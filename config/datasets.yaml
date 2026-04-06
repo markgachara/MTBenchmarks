@@ -1,0 +1,72 @@
+# Dataset Registry for MT Benchmarking
+# Defines all datasets used for evaluation and validation
+
+datasets:
+  flores_200:
+    name: "FLORES-200"
+    type: "huggingface"
+    dataset_id: "facebook/flores"
+    config: "kik_Latn-eng_Latn"
+    splits:
+      dev:
+        hf_split: "dev"
+        size: 997
+      devtest:
+        hf_split: "devtest"
+        size: 1012
+    source_lang: "kik_Latn"
+    target_lang: "eng_Latn"
+    text_field: "sentence"
+    description: "Professional multilingual benchmark with Kikuyu coverage (1000+ sentences per split)"
+    download_size_mb: 100
+    license: "CC-BY-SA 4.0"
+
+  kikuyu_kb:
+    name: "KevinKibe Kikuyu Sentence Pairs"
+    type: "huggingface"
+    dataset_id: "KevinKibe/kikuyu-sentence-pairs"
+    splits:
+      default:
+        hf_split: "train"  # Only train split available
+        size: 420
+    source_lang: "kik"
+    target_lang: "eng"
+    text_field: "text"  # May need inspection
+    description: "Small curated bilingual corpus (~420 pairs, general domain)"
+    download_size_mb: 1
+    license: "Unknown"
+    notes: "Small but clean; good for validation and sanity checks"
+
+# Evaluation configuration
+evaluation:
+  primary_dataset: "flores_200"
+  validation_dataset: "kikuyu_kb"
+  split_for_eval: "devtest"  # Use devtest split from FLORES-200
+  
+  directions:
+    - source_lang: "kik"
+      target_lang: "eng"
+      description: "Kikuyu to English"
+    - source_lang: "eng"
+      target_lang: "kik"
+      description: "English to Kikuyu"
+
+  metrics:
+    primary:
+      - "bleu"
+      - "chrf"
+      - "chrf++"
+    secondary:
+      - "bertscore"  # Requires GPU; will skip if unavailable
+    optional: []
+
+# Caching and preprocessing
+data_cache:
+  cache_dir: "./data/cache"
+  preprocess_format: "jsonl"  # JSONL format for streaming
+  keep_original: false
+  validate_parallel: true  # Ensure source and target have same length
+
+sampling:
+  validation_sample_size: 50  # Quick sanity check
+  enable_validation: true
