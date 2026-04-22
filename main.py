@@ -214,6 +214,8 @@ def main():
                     )
                     metrics["speed"] = trans.get("speed", 0)
                     metrics["inference_time"] = trans.get("inference_time", 0)
+                    # Release evaluator GPU memory so next model can load
+                    evaluator.release_gpu()
 
                     dir_results[display_name] = metrics
 

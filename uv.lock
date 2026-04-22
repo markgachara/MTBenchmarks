@@ -15,6 +15,9 @@ resolution-markers = [
     "python_full_version < '3.10'",
 ]
 
+[manifest]
+constraints = [{ name = "setuptools", specifier = "<76" }]
+
 [[package]]
 name = "accelerate"
 version = "1.10.1"
@@ -2320,6 +2323,8 @@ dependencies = [
     { name = "accelerate", version = "1.10.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "accelerate", version = "1.13.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "bert-score" },
+    { name = "bitsandbytes", version = "0.48.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "bitsandbytes", version = "0.49.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "numpy" },
     { name = "openpyxl" },
     { name = "pandas", version = "2.3.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11' or python_full_version >= '3.14'" },
@@ -2330,6 +2335,7 @@ dependencies = [
     { name = "pyyaml" },
     { name = "sacrebleu" },
     { name = "sentencepiece" },
+    { name = "setuptools" },
     { name = "tabulate", version = "0.9.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "tabulate", version = "0.10.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "torch", version = "2.8.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
@@ -2338,13 +2344,11 @@ dependencies = [
     { name = "transformers", version = "4.57.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "transformers", version = "4.57.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "unbabel-comet" },
+    { name = "unsloth", version = "2026.1.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "unsloth", version = "2026.4.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
 ]
 
 [package.optional-dependencies]
-quantization = [
-    { name = "bitsandbytes", version = "0.48.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "bitsandbytes", version = "0.49.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-]
 unsloth = [
     { name = "unsloth", version = "2026.1.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "unsloth", version = "2026.4.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
@@ -2354,7 +2358,7 @@ unsloth = [
 requires-dist = [
     { name = "accelerate", specifier = ">=0.27" },
     { name = "bert-score", specifier = ">=0.3" },
-    { name = "bitsandbytes", marker = "extra == 'quantization'", specifier = ">=0.41" },
+    { name = "bitsandbytes", specifier = ">=0.41" },
     { name = "numpy" },
     { name = "openpyxl" },
     { name = "pandas", specifier = ">=2.0" },
@@ -2364,14 +2368,16 @@ requires-dist = [
     { name = "pyyaml" },
     { name = "sacrebleu", specifier = ">=2.0" },
     { name = "sentencepiece" },
+    { name = "setuptools", specifier = "<76" },
     { name = "tabulate" },
     { name = "torch", specifier = ">=2.0" },
     { name = "tqdm" },
     { name = "transformers", specifier = ">=4.40" },
     { name = "unbabel-comet", specifier = ">=2.0" },
+    { name = "unsloth", specifier = ">=2026.1.2" },
     { name = "unsloth", marker = "extra == 'unsloth'" },
 ]
-provides-extras = ["quantization", "unsloth"]
+provides-extras = ["unsloth"]
 
 [[package]]
 name = "multidict"
@@ -4528,11 +4534,11 @@ wheels = [
 
 [[package]]
 name = "setuptools"
-version = "82.0.1"
+version = "75.9.1"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/4f/db/cfac1baf10650ab4d1c111714410d2fbb77ac5a616db26775db562c8fab2/setuptools-82.0.1.tar.gz", hash = "sha256:7d872682c5d01cfde07da7bccc7b65469d3dca203318515ada1de5eda35efbf9", size = 1152316, upload-time = "2026-03-09T12:47:17.221Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d0/df/ec5ad16b0ec305081c372bd0550fd638fa96e472cd5a03049c344076ea76/setuptools-75.9.1.tar.gz", hash = "sha256:b6eca2c3070cdc82f71b4cb4bb2946bc0760a210d11362278cf1ff394e6ea32c", size = 1345088, upload-time = "2025-03-09T03:18:44.129Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/9d/76/f789f7a86709c6b087c5a2f52f911838cad707cc613162401badc665acfe/setuptools-82.0.1-py3-none-any.whl", hash = "sha256:a59e362652f08dcd477c78bb6e7bd9d80a7995bc73ce773050228a348ce2e5bb", size = 1006223, upload-time = "2026-03-09T12:47:15.026Z" },
+    { url = "https://files.pythonhosted.org/packages/8d/28/19ad82a0549d73ec6feffa6711eacf9246035a9426b8a8b528440c9959d2/setuptools-75.9.1-py3-none-any.whl", hash = "sha256:0a6f876d62f4d978ca1a11ab4daf728d1357731f978543ff18ecdbf9fd071f73", size = 1231632, upload-time = "2025-03-09T03:18:42.453Z" },
 ]
 
 [[package]]

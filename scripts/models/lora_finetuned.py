@@ -30,7 +30,11 @@ class LoRAFineTuned(BaseModel):
 
         try:
             if use_unsloth:
-                self._load_with_unsloth(load_in_4bit)
+                try:
+                    self._load_with_unsloth(load_in_4bit)
+                except ImportError:
+                    logger.warning("unsloth not installed; falling back to transformers + PEFT")
+                    self._load_with_transformers()
             else:
                 self._load_with_transformers()
 
@@ -51,23 +55,45 @@ class LoRAFineTuned(BaseModel):
             self.model_id,
             max_seq_length=2048,
             load_in_4bit=load_in_4bit,
+            device_map="auto",
         )
         self.tokenizer = get_chat_template(self.tokenizer, chat_template="gemma-3")
         self._use_chat_template = True
 
     def _load_with_transformers(self):
-        """Fallback: load with standard transformers + PEFT."""
+        """Fallback: load with standard transformers."""
         from transformers import AutoModelForCausalLM, AutoTokenizer
 
         torch_dtype = eval(self.dtype) if isinstance(self.dtype, str) else self.dtype
-        self.tokenizer = AutoTokenizer.from_pretrained(self.model_id)
-        self.model = AutoModelForCausalLM.from_pretrained(
-            self.model_id,
-            device_map=self.device_map,
-            torch_dtype=torch_dtype,
-            low_cpu_mem_usage=True,
+        self.tokenizer = AutoTokenizer.from_pretrained(
+            self.model_id, trust_remote_code=True
         )
-        self._use_chat_template = False
+
+        load_kwargs = {
+            "device_map": self.device_map,
+            "trust_remote_code": True,
+            "low_cpu_mem_usage": True,
+        }
+
+        # Use 4-bit quantization if configured (saves VRAM)
+        if self.config.get("load_in_4bit", False):
+            try:
+                from transformers import BitsAndBytesConfig
+                load_kwargs["quantization_config"] = BitsAndBytesConfig(
+                    load_in_4bit=True,
+                    bnb_4bit_compute_dtype=torch_dtype,
+                )
+                logger.info("Using 4-bit quantization via bitsandbytes")
+            except ImportError:
+                logger.warning("bitsandbytes not available; loading in fp16")
+                load_kwargs["torch_dtype"] = torch_dtype
+        else:
+            load_kwargs["torch_dtype"] = torch_dtype
+
+        self.model = AutoModelForCausalLM.from_pretrained(
+            self.model_id, **load_kwargs
+        )
+        self._use_chat_template = hasattr(self.tokenizer, "apply_chat_template")
 
     def translate(
         self,

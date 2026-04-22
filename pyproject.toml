@@ -21,8 +21,13 @@ dependencies = [
     "py-cpuinfo",
     "tabulate",
     "numpy",
+    "setuptools<76",
+    "bitsandbytes>=0.41",
+    "unsloth>=2026.1.2",
 ]
 
 [project.optional-dependencies]
-quantization = ["bitsandbytes>=0.41"]
 unsloth = ["unsloth"]
+
+[tool.uv]
+constraint-dependencies = ["setuptools<76"]

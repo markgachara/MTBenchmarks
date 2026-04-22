@@ -50,6 +50,18 @@ class MTEvaluator:
                 self._africomet_model = None
         return self._africomet_model
 
+    def release_gpu(self):
+        """Release any GPU-resident models (AfriCOMET, BERTScore cache) to free VRAM."""
+        import gc
+        import torch
+        if self._africomet_model is not None:
+            del self._africomet_model
+            self._africomet_model = None
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        logger.info("Evaluator GPU memory released")
+
     # ------------------------------------------------------------------
     # Main entry point
     # ------------------------------------------------------------------

@@ -44,11 +44,17 @@ class TranslationOrchestrator:
         if self.current_model_id == model_id and self.current_model and self.current_model.is_loaded:
             return
 
-        # Unload previous model
-        if self.current_model and self.current_model.is_loaded:
+        # Always unload previous model and clear GPU
+        if self.current_model:
             logger.info(f"Unloading {self.current_model.name} to free memory")
             self.current_model.unload()
-            clear_gpu_cache()
+        self.current_model = None
+        self.current_model_id = None
+
+        # Aggressive GPU cleanup
+        import gc
+        gc.collect()
+        clear_gpu_cache()
 
         # Load new model
         model = self.create_model(model_id, model_config)
@@ -116,6 +122,14 @@ class TranslationOrchestrator:
 
         except Exception as e:
             logger.error(f"Translation failed for {model_id}: {e}")
+            # Clean up after failure to prevent cascading OOM
+            if self.current_model:
+                self.current_model.unload()
+            self.current_model = None
+            self.current_model_id = None
+            import gc
+            gc.collect()
+            clear_gpu_cache()
             return {
                 "model_id": model_id,
                 "model_name": model_name,

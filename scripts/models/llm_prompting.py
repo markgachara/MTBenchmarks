@@ -144,7 +144,7 @@ class LLMViaPrompting(BaseModel):
 
     def _generate_causal(self, prompt: str) -> str:
         """Generate translation using decoder-only model (Llama 3)."""
-        # Use chat template if available
+        # Use chat template if available (Llama 3 requires this)
         if hasattr(self.tokenizer, "apply_chat_template"):
             messages = [{"role": "user", "content": prompt}]
             input_ids = self.tokenizer.apply_chat_template(
@@ -161,13 +161,20 @@ class LLMViaPrompting(BaseModel):
 
         prompt_len = input_ids.shape[1]
 
+        # Build EOS token list (Llama 3 uses <|eot_id|> as additional terminator)
+        eos_token_ids = [self.tokenizer.eos_token_id]
+        eot_id = self.tokenizer.convert_tokens_to_ids("<|eot_id|>")
+        if eot_id != self.tokenizer.unk_token_id:
+            eos_token_ids.append(eot_id)
+
         with torch.no_grad():
             outputs = self.model.generate(
                 input_ids,
                 max_new_tokens=self.config.get("max_new_tokens", 256),
-                temperature=self.config.get("temperature", 0.3),
+                eos_token_id=eos_token_ids,
+                do_sample=True,
+                temperature=self.config.get("temperature", 0.6),
                 top_p=self.config.get("top_p", 0.9),
-                do_sample=False,
                 pad_token_id=self.tokenizer.pad_token_id,
             )
 
