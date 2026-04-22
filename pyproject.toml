@@ -1,7 +1,28 @@
 [project]
 name = "mtbenchmarks"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0.0"
+description = "Benchmarking Machine Translation Models for Gĩkũyũ"
 readme = "README.md"
 requires-python = ">=3.9"
-dependencies = []
+dependencies = [
+    "torch>=2.0",
+    "transformers>=4.40",
+    "accelerate>=0.27",
+    "sentencepiece",
+    "protobuf",
+    "sacrebleu>=2.0",
+    "bert-score>=0.3",
+    "unbabel-comet>=2.0",
+    "pandas>=2.0",
+    "openpyxl",
+    "pyyaml",
+    "tqdm",
+    "psutil",
+    "py-cpuinfo",
+    "tabulate",
+    "numpy",
+]
+
+[project.optional-dependencies]
+quantization = ["bitsandbytes>=0.41"]
+unsloth = ["unsloth"]
