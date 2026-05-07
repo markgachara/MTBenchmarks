@@ -147,6 +147,25 @@ models:
       - "zero_shot"
       - "few_shot"
 
+  gemma3_4b_it:
+    name: "Gemma 3 4B Instruct"
+    model_id: "google/gemma-3-4b-it"
+    model_type: "llm_prompting"
+    model_class: "gemma3"  # use Gemma3ForCausalLM (text-only head)
+    category: "LLM Evaluated via Prompting"
+    parameters: 4_000_000_000
+    vram_fp16_gb: 8.0
+    dtype: "torch.bfloat16"
+    is_encoder_decoder: false
+    architecture: "decoder_only"
+    batch_size: 2
+    max_new_tokens: 256
+    device_map: "auto"
+    description: "Gemma 3 4B Instruct (BF16). Same base as kikuyu-translator-final; isolates the LoRA fine-tuning effect. INT4/INT8 are broken for Gemma-3 on Turing GPUs, so we use BF16."
+    prompting_modes:
+      - "zero_shot"
+      - "few_shot"
+
 # Language code mappings per model type
 language_codes:
   english: "eng"

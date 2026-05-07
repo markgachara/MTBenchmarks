@@ -50,6 +50,21 @@ class LLMViaPrompting(BaseModel):
                     logger.info(f"Using INT8 quantization for {self.name}")
                 except ImportError:
                     logger.warning("bitsandbytes not available; loading without quantization")
+            elif quantization == "int4":
+                try:
+                    from transformers import BitsAndBytesConfig
+
+                    load_kwargs["quantization_config"] = BitsAndBytesConfig(
+                        load_in_4bit=True,
+                        bnb_4bit_compute_dtype=torch_dtype,
+                        bnb_4bit_quant_type="nf4",
+                    )
+                    load_kwargs.pop("torch_dtype", None)
+                    logger.info(f"Using INT4 (NF4) quantization for {self.name}")
+                except ImportError:
+                    logger.warning("bitsandbytes not available; loading without quantization")
+
+            model_class = self.config.get("model_class")
 
             if is_enc_dec:
                 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
@@ -59,14 +74,27 @@ class LLMViaPrompting(BaseModel):
                     self.model_id, **load_kwargs
                 )
             else:
-                from transformers import AutoModelForCausalLM, AutoTokenizer
+                from transformers import AutoTokenizer
 
                 self.tokenizer = AutoTokenizer.from_pretrained(self.model_id)
                 if self.tokenizer.pad_token is None:
                     self.tokenizer.pad_token = self.tokenizer.eos_token
-                self.model = AutoModelForCausalLM.from_pretrained(
-                    self.model_id, **load_kwargs
-                )
+
+                # Gemma-3 ships as a multimodal Gemma3ForConditionalGeneration; use
+                # the text-only Gemma3ForCausalLM head to avoid loading the vision
+                # tower we never use.
+                if model_class == "gemma3":
+                    from transformers import Gemma3ForCausalLM
+
+                    self.model = Gemma3ForCausalLM.from_pretrained(
+                        self.model_id, **load_kwargs
+                    )
+                else:
+                    from transformers import AutoModelForCausalLM
+
+                    self.model = AutoModelForCausalLM.from_pretrained(
+                        self.model_id, **load_kwargs
+                    )
 
             self._is_loaded = True
             self._load_time = time.time() - start_time
@@ -168,15 +196,24 @@ class LLMViaPrompting(BaseModel):
             eos_token_ids.append(eot_id)
 
         with torch.no_grad():
-            outputs = self.model.generate(
-                input_ids,
+            gen_kwargs = dict(
                 max_new_tokens=self.config.get("max_new_tokens", 256),
                 eos_token_id=eos_token_ids,
-                do_sample=True,
-                temperature=self.config.get("temperature", 0.6),
-                top_p=self.config.get("top_p", 0.9),
                 pad_token_id=self.tokenizer.pad_token_id,
             )
+            # Default to greedy. Sampling is opt-in via the config flag; some
+            # models (Gemma-3) ship a generation_config.json with
+            # do_sample=true which we override here, and INT8 quantization
+            # on Turing GPUs produces inf/nan logits in the multinomial path.
+            if self.config.get("do_sample", False):
+                gen_kwargs.update(
+                    do_sample=True,
+                    temperature=self.config.get("temperature", 0.6),
+                    top_p=self.config.get("top_p", 0.9),
+                )
+            else:
+                gen_kwargs.update(do_sample=False, temperature=None, top_p=None, top_k=None)
+            outputs = self.model.generate(input_ids, **gen_kwargs)
 
         # Decode only the generated tokens (exclude prompt)
         generated = outputs[0][prompt_len:]
