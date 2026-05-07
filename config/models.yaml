@@ -125,9 +125,9 @@ models:
     quantization: "int8"  # Required due to model size
     skip_on_low_memory: false
 
-  llama3_8b:
-    name: "Llama 3 8B Instruct"
-    model_id: "meta-llama/Meta-Llama-3-8B-Instruct"
+  llama3_1_8b:
+    name: "Llama 3.1 8B Instruct"
+    model_id: "meta-llama/Llama-3.1-8B-Instruct"
     model_type: "llm_prompting"
     category: "LLM Evaluated via Prompting"
     parameters: 8_000_000_000
@@ -141,7 +141,8 @@ models:
     temperature: 0.3
     top_p: 0.9
     device_map: "auto"
-    description: "English-first general-purpose decoder model. Tests emergent multilingual transfer."
+    quantization: "int8"  # 8B at FP16 = 16 GB; INT8 (~8 GB) fits a single 11 GB GPU
+    description: "Llama 3.1 8B Instruct. Officially supports 8 langs (none Bantu); tests emergent zero/few-shot Kikuyu transfer."
     prompting_modes:
       - "zero_shot"
       - "few_shot"
