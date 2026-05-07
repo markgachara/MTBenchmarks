@@ -21,6 +21,8 @@ class MTEvaluator:
         self._sacrebleu = None
         self._bertscore = None
         self._africomet_model = None
+        self._goldfish_model = None
+        self._goldfish_tok = None
 
     # ------------------------------------------------------------------
     # Lazy loaders
@@ -50,13 +52,37 @@ class MTEvaluator:
                 self._africomet_model = None
         return self._africomet_model
 
+    def _get_goldfish(self):
+        """Load Goldfish-Kikuyu (124M GPT-2) for perplexity scoring."""
+        if self._goldfish_model is None:
+            try:
+                import torch
+                from transformers import AutoModelForCausalLM, AutoTokenizer
+                model_id = "goldfish-models/kik_latn_full"
+                self._goldfish_tok = AutoTokenizer.from_pretrained(model_id)
+                # FP32 on a single GPU; the model is only ~500 MB.
+                device = "cuda" if torch.cuda.is_available() else "cpu"
+                self._goldfish_model = (
+                    AutoModelForCausalLM.from_pretrained(model_id).to(device).eval()
+                )
+                logger.info(f"Loaded Goldfish-Kikuyu LM on {device}")
+            except Exception as e:
+                logger.warning(f"Could not load Goldfish-Kikuyu: {e}")
+                self._goldfish_model = None
+                self._goldfish_tok = None
+        return self._goldfish_model, self._goldfish_tok
+
     def release_gpu(self):
-        """Release any GPU-resident models (AfriCOMET, BERTScore cache) to free VRAM."""
+        """Release any GPU-resident models (AfriCOMET, BERTScore cache, Goldfish) to free VRAM."""
         import gc
         import torch
         if self._africomet_model is not None:
             del self._africomet_model
             self._africomet_model = None
+        if self._goldfish_model is not None:
+            del self._goldfish_model
+            self._goldfish_model = None
+            self._goldfish_tok = None
         gc.collect()
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
@@ -101,6 +127,12 @@ class MTEvaluator:
         results.update(
             self._compute_corpus_metrics(predictions, references, direction)
         )
+
+        # Perplexity (only meaningful for Kikuyu output, scored by a Kikuyu LM)
+        if direction.endswith("kik"):
+            ppl = self._compute_perplexity(predictions)
+            if ppl is not None:
+                results["pred_perplexity"] = ppl
 
         return results
 
@@ -237,6 +269,51 @@ class MTEvaluator:
         }
 
     # ------------------------------------------------------------------
+    # Perplexity (Goldfish-Kikuyu LM)
+    # ------------------------------------------------------------------
+
+    def _compute_perplexity(self, texts: List[str]) -> Optional[float]:
+        """Corpus-level perplexity scored by Goldfish-Kikuyu (124M GPT-2).
+
+        Returns exp(corpus mean per-token NLL), summing total NLL across
+        sentences and dividing by total token count (paper-standard
+        formulation). Returns None on any failure or if the model is
+        unavailable.
+        """
+        model, tok = self._get_goldfish()
+        if model is None or tok is None:
+            return None
+        try:
+            import torch
+            device = next(model.parameters()).device
+            total_nll = 0.0
+            total_tokens = 0
+            max_len = getattr(model.config, "max_position_embeddings", 512) or 512
+            with torch.no_grad():
+                for text in texts:
+                    if not text or not text.strip():
+                        continue
+                    enc = tok(
+                        text.strip(),
+                        return_tensors="pt",
+                        truncation=True,
+                        max_length=max_len,
+                    )
+                    ids = enc.input_ids.to(device)
+                    if ids.shape[1] < 2:  # need at least 2 tokens for next-token loss
+                        continue
+                    out = model(ids, labels=ids)
+                    n_tokens = ids.shape[1] - 1  # next-token prediction
+                    total_nll += out.loss.item() * n_tokens
+                    total_tokens += n_tokens
+            if total_tokens == 0:
+                return None
+            return float(math.exp(total_nll / total_tokens))
+        except Exception as e:  # noqa: BLE001
+            logger.warning(f"Perplexity computation failed: {e}")
+            return None
+
+    # ------------------------------------------------------------------
     # Human Reference Baseline
     # ------------------------------------------------------------------
 
@@ -247,4 +324,13 @@ class MTEvaluator:
         Compute corpus-level metrics for human reference translations.
         These serve as the baseline row in results Tables 4 & 5.
         """
-        return self._linguistic_metrics(references, prefix="human_ref")
+        result = self._linguistic_metrics(references, prefix="human_ref")
+        # Score the Kikuyu reference column with Goldfish-Kikuyu so the
+        # Human Reference row in Table 4 has a perplexity baseline. The
+        # English reference (kik->eng direction) is scored with a Kikuyu
+        # LM only as a sanity check; we skip it.
+        if direction.endswith("kik"):
+            ppl = self._compute_perplexity(references)
+            if ppl is not None:
+                result["human_ref_perplexity"] = ppl
+        return result
