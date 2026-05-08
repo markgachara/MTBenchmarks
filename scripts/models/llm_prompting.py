@@ -4,6 +4,7 @@ Supports: Aya-101 (encoder-decoder / seq2seq) and Llama 3 8B Instruct (decoder-o
 Both zero-shot and 3-shot prompting modes.
 """
 import logging
+import re
 import time
 from typing import List, Dict, Optional
 
@@ -13,6 +14,45 @@ from tqdm import tqdm
 from .base import BaseModel, TranslationResult
 
 logger = logging.getLogger(__name__)
+
+
+_PREAMBLE_RE = re.compile(
+    r"^\s*(?:okay|sure|here(?:'s| is)|the translation|translation)[^\n:]*[:.]?\s*\n",
+    re.IGNORECASE,
+)
+
+
+def _clean_llm_translation(text: str) -> str:
+    """Heuristic post-processing for chatty LLM responses.
+
+    Drops common preambles like "Okay, here's the translation: ...", strips
+    markdown bold/italic/code markers, and returns the first non-empty
+    content line. The aim is to recover the actual translated sentence
+    even when the model adds explanatory framing.
+    """
+    if not text:
+        return ""
+
+    # Strip leading whitespace + an optional preamble line that ends in ':'.
+    cleaned = _PREAMBLE_RE.sub("", text, count=1)
+
+    # Look for the first non-empty line; if it's bracketed in markdown bold,
+    # keep the inner text. Skip lines that are clearly meta-commentary.
+    for raw in cleaned.splitlines():
+        line = raw.strip()
+        if not line:
+            continue
+        # Strip markdown bold/italic/code markers
+        line = re.sub(r"^\*+\s*|\s*\*+$", "", line)  # **...**
+        line = re.sub(r"^_+\s*|\s*_+$", "", line)
+        line = re.sub(r"^`+\s*|\s*`+$", "", line)
+        # Strip common label prefixes that LLMs add
+        line = re.sub(r"^(?:Translation|Gĩkũyũ|English|Kikuyu|Kik|Output|Answer)\s*[:.\-]\s*", "", line, flags=re.IGNORECASE)
+        # Drop surrounding quotes
+        line = line.strip().strip("\"'")
+        if line:
+            return line
+    return ""
 
 
 class LLMViaPrompting(BaseModel):
@@ -126,28 +166,29 @@ class LLMViaPrompting(BaseModel):
             batch_size = self.config.get("batch_size", 4)
 
         is_enc_dec = self.config.get("is_encoder_decoder", False)
-        translations = []
+        translations: List[str] = []
         start_time = time.time()
 
         mode_label = "3-shot" if prompting_mode == "few_shot" else "zero-shot"
         desc = f"Translating with {self.name} ({mode_label})"
 
-        for i, text in enumerate(tqdm(texts, desc=desc)):
+        # Build all prompts up front so we can batch them.
+        prompts = [
+            self._build_prompt(t, source_lang, target_lang, prompting_mode, few_shot_examples)
+            for t in texts
+        ]
+
+        for i in tqdm(range(0, len(prompts), batch_size), desc=desc):
+            batch = prompts[i : i + batch_size]
             try:
-                prompt = self._build_prompt(
-                    text, source_lang, target_lang, prompting_mode, few_shot_examples
-                )
-
                 if is_enc_dec:
-                    translation = self._generate_seq2seq(prompt)
+                    out_batch = self._generate_seq2seq_batch(batch)
                 else:
-                    translation = self._generate_causal(prompt)
-
-                translations.append(translation)
-
+                    out_batch = self._generate_causal_batch(batch)
             except Exception as e:
-                logger.warning(f"Error translating text {i}: {e}")
-                translations.append("")
+                logger.warning(f"Error translating batch starting at {i}: {e}")
+                out_batch = [""] * len(batch)
+            translations.extend(out_batch)
 
         inference_time = time.time() - start_time
         return TranslationResult(
@@ -158,45 +199,50 @@ class LLMViaPrompting(BaseModel):
             inference_time=inference_time,
         )
 
-    def _generate_seq2seq(self, prompt: str) -> str:
-        """Generate translation using encoder-decoder model (Aya-101)."""
-        inputs = self.tokenizer.encode(prompt, return_tensors="pt")
-        if torch.cuda.is_available() and hasattr(self.model, "device"):
-            inputs = inputs.to(self.model.device)
-
+    def _generate_seq2seq_batch(self, prompts: List[str]) -> List[str]:
+        """Batched generation for encoder-decoder models (e.g. Aya-101)."""
+        enc = self.tokenizer(prompts, return_tensors="pt", padding=True, truncation=True, max_length=1024)
+        first_dev = next(iter(self.model.parameters())).device
+        enc = {k: v.to(first_dev) for k, v in enc.items()}
         with torch.no_grad():
             outputs = self.model.generate(
-                inputs,
+                **enc,
                 max_new_tokens=self.config.get("max_new_tokens", 256),
                 num_beams=self.config.get("num_beams", 5),
             )
+        decoded = self.tokenizer.batch_decode(outputs, skip_special_tokens=True)
+        return [d.strip() for d in decoded]
 
-        translation = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
-        return translation.strip()
-
-    def _generate_causal(self, prompt: str) -> str:
-        """Generate translation using decoder-only model (Llama 3)."""
-        # Use chat template if available (Llama 3 requires this)
+    def _generate_causal_batch(self, prompts: List[str]) -> List[str]:
+        """Batched generation for decoder-only models (Llama, Gemma)."""
+        # Build chat-template inputs as plain strings, then batch-tokenize
+        # with left padding so the prompts align at the right edge.
         if hasattr(self.tokenizer, "apply_chat_template"):
-            messages = [{"role": "user", "content": prompt}]
-            input_ids = self.tokenizer.apply_chat_template(
-                messages,
-                tokenize=True,
-                add_generation_prompt=True,
-                return_tensors="pt",
-            )
+            tmpl = [
+                self.tokenizer.apply_chat_template(
+                    [{"role": "user", "content": p}],
+                    tokenize=False,
+                    add_generation_prompt=True,
+                )
+                for p in prompts
+            ]
         else:
-            input_ids = self.tokenizer.encode(prompt, return_tensors="pt")
+            tmpl = prompts
 
-        if torch.cuda.is_available() and hasattr(self.model, "device"):
-            input_ids = input_ids.to(self.model.device)
+        prev_side = self.tokenizer.padding_side
+        self.tokenizer.padding_side = "left"
+        try:
+            enc = self.tokenizer(tmpl, return_tensors="pt", padding=True, truncation=True, max_length=2048)
+        finally:
+            self.tokenizer.padding_side = prev_side
 
-        prompt_len = input_ids.shape[1]
+        first_dev = next(iter(self.model.parameters())).device
+        enc = {k: v.to(first_dev) for k, v in enc.items()}
+        prompt_len = enc["input_ids"].shape[1]
 
-        # Build EOS token list (Llama 3 uses <|eot_id|> as additional terminator)
         eos_token_ids = [self.tokenizer.eos_token_id]
         eot_id = self.tokenizer.convert_tokens_to_ids("<|eot_id|>")
-        if eot_id != self.tokenizer.unk_token_id:
+        if eot_id is not None and eot_id != self.tokenizer.unk_token_id:
             eos_token_ids.append(eot_id)
 
         with torch.no_grad():
@@ -205,10 +251,6 @@ class LLMViaPrompting(BaseModel):
                 eos_token_id=eos_token_ids,
                 pad_token_id=self.tokenizer.pad_token_id,
             )
-            # Default to greedy. Sampling is opt-in via the config flag; some
-            # models (Gemma-3) ship a generation_config.json with
-            # do_sample=true which we override here, and INT8 quantization
-            # on Turing GPUs produces inf/nan logits in the multinomial path.
             if self.config.get("do_sample", False):
                 gen_kwargs.update(
                     do_sample=True,
@@ -217,15 +259,21 @@ class LLMViaPrompting(BaseModel):
                 )
             else:
                 gen_kwargs.update(do_sample=False, temperature=None, top_p=None, top_k=None)
-            outputs = self.model.generate(input_ids, **gen_kwargs)
+            outputs = self.model.generate(**enc, **gen_kwargs)
 
-        # Decode only the generated tokens (exclude prompt)
-        generated = outputs[0][prompt_len:]
-        translation = self.tokenizer.decode(generated, skip_special_tokens=True)
+        # Slice off the prompt tokens from each row, decode, then post-process
+        # to strip preambles, markdown, etc. (LLMs love to be chatty).
+        gen = outputs[:, prompt_len:]
+        decoded = self.tokenizer.batch_decode(gen, skip_special_tokens=True)
+        return [_clean_llm_translation(d) for d in decoded]
 
-        # Clean: take first line, strip artifacts
-        translation = translation.split("\n")[0].strip()
-        return translation
+    # Single-prompt helpers kept for backward compatibility (tests / callers).
+
+    def _generate_seq2seq(self, prompt: str) -> str:
+        return self._generate_seq2seq_batch([prompt])[0]
+
+    def _generate_causal(self, prompt: str) -> str:
+        return self._generate_causal_batch([prompt])[0]
 
     def _build_prompt(
         self,
@@ -252,7 +300,10 @@ class LLMViaPrompting(BaseModel):
         """Paper-specified zero-shot prompt format."""
         return (
             f"Translate the following sentence from {src_name} to {tgt_name}, "
-            f"preserving all diacritical marks accurately: {text}"
+            f"preserving all diacritical marks accurately. "
+            f"Output ONLY the {tgt_name} translation as a single line, with no preamble, "
+            f"no explanation, no quotation marks, and no markdown formatting.\n\n"
+            f"{src_name}: {text}\n{tgt_name}:"
         )
 
     def _build_few_shot_prompt(
@@ -265,7 +316,8 @@ class LLMViaPrompting(BaseModel):
         """Paper-specified 3-shot prompt format."""
         prompt = (
             f"Translate sentences from {src_name} to {tgt_name}, "
-            f"preserving all diacritical marks accurately.\n\n"
+            f"preserving all diacritical marks accurately. "
+            f"Output ONLY the {tgt_name} translation as a single line, with no preamble.\n\n"
         )
         for idx, ex in enumerate(examples, 1):
             prompt += f"Example {idx}:\n"
