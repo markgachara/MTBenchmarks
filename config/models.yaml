@@ -88,19 +88,20 @@ models:
     model_id: "InterstellarCG/kikuyu-translator-final"
     model_type: "lora_finetuned"
     category: "Community Fine-Tuned Model"
-    parameters: 4_000_000_000
-    vram_fp16_gb: 6.0
-    vram_int8_gb: 4.0
-    dtype: "torch.float16"
+    parameters: 8_000_000_000  # Gemma-3n-E4B effective param count (multimodal base)
+    vram_fp16_gb: 16.0
+    vram_int8_gb: 12.0
+    dtype: "torch.bfloat16"
     is_encoder_decoder: false
-    batch_size: 4
+    batch_size: 1
     max_new_tokens: 256
     device_map: "auto"
-    description: "LoRA fine-tuned Gemma 3 4B for bidirectional English-Gĩkũyũ translation."
+    description: "LoRA fine-tune of unsloth/gemma-3n-e4b-it-unsloth-bnb-4bit (Gemma-3n multimodal). The bnb-4bit base + unquantized vision/audio towers + LoRA adapter exceed 12 GB VRAM on dual-11 GB GPUs; needs >=16 GB single GPU. Skip by default; the README claims a Gemma-3-4B base but adapter_config.json reveals Gemma-3n."
     bidirectional: true
-    base_model: "google/gemma-3-4b-it"
+    base_model: "unsloth/gemma-3n-e4b-it-unsloth-bnb-4bit"  # corrected from earlier wrong "google/gemma-3-4b-it"
     use_unsloth: true
     load_in_4bit: true
+    skip_on_low_memory: true
 
   # === Category 3: LLMs Evaluated via Prompting ===
 
@@ -118,12 +119,12 @@ models:
     batch_size: 2
     max_new_tokens: 256
     device_map: "auto"
-    description: "Massively multilingual instruction-tuned model (101 languages). Purpose-built for lower-resource communities."
+    description: "Massively multilingual instruction-tuned model (101 languages). Purpose-built for lower-resource communities. Does NOT fit on dual-11 GB GPUs even at INT8 + CPU offload (forward pass OOMs); documented as hardware-inaccessible."
     prompting_modes:
       - "zero_shot"
       - "few_shot"
     quantization: "int8"  # Required due to model size
-    skip_on_low_memory: false
+    skip_on_low_memory: true  # 13 GB INT8 + activations + concurrent users -> OOM on 11 GB GPUs
 
   llama3_1_8b:
     name: "Llama 3.1 8B Instruct"

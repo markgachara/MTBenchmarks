@@ -43,11 +43,15 @@ class LLMViaPrompting(BaseModel):
                     from transformers import BitsAndBytesConfig
 
                     load_kwargs["quantization_config"] = BitsAndBytesConfig(
-                        load_in_8bit=True
+                        load_in_8bit=True,
+                        # Allow accelerate to spill modules to CPU when the model
+                        # doesn't fit on available GPUs (e.g. Aya-101 13B on
+                        # dual-11 GB GPUs); CPU layers run unquantized fp32.
+                        llm_int8_enable_fp32_cpu_offload=True,
                     )
                     # Remove torch_dtype when using quantization
                     load_kwargs.pop("torch_dtype", None)
-                    logger.info(f"Using INT8 quantization for {self.name}")
+                    logger.info(f"Using INT8 quantization for {self.name} (CPU offload enabled)")
                 except ImportError:
                     logger.warning("bitsandbytes not available; loading without quantization")
             elif quantization == "int4":
