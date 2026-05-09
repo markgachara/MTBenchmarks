@@ -1,342 +1,268 @@
-# MT Benchmarking Pipeline for Gĩkũyũ - v1.0
+# MT Benchmarking Pipeline for Gĩkũyũ
 
-Lean, resource-efficient benchmarking system for machine translation models and datasets from Hugging Face, with focus on English ↔ Gĩkũyũ translation.
+Reproducible benchmark of machine-translation models on **English ↔ Gĩkũyũ**, aligned with the paper *"Benchmarking Machine Translation Models for Gĩkũyũ"* (Irura, 2026). Evaluates seven models on the 500-pair GAC agricultural test set with a multi-metric framework, statistical significance tests, and six deep-dive analyses (diacritics, length effect, hallucination, code-switching, per-sentence metric agreement).
 
-## Features
+See [results/benchmark_20260508_063320/FINAL_REPORT.md](results/benchmark_20260508_063320/FINAL_REPORT.md) for the latest run's full report (8 plots, all tables, all p-values).
 
-✅ **6 Machine Translation Models**
-- NLLB-200 (600M distilled)
-- M2M-100 (418M)
-- SeamlessM4T (medium, 1.2B)
-- Kikuyu-Translator (LoRA fine-tuned Gemma-3)
-- Mistral-7B-Instruct
-- Mistral-Small-3.1 (24B)
+---
 
-✅ **2 Evaluation Directions**
-- English → Gĩkũyũ
-- Gĩkũyũ → English
+## What's in the benchmark
 
-✅ **Multiple Datasets**
-- FLORES-200 (primary benchmark)
-- KevinKibe (validation)
+### Models evaluated (7 configurations)
 
-✅ **Comprehensive Metrics**
-- BLEU
-- ChrF / ChrF++
-- BERTScore (if GPU available)
+| Model | Type | Quantization | Notes |
+|---|---|---|---|
+| NLLB-200 600M / 1.3B / 3.3B | Encoder-decoder MT | FP16 | Within-family scaling curve |
+| M2M-100 418M | Encoder-decoder MT | FP16 | No `kik` token; uses Swahili proxy |
+| Llama 3.1 8B Instruct | Decoder-only LLM | INT8 | Zero-shot + 3-shot prompting |
+| Gemma 3 4B Instruct | Decoder-only LLM | BF16 | Zero-shot + 3-shot prompting |
 
-✅ **Hardware-Aware**
-- Automatic hardware detection
-- Quantization recommendations (FP16, INT8)
-- CPU-fallback mode (slow but works)
-- Memory-efficient sequential loading
+### Models declared but skipped (consumer-GPU constraints)
 
-✅ **Complete Reporting**
-- CSV results export
-- JSON detailed results
-- Markdown summary reports
-- Speed metrics (tokens/sec)
+| Model | Reason |
+|---|---|
+| `InterstellarCG/kikuyu-translator-final` | Built on `unsloth/gemma-3n-e4b-it-unsloth-bnb-4bit` (multimodal Gemma-3n); vision/audio towers exceed VRAM headroom on dual-11 GB GPUs even with text weights at nf4. |
+| `CohereForAI/aya-101` (13 B mT5) | INT8 weights ~13 GB; CPU offload OOMs during forward pass. |
 
-## Installation
+Documented in [config/models.yaml](config/models.yaml). Treated as a finding about reproducibility for the African-NLP community, not a flaw.
 
-### Prerequisites
-- Python 3.10+
-- At least 12 GB RAM
-- Optional: GPU with 6+ GB VRAM (for faster inference)
+### Verified non-runnable (dropped from the plan)
+
+`MADLAD-400-3B/7B` — `<2kik>` resolves to `<unk>`. Confirmed via [scripts/verify_lang_support.py](scripts/verify_lang_support.py).
+
+### Test set
+
+- **GAC 500-pair test set** ([data/selectpairs500.xlsx](data/selectpairs500.xlsx)) — agricultural domain, predominantly KI-MURANGA dialect, 79/499 references contain `[cs]english_borrowing[cs]` code-switch markers.
+- Both directions evaluated: English → Gĩkũyũ and Gĩkũyũ → English.
+- 1 pair dropped for missing translation; final n = 499.
+
+### Metrics
+
+Reference-based, per [config/datasets.yaml](config/datasets.yaml):
+
+- **BLEU** via SacreBLEU (Post 2018) — secondary, surface n-gram.
+- **chrF++** with `char_order=6, word_order=2` — surface, character-level. Robust to morphology.
+- **BERTScore F1** with `bert-base-multilingual-cased` — semantic. **Disagrees with chrF++ for eng→kik** in this benchmark (Spearman ρ ≈ 0.6 vs 0.98 the other way).
+- **AfriCOMET-MTL** (`masakhane/africomet-mtl`) — primary ranking metric for African languages.
+- **Goldfish-Kikuyu perplexity** (`goldfish-models/kik_latn_full`) — fluency relative to a Kikuyu LM. Note: the LM is biblical/Wikipedia-trained, so absolute values reflect domain mismatch with the agricultural test set.
+
+Plus corpus-level linguistic metrics: TTR, hapax legomena rate, average sentence length.
+
+### Statistical analysis
+
+- **Sentence-level chrF++** computed per (model, direction) sentence — see [analysis.ipynb](analysis.ipynb).
+- **5 000-sample paired bootstrap** (Koehn 2004) for all pairwise model comparisons.
+- **95 % bootstrap CIs** on every chrF++ point estimate.
+- **Spearman correlations** between metrics across 8 model rows per direction.
+
+### Deep-dive analyses (notebook §13)
+
+Six paper-publishable findings exploit metadata that the v1.0 corpus-level pipeline left unused:
+
+| § | Analysis | Headline result |
+|---|---|---|
+| 13.1 | Diacritic F1 on `ĩ ũ Ĩ Ũ` | Only NLLB learnt Gĩkũyũ orthography (F1 0.74). Llama zero-shot = 0.15, M2M = 0.004. |
+| 13.2 | chrF++ ~ source length OLS | All 16 slopes positive — **chrF++ rewards verbosity**. |
+| 13.3 | Wrong-script + 4-gram repetition | Llama zero-shot eng→kik is 69 % English-script; Gemma 3-shot has 22 % looping 4-grams. |
+| 13.4 | Code-switching robustness | NLLB loses 5–7 chrF++ on `[cs]` strata (p < 0.001). |
+| 13.5 | Per-sentence metric agreement | chrF++ vs AfriCOMET disagree on the per-sentence winner ~60 % of the time. |
+| 14 | Synthesis + paper recommendations | Add diacritic F1 as Table 4a; report length-stratified scores; flag wrong-script rate; report chrF++ + AfriCOMET *together*. |
+
+---
+
+## Quick start
+
+### Hardware
+
+Tested on dual NVIDIA consumer GPUs (RTX 3060 12 GB + RTX 2080 Ti 11 GB) with 1.5 TB RAM and a 32-core Xeon. CPU-only mode works but is impractical for the LLMs.
 
 ### Setup
 
 ```bash
-# Clone/download the project
+git clone https://github.com/markgachara/MTBenchmarks
 cd MTBenchmarks
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Verify installation
-python test_validation.py
+uv sync                              # or: pip install -r requirements.txt
+huggingface-cli login                 # required for gated Gemma-3 / Llama-3.1
+python scripts/verify_lang_support.py # confirms tokenizers know about kik
 ```
 
-## Quick Start
-
-### 1. Run Full Benchmarking Pipeline
+### Run
 
 ```bash
+# Full benchmark (~6 hours on dual 11 GB GPUs)
 python main.py
+
+# Subset of models for fast iteration
+python main.py --models nllb_200_3_3b llama3_1_8b --dry-run    # 10 sentences
+
+# Skip expensive metrics if iterating
+python main.py --skip-bertscore --skip-africomet
 ```
 
-This will:
-- Detect your hardware
-- Load all 6 models
-- Download FLORES-200 + KevinKibe datasets (first run only)
-- Translate with both directions
-- Evaluate with all metrics
-- Generate CSV, JSON, and Markdown reports
+Run-time tips:
+- Sequential model loading is automatic; one model in VRAM at a time.
+- Cache is at `~/.cache/huggingface` (symlink to wherever you have space; we use `/work/irura/hf_cache`).
+- Aya-101 / kikuyu-translator-final are auto-skipped via `skip_on_low_memory` in the YAML; force-enable at your own peril.
 
-**Expected runtime:**
-- GPU (12GB+ VRAM): ~30-60 minutes
-- CPU-only: ~3-4 hours
-
-### 2. Benchmark Specific Models
+### Reproduce the analysis
 
 ```bash
-# Only test lightweight models
-python main.py --models nllb_200 m2m_100 seamless_m4t
-
-# Only test the Kikuyu-specific model
-python main.py --models kikuyu_translator
-
-# Only test Mistral-7B
-python main.py --models mistral_7b
+jupyter nbconvert --to notebook --execute analysis.ipynb --output analysis.ipynb
 ```
 
-### 3. Use Different Dataset Split
-
-```bash
-# Use full dev split instead of devtest (smaller)
-python main.py --eval-split dev
-
-# Skip validation dataset
-python main.py --skip-validation
-```
-
-### 4. Custom Output Location
-
-```bash
-python main.py \
-  --output-dir ./my_results \
-  --data-dir ./my_data_cache
-```
-
-## Project Structure
-
-```
-MTBenchmarks/
-├── config/
-│   ├── models.yaml           # Model specifications & registry
-│   └── datasets.yaml         # Dataset configuration
-├── scripts/
-│   ├── __init__.py
-│   ├── utils.py              # Utilities (hardware detection, config loading)
-│   ├── data_loader.py        # Dataset loading & preprocessing
-│   ├── translator.py         # Translation orchestrator
-│   ├── evaluator.py          # Metric computation
-│   ├── reporter.py           # Results aggregation & reporting
-│   └── models/
-│       ├── __init__.py
-│       ├── base.py           # Abstract model class
-│       ├── transformer_mt.py # NLLB, M2M, SeamlessM4T
-│       ├── llm_prompting.py  # Mistral models
-│       └── lora_finetuned.py # Kikuyu-Translator
-├── data/                     # Downloaded datasets (created on first run)
-├── results/                  # Output results
-├── main.py                   # Main entry point
-├── test_validation.py        # Validation tests
-├── requirements.txt          # Python dependencies
-└── README.md                 # This file
-```
-
-## Configuration
-
-### models.yaml
-Defines all 6 MT models with:
-- Model IDs and Hugging Face repositories
-- Parameter counts and download sizes
-- VRAM requirements (FP32, FP16, INT8)
-- Batch sizes and generation parameters
-- Special handling (language code formats, prompting modes)
-
-### datasets.yaml
-Specifies datasets:
-- FLORES-200 (professionals translated, 1000+ Gĩkũyũ sentences)
-- KevinKibe (crowdsourced, ~420 sentences)
-- Evaluation splits and metrics
-
-### Override via Command-line
-All paths can be overridden:
-```bash
-python main.py \
-  --models-config ./my_models.yaml \
-  --datasets-config ./my_datasets.yaml
-```
-
-## Output
-
-Results are saved to `./results/` with timestamp:
-
-### 1. CSV Results (`mt_benchmark_YYYYMMDD_HHMMSS.csv`)
-Spreadsheet-friendly format with columns:
-- `model`: Model name
-- `direction`: eng->kik or kik->eng
-- `dataset`: Dataset used (FLORES, KevinKibe)
-- `bleu`: BLEU score
-- `chrf`: ChrF score
-- `bertscore`: BERTScore (if computed)
-- `speed_tokens_per_sec`: Inference speed
-- `valid`: Whether translation succeeded
-
-### 2. JSON Results (`mt_benchmark_YYYYMMDD_HHMMSS.json`)
-Detailed results including:
-- Full metric values
-- Metric precisions (BLEU n-grams)
-- Model load times
-- Batch statistics
-
-### 3. Markdown Report (`mt_benchmark_YYYYMMDD_HHMMSS.md`)
-Human-readable summary:
-- Hardware configuration
-- Best performing models per metric
-- Speed comparison
-- Data tables
-- Notes on interpretation
-
-## Advanced Usage
-
-### Monitor GPU Memory
-
-```bash
-# In another terminal, monitor GPU usage
-nvidia-smi -l 1
-```
-
-### Profile Model Memory
-
-The pipeline automatically profiles each model's memory usage:
-```
-Loading NLLB-200 (600M Distilled)
-  Speed: 245.3 tokens/sec
-  Time: 34.21s
-```
-
-### Extend with Custom Models
-
-1. Add model definition to `config/models.yaml`
-2. Create subclass in `scripts/models/` if needed
-3. Update model factory in `scripts/translator.py`
-
-### Extend with Custom Datasets
-
-1. Add dataset config to `config/datasets.yaml`
-2. Implement loader in `scripts/data_loader.py`
-3. Ensure parallel format (source/target pairs)
-
-## Hardware Recommendations
-
-| Configuration | Expected Runtime | Setup |
-|---|---|---|
-| **CPU-only (8 cores)** | 3-4 hours | Baseline, very slow |
-| **GPU (6GB)** | 1-2 hours | Good for lightweight models only |
-| **GPU (12GB)** | 30-60 min | Ideal; can test all 6 models |
-| **GPU (24GB)** | 20-30 min | Excellent; all models with larger batches |
-
-## Troubleshooting
-
-### Out of Memory (OOM)
-```
-RuntimeError: CUDA out of memory
-```
-**Solution:**
-- Reduce batch size in `config/models.yaml`
-- Use INT8 quantization instead of FP16
-- Skip large models (Mistral-24B)
-- Use CPU-only mode
-
-### Model Download Fails
-```
-ConnectionError: Failed to download model
-```
-**Solution:**
-- Check internet connection
-- Increase HF timeout: `export HF_DATASETS_TIMEOUT=60`
-- Manually download from https://huggingface.co
-
-### Dataset Not Found
-```
-FileNotFoundError: FLORES-200 not found
-```
-**Solution:**
-- First run requires internet connection to download datasets
-- Check `./data/cache/` for partially downloaded files
-- Delete and retry
-
-## Performance Tips
-
-1. **On CPU**: Use only lightweight models (NLLB, M2M)
-2. **On GPU**: Increase batch size for better throughput
-3. **Long texts**: Reduce `max_new_tokens` in config
-4. **Quick test**: Use `--eval-split dev` (smaller dataset)
-5. **Memory critical**: Skip BERTScore (doesn't affect ranking)
-
-## Benchmarking Methodology
-
-### Metrics Interpretation
-- **BLEU** (0-100): Surface-level n-gram match. Baseline metric.
-- **ChrF** (0-100): Character-level F-score. Better for morphology.
-- **ChrF++** (0-100): ChrF with word level. Best for low-resource.
-- **BERTScore** (0-1): Semantic similarity via embeddings. Correlates with human.
-
-### Important Notes
-- Gĩkũyũ is low-resource; expect baseline scores lower than high-resource pairs
-- FLORES-200 is professional translation; high quality reference
-- Results depend on quantization (FP32 > FP16 > INT8 quality)
-- Batch size affects reproducibility; use same settings for comparison
-
-## Extending v1.0
-
-Planned features for future versions:
-- [ ] Human evaluation interface
-- [ ] Statistical significance testing
-- [ ] Domain-specific evaluations (agriculture, news, etc.)
-- [ ] Real-time serving/API
-- [ ] Multi-GPU distribution
-- [ ] Custom fine-tuning workflows
-
-## Contributing
-
-To add support for new models or datasets:
-
-1. **New Model**: Create subclass of `BaseModel` in `scripts/models/`
-2. **New Dataset**: Add loader in `scripts/data_loader.py`
-3. **New Metric**: Add to evaluator in `scripts/evaluator.py`
-4. **Update configs**: Add entries to `config/models.yaml` or `datasets.yaml`
-
-## License
-
-[Specify your license]
-
-## Citation
-
-If you use this benchmarking system, please cite:
-
-```bibtex
-@software{mtbenchmarks2026,
-  title={MT Benchmarking Pipeline for Gĩkũyũ},
-  version={1.0},
-  year={2026}
-}
-```
-
-## Support
-
-For issues, questions, or contributions:
-- Check existing documentation in this README
-- Review output logs in `./results/` 
-- Validate setup with `python test_validation.py`
-
-## References
-
-- **FLORES-200**: https://github.com/openlanguagedata/flores
-- **NLLB**: https://huggingface.co/facebook/nllb-200-distilled-600M
-- **M2M-100**: https://huggingface.co/facebook/m2m100_418M
-- **SeamlessM4T**: https://huggingface.co/facebook/seamless-m4t-medium
-- **SacreBLEU**: https://github.com/mjpost/sacreBLEU
-- **Evaluate Library**: https://huggingface.co/docs/evaluate
+This regenerates eight plots and writes `FINAL_REPORT.md` next to the most recent run.
 
 ---
 
-**Last updated**: April 2026
-**Status**: v1.0 Production Ready
+## Project layout
+
+```
+MTBenchmarks/
+├── main.py                                # entry point, CLI
+├── analysis.ipynb                         # statistical + deep-dive analysis
+├── config/
+│   ├── models.yaml                        # model registry (per-model VRAM, batch size, prompting)
+│   └── datasets.yaml                      # GAC test set + metric configuration
+├── data/
+│   └── selectpairs500.xlsx                # GAC 500-pair test set
+├── scripts/
+│   ├── data_loader.py
+│   ├── evaluator.py                       # BLEU, chrF++, BERTScore, AfriCOMET, perplexity
+│   ├── reporter.py                        # CSV + Markdown + JSON outputs
+│   ├── translator.py                      # sequential-loading orchestrator
+│   ├── verify_lang_support.py             # Phase-1 gate; checks Kikuyu token coverage
+│   └── models/
+│       ├── base.py                        # BaseModel abstract class
+│       ├── transformer_mt.py              # NLLB, M2M-100
+│       ├── llm_prompting.py               # Llama-3.1, Gemma-3, Aya-101
+│       └── lora_finetuned.py              # kikuyu-translator-final (PEFT)
+├── plans.md / tasks.md                    # implementation plan + dependency-ordered tasks
+├── EVALUATION_PLAN.md                     # original paper-alignment plan
+└── results/
+    └── benchmark_<timestamp>/
+        ├── translations/                  # per-model JSONL of (src, hyp, ref)
+        ├── metrics/                       # CSV + Markdown tables, full_metrics.json
+        ├── qualitative/                   # human assessment template (50 stratified pairs)
+        ├── *.png                          # 8 analysis plots
+        ├── report.md                      # auto-generated summary
+        └── FINAL_REPORT.md                # paper-ready writeup
+```
+
+---
+
+## Headline results (run `benchmark_20260508_063320`, 499 pairs)
+
+### Table 4 — English → Gĩkũyũ (sorted by chrF++)
+
+| Model | BLEU | chrF++ | 95 % CI | AfriCOMET | Diacritic F1 | Wrong-script |
+|---|---:|---:|---|---:|---:|---:|
+| NLLB-200 (3.3B) | 8.42 | **34.20** | [33.00, 35.45] | 0.36 | 0.73 | 0.4 % |
+| NLLB-200 (1.3B) | 6.87 | 32.91 | [31.71, 34.14] | 0.35 | 0.74 | 0.4 % |
+| NLLB-200 (600M) | 5.47 | 30.57 | [29.47, 31.71] | 0.33 | 0.74 | 0.2 % |
+| M2M-100 | 1.16 | 13.11 | [12.70, 13.54] | 0.27 | **0.004** | **100 %** |
+| Llama 3.1 (zero-shot) | 0.93 | 12.99 | [12.60, 13.40] | 0.14 | 0.15 | 68.9 % |
+| Gemma 3 (3-shot) | 0.55 | 12.61 | [12.09, 13.16] | −0.01 | 0.48 | 0.0 % |
+| Gemma 3 (zero-shot) | 0.51 | 11.75 | [11.30, 12.21] | −0.03 | 0.51 | 0.4 % |
+| Llama 3.1 (3-shot) | 0.63 | 11.58 | [11.05, 12.12] | −0.02 | 0.47 | 0.8 % |
+
+### Table 5 — Gĩkũyũ → English (sorted by chrF++)
+
+| Model | BLEU | chrF++ | 95 % CI | AfriCOMET |
+|---|---:|---:|---|---:|
+| NLLB-200 (3.3B) | 7.28 | **31.55** | [30.07, 33.03] | 0.42 |
+| NLLB-200 (1.3B) | 3.96 | 30.36 | [28.91, 31.81] | 0.39 |
+| NLLB-200 (600M) | 5.50 | 27.44 | [26.19, 28.68] | 0.31 |
+| Llama 3.1 (3-shot) | 3.20 | 18.82 | [18.07, 19.60] | 0.22 |
+| Gemma 3 (3-shot) | 2.45 | 18.40 | [17.72, 19.10] | 0.21 |
+| Gemma 3 (zero-shot) | 2.15 | 17.45 | [16.83, 18.12] | 0.16 |
+| Llama 3.1 (zero-shot) | 2.43 | 17.18 | [16.51, 17.90] | 0.19 |
+| M2M-100 | 0.43 | 10.33 | [9.96, 10.73] | **−0.26** |
+
+### Six headline findings
+
+1. **NLLB-200 dominates.** Even 600M beats every LLM by 9–18 chrF++.
+2. **NLLB scaling is real.** All five 600M→1.3B→3.3B increments significant at p ≤ 0.020 worst-case (5 000-sample paired bootstrap).
+3. **Few-shot prompting is direction-dependent and family-dependent.** Llama-3.1 eng→kik 3-shot regresses by 1.4 chrF++ (p < 0.001) — but its diacritic F1 *triples* (0.15 → 0.47).
+4. **The LLM chrF++ floor on eng→kik is hallucination, not partial competence.** Llama zero-shot is 69 % English-script; Gemma 3-shot has 22 % repeated 4-grams.
+5. **Code-switching markers cost NLLB 5–7 chrF++** (p < 0.001). LLMs show no CS sensitivity because their baseline is already at the floor.
+6. **chrF++ and AfriCOMET disagree on the per-sentence winner ~60 % of the time** (33.7 % eng→kik, 41.9 % kik→eng) despite Spearman ρ ≥ 0.95 on aggregate scores. Argues against picking a single primary metric.
+
+Full prose findings: [analysis.ipynb §12 + §14](analysis.ipynb), tables: [results/benchmark_20260508_063320/FINAL_REPORT.md](results/benchmark_20260508_063320/FINAL_REPORT.md).
+
+---
+
+## Configuration cheat sheet
+
+[config/models.yaml](config/models.yaml) entries support:
+
+```yaml
+my_model:
+  name: "Display name for tables"
+  model_id: "huggingface/repo"
+  model_type: "transformer_mt | llm_prompting | lora_finetuned"
+  parameters: 600_000_000
+  vram_fp16_gb: 1.2
+  dtype: "torch.bfloat16"
+  is_encoder_decoder: true
+  batch_size: 8
+  max_new_tokens: 256
+  num_beams: 5
+  device_map: "auto"
+  lang_code_format: "flores"   # for transformer_mt — flores | m2m
+  model_class: "gemma3"        # for llm_prompting — opt-in to Gemma3ForCausalLM
+  quantization: "int4 | int8"  # opt-in bitsandbytes
+  prompting_modes: ["zero_shot", "few_shot"]   # for llm_prompting
+  skip_on_low_memory: false
+```
+
+[config/datasets.yaml](config/datasets.yaml) declares the test set, metric configuration, and qualitative-assessment parameters.
+
+---
+
+## Development log
+
+Implementation followed a phased plan with paired bootstrap validation at every step:
+
+- **Phase 0–1**: Environment setup, [verify_lang_support.py](scripts/verify_lang_support.py) gate. **Caught MADLAD-400 unsupported before any wasted code.**
+- **Phase 2**: NLLB-200 1.3B + 3.3B (config-only).
+- **Phase 3**: Llama 3 → Llama 3.1 swap with INT8.
+- **Phase 5**: Gemma 3 4B with `model_class: gemma3` and forced-greedy decoding (Gemma's shipped `do_sample=true` collides with bnb-INT8 on Turing).
+- **Phase 6**: Goldfish-Kikuyu perplexity scoring in [evaluator.py](scripts/evaluator.py).
+- **Phase 7**: Documented kikuyu-translator-final and Aya-101 as hardware-skipped findings.
+- **Phase 8**: Full 500-pair run with sequential loading + batched LLM generation.
+- **Phase 9**: [analysis.ipynb](analysis.ipynb) end-to-end execution, eight plots, FINAL_REPORT.
+- **Phase 9b**: Six novel deep-dive analyses (diacritics, length effect, hallucination, CS robustness, metric agreement, synthesis).
+
+Branch history: `git log --oneline feature/evaluation-pipeline-alignment`. The default branch (`main`) is the v1.0 starting point.
+
+---
+
+## Citation
+
+```bibtex
+@misc{mtbenchmarks2026,
+  title  = {MT Benchmarking Pipeline for Gĩkũyũ},
+  author = {Irura, Mark},
+  year   = {2026},
+  url    = {https://github.com/markgachara/MTBenchmarks}
+}
+```
+
+## References
+
+- NLLB-200 — Costa-jussà et al. 2022, [arXiv:2207.04672](https://arxiv.org/abs/2207.04672)
+- M2M-100 — Fan et al. 2020, [arXiv:2010.11125](https://arxiv.org/abs/2010.11125)
+- Aya-101 — Üstün et al. 2024, [arXiv:2402.07827](https://arxiv.org/abs/2402.07827)
+- Llama 3.1 — Meta 2024, [meta-llama/Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)
+- Gemma 3 — Google 2025, [Gemma 3 technical report](https://goo.gle/Gemma3Report)
+- Goldfish — Chang et al. 2024, [arXiv:2408.10441](https://arxiv.org/abs/2408.10441)
+- AfriCOMET — Wang et al. 2024, [masakhane/africomet-mtl](https://huggingface.co/masakhane/africomet-mtl)
+- chrF++ / SacreBLEU — Popović 2017, Post 2018
+- Paired bootstrap test — Koehn 2004, *Statistical Significance Tests for Machine Translation Evaluation*
+
+---
+
+**Last updated**: 9 May 2026
+**Latest run**: [`benchmark_20260508_063320`](results/benchmark_20260508_063320/)
+**Current branch**: `feature/evaluation-pipeline-alignment`
