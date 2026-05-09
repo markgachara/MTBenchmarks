@@ -21,6 +21,7 @@ from transformers import AutoTokenizer
 class Check:
     name: str
     fn: Callable[[], str]  # returns a short status string on success
+    informational: bool = False  # if True, a FAIL does not affect the script exit code
 
 
 def _green(s: str) -> str:
@@ -29,6 +30,10 @@ def _green(s: str) -> str:
 
 def _red(s: str) -> str:
     return f"\033[91m{s}\033[0m"
+
+
+def _yellow(s: str) -> str:
+    return f"\033[93m{s}\033[0m"
 
 
 # ---------------------------------------------------------------------------
@@ -96,8 +101,15 @@ def check_goldfish(model_id: str) -> str:
 CHECKS: list[Check] = [
     Check("NLLB-200-1.3B",        lambda: check_nllb("facebook/nllb-200-1.3B")),
     Check("NLLB-200-3.3B",        lambda: check_nllb("facebook/nllb-200-3.3B")),
-    Check("MADLAD-400-3B",        lambda: check_madlad("google/madlad400-3b-mt")),
-    Check("MADLAD-400-7B",        lambda: check_madlad("google/madlad400-7b-mt")),
+    # MADLAD-400 is documented as verified-non-runnable for Kikuyu (the
+    # MT model has no <2kik> token despite the monolingual corpus
+    # covering 419 languages). We keep the check as informational so it
+    # serves as a regression guard — if Google ever releases a Kikuyu-
+    # capable MADLAD checkpoint, the check will start passing and we can
+    # promote it to a hard requirement. A FAIL here does not affect the
+    # script exit code.
+    Check("MADLAD-400-3B",        lambda: check_madlad("google/madlad400-3b-mt"),  informational=True),
+    Check("MADLAD-400-7B",        lambda: check_madlad("google/madlad400-7b-mt"),  informational=True),
     Check("Gemma-3-12B-IT",       lambda: check_gemma3("google/gemma-3-12b-it")),
     Check("Llama-3.1-8B-Instruct", lambda: check_llama31("meta-llama/Llama-3.1-8B-Instruct")),
     Check("Goldfish-Kikuyu",      lambda: check_goldfish("goldfish-models/kik_latn_full")),
@@ -105,7 +117,8 @@ CHECKS: list[Check] = [
 
 
 def main() -> int:
-    failures = 0
+    hard_failures = 0
+    info_failures = 0
     print(f"{'Model':<28} {'Result':<10} Notes")
     print("-" * 78)
     for c in CHECKS:
@@ -113,13 +126,23 @@ def main() -> int:
             note = c.fn()
             print(f"{c.name:<28} {_green('PASS'):<19} {note}")
         except Exception as e:  # noqa: BLE001
-            print(f"{c.name:<28} {_red('FAIL'):<19} {type(e).__name__}: {e}")
-            failures += 1
+            if c.informational:
+                tag = _yellow("INFO")
+                info_failures += 1
+            else:
+                tag = _red("FAIL")
+                hard_failures += 1
+            print(f"{c.name:<28} {tag:<19} {type(e).__name__}: {e}")
     print("-" * 78)
-    if failures:
-        print(_red(f"{failures}/{len(CHECKS)} check(s) failed"))
+    n = len(CHECKS)
+    if hard_failures:
+        print(_red(f"{hard_failures}/{n} required check(s) failed"))
+        if info_failures:
+            print(_yellow(f"{info_failures}/{n} informational check(s) failed (no exit-code effect)"))
         return 1
-    print(_green(f"All {len(CHECKS)} checks passed"))
+    if info_failures:
+        print(_yellow(f"{info_failures}/{n} informational check(s) failed (expected; not blocking)"))
+    print(_green(f"All {n - info_failures} required check(s) passed"))
     return 0
 
 

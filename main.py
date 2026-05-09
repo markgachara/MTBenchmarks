@@ -1,13 +1,20 @@
 #!/usr/bin/env python3
 """
 Gĩkũyũ MT Benchmarking Pipeline
-Evaluates 8 model configurations on the GAC 500-pair test set.
-Produces Tables 4, 5, 6 from the paper + qualitative assessment template.
+
+Evaluates 8 MT model configurations on the GAC 500-pair test set:
+NLLB-200 (600M, 1.3B, 3.3B), M2M-100, Llama 3.1 8B Instruct
+(zero-shot + 3-shot), Gemma 3 4B Instruct (zero-shot + 3-shot).
+
+Produces Tables 4 and 5 from the paper plus a qualitative-assessment
+template. Companion analysis and the deep-dive plots live in
+``analysis.ipynb``.
 
 Usage:
-    python main.py                          # Full benchmark
-    python main.py --dry-run                # 10-sentence test
-    python main.py --models nllb_200 m2m_100  # Specific models only
+    python main.py                                      # Full benchmark
+    python main.py --dry-run                            # 10-sentence test
+    python main.py --models nllb_200 m2m_100            # Specific models
+    python main.py --skip-bertscore --skip-africomet    # Cheap metrics only
 """
 import logging
 import argparse
@@ -38,11 +45,6 @@ def parse_args():
         "--models-config",
         default="config/models.yaml",
         help="Path to models config",
-    )
-    parser.add_argument(
-        "--datasets-config",
-        default="config/datasets.yaml",
-        help="Path to datasets config",
     )
     parser.add_argument(
         "--data-file",
@@ -86,7 +88,6 @@ def main():
 
     # ── 1. Load configs ──────────────────────────────────────────
     models_config = load_config(args.models_config)
-    datasets_config = load_config(args.datasets_config)
 
     # ── 2. Hardware detection ────────────────────────────────────
     hardware_info = get_hardware_info()
@@ -205,12 +206,14 @@ def main():
                             f"Invalid translations from {display_name}: {trans.get('error')}"
                         )
 
-                    # Evaluate
+                    # Evaluate (honour --skip-bertscore / --skip-africomet)
                     metrics = evaluator.compute_all_metrics(
                         predictions=trans["translations"],
                         references=target_texts,
                         sources=source_texts,
                         direction=direction,
+                        skip_bertscore=args.skip_bertscore,
+                        skip_africomet=args.skip_africomet,
                     )
                     metrics["speed"] = trans.get("speed", 0)
                     metrics["inference_time"] = trans.get("inference_time", 0)
@@ -282,10 +285,10 @@ def main():
     logger.info("=" * 60)
 
     print("\n--- Table 4: English → Gĩkũyũ ---")
-    print(eng2kik_df.to_string(index=False))
+    print(reporter._format_for_markdown(eng2kik_df).to_string(index=False))
 
     print("\n--- Table 5: Gĩkũyũ → English ---")
-    print(kik2eng_df.to_string(index=False))
+    print(reporter._format_for_markdown(kik2eng_df).to_string(index=False))
 
     logger.info(f"\nAll outputs saved to: {reporter.run_dir}")
     logger.info("Done.")

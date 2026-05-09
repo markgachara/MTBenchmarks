@@ -67,12 +67,41 @@ class LoRAFineTuned(BaseModel):
         self._use_chat_template = True
 
     def _load_with_transformers(self):
-        """Fallback: load with standard transformers."""
+        """Fallback: load base + adapter with standard transformers + PEFT.
+
+        ``self.model_id`` for kikuyu-translator-final is an *adapter*
+        repo on HuggingFace (it contains ``adapter_config.json`` and
+        ``adapter_model.safetensors`` rather than full weights), so this
+        fallback must (a) discover and load the base model declared in
+        the adapter config, and (b) call ``PeftModel.from_pretrained``
+        to merge the LoRA on top. Without (b) we would silently run the
+        base model with no fine-tuning, which is exactly the bug
+        reviewers flagged.
+        """
         from transformers import AutoModelForCausalLM, AutoTokenizer
 
-        torch_dtype = _DTYPE_MAP.get(self.dtype, torch.float16) if isinstance(self.dtype, str) else self.dtype
+        # Use the safe dtype lookup table to avoid eval() on config strings.
+        torch_dtype = (
+            _DTYPE_MAP.get(self.dtype, torch.float16)
+            if isinstance(self.dtype, str)
+            else self.dtype
+        )
+
+        # 1) Discover the base model from the adapter config.
+        base_model_id = self.config.get("base_model")
+        if not base_model_id:
+            try:
+                from huggingface_hub import hf_hub_download
+                import json
+                cfg_path = hf_hub_download(self.model_id, filename="adapter_config.json")
+                with open(cfg_path) as f:
+                    base_model_id = json.load(f).get("base_model_name_or_path")
+            except Exception as e:  # noqa: BLE001
+                logger.warning(f"Could not infer base model from adapter: {e}")
+                base_model_id = self.model_id  # last-resort: assume it's a full repo
+
         self.tokenizer = AutoTokenizer.from_pretrained(
-            self.model_id, trust_remote_code=True
+            base_model_id, trust_remote_code=True
         )
 
         load_kwargs = {
@@ -96,9 +125,25 @@ class LoRAFineTuned(BaseModel):
         else:
             load_kwargs["torch_dtype"] = torch_dtype
 
+        # 2) Load the base model.
         self.model = AutoModelForCausalLM.from_pretrained(
-            self.model_id, **load_kwargs
+            base_model_id, **load_kwargs
         )
+
+        # 3) Apply the LoRA adapter (only if base != adapter repo).
+        if base_model_id != self.model_id:
+            try:
+                from peft import PeftModel
+                self.model = PeftModel.from_pretrained(self.model, self.model_id)
+                logger.info(f"Applied LoRA adapter {self.model_id} on base {base_model_id}")
+            except ImportError:
+                logger.error(
+                    "peft is required for the transformers fallback path but is "
+                    "not installed. Without it the base model would run unfine-tuned. "
+                    "Install with `pip install peft` or use unsloth."
+                )
+                raise
+
         self._use_chat_template = hasattr(self.tokenizer, "apply_chat_template")
 
     def translate(

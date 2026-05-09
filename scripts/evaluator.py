@@ -98,6 +98,8 @@ class MTEvaluator:
         references: List[str],
         sources: Optional[List[str]] = None,
         direction: str = "kik->eng",
+        skip_bertscore: bool = False,
+        skip_africomet: bool = False,
     ) -> Dict:
         """
         Compute all available metrics.
@@ -107,6 +109,8 @@ class MTEvaluator:
             references: Human reference translations
             sources: Source texts (needed for AfriCOMET)
             direction: Translation direction string
+            skip_bertscore: If True, skip BERTScore F1 computation
+            skip_africomet: If True, skip AfriCOMET-MTL computation
         """
         if not predictions or not references:
             logger.warning("Empty predictions or references")
@@ -117,8 +121,9 @@ class MTEvaluator:
         # MT-specific metrics
         results.update(self._compute_bleu(predictions, references))
         results.update(self._compute_chrf_pp(predictions, references))
-        results.update(self._compute_bertscore(predictions, references, direction))
-        if sources:
+        if not skip_bertscore:
+            results.update(self._compute_bertscore(predictions, references, direction))
+        if sources and not skip_africomet:
             results.update(
                 self._compute_africomet(predictions, references, sources)
             )
@@ -167,11 +172,21 @@ class MTEvaluator:
     def _compute_bertscore(
         self, predictions: List[str], references: List[str], direction: str
     ) -> Dict:
-        """BERTScore F1 using bert-base-multilingual-cased."""
+        """BERTScore F1 using bert-base-multilingual-cased.
+
+        We pick the target-side ISO-639-1 code for `lang`. mBERT was not
+        trained on Kikuyu, so for kik output we fall back to ``ki`` (which
+        instructs ``bert-score`` to *not* use a language-specific
+        rescaling baseline). The model_type is fixed to mBERT to keep
+        scoring multilingual either way.
+        """
         try:
             bert_score_fn = self._get_bertscore()
-            # Use the target language side for BERTScore
-            lang = "en" if "eng" in direction.split("->")[-1] else "ki"
+            target = direction.split("->")[-1]
+            # ``bert-score`` does not have a Kikuyu rescaling baseline, but
+            # accepts unknown ISO codes and falls through to the multilingual
+            # default. ``en`` for English; ``ki`` for Kikuyu output.
+            lang = "en" if target.startswith("eng") else "ki"
             P, R, F1 = bert_score_fn(
                 predictions,
                 references,
@@ -275,10 +290,22 @@ class MTEvaluator:
     def _compute_perplexity(self, texts: List[str]) -> Optional[float]:
         """Corpus-level perplexity scored by Goldfish-Kikuyu (124M GPT-2).
 
-        Returns exp(corpus mean per-token NLL), summing total NLL across
-        sentences and dividing by total token count (paper-standard
-        formulation). Returns None on any failure or if the model is
-        unavailable.
+        Returns ``exp(corpus_mean_per_token_NLL)``, summing total NLL
+        across sentences and dividing by total scored token count
+        (paper-standard formulation).
+
+        On truncation: each sentence is truncated to the LM's
+        ``max_position_embeddings`` (= 512 tokens for this Goldfish
+        checkpoint). For our run the longest model output (Gemma-3 3-shot
+        eng->kik) averages ~26 words / sentence; even with subword
+        tokenisation that fits comfortably under 512, so the truncation
+        rate is effectively 0. We log it explicitly so future runs that
+        do trigger truncation are visible. Sliding-window scoring would
+        be the principled fix for documents that exceed 512 tokens; we
+        don't implement it here because no sentence in this benchmark
+        triggers the limit.
+
+        Returns None on any failure or if the model is unavailable.
         """
         model, tok = self._get_goldfish()
         if model is None or tok is None:
@@ -288,6 +315,7 @@ class MTEvaluator:
             device = next(model.parameters()).device
             total_nll = 0.0
             total_tokens = 0
+            truncated = 0
             max_len = getattr(model.config, "max_position_embeddings", 512) or 512
             with torch.no_grad():
                 for text in texts:
@@ -302,12 +330,19 @@ class MTEvaluator:
                     ids = enc.input_ids.to(device)
                     if ids.shape[1] < 2:  # need at least 2 tokens for next-token loss
                         continue
+                    if ids.shape[1] >= max_len:
+                        truncated += 1
                     out = model(ids, labels=ids)
                     n_tokens = ids.shape[1] - 1  # next-token prediction
                     total_nll += out.loss.item() * n_tokens
                     total_tokens += n_tokens
             if total_tokens == 0:
                 return None
+            if truncated:
+                logger.warning(
+                    f"Goldfish perplexity: {truncated}/{len(texts)} sentences truncated to "
+                    f"max_len={max_len}; consider sliding-window scoring for these inputs."
+                )
             return float(math.exp(total_nll / total_tokens))
         except Exception as e:  # noqa: BLE001
             logger.warning(f"Perplexity computation failed: {e}")

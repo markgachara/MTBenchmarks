@@ -34,6 +34,11 @@ class MTReporter:
         """
         Create a results table matching paper Table 4/5 format.
 
+        Returns a *numeric* DataFrame: missing values are stored as
+        ``None`` / ``NaN`` so that downstream pandas/R analysis can
+        treat the columns as numeric. Markdown rendering applies
+        formatting at output time only (see ``save_results``).
+
         Args:
             all_metrics: {model_display_name: metrics_dict}
             direction: e.g. "eng->kik" or "kik->eng"
@@ -45,38 +50,68 @@ class MTReporter:
             row = {
                 "Model": model_name,
                 "Direction": direction,
-                "BLEU": self._fmt(metrics.get("bleu")),
-                "chrF++": self._fmt(metrics.get("chrf_pp")),
-                "BERTScore F1": self._fmt(metrics.get("bertscore_f1"), scale=1),
-                "AfriCOMET-MTL": self._fmt(metrics.get("africomet_mtl"), scale=1),
-                "Perplexity": self._fmt(metrics.get("pred_perplexity")),
-                "TTR": self._fmt(metrics.get("pred_ttr"), scale=1),
-                "Hapax Rate": self._fmt(metrics.get("pred_hapax_rate"), scale=1),
-                "Avg Sent Len": self._fmt(metrics.get("pred_avg_sent_len")),
-                "Inference Time (s)": self._fmt(metrics.get("inference_time")),
-                "Speed (tok/s)": self._fmt(metrics.get("speed")),
+                "BLEU": metrics.get("bleu"),
+                "chrF++": metrics.get("chrf_pp"),
+                "BERTScore F1": metrics.get("bertscore_f1"),
+                "AfriCOMET-MTL": metrics.get("africomet_mtl"),
+                "Perplexity": metrics.get("pred_perplexity"),
+                "TTR": metrics.get("pred_ttr"),
+                "Hapax Rate": metrics.get("pred_hapax_rate"),
+                "Avg Sent Len": metrics.get("pred_avg_sent_len"),
+                "Inference Time (s)": metrics.get("inference_time"),
+                "Speed (tok/s)": metrics.get("speed"),
             }
             rows.append(row)
 
-        # Human reference baseline row
+        # Human reference baseline row — None for metrics that are
+        # undefined for the human reference (BLEU/chrF++ against itself).
         if human_ref_metrics:
-            ref_row = {
+            rows.append({
                 "Model": "Human Reference",
                 "Direction": direction,
-                "BLEU": "—",
-                "chrF++": "—",
-                "BERTScore F1": "—",
-                "AfriCOMET-MTL": "—",
-                "Perplexity": self._fmt(human_ref_metrics.get("human_ref_perplexity")),
-                "TTR": self._fmt(human_ref_metrics.get("human_ref_ttr"), scale=1),
-                "Hapax Rate": self._fmt(human_ref_metrics.get("human_ref_hapax_rate"), scale=1),
-                "Avg Sent Len": self._fmt(human_ref_metrics.get("human_ref_avg_sent_len")),
-                "Inference Time (s)": "—",
-                "Speed (tok/s)": "—",
-            }
-            rows.append(ref_row)
+                "BLEU": None,
+                "chrF++": None,
+                "BERTScore F1": None,
+                "AfriCOMET-MTL": None,
+                "Perplexity": human_ref_metrics.get("human_ref_perplexity"),
+                "TTR": human_ref_metrics.get("human_ref_ttr"),
+                "Hapax Rate": human_ref_metrics.get("human_ref_hapax_rate"),
+                "Avg Sent Len": human_ref_metrics.get("human_ref_avg_sent_len"),
+                "Inference Time (s)": None,
+                "Speed (tok/s)": None,
+            })
 
         return pd.DataFrame(rows)
+
+    # Per-column formatters used only when rendering Markdown / display
+    # (CSV stays numeric so pandas/R can parse the columns correctly).
+    _MARKDOWN_FORMATTERS = {
+        "BLEU": "{:.2f}",
+        "chrF++": "{:.2f}",
+        "BERTScore F1": "{:.4f}",
+        "AfriCOMET-MTL": "{:.4f}",
+        "Perplexity": "{:.2f}",
+        "TTR": "{:.4f}",
+        "Hapax Rate": "{:.4f}",
+        "Avg Sent Len": "{:.2f}",
+        "Inference Time (s)": "{:.2f}",
+        "Speed (tok/s)": "{:.2f}",
+    }
+
+    @classmethod
+    def _format_for_markdown(cls, df: pd.DataFrame) -> pd.DataFrame:
+        """Return a copy of df with numeric columns rendered as strings,
+        with ``None`` / ``NaN`` shown as ``"—"``. Used only for
+        Markdown output; CSV consumers see the numeric DataFrame."""
+        out = df.copy()
+        for col, fmt in cls._MARKDOWN_FORMATTERS.items():
+            if col not in out.columns:
+                continue
+            out[col] = out[col].apply(
+                lambda v: "—" if v is None or (isinstance(v, float) and pd.isna(v))
+                else (fmt.format(v) if isinstance(v, (int, float)) else v)
+            )
+        return out
 
     def save_results(
         self,
@@ -84,7 +119,12 @@ class MTReporter:
         direction: str,
         fmt: str = "csv",
     ) -> Path:
-        """Save results table."""
+        """Save results table.
+
+        ``fmt='csv'`` writes the *numeric* DataFrame so values are
+        machine-readable. ``fmt='markdown'`` applies display formatting
+        first so missing values render as "—" rather than "nan".
+        """
         tag = direction.replace("->", "2")
         if fmt == "csv":
             path = self.run_dir / "metrics" / f"table_{tag}.csv"
@@ -92,7 +132,7 @@ class MTReporter:
         elif fmt == "markdown":
             path = self.run_dir / "metrics" / f"table_{tag}.md"
             with open(path, "w") as f:
-                f.write(df.to_markdown(index=False))
+                f.write(self._format_for_markdown(df).to_markdown(index=False))
         else:
             path = self.run_dir / "metrics" / f"table_{tag}.json"
             df.to_json(path, orient="records", indent=2, force_ascii=False)
@@ -188,11 +228,11 @@ class MTReporter:
         lines.append("")
 
         lines.append("## Table 4: English → Gĩkũyũ\n")
-        lines.append(eng2kik_df.to_markdown(index=False))
+        lines.append(self._format_for_markdown(eng2kik_df).to_markdown(index=False))
         lines.append("")
 
         lines.append("## Table 5: Gĩkũyũ → English\n")
-        lines.append(kik2eng_df.to_markdown(index=False))
+        lines.append(self._format_for_markdown(kik2eng_df).to_markdown(index=False))
         lines.append("")
 
         path = self.run_dir / "report.md"
@@ -200,17 +240,6 @@ class MTReporter:
             f.write("\n".join(lines))
         logger.info(f"Saved report to {path}")
         return path
-
-    @staticmethod
-    def _fmt(value, scale: float = 100) -> str:
-        """Format metric value for display."""
-        if value is None:
-            return "—"
-        if isinstance(value, str):
-            return value
-        if scale == 1:
-            return f"{value:.4f}"
-        return f"{value:.2f}"
 
 
 def _json_default(obj):

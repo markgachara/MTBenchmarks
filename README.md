@@ -1,6 +1,6 @@
 # MT Benchmarking Pipeline for Gĩkũyũ
 
-Reproducible benchmark of machine-translation models on **English ↔ Gĩkũyũ**, aligned with the paper *"Benchmarking Machine Translation Models for Gĩkũyũ"* (Irura, 2026). Evaluates seven models on the 500-pair GAC agricultural test set with a multi-metric framework, statistical significance tests, and six deep-dive analyses (diacritics, length effect, hallucination, code-switching, per-sentence metric agreement).
+Reproducible benchmark of machine-translation models on **English ↔ Gĩkũyũ**, aligned with the paper *"Benchmarking Machine Translation Models for Gĩkũyũ"* (Irura, 2026). Evaluates **8 model configurations** (6 unique models, with 2 of them run in both zero-shot and 3-shot prompting modes) on the 500-pair GAC agricultural test set with a multi-metric framework, statistical significance tests, and six deep-dive analyses (diacritics, length effect, hallucination, code-switching, per-sentence metric agreement).
 
 See [results/benchmark_20260508_063320/FINAL_REPORT.md](results/benchmark_20260508_063320/FINAL_REPORT.md) for the latest run's full report (8 plots, all tables, all p-values).
 
@@ -8,7 +8,7 @@ See [results/benchmark_20260508_063320/FINAL_REPORT.md](results/benchmark_202605
 
 ## What's in the benchmark
 
-### Models evaluated (7 configurations)
+### Models evaluated (8 configurations)
 
 | Model | Type | Quantization | Notes |
 |---|---|---|---|
