@@ -1,72 +1,114 @@
 # Dataset Registry for MT Benchmarking
-# Defines all datasets used for evaluation and validation
+# Aligned with paper: GAC 500-pair test set as PRIMARY evaluation dataset
 
 datasets:
+  # PRIMARY evaluation dataset
+  gac_test:
+    name: "Gĩkũyũ Agricultural Corpus (GAC) Test Set"
+    type: "local_excel"
+    path: "data/selectpairs500.xlsx"
+    size: 500
+    source_lang: "eng"
+    target_lang: "kik"
+    columns:
+      english: "translatedText"
+      kikuyu: "data_to_quality_check"
+      dialect: "sentenceDialect"
+      id: "z"
+    description: >
+      500 human-validated parallel sentence pairs from the GAC.
+      Agricultural domain, non-religious, non-FLORES.
+      Excludes FLORES-200 sentences to avoid data leakage.
+      Predominantly KI-MURANGA dialect (477/500).
+    license: "Available upon request (Irura, 2025)"
+    domain: "agricultural"
+    notes: >
+      This is the FINAL 500-pair test set from Mark's email (11 Apr 2026).
+      Training (1600) and validation (230) splits are withheld for fine-tuning phase.
+
+  # OPTIONAL validation datasets (not primary)
   flores_200:
     name: "FLORES-200"
     type: "huggingface"
     dataset_id: "facebook/flores"
     config: "kik_Latn-eng_Latn"
     splits:
-      dev:
-        hf_split: "dev"
-        size: 997
       devtest:
         hf_split: "devtest"
         size: 1012
     source_lang: "kik_Latn"
     target_lang: "eng_Latn"
     text_field: "sentence"
-    description: "Professional multilingual benchmark with Kikuyu coverage (1000+ sentences per split)"
-    download_size_mb: 100
-    license: "CC-BY-SA 4.0"
-
-  kikuyu_kb:
-    name: "KevinKibe Kikuyu Sentence Pairs"
-    type: "huggingface"
-    dataset_id: "KevinKibe/kikuyu-sentence-pairs"
-    splits:
-      default:
-        hf_split: "train"  # Only train split available
-        size: 420
-    source_lang: "kik"
-    target_lang: "eng"
-    text_field: "text"  # May need inspection
-    description: "Small curated bilingual corpus (~420 pairs, general domain)"
-    download_size_mb: 1
-    license: "Unknown"
-    notes: "Small but clean; good for validation and sanity checks"
+    description: "Professional multilingual benchmark. NOT used as primary eval (risk of data leakage for NLLB/M2M)."
+    evaluate: false  # Excluded from primary benchmark per paper
 
 # Evaluation configuration
 evaluation:
-  primary_dataset: "flores_200"
-  validation_dataset: "kikuyu_kb"
-  split_for_eval: "devtest"  # Use devtest split from FLORES-200
-  
+  primary_dataset: "gac_test"
+
   directions:
-    - source_lang: "kik"
-      target_lang: "eng"
-      description: "Kikuyu to English"
     - source_lang: "eng"
       target_lang: "kik"
-      description: "English to Kikuyu"
+      description: "English to Gĩkũyũ"
+    - source_lang: "kik"
+      target_lang: "eng"
+      description: "Gĩkũyũ to English"
 
+  # Metric suite per paper Section 3.4
   metrics:
-    primary:
-      - "bleu"
-      - "chrf"
-      - "chrf++"
-    secondary:
-      - "bertscore"  # Requires GPU; will skip if unavailable
-    optional: []
+    # MT-specific quantitative metrics
+    mt_specific:
+      - name: "bleu"
+        library: "sacrebleu"
+        role: "secondary"
+        notes: "Standardized tokenization. Retained for comparability with broader MT literature."
+      - name: "chrf++"
+        library: "sacrebleu"
+        role: "primary_surface"
+        params:
+          char_order: 6
+          word_order: 2
+        notes: "Primary surface-level metric for morphologically agglutinative Gĩkũyũ."
+      - name: "bertscore"
+        library: "bert-score"
+        role: "secondary"
+        model: "bert-base-multilingual-cased"
+        notes: "Semantic similarity via contextual embeddings."
+      - name: "africomet_mtl"
+        library: "unbabel-comet"
+        checkpoint: "masakhane/africomet-mtl"
+        role: "primary_ranking"
+        notes: >
+          PRIMARY RANKING METRIC. Trained on human evaluation data
+          including English-Kikuyu. Spearman correlation 0.441 with human
+          judgments on AfriMTE test set.
 
-# Caching and preprocessing
+    # Corpus-level linguistic metrics
+    corpus_level:
+      - name: "perplexity"
+        notes: "Score generated Gĩkũyũ text against a language model."
+      - name: "type_token_ratio"
+        notes: "Lexical diversity. Compare model output vs human reference."
+      - name: "hapax_legomena_rate"
+        notes: "Words appearing exactly once / total unique words."
+      - name: "avg_sentence_length"
+        notes: "Mean word count + std dev per direction."
+
+  # Qualitative assessment parameters
+  qualitative:
+    sample_size: 50  # Stratified sample from 500-pair test set
+    criteria:
+      - "diacritic_accuracy"
+      - "idiomatic_appropriateness"
+      - "biblical_register_avoidance"
+      - "cultural_concept_handling"
+      - "addition"
+      - "omission"
+      - "mistranslation"
+      - "grammar"
+    scale: "1-5"  # 5 = human-reference quality
+    assessors: 2  # Two fluent Gĩkũyũ speakers
+
+# Caching
 data_cache:
   cache_dir: "./data/cache"
-  preprocess_format: "jsonl"  # JSONL format for streaming
-  keep_original: false
-  validate_parallel: true  # Ensure source and target have same length
-
-sampling:
-  validation_sample_size: 50  # Quick sanity check
-  enable_validation: true

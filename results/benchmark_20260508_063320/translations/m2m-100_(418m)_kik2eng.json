@@ -1,0 +1,2507 @@
+{
+  "model": "M2M-100 (418M)",
+  "direction": "kik->eng",
+  "num_sentences": 499,
+  "metadata": {
+    "prompting_mode": null,
+    "speed": 88.5208988109767,
+    "inference_time": 146.47388553619385
+  },
+  "sentences": [
+    {
+      "source": "Hihi ũhũthĩri rĩngĩ wa mbembe ciagethetwo no ihandwo imera irũmanĩrĩire?",
+      "translation": "Is it a wrath, or is it a wrath, or is it a wrath?",
+      "reference": "Is re-use of harvested maize for planting in successive seasons a common practice?"
+    },
+    {
+      "source": "Thomithia ũrĩmi wĩgiĩ gũthuura mbegũ wega,  mũtaganĩrie mwagĩrĩru wa mbegũ, wongereri wa mborera ona kũrĩmĩra ",
+      "translation": "Thou shalt bear, thou shalt bear, thou shalt bear, thou shalt bear, thou shalt bear, thou shalt bear",
+      "reference": "Train on good agronomic practices, that is, seed selection, correct spacing, fertilizer application and weeding."
+    },
+    {
+      "source": "Kũrĩ icigo iria ikoragwo na ũgucania mũnene wa arĩmĩ arũme na arĩmĩ atumia, mĩcemanio ya mwanya ya ithomo kana mĩbango ngũrani ya gũikara ya arĩmĩ arũme na arĩmĩ atumia nĩ yagĩrĩirũo kũrũmagĩrĩrũo.",
+      "translation": "Thro the world, it is the world, and it is the world, and it is the world, and it is the world, and it is the world, and it is the world, and it is the world, and it is the world, and it is the world, and it is the world.",
+      "reference": "Regions where gender dynamics is pronounced, separate training sessions or seating arrangements of male and female farmers should be adhered to."
+    },
+    {
+      "source": "na mĩtugo ya ũrĩmi ĩrĩa ĩhũthagĩrwo  matũũrainĩ mao.",
+      "translation": "And the wicked wicked wicked wicked wicked.",
+      "reference": "and agronomic practices used in their villages."
+    },
+    {
+      "source": "Mĩthemba mĩega ya mbegũ na ĩrĩa yagĩrĩire nĩ ĩri bata harĩ gũkũria mĩmera mĩega ĩtangĩgũmĩrwo nĩ mĩrimũ kana waagi wa mbura ",
+      "translation": "The Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, and the Americans.",
+      "reference": "Good quality and appropriate seed varieties are essential for the growth of strong and healthy crops that are resistant to diseases and even drought."
+    },
+    {
+      "source": "Ciũria cia gũtaara: Nĩkĩi harĩ bata kũhũthĩra mbegũ mĩthemba ĩrĩa yagĩrĩire?",
+      "translation": "He said, “Who is the one who gives righteousness to the wicked?”",
+      "reference": "Prompting questions: Why is it important to use appropriate seed variety?"
+    },
+    {
+      "source": "Mĩgũnda ya kũgereria nĩ ĩgũteithĩrĩria gũthuura mbegũ cia mbembe iria ĩrĩhũthagĩrwo.",
+      "translation": "Thus, the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers.",
+      "reference": "Demo plots will facilitate in selection of maize seed varieties to be adopted."
+    },
+    {
+      "source": "Haha mũhuro nĩ ciũria imwe iria [cs] technical adviser [cs]  angĩũria [cs]VBA [cs]  nĩguo amenye ũrĩa ũrĩmi ũratwarithio mĩgũndainĩ gicigo kĩu",
+      "translation": "He is the one who gives righteousness, and he is the one who gives righteousness, and he is the one who gives righteousness, and he is the one who gives righteousness, and he is the one who gives righteousness.",
+      "reference": "Below are a number of questions which the technical adviser can ask the VBAs in order to get an overview of contemporary agricultural practices in the area."
+    },
+    {
+      "source": "Maumĩrĩra ma gĩthomo: kũmenya bata wa kuhũthĩra mĩthemba ya mbegũ iria ciagĩrĩire\n",
+      "translation": "Thus, the righteous are the righteous; the righteous are the righteous; the righteous are the righteous; the righteous are the righteous.",
+      "reference": "Learning outcomes: Understand the importance of using the appropriate seed variety."
+    },
+    {
+      "source": "Wandĩkithia wa nyũmba  o nyũmba  wa andũ arĩa marigainie",
+      "translation": "Sunset of marine or marine.",
+      "reference": "Door-to-door registration of their neighbours."
+    },
+    {
+      "source": "Maumĩrĩra ma gĩthomo: kũhanda kwĩmenyeria  mĩtugo ya ũrĩmi ĩrĩa ĩ kuo ",
+      "translation": "Those who are the worshippers, the worshippers, the worshippers, the worshippers, the worshippers, the worshippers.",
+      "reference": "Learning objectives: establish the existing agronomic practices."
+    },
+    {
+      "source": "  Mũtaganĩrie wa rĩu nĩ ũrĩkũ? ",
+      "translation": "What is the righteous righteous?",
+      "reference": "What is the current spacing?"
+    },
+    {
+      "source": "Mbegũ ĩtarĩ cia ũndũire ĩhandagwo icigo itiganĩte ũraihu wa igũrũ na thĩ hamwe na mũigana wa mbura",
+      "translation": "Those who are in the midst of the covenant, and those who are in the midst of the covenant, and those who are in the midst of the covenant, and those who are in the midst of the covenant.",
+      "reference": "Hybrid seeds are usually area-specific since different places have different altitude and rainfall conditions."
+    },
+    {
+      "source": "ngarama ya ũcenjia wa rĩera ũrĩmi-inĩ ũtarĩirwo gũkorwo ũrĩ   gĩcunjĩ kĩa igĩrĩ tũrũmo ithathatũ kwa igana ya ũtonga wa Kenya (GDP)",
+      "translation": "In fact, it’s not enough to say that it’s a good thing to say, it’s a good thing to say, it’s a good thing to say, it’s a good thing to say, it’s a good thing to say, it’s a good thing to say, it’s a good thing to say, it’s a good thing to say, it’s a good thing to say.",
+      "reference": "The economic costs of climate change on agriculture are estimated at 2.6% of GDP."
+    },
+    {
+      "source": "Ũrĩmi bũrũri wa Kenya nĩ mũnene na nĩwongagĩrĩra ũkũria wa ũtonga wa bũrũri (GDP)",
+      "translation": "The U.S. Air Force (U.S. Air Force, U.S. Air Force, U.S. Air Force, U.S. Air Force, U.S. Air Force, U.S. Air Force, U.S. Air Force, U.S. Air Force, U.S. Air Force, U.S. Air Force)",
+      "reference": "Agriculture in Kenya dominates the economy, contributing significantly to GDP."
+    },
+    {
+      "source": "Ikundi cia ũrĩmi nĩirutaga wĩra wa bata harĩ ũkũria wa matũra bũrũriinĩ wa Kenya ",
+      "translation": "A group of Cia Ar-Rahmi rejects a large battalion of aristocracy in Kenya",
+      "reference": "Agricultural cooperatives play a significant role in Kenya’s rural economy."
+    },
+    {
+      "source": "Ngwatanĩro cia arĩmi a kauntĩ nĩmarahũkĩte kwendia magetha hamwe.",
+      "translation": "Thus, he is the one who gives righteousness to the wicked, and he is the one who gives righteousness to the wicked.",
+      "reference": "The county’s farmers are actively involved in cooperative societies to market their produce."
+    },
+    {
+      "source": "ũigi mwega  wa magetha thitooinĩ nĩũgiragĩrĩria mathũke matanendio",
+      "translation": "The wicked wicked wicked wicked wicked wicked wicked",
+      "reference": "Proper storage methods help prevent farm produce from spoiling before reaching the market."
+    },
+    {
+      "source": "Mborera nĩnoragia tĩĩri harĩ ũkũria wa karati ",
+      "translation": "The Greek Greek Greek Greek Greek Greek Greek Greek Greek",
+      "reference": "Organic matter improves soil structure for carrots."
+    },
+    {
+      "source": "\nMĩgũnda  ya Nyandarua kũrĩa  kũhandagwo mboga mĩthemba na mĩthemba  \n  nĩiri nyũmba nyĩngĩ  iria cigaga ũrugarĩ, heho,  maaĩ  na kũgitĩra tũtambi \n",
+      "translation": "And the wicked, and the wicked, and the wicked, and the wicked, and the wicked, and the wicked, and the wicked, and the wicked, and the wicked.",
+      "reference": "Nyandarua’s agricultural landscape is dotted with greenhouses growing a variety of vegetables."
+    },
+    {
+      "source": "No mũhaka arĩmi marũmĩrĩre mawatho ma ũgitĩri wa irio kũri wendia wa karati",
+      "translation": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no.",
+      "reference": "Farmers must comply with food safety regulations for carrot sales."
+    },
+    {
+      "source": "ũrĩmi nĩũrathogwo nĩ ũcenjia wa rĩera na ũrĩmĩ wĩhocĩtie mbũra mũno",
+      "translation": "He is the one who gives righteousness, and he is the one who gives righteousness, and he is the one who gives righteousness.",
+      "reference": "Kenya’s agricultural sector faces challenges like climate change and overreliance on rain-fed farming."
+    },
+    {
+      "source": "kũhe mahiũ irio hĩndĩ ciothe na ũmenyereri mwega nĩũtũmaga mahiu magie na ũgima mwega wa mwĩrĩ na kũgia maciaro mega.",
+      "translation": "Through the heavens of the heavens of the heavens of the heavens of the heavens of the heavens of the heavens of the heavens of the heavens of the heavens of the heavens of the heavens of the heavens of the heavens.",
+      "reference": "Regular feeding and care of livestock ensure animals remain healthy and productive."
+    },
+    {
+      "source": "Kabici yendaga ũrugarĩ  wa  centigrade ikũmi na ithano nginya mĩrongo ĩrĩ.",
+      "translation": "The covenant of the covenant of the covenant of the covenant of the covenant of the covenant of the covenant of the covenant.",
+      "reference": "Cabbage prefers temperatures between 15°C and 20°C."
+    },
+    {
+      "source": "Kũgitĩra mĩmera kuumana na mĩrimũ na tũtambi nĩ  ũndũ wa bata harĩ kũgaacĩra magetha.",
+      "translation": "Thus, we will be able to bring the righteous and the righteous and the righteous and the righteous and the righteous and the righteous and the righteous and the righteous.",
+      "reference": "Protecting crops from pests and diseases is essential for a successful harvest ."
+    },
+    {
+      "source": "Arĩmi nĩ mabataraga kũingĩra thoko-inĩ cia bũrũri na cia mabũrũri ma nja nĩguo mahote kwendia magetha mao.",
+      "translation": "The Armed Forces (Armed Forces) are the Armed Forces (Armed Forces) and the Armed Forces (Armed Forces) are the Armed Forces (Armed Forces) and the Armed Forces (Armed Forces) are the Armed Forces (Armed Forces) and the Armed Forces (Armed Forces).",
+      "reference": "Farmers need enter to local and international markets to sell their harvested produce."
+    },
+    {
+      "source": "Mũgũnda mũtheru  nĩ ũgitagĩra mahiũ kuumana na mĩrimũ.",
+      "translation": "Those who are in the midst and in the midst and in the midst and in the midst and in the midst.",
+      "reference": "A clean farm keeps livestock safe from diseases."
+    },
+    {
+      "source": "Arĩmi nĩmagitagĩra mahiũ   kuumana na mĩrimũ nĩ kũmaiga marĩa matheru.",
+      "translation": "And the army, and the army, and the army, and the army, and the army, and the army, and the army, and the army, and the army, and the army.",
+      "reference": "Farmers protect livestock from diseases by keeping them clean."
+    },
+    {
+      "source": "Tũhaandaga mbegũ hĩndĩ ya mbura nĩguo ikũre wega na tũgĩe na magetha mega.",
+      "translation": "Let us bring the grain of the grain of the grain of the grain of the grain of the grain of the grain of the grain of the grain of the grain of the grain of the grain of the grain.",
+      "reference": "We plant our seeds during the rainy season to ensure good growth and harvest."
+    },
+    {
+      "source": "Arĩmi a kaunti  nĩmararĩma  makĩhũthĩra mũno thumu wa gũtũria tĩri.",
+      "translation": "And it is the mountains, and the mountains, and the mountains, and the mountains, and the mountains.",
+      "reference": "The county’s farmers are increasingly using organic fertilizers to maintain soil health."
+    },
+    {
+      "source": "Arĩmi magethaga irio hĩndĩ ya riũa rĩrĩa mĩgũnda ĩrĩ mĩũmũ.",
+      "translation": "And he will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one.",
+      "reference": "Farmers harvest their crops during the dry season when the fields are dry."
+    },
+    {
+      "source": "Rĩera rĩega  riũa na mbura nĩ iteithagia arĩmi kũgĩa na magetha maingĩ.",
+      "translation": "It is a righteous righteous righteous righteous righteous righteous righteous righteous righteous.",
+      "reference": "Good weather conditions, including sunshine and rain, help farmers produce abundant crops."
+    },
+    {
+      "source": "Ũrĩmi Kenya  wĩ bata harĩ ũkũria wa bũrũri na ũgitĩri wa wagi wa irio.",
+      "translation": "It is the worship of the righteous, the worship of the righteous, and the worship of the righteous.",
+      "reference": "Kenya’s agricultural sector is crucial for national development and food security."
+    },
+    {
+      "source": "Thũmũ ya mahiũ nĩ ũteithagia mũgũnda gũkũria magetha mega.",
+      "translation": "Thus, the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers.",
+      "reference": "Cattle manure helps the field to grow good crops."
+    },
+    {
+      "source": "Arĩmi a ngũkũ marĩithagia  ngũkũ nĩũndũ  wa matũmbi marĩa mendagia thokoinĩ.",
+      "translation": "He is the one who gives righteousness to the righteous; he is the one who gives righteousness to the righteous.",
+      "reference": "Farmers raise chickens for eggs, which they sell in the market."
+    },
+    {
+      "source": "Mũrĩmi nĩakamaga iria rĩingĩ rĩrĩa ng’ombe ĩhũnĩte. ",
+      "translation": "And I will give it to the wicked, to the wicked, to the wicked.",
+      "reference": "A well-fed cow produces more milk for the farmer."
+    },
+    {
+      "source": "Rĩera rĩega na ũteithio wa thirikari nĩũgacĩrĩirie  maciaro ũrĩminĩ  bũrũri wa Kenya. ",
+      "translation": "The Greek and Turkish armed forces are in the midst of Kenya.",
+      "reference": "Favorable weather and government subsidies have boosted agricultural productivity in Kenya recently."
+    },
+    {
+      "source": "Kurima makũniainĩ nĩkũhotithagia mũrĩmi gũkũria karati handũ harĩ mwaramo mũnini.",
+      "translation": "Thus, the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers.",
+      "reference": "Container gardening allows for growing carrots in limited spaces."
+    },
+    {
+      "source": "kabici ndumanu nocigũmĩrwo nĩ mĩrimũ.",
+      "translation": "They are the worshippers of the Americans.",
+      "reference": "Crowded cabbage heads are more prone to diseases."
+    },
+    {
+      "source": "Kaingĩ arĩmi nĩ mendagia magetha marĩa matigarĩte thoko-inĩ cia hakuhĩ  nĩguo magĩe mbeca nyingĩ.",
+      "translation": "The British army did not think of the British army, but the British army did not think of the British army.",
+      "reference": "Farmers often sell surplus crops in local markets to earn income"
+    },
+    {
+      "source": "Ngũkũ iheanaga matumbi na nyama iria irĩ bata irio inĩ cia bamĩrĩ.",
+      "translation": "It is the food and the food of the Iranian and the Iranian and the Iranian.",
+      "reference": "Chickens provide eggs and meat, important for family meals."
+    },
+    {
+      "source": "Ũtheri wa riũa ũheaga mĩmera hinya ũrĩa ũbataranagia nĩguo ithondeke irio na ikũre.",
+      "translation": "Thus, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, and the righteous.",
+      "reference": "Sunlight provides plants with energy, which is necessary for photosynthesis and growth."
+    },
+    {
+      "source": "Arĩmi nĩmakaga ngiri nũmu  nĩ kũgitĩra mahiũ kuumana  na nyamũ cia gĩthaka.",
+      "translation": "And I put him in the shadow, and he put him in the shadow, and he put him in the shadow, and he put him in the shadow.",
+      "reference": "Farmers build strong fences to protect livestock from wild animals."
+    },
+    {
+      "source": "Kenya nĩtongorĩtie harĩ ũrimi wa cai na kahũa, ũrĩa ũri bata harĩ ũkũria wa bũrũri.",
+      "translation": "The kingdom of the kingdom of the kingdom of the kingdom of the kingdom of the kingdom of the kingdom of the kingdom of the kingdom of the kingdom of the kingdom of the kingdom of the kingdom of the kingdom of the kingdom of the kingdom.",
+      "reference": "Kenya is a leading producer of tea and coffee, vital for its economy."
+    },
+    {
+      "source": "Nyamũ irĩ ũgima mwega wa mwĩrĩ nĩ ibataraga maĩ matheru na irio cia kũigana o mũthenya.",
+      "translation": "The Iranian armed forces of the Iranian armed forces of the Iranian armed forces of the Iranian armed forces of the Iranian armed forces of the Iranian armed forces of the Iranian armed forces of the Iranian armed forces of the Iranian armed forces of the Iranian armed forces.",
+      "reference": "Healthy animals need clean water and enough food every day."
+    },
+    {
+      "source": "Ũrĩmi nĩ ũheaga andũ wĩra, na makĩria icagi-inĩ kũrĩa ũrĩmi nĩ mũingĩ.",
+      "translation": "He is the great one, and he is the great one, and he is the great one, and he is the great one, and he is the great one.",
+      "reference": "Agriculture creates employment opportunities, especially in rural areas where farming is common."
+    },
+    {
+      "source": "Ng'ombe nĩ iheaga arĩmi iria na nyama cia kũrĩa na kwendia.",
+      "translation": "The cabbage is the cabbage, and the cabbage is the cabbage, and the cabbage is the cabbage.",
+      "reference": "Cows provide milk and meat for the farmers to consume and sell."
+    },
+    {
+      "source": "Rũhonge rwa ũrĩmi Kenya nĩrũrahĩmbĩria ũrĩmi na matanya ma kĩrĩu.",
+      "translation": "Thus, the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship.",
+      "reference": "Kenya’s agricultural sector is adapting to new challenges and opportunities."
+    },
+    {
+      "source": "ũkũria wa cai Kenya ũtigarĩtĩ ũri gĩcangĩro kĩnene hari indo iria ciendagio na nja cia ũrĩmi",
+      "translation": "I am the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness.",
+      "reference": "Kenya’s tea production remains a major contributor to its agricultural exports."
+    },
+    {
+      "source": "ũcenjia wa rĩera nĩ ũrehaga mathĩna ũrĩmi-inĩ",
+      "translation": "And the righteous, the righteous, the righteous,",
+      "reference": "Climate change poses significant challenges to Kenya’s agricultural sector."
+    },
+    {
+      "source": "Arĩmi mendagia mahiũ nĩguo mone mbeca cia kũgũra indo ingĩ cia ũremi.",
+      "translation": "And they will see him, and they will see him, and they will see him, and they will see him, and they will see him, and they will see him.",
+      "reference": "Farmers sell livestock to make money for other farm needs."
+    },
+    {
+      "source": "Ruhonge rwa ũrimi  Nyandarua   nĩ  ũri   bata mũno nĩũndũ wa  gũtigĩrĩra atĩ kwĩna irio ciakũigana Kenya",
+      "translation": "I will be able to give you a lot of money, and you will be able to give you a lot of money, you will be able to give you a lot of money, you will be able to give you a lot of money, you will be able to give you a lot of money, you will be able to give you a lot of money.",
+      "reference": "Nyandarua’s agricultural sector plays a crucial role in ensuring food security in Kenya."
+    },
+    {
+      "source": "Arĩmi  maciarithanagia mahiu nigetha maagirie mahiu.",
+      "translation": "And he will not be able to do so, and he will not be able to do so.",
+      "reference": "Farmers breed strong animals to improve livestock quality."
+    },
+    {
+      "source": "ũkũria wa macani  Kenya wakinyire tani ngiri magana matano mwaka wa ngiri igĩrĩ na ikũmi na inyanya.",
+      "translation": "Five years ago, the people of Kenia wrecked five tons of straw in the summer of the year, and they wrecked and wrecked.",
+      "reference": "Kenya’s tea production reached 500 thousand tons in 2018."
+    },
+    {
+      "source": "Rũhonge rwa ũrĩmi  Kenya  nĩ ũraiyũkia teknoronji  njerũ na ũrĩmi wa kĩrĩu ",
+      "translation": "Rise of Kenya's rise of the Chinese rise of the Chinese rise of the Chinese rise of the Chinese rise of the Chinese rise",
+      "reference": "Kenya’s agricultural sector is adapting to new technologies and practices."
+    },
+    {
+      "source": "Bũrũri nĩ ũkoretwo na mathĩna ũhoro ũkoniĩ  ũrĩmi nĩũndũ wa ũnyihu wa mĩgũnda.",
+      "translation": "Thus, the wicked, and the wicked, and the wicked, and the wicked, and the wicked, and the wicked, and the wicked, and the wicked.",
+      "reference": "The country faces challenges in agricultural productivity due to limited arable land."
+    },
+    {
+      "source": "Bũrũri niguo wa gatatũ ũtongoragia  hari wendia wa maciaro thĩ yothe ",
+      "translation": "I am the one who gives righteousness, the one who gives righteousness, the one who gives righteousness.",
+      "reference": "The country is the third-leading exporter of fresh produce globally."
+    },
+    {
+      "source": "Arĩmi no mũhaka mamenyerere mahiũ matikanyitwo nĩ mĩrimũ.",
+      "translation": "Therefore, there is no such thing as the righteous, the righteous, the righteous, the righteous.",
+      "reference": "Farmers must watch animals closely to see if they are sick."
+    },
+    {
+      "source": "Mahiũ no marehe  ũtonga  rĩrĩa mendio thokoinĩ.",
+      "translation": "Those who are not in the midst of the wrath are the wrath of the wrath.",
+      "reference": "Livestock can provide income when sold at the market."
+    },
+    {
+      "source": "Rũhonge rwa ũrĩmi nĩrwabata harĩ ũthii wa nambere na kũnyihia ũkĩa Kenya.",
+      "translation": "I will be able to make a great deal of greetings and a great deal of greetings and a great deal of greetings.",
+      "reference": "Kenya’s agriculture sector is crucial for rural development and poverty reduction."
+    },
+    {
+      "source": "Arĩmi nĩ mandikaga  rekondi cia mahiũ  nigetha  mamenye ũrĩa mahiu marakũra na ũgima.",
+      "translation": "The Armed Forces (the Armed Forces) are the Armed Forces (the Armed Forces) and the Armed Forces (the Armed Forces) and the Armed Forces (the Armed Forces).",
+      "reference": "Farmers keep records of livestock to track their growth and health."
+    },
+    {
+      "source": "Kumenyerera  mahiũ wega nĩ gũteithagia arĩmi kũongerera ũtonga.   ",
+      "translation": "And they will be able to bring them to the ground, and they will be able to bring them to the ground.",
+      "reference": "Good care of livestock helps increase farm income."
+    },
+    {
+      "source": "\nMaciaro ma mĩgunda kuuma Kenya marĩa mendagio  mũno mabũrũri ma nja nĩ macani, kahũa,  mahũa na mĩthemba ya  mboga\n",
+      "translation": "Maciaro ma mergunta sends Kenya mergain mergain mergain mergain mergain mergain mergain mergain mergain mergain mergain mergain",
+      "reference": "Kenya’s major agricultural exports include tea, coffee, cut flowers, and vegetables."
+    },
+    {
+      "source": "Rũhonge rwa iria Kenya nĩrũmwe rwa marĩa manene (cs) Sub-Saharan Afrika",
+      "translation": "Rhinoplasty rhinoplasty rhinoplasty rhinoplasty rhinoplasty rhinoplasty rhinoplasty rhinoplasty rhinoplasty",
+      "reference": "Kenya’s dairy sector is one of the largest in sub-Saharan Africa."
+    },
+    {
+      "source": "Thirikari  nĩ  ĩrambatĩria ũrimi wa maĩ nĩũndũ wa kũnyihia kwĩhoka ũrĩmi wa mbura.",
+      "translation": "Thro the world, the people of the north (the north) are the people of the north (the north) and the people of the north (the north).",
+      "reference": "The government is promoting irrigation to reduce dependence on rain-fed agriculture."
+    },
+    {
+      "source": "ũrĩmi nĩguo  wĩra ũrĩa mũnene na nĩ wandĩkĩte andũ mĩrongo mũgwanja harĩ igana Kenya.",
+      "translation": "They are the worshippers, and they are the worshippers, and they are the worshippers, and they are the worshippers, and they are the worshippers.",
+      "reference": "Agriculture is the backbone of Kenya’s economy, employing 70% of the rural population."
+    },
+    {
+      "source": "Kenya niyo ĩtongoretie harĩ ũkũria wa macani, kahũa na mboga mĩthema mĩthemba.",
+      "translation": "It is the land of the land, the land of the land, the land of the land, the land of the land, the land of the land, and the land of the land.",
+      "reference": "Kenya is a leading producer of tea, coffee, and fresh vegetables."
+    },
+    {
+      "source": "Thirikari nĩirambatĩrĩria ũrĩmi  mwega nĩguo kũgitĩra marĩa matũrigicĩirie.",
+      "translation": "Thro the world, there is a righteous righteousness, and there is a righteousness, and there is a righteousness.",
+      "reference": "The government is promoting agricultural practices to protect the environment."
+    },
+    {
+      "source": "Karati nĩ ibataraga ũtheri wa riũa mũthenya wothe nĩguo ĩgĩe na mĩri mĩega.",
+      "translation": "He will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one.",
+      "reference": "Carrots need sunlight all day to grow strong and produce good roots."
+    },
+    {
+      "source": "Thirikari nĩĩranyitĩrĩra ikundi cia ũrĩmi nĩgetha  kũongerereke  maciaro ma arĩmi",
+      "translation": "Thus, the people of Israel, who are in the midst of the covenant, and who are in the midst of the covenant, are in the midst of the covenant.",
+      "reference": "The government is supporting agricultural cooperatives to enhance farmer productivity."
+    },
+    {
+      "source": "Arĩmi anini Kenya makũragia mbembe, mboco, waru na marigu.",
+      "translation": "The army belongs to Kenya for the cattle, boko, waru and marigu.",
+      "reference": "Small-scale farmers in Kenya grow maize, beans, potatoes, and bananas."
+    },
+    {
+      "source": "Rũhonge rwa iria rũcangagĩra gĩcunje kĩa inya harĩ igana ya ũtonga wa Kenya  [cs](GDP).",
+      "translation": "The country’s economic growth has increased significantly since the country’s economic growth has increased (GDP).",
+      "reference": "The dairy sector contributes 4% to Kenya’s GDP."
+    },
+    {
+      "source": "Thirikari nĩraigithia ũrĩmi-inĩ wa maĩ kwambatĩria maciaro ma ũrĩmi",
+      "translation": "Through the righteousness of the righteous, the righteousness of the righteous,",
+      "reference": "The government is investing in irrigation to boost agricultural production."
+    },
+    {
+      "source": "kabici yendaga   riũa nĩguo  ĩkũre wega.",
+      "translation": "And the wicked wicked wicked.",
+      "reference": "Cabbage needs full sunlight for proper growth."
+    },
+    {
+      "source": "mbegũ cia kabici ciamambaga kuhurwo.",
+      "translation": "I will be able to give up the covenant.",
+      "reference": "Cabbage seeds are sown in seedbeds first."
+    },
+    {
+      "source": "Ongerera thũmũ mũgũnda-inĩ nĩ ũndũ wa gũteithĩrĩria karati gũkũra na ũgima mwega.",
+      "translation": "Through the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "Add compost to the soil to help carrots grow larger and healthier."
+    },
+    {
+      "source": "Ona mĩgũnda mĩnini Kenya nĩkũragia mboco, minji, na biribiri",
+      "translation": "The Americans of Kenya are sheltered by the mountains, the mines, and the bears.",
+      "reference": "Small farms in Kenya also produce beans, peas, and chillies."
+    },
+    {
+      "source": "Kũhumbĩra tĩri na mahuti gũteithagia kũiga ũgunyu.",
+      "translation": "And they are in the midst and in the midst and in the midst and in the midst.",
+      "reference": "mulching helps to retain soil moisture."
+    },
+    {
+      "source": "Iga kabici  handũ hatarĩ  na urugari   nĩgetha ciikarange itagũthũka.",
+      "translation": "It is a danger, and it is a danger, and it is a danger, and it is a danger.",
+      "reference": "Store cabbage in cold storage for longer freshness."
+    },
+    {
+      "source": "Thirikari nĩraendekithia ũthuthuria wa ũrĩmi kwagĩria maciaro",
+      "translation": "The Covenant of the Covenant of the Covenant of the Covenant",
+      "reference": "The government is promoting agricultural research to enhance productivity."
+    },
+    {
+      "source": "Gũitĩrĩria maĩ wega gũtũmaga kabici  ĩkorwo cĩganaine.",
+      "translation": "Thus, the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers.",
+      "reference": "Proper irrigation ensures healthy, uniform cabbage heads."
+    },
+    {
+      "source": "Mĩthemba ĩrĩa ĩkũrangaga nĩĩteithagia kũrĩra rĩera rĩũru.",
+      "translation": "Those who are in the midst of the covenant are in the midst of the covenant, and they are in the midst of the covenant.",
+      "reference": "Early maturing varieties help avoid harsh weather conditions."
+    },
+    {
+      "source": "Arĩmi mongagĩrĩra thumu  nĩguo kwongerera maciaro ma kabici.",
+      "translation": "He is the one who gives the worship of the worship of the worship of the worship.",
+      "reference": "Farmers add manure to boost cabbage yields."
+    },
+    {
+      "source": "Karati nĩikoragwo na bitameni nyingĩ  cia A na K.",
+      "translation": "A and C are the English and the English and the English.",
+      "reference": "Carrots are rich in vitamins A and K."
+    },
+    {
+      "source": "Riia rĩhĩtahĩtanaga gũtunya mĩmera [cs]nutrients[cs] na maĩ ",
+      "translation": "The righteous righteous righteous righteous righteous righteous righteous",
+      "reference": "Weeds can compete with crops for nutrients and water."
+    },
+    {
+      "source": "gũitĩrĩria maĩ nĩ kũri bata hĩndĩ ĩrĩa kwarĩte.",
+      "translation": "Thus, the righteous are the righteous, the righteous, the righteous, the righteous.",
+      "reference": "Irrigation is crucial during dry periods"
+    },
+    {
+      "source": "gũcenjania mĩmera kũnyihagia ũgwati wa mĩrimũ na tũtambi.",
+      "translation": "Thus, the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship.",
+      "reference": "Crop rotation reduces the risk of disease and pest."
+    },
+    {
+      "source": "ũrugarĩ mũingĩ no ũtũme   kabici ciatũke.",
+      "translation": "It is not in the midst of the covenant, and it is in the midst of the covenant.",
+      "reference": "Too much heat can cause cabbage heads to crack."
+    },
+    {
+      "source": "Irio ithondeketwo igereirio maciniinĩ ta mai na irio cia mĩkebe",
+      "translation": "Iris is a man, and Iris is a man, and Iris is a man.",
+      "reference": "Processed forms include juices and canned products."
+    },
+    {
+      "source": "no ũhũthĩre thumu wa mĩmera ũrĩminĩ wa kabici.",
+      "translation": "And not to the wicked wicked wicked wicked.",
+      "reference": "Also use green manures for cabbage farming."
+    },
+    {
+      "source": "Getha kabici rũcinĩ tene.",
+      "translation": "Give it a twin-thirds.",
+      "reference": "Harvest cabbage early in the morning."
+    },
+    {
+      "source": "No ũhande karati na njĩra ya kũhura kana kũhanda tũmĩmera twahurĩtwo.  ",
+      "translation": "We are not in the shadows of the shadows, but in the shadows of the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "You can plant carrots either by sowing seeds straight into the soil, or transplant seedlings that were started in another location."
+    },
+    {
+      "source": "Karati igethagwo na gũcigũcia kahora kuma tĩriinĩ.",
+      "translation": "It is the wrath and the wrath, and the wrath, and the wrath.",
+      "reference": "Carrots are harvested by gently pulling from the soil."
+    },
+    {
+      "source": "Nĩ ciendaga ũgunyu mũingĩ hĩndĩ ĩrĩa irakũra.",
+      "translation": "And I will give you the righteous righteous righteous.",
+      "reference": "They requires consistent moisture during the growing season."
+    },
+    {
+      "source": "Getha kabici yakũra wega",
+      "translation": "Give a little bit of it.",
+      "reference": "Harvest cabbage when heads are firm."
+    },
+    {
+      "source": "Thumu nĩ wongagĩrĩra ũnoru wa tĩri ũrĩminĩ wa kabici.",
+      "translation": "Thus, it is the worship of the righteous, the worship of the righteous.",
+      "reference": "Compost improves soil fertility for cabbage farming."
+    },
+    {
+      "source": "Arĩmi mahũthagĩra dawa kũingata tũtambi.",
+      "translation": "He is the wicked, the wicked, the wicked.",
+      "reference": "Farmers use organic pesticides to control pests."
+    },
+    {
+      "source": "Kũhanda ihinda rĩrĩa rĩagĩrĩire kũrehaga maciaro maingĩ.",
+      "translation": "It is a great deal of a great deal of a great deal of a great deal of a great deal of a great deal of a great deal of a great deal of a great deal.",
+      "reference": "Well-timed planting leads to higher yields."
+    },
+    {
+      "source": "Getha karati rĩrĩa ciakũra.",
+      "translation": "Give you a lot of money.",
+      "reference": "Harvest carrots when they reach desired size."
+    },
+    {
+      "source": "Ciendaga ũgunyu hĩndĩ ĩrĩa   irakũra.",
+      "translation": "And I will give you the righteous righteous.",
+      "reference": "They require consistent moisture throughout their growth."
+    },
+    {
+      "source": "Bataraitha ĩna [cs] nitrogen [cs] nyingĩ  nĩ ĩteithagia ũgima mwega wa mahuti ma karati.",
+      "translation": "Thus, the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels.",
+      "reference": "Nitrogen-rich fertilizers promote healthy carrot tops."
+    },
+    {
+      "source": "Munya mĩmera ĩmwe ya karati nĩgetha kũgie na handũ ha mĩmera ĩyo ĩngĩ gũkũra wega.",
+      "translation": "Thou shalt give you the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship.",
+      "reference": "Pull out extra carrot plants to give the others space"
+    },
+    {
+      "source": "Karati no ihandwo mbura  yambĩrĩria kana ĩkiura.",
+      "translation": "There is no shadows in the shadows of the shadows.",
+      "reference": "Carrots can be planted in both spring and fall."
+    },
+    {
+      "source": "Thima ũrũrũ wa tĩri ũtana handa karati.",
+      "translation": "Thus, the righteousness of the righteous shall be revealed to the righteous.",
+      "reference": "Test soil pH before planting carrots."
+    },
+    {
+      "source": "Mbegu ihandagwo o rĩmwe tĩrinĩ ",
+      "translation": "and the worship of the worship,",
+      "reference": "Seeds are sown directly into the garden soil."
+    },
+    {
+      "source": "Kũiga kabici wega nĩkũmenyagĩrĩra gĩkĩro thutha wa kũgethwo.",
+      "translation": "And the covenant of the covenant of the covenant of the covenant of the covenant.",
+      "reference": "Proper storage practices ensure cabbage quality is maintained after harvest."
+    },
+    {
+      "source": "Karati ikũraga wega tĩri-inĩ ũtagaga ũgunyu na riũa",
+      "translation": "And it will be in the midst and in the midst and in the midst and in the midst.",
+      "reference": "Carrots grow best in loose, well-drained soil with plenty of sunlight."
+    },
+    {
+      "source": "Karati ĩkũraga wega  kũndũ gũtarahaga maĩ",
+      "translation": "I am in the midst, and I am in the midst and I am in the midst.",
+      "reference": "Carrots grow well in well-drained, loose soil."
+    },
+    {
+      "source": "Ĩtagirĩria karati maĩ kaingĩ nĩgetha itikome",
+      "translation": "The United States of America is going to",
+      "reference": "Water carrots regularly to prevent them from becoming woody."
+    },
+    {
+      "source": "Karati yendaga tĩri ũharĩrio wega ĩtanahandwo.",
+      "translation": "And it will be forth in the midst of the covenant.",
+      "reference": "Carrots require good soil preparation before planting."
+    },
+    {
+      "source": "kabici ndune na ya ngiriini nĩyo mĩthemba ĩrĩa yonekanaga kaingĩ.",
+      "translation": "The covenant of the covenant and the covenant of the covenant of the covenant of the covenant of the covenant of the covenant.",
+      "reference": "Red cabbage and green cabbage are common varieties."
+    },
+    {
+      "source": "Kũhanda kabici mbura ĩkĩambĩrĩria nĩ gũtũmaga ĩgethwo tene.",
+      "translation": "Thus, the tribe of the tribe of the tribe of the tribe of the tribe of the tribe of the tribe.",
+      "reference": "Spring planting gives an early cabbage harvest."
+    },
+    {
+      "source": "Karati no ikũrio kũndũ kũhehu  ",
+      "translation": "Carat is not a carat.",
+      "reference": "Carrots can be grown in cool climates."
+    },
+    {
+      "source": "Karati  ikũraga ihinda rĩa mĩeri ĩĩrĩ kana ĩtatũ.  ",
+      "translation": "He is the one who gives righteous righteousness to the Americans.",
+      "reference": "Carrots take about two to three months to fully mature for harvesting."
+    },
+    {
+      "source": "Arĩmi mahũthagĩra thumu nĩguo  manyihie ũthũkangu wa rĩera.",
+      "translation": "Thus, the aristocratic aristocratic aristocratic aristocratic aristocratic aristocratic aristocratic aristocratic.",
+      "reference": "Farmers use organic methods to reduce environmental impact."
+    },
+    {
+      "source": "Karati yendaga riũa  nĩguo ikũre wega,",
+      "translation": "And the wrath of the wrath of the wrath,",
+      "reference": "Carrots need full sunlight for optimal development."
+    },
+    {
+      "source": "Kũrora mĩgũnda ya karati kaingĩ nĩkwabata mũno.",
+      "translation": "And the wicked wicked wicked wicked wicked.",
+      "reference": "Regular monitoring of carrot fields is crucial."
+    },
+    {
+      "source": "Arĩmi maroraga mĩgũnda kũrira tũtambi ",
+      "translation": "We are in the midst of the wrath, and we are in the midst of",
+      "reference": "Farmers scout fields to monitor pest activity."
+    },
+    {
+      "source": "Mĩgũndainĩ mĩnene ihũthagĩra macini kũgetha.",
+      "translation": "Those who are in the midst of the covenant are the ones who are in the midst of the covenant.",
+      "reference": "Large-scale farms use mechanical harvesters ."
+    },
+    {
+      "source": "kũgitĩra mĩrimũ kwina gũthiũrũrũkia mĩmera mũgũndainĩ na gũitĩrĩrĩa maĩ wega.",
+      "translation": "Those who are in the midst of the covenant, and those who are in the midst of the covenant, and those who are in the midst of the covenant, and those who are in the midst of the covenant.",
+      "reference": "Disease management includes crop rotation and proper watering."
+    },
+    {
+      "source": "Arĩmi nĩmamunyaga karati imwe nĩgwo gũteithia rĩera rithiũngũke wega.",
+      "translation": "I will be able to make the worship of the worship of the worship of the worship of the worship.",
+      "reference": "Farmers often thin carrot rows to improve air circulation."
+    },
+    {
+      "source": "Karati no  irĩo ciĩ njĩthĩ kana irugĩtwo",
+      "translation": "It is not an Iranian, it is an Iranian.",
+      "reference": "Carrots can be eaten raw or cooked."
+    },
+    {
+      "source": "kabici noimere wega kũĩna heho nini no ti heho nyingĩ.  ",
+      "translation": "And I will say that I will not be the one who will not be the one who will not be the one.",
+      "reference": "Cabbage can tolerate light frost but not heavy frost."
+    },
+    {
+      "source": "Arĩmi macagũraga mbegu kũringana na rĩera.",
+      "translation": "The arms of the arms of the arms of the arms of the arms of the arms.",
+      "reference": "Farmers select seeds based on their climate."
+    },
+    {
+      "source": "Arĩmi mahũthagĩra indo cia gũthondekwo kũhanda na kũgetha karati.",
+      "translation": "The armed forces of the Armed Armed Armed Armed Armed Armed Armed Armed Armed Armed Armed Armed Armed Armed",
+      "reference": "Farmers use mechanical tools for planting and harvesting carrots."
+    },
+    {
+      "source": "ũĩigi wa karati nĩ ũcenjagia ihinda rĩrĩa cingĩigwo.",
+      "translation": "Thus, the wicked wicked wicked wicked wicked.",
+      "reference": "Storage conditions affect carrot shelf life."
+    },
+    {
+      "source": "Tĩri ũharĩirio wega ũtũmaga mĩri ĩkũre wega.",
+      "translation": "Thus, the righteous are the righteous, and the righteous are the righteous, the righteous.",
+      "reference": "Well-prepared soil ensures good root development."
+    },
+    {
+      "source": "Tĩri wĩna ũgima mwega ũtũmaga karati ĩkorwo na ũgima mwega na cama.",
+      "translation": "Through the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "Healthy soil leads to healthy, flavorful carrots."
+    },
+    {
+      "source": "Kũigĩrĩra mahuti nĩgũteithagia kũiga ũrugarĩ mwega wa tĩri.",
+      "translation": "And I will be able to bring them to the shadows of the shadows.",
+      "reference": "Mulching helps in keeping the soil temperature stable."
+    },
+    {
+      "source": "Kũgetha karati tene no kũgũmire cama wacio.",
+      "translation": "Three of them are not in the midst of the covenant.",
+      "reference": "Harvesting carrots too early can affect their flavor."
+    },
+    {
+      "source": "Karati ĩkũragio na mbegũ.",
+      "translation": "Cut and Cut.",
+      "reference": "Carrots are often grown from seed,"
+    },
+    {
+      "source": "kabici na itũngũrũ nĩ mĩmera mĩega ya kũhandanĩrio na karati,",
+      "translation": "And they will be worshipped, and they will be worshipped and worshipped.",
+      "reference": "Cabbage and onions are good companions for carrots."
+    },
+    {
+      "source": "Karati no ĩkũrio mĩkebeinĩ taũninĩ.",
+      "translation": "It is not a warrant to the Americans.",
+      "reference": "Carrots can be grown in containers for urban farming."
+    },
+    {
+      "source": "Kũhanda na kũgetha rĩrĩa kwagĩrĩire nĩkwongagĩrĩra magetha.",
+      "translation": "It is in the midst and in the midst, and in the midst, and in the midst, and in the midst, and in the midst.",
+      "reference": "Proper timing of planting and harvesting improves yields."
+    },
+    {
+      "source": "ũndu ũyũ ũtũmaga karati ĩrũngare na ĩiganane.",
+      "translation": "And they will be worshipped, and they will be worshipped.",
+      "reference": "This also help in achieving straight, uniform carrots."
+    },
+    {
+      "source": "Maĩ maingĩ no matũme karati ibuthe.",
+      "translation": "The Americans will not be able to do so.",
+      "reference": "Too much water can cause carrots to rot."
+    },
+    {
+      "source": "Getha karati ihinda rĩrĩa rĩagĩrĩire nĩgetha cikorwo na mũcamo mwega.",
+      "translation": "Thus, I will be able to bring the wrath to the wrath and the wrath to the wrath and the wrath to the wrath.",
+      "reference": "Harvesting carrots at the right time ensures good flavor."
+    },
+    {
+      "source": "Arĩmi mahũthagĩra natharĩ cioetwo igũrũ nĩgetha maĩ makanyuo wega.",
+      "translation": "And I will be able to bring them to the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "Farmers often use raised beds for better drainage."
+    },
+    {
+      "source": "Karati no ĩgũmĩrwo nĩ tũtambi twa karati.",
+      "translation": "Thus, we will not be able to do so, but we will not be able to do so, and we will be able to do so.",
+      "reference": "Carrots are susceptible to pests like carrot flies."
+    },
+    {
+      "source": "Arĩmi macenjagia mĩthemba ya kũrĩma kuumana na ũrĩa tĩrĩ ũtarie.",
+      "translation": "He is the one who gives righteousness, and the one who gives righteousness, and the one who gives righteousness.",
+      "reference": "Farmers adjust cultivation practices based on soil conditions."
+    },
+    {
+      "source": "Arĩmi mahũthagĩra ũthimi wa tĩri nĩgetha kũmenya [cs] nutrients [cs] iria irendekana.",
+      "translation": "Thus, it is the worship of the worship of the worship of the worship of the worship of the worship of the worship.",
+      "reference": "Farmers use soil tests to determine nutrient needs."
+    },
+    {
+      "source": "ũrugarĩ mũhehu nĩwongagĩrĩra cama wa karati.",
+      "translation": "And they will be in the midst of the shadow of the shadow.",
+      "reference": "Cool temperatures can enhance the sweetness of carrots."
+    },
+    {
+      "source": "ũrĩmi ũtarĩ wa dawa nĩta thumu na kũingata tũtambi ũtakũhũthĩra dawa.",
+      "translation": "They are the wicked and we are the wicked and we are the wicked and we are the wicked.",
+      "reference": "Organic farming practices include composting and non-chemical pest control."
+    },
+    {
+      "source": "ũthuthuria ũrongoragĩrĩria kwongerera maciaro, kuĩgĩtĩra mĩrimũ na cama.",
+      "translation": "Thus, the righteous are the righteous, the righteous are the righteous, the righteous are the righteous, the righteous are the righteous.",
+      "reference": "Research focuses on improving yield, disease resistance, and flavor."
+    },
+    {
+      "source": "Kũeheria riia wega nĩkwambatagĩrĩa gĩkĩro kĩa mĩmera ya karati.",
+      "translation": "The righteous righteous righteous righteous righteous.",
+      "reference": "Proper weed management improves the quality of carrot crops."
+    },
+    {
+      "source": "Karati ĩbatie gũthambio wega ĩtanaigwo thitoo.",
+      "translation": "Thus, the worship of the worship of the worship of the worship of the worship.",
+      "reference": "Carrots should be cleaned thoroughly before storage."
+    },
+    {
+      "source": "Karati no ĩkũrio tĩri mũthemba mũthemba ĩngimenyereirwo wega.",
+      "translation": "Thus, there is no shadows in the shadows of the shadows of the shadows.",
+      "reference": "Carrots can be grown in various soil types with proper care."
+    },
+    {
+      "source": "Karati ihandagwo itiganĩte hanini nĩgetha kũgetha gũtikarũgame.",
+      "translation": "And I will be able to make the wrath, and I will be able to make the wrath.",
+      "reference": "Carrots are often grown in succession for continuous harvest."
+    },
+    {
+      "source": "Gũkũrĩria karati nyũmba cia kũiga urũgari kugitagĩra karati kuumana na rĩera rĩũru.",
+      "translation": "And the wicked wicked wicked wicked wicked wicked wicked wicked wicked wicked.",
+      "reference": "Greenhouse cultivation protects carrots from extreme weather conditions."
+    },
+    {
+      "source": "mĩmera ĩrĩa ĩhumbagĩra tĩri nĩ ithondekaga ũnoru wa tĩri nĩũndũ wa karati.",
+      "translation": "Thus, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous.",
+      "reference": "Cover crops enhance soil structure and fertility for carrots."
+    },
+    {
+      "source": "ũigi mwega wa [cs] record [cs] nĩ ũteithagia ũrĩmi mwega wa karati.",
+      "translation": "It is a record of [s] [s] [s] [s] [s] [s] [s] [s].",
+      "reference": "Proper record-keeping helps in managing carrot production."
+    },
+    {
+      "source": "Arĩmi ni mekaga ũthuthuria nĩgetha magagĩrie mĩthemba ya karati.",
+      "translation": "It is an aristocracy, and it is an aristocracy, and it is an aristocracy, and it is an aristocracy.",
+      "reference": "Farmers often conduct research to improve carrot varieties."
+    },
+    {
+      "source": "Karati no igwo wega kũhũthĩra kugwatia heho kana gũĩkĩra mĩkebeinĩ.",
+      "translation": "It is not a shadows like a shadows like a shadows like a shadows like a shadows like a shadows.",
+      "reference": "Carrots can be preserved through freezing or canning."
+    },
+    {
+      "source": "ũigi mwega nĩgũteithagia karati ĩikare kahinda karaihu.",
+      "translation": "And the wicked wicked wicked wicked wicked.",
+      "reference": "Preservation methods extend the shelf life of carrots."
+    },
+    {
+      "source": "gũitĩrĩrĩa maĩ na njira ya mataata ni kũnyihagia gũitaanga maĩ na kũgirĩrĩa mĩrimũ.",
+      "translation": "Thus, the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship.",
+      "reference": "Drip irrigation helps in reducing water waste and disease."
+    },
+    {
+      "source": "Arĩmi mataatagĩria mĩgũnda maĩ nĩguo gũkorwo na maĩ kaingĩ.",
+      "translation": "The Arabs and the Arabs are the Arabs and the Arabs are the Arabs and the Arabs.",
+      "reference": "Farmers use irrigation to provide consistent water supply."
+    },
+    {
+      "source": "Kumenyerera ni kũgiragĩriria gũthũka na kũiga wega.",
+      "translation": "It is a wrath and a wrath and a wrath.",
+      "reference": "Proper handling prevents damage and maintains quality."
+    },
+    {
+      "source": "Mĩgũnda mĩnene ĩhũthagĩra [cs] advanced technology [cs] gũkũria karati.",
+      "translation": "The most advanced technology [cs] [cs] is the most advanced technology [cs].",
+      "reference": "Large-scale farms use advanced technology for carrot production."
+    },
+    {
+      "source": "Karati no cikũrio mĩgũndainĩ mĩnini na mĩnene.",
+      "translation": "He is the one who is the one who is the one who is the one who is the one who is the one who is the one.",
+      "reference": "Carrots are grown in both small and large-scale farms."
+    },
+    {
+      "source": "Arĩmi mendagia karati kũgerera thoko cia arĩmi kana nduka.",
+      "translation": "And the wicked wicked wicked wicked wicked wicked wicked wicked",
+      "reference": "Farmers market carrots through local farmers’ markets and grocery stores."
+    },
+    {
+      "source": "Ciongagĩrĩra ũruti wa wĩra wega na kũnyihia marĩhi ma aruti  a wĩra.",
+      "translation": "It is a wrath and a wrath and a wrath and a wrath and a wrath.",
+      "reference": "They increase efficiency and reduce labor costs."
+    },
+    {
+      "source": "Itũngũrũ no igethwo rĩrĩa ciagĩa  rangi wa ngoikoni na mahuti marĩkia kũũma ",
+      "translation": "It will also be no igethwo riddle colour of the skin and the seat of the American clay",
+      "reference": "Harvest onions when their tops turn yellow and fall."
+    },
+    {
+      "source": "Arĩmi nĩ mahũthagĩra mahuti nĩgetha magitĩre  gĩtũngũrũ kuumana tũtambĩ. ",
+      "translation": "The Armed Forces (the Armed Forces) are the Armed Forces (the Armed Forces) and the Armed Forces (the Armed Forces) are the Armed Forces (the Armed Forces).",
+      "reference": "Farmers use row covers to protect onions from pests."
+    },
+    {
+      "source": "Karati ĩhandagwo hamwe na mĩthemba ĩngĩ ya mboga",
+      "translation": "And the wicked wicked wicked wicked.",
+      "reference": "Carrots are often grown alongside other root vegetables."
+    },
+    {
+      "source": "Gũthima tĩri kaingĩ gũteithagia gũtua matua mega kũhuthĩra mborera.  ",
+      "translation": "Thro the world, there is a great deal of fruit, and a great deal of fruit, a great deal of fruit.",
+      "reference": "Regular soil testing helps in making informed fertilization decisions."
+    },
+    {
+      "source": "Itĩrĩria itũngũrũ maĩ maita maingĩ  no maĩ  matikarahe.",
+      "translation": "Turkey will bring the US miles of Americans to the United States.",
+      "reference": "Water onions regularly but avoid waterlogging."
+    },
+    {
+      "source": "Menyerera itũngũrũ ndugekire nduutu.",
+      "translation": "He will be the one who gives righteousness.",
+      "reference": "Handle onions carefully to avoid bruising."
+    },
+    {
+      "source": "Njira njega  ya gũitĩrĩria maĩ nĩ ĩteithagia ũhũthĩri wa maĩ wega na kũgacĩrĩria karati  gũkũra ",
+      "translation": "The way of the righteous, the way of the righteous, the way of the righteous, the way of the righteous, the way of the righteous.",
+      "reference": "Efficient irrigation systems conserve water and improve carrot growth."
+    },
+    {
+      "source": "Gĩtũngũrũ gĩkũraga wega gĩkĩrĩtwo mborera ĩna [cs] phosphorus[cs] nyingĩ",
+      "translation": "Thus, it is the one who gives righteousness, and the one who gives righteousness, and the one who gives righteousness, and the one who gives righteousness.",
+      "reference": "Onions benefit from fertilizers high in phosphorus."
+    },
+    {
+      "source": "Kũmenya mathĩna tene nĩgũteithagia kũmeheria na njĩra njega ",
+      "translation": "Thou shalt speak to him, thou shalt speak to him, thou shalt speak to him.",
+      "reference": "Early detection of issues helps in managing problems effectively."
+    },
+    {
+      "source": "Gitũngũrũ no gĩkũre hĩndĩ ya heho kana hĩndĩ ya mbura.",
+      "translation": "It is not like the wind, it is like the wind, it is like the wind.",
+      "reference": "Onions can be grown in both spring and fall."
+    },
+    {
+      "source": "Thima [cs] pH[cs] ya  tĩri ũtanahanda gĩtũngũrũ .",
+      "translation": "Them [cs] of the pH [cs] of the therm will be thin.",
+      "reference": "Test soil pH before planting onions."
+    },
+    {
+      "source": "Ciendaga ũgunyu  mwagĩrĩru hĩndĩ ĩrĩa yothe  irakũra.",
+      "translation": "And I will give you the righteous, and the righteous will give you the righteous.",
+      "reference": "They need consistent moisture throught their growing period."
+    },
+    {
+      "source": "Karati  nĩ ĩkũragio thĩ yothe kũringana na rĩera rĩa kũrĩa ĩrakũrio",
+      "translation": "And the wicked wicked wicked wicked wicked wicked",
+      "reference": "Carrots are grown worldwide, adapted to various climates."
+    },
+    {
+      "source": "Hura  tũtambi ũkĩhũthĩra njĩra ya  [cs] organic[cs] kana njĩra cia  [cs] chemical [cs]",
+      "translation": "It is a chemical chemical chemical chemical chemical chemical chemical chemical.",
+      "reference": "Control pests using organic or chemical methods."
+    },
+    {
+      "source": "Kũiga karati handũ  harĩ ũhehu nĩ gũtũmaga ndĩgathũke.  ",
+      "translation": "Then he turned to him, and he turned to him, and he turned to him, and he turned to him, and he turned to him, and he turned to him.",
+      "reference": "Cold storage slows down the aging process of carrots."
+    },
+    {
+      "source": "Gĩtũngũrũ  nĩ kĩgũmagĩrwo nĩ tũtambi ta ngi iria itangaga  itũngũrũ.",
+      "translation": "We will be able to do this, and we will be able to do this, and we will be able to do this, and we will be able to do this, and we will be able to do this.",
+      "reference": "Onions are susceptible to pests like onion flies."
+    },
+    {
+      "source": "Kũhumbĩra nĩ gũteithagia gũkũra wega",
+      "translation": "The Americans are in the midst of the earth.",
+      "reference": "Shading helps in maintaining optimal growth."
+    },
+    {
+      "source": "Kaingĩ arĩmi mahũthagĩra thumu kũongerera ũnoru wa tĩri.",
+      "translation": "The Anglo-American army has hardly flattered the threshold of the threshold.",
+      "reference": "Farmers often use compost to improve soil fertility."
+    },
+    {
+      "source": "Itemi Nĩ wĩra ũrĩkũ marutaga mĩciĩ-inĩ kana kũri mũingĩ  rĩao nĩ rĩrĩkũ mũciĩ-inĩ/mũingĩ-inĩ?",
+      "translation": "Do you think that the people of the United States (the United States of America) are the people of the United States (the United States of America) and the people of the United States (the United States of America) are the people of the United States (the United States of America)?",
+      "reference": "What are their roles in the household/society?"
+    },
+    {
+      "source": "Mũtaratara wa ũrĩa  ũhũthagĩrwo wa gũthomithia. ",
+      "translation": "and the righteousness of the righteous.",
+      "reference": "A systematic outline of how the training is conducted."
+    },
+    {
+      "source": "Buroti cia kũgereria na tũmĩhuko tũnini tũa mbegũ cia kũgeria: matanya ma maumĩrĩra ma gũthomithia\n \n",
+      "translation": "We are the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness.",
+      "reference": "Demo Plots and maize Small packs for demonstration: learning objectives:"
+    },
+    {
+      "source": "[cs]VBA [cs] gũkorwo makĩmenya bata wa kũhũthĩra njĩra njega cia ũrĩmi.",
+      "translation": "[b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b] [b]",
+      "reference": "VBAs understanding the benefit of adopting good agronomic practices."
+    },
+    {
+      "source": "ĩtana baratha kana mĩcemanio.",
+      "translation": "They are like the Americans.",
+      "reference": "Call for barazas or meetings."
+    },
+    {
+      "source": "No mahũthĩre kanitha ta njĩra ya kũambĩrĩria.",
+      "translation": "And the wicked wicked wicked wicked.",
+      "reference": "They can use the church as an entry point."
+    },
+    {
+      "source": "Ũhoro ũikaine wĩgiĩ gĩcigo kĩu",
+      "translation": "Those who are great are great.",
+      "reference": "Background information of the region"
+    },
+    {
+      "source": "Thogora wa irio no ũnyihio nĩ gũĩkũrĩria irio ciaku cia mbũkũ",
+      "translation": "Through it, it is not a righteous righteous righteous righteous righteous.",
+      "reference": "Feed costs can be managed by growing your own rabbit feed."
+    },
+    {
+      "source": "Nĩguo irio ithĩĩke  wega mbũkũ ibataraga kũheo nyeki ",
+      "translation": "It is a place where you will be able to find a place where you can find a place where you can find a place where you can find a place where you can find a place where you can find a place where you can find a place where you can find a place where you can find a place where you can find a place where you can find a place where you can find a place where you can find a place where you can find a place where you can find a place where you can.",
+      "reference": "Rabbits need unlimited access to hay for proper digestion."
+    },
+    {
+      "source": "ũrugarĩ mũingĩ no ũtũme ngano yũme naihenya.",
+      "translation": "He is the one who is not the one who is the one who is the one who is the one who is the one who is the one who is the one who is the one who is the one.",
+      "reference": "Extreme heat can cause wheat to dry out quickly."
+    },
+    {
+      "source": "Arĩmi othe arĩa marenda gũkũria mbeniko no mũhaka mathime tĩri.",
+      "translation": "He is the one who gives righteousness, and he is the one who gives righteousness, and he is the one who gives righteousness.",
+      "reference": "All farmers intending to grow pyrethrum should first test their soil."
+    },
+    {
+      "source": "Ramata mĩrĩre  ya mbũkũ nĩguo ũgirĩrĩrie ũritũ mũkĩru",
+      "translation": "The righteous righteous righteous righteous righteous",
+      "reference": "Monitor feed intake to prevent obesity in rabbits."
+    },
+    {
+      "source": "Ũhehu mũigananu nĩ ũtũmaga kabici ĩkũre wega.",
+      "translation": "Thus, the wicked wicked wicked wicked wicked.",
+      "reference": "Cool temperatures encourage the formation of compact cabbage heads."
+    },
+    {
+      "source": "Ngano no yũmĩrĩrie tĩri wĩna [cs] alkaline [cs] niini kana wĩ [cs] acidic [cs]",
+      "translation": "Therefore, it is not a matter of the fact that it is not a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter of a matter.",
+      "reference": "Wheat can tolerate slightly alkaline or acidic soils."
+    },
+    {
+      "source": "ũrugarĩ mũnini nĩ ũteithagia mbegũ gũthethũka hĩndĩ ya kũmera.",
+      "translation": "Those who are in the midst of the covenant, are the ones who are in the midst of the covenant, the ones who are in the midst of the covenant.",
+      "reference": "Warm temperatures during germination help wheat seeds sprout."
+    },
+    {
+      "source": "kabici nĩ mboga ĩ mahuti maĩngĩ ikuragio nĩũndũ wa gũtunguha.",
+      "translation": "And the people of the covenant, who are in the covenant, are in the covenant of the covenant.",
+      "reference": "Cabbage is a leafy vegetable grown for its dense head."
+    },
+    {
+      "source": "Ngano no yũmĩrĩrie heho niini yakũra.",
+      "translation": "It is not in the air that it is in the air.",
+      "reference": "Wheat can tolerate mild frost once it is fully established."
+    },
+    {
+      "source": "Yendaga mbura gĩthimo kĩa gatagatĩ ga [cs] centimeter [cs] mĩrongo ĩtatũ na ĩtano nginya mĩrongo ĩtano.",
+      "translation": "It will be made up of a flower of a flower of a flower of a flower of a flower of a flower of a flower of a flower of a flower of a flower of a flower.",
+      "reference": "It requires about 35 to 50 cm of rainfall during its growth."
+    },
+    {
+      "source": "Njĩra njega cia gũkũria cai no gũteithie kũgitĩra ũcenjia wa rĩera na kũnyihia kũrekererio ndogo  ya  [cs] carbon [cs] ",
+      "translation": "It is a little bit of a little bit of a little bit of a little bit of a little bit of a little bit of a little bit of a little bit of a little bit of a little bit of a little bit of a little bit of a little bit of a little bit of a little bit.",
+      "reference": "Sustainable tea farming practices can help combat climate change by reducing carbon emissions."
+    },
+    {
+      "source": "Hũra hũra tĩri  ũregere  na  ũrĩme   ũriku wa [cs] centimeter [cs]  mĩrongo ĩtatũ nĩguo tĩri ũhuthe   mĩri inyite wega",
+      "translation": "It is a shade of the shade of the shade of the shade of the shade of the shade of the shade of the shade of the shade of the shade of the shade.",
+      "reference": "Loosen the soil by tilling to a depth of about 30 cm to improve aeration and root penetration."
+    },
+    {
+      "source": "Hũthĩra indo theru na njũgĩ gũceha kũgirĩrĩria gũthũkia na kũnyihia ũgwati wa mĩrimũHũthĩra indo theru na njũgĩ cia gũceha  nĩguo kũgirĩrĩria gũthũkia na kũnyihia ũgwati wa mĩrimũ",
+      "translation": "Thro the world, it is the world, and the world is the world, and the world is the world, and the world is the world, and the world is the world, and the world is the world.",
+      "reference": "Use clean, sharp tools for pruning to prevent damage and reduce the risk of infection."
+    },
+    {
+      "source": "\nTiga mĩanya ya nathari ũrĩa kwagĩrĩire ũtigie mĩanya ya kũigana ya  mũmera gũkũra wega na kũhota kũmenyererwo \n",
+      "translation": "Three U.S. strikes the U.S. strikes the U.S. strikes the U.S. strikes the U.S. strikes the U.S. strikes the U.S. strikes the U.S. strikes the U.S.",
+      "reference": "Space the seedbeds appropriately, leaving enough room for plant growth and management."
+    },
+    {
+      "source": "Mahinda   matiganĩte ma  kũgetha cai   mabatiĩ kũigananio gũtigĩrĩra macani nĩ ma gĩkĩro kĩa igũru na  cai wĩna mũcamo ũrĩa urendekana",
+      "translation": "He is the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness.",
+      "reference": "Harvesting intervals should be optimized to ensure high-quality tea leaves with the desired flavor profile."
+    },
+    {
+      "source": "Macani nĩ marĩ [cs] antioxidants [cs] na [cs] compounds [cs]  iria ikoragwo na ũguni harĩ  ũgima wa mwĩrĩ igatũma macani mendekane nĩ andũ",
+      "translation": "[s] [s] [s] [s] [s] [s] [s] [s] [s] [s] [s] [s] [s] [s] [s] [s] [s] [s] [s] [s] [s] [s]",
+      "reference": "Tea contains antioxidants and other compounds that offer health benefits, boosting its popularity."
+    },
+    {
+      "source": "Thima tĩri kaingĩ nĩgetha ũmenye ũrĩa  ũrĩhũthagĩra   bataraitha",
+      "translation": "Thus, it will be the first time that you will be able to make a lot of money, and you will be able to make a lot of money, and you will be able to make a lot of money.",
+      "reference": "Conduct soil tests periodically to adjust fertilization practices."
+    },
+    {
+      "source": "Niĩ ndĩ obithaa wa ũrĩmi wa ndengũ",
+      "translation": "It is the worship of the righteous.",
+      "reference": "Mimi ni ofisa wa ukulima wa ndengu"
+    },
+    {
+      "source": "Macani nĩ mamwe ma indo iria inyuagwo mũno thĩ yothe  kũheana ũgima na kũhe arĩmi mbeca",
+      "translation": "And it will be in the midst of it, and it will be in the midst of it, and it will be in the midst of it, and it will be in the midst of it, and it will be in the midst of it.",
+      "reference": "Tea is one of the most widely consumed beverages globally, providing both health benefits and economic value."
+    },
+    {
+      "source": "Gathĩka mĩtego ya [SC]pheromone[CS] nĩguo ũgirĩrĩrie ũingĩ wa [cs] coffee berry borer [cs]  ",
+      "translation": "The American Coffee Berry [cs] Coffee Berry [cs] Coffee Berry [cs] Coffee Berry [cs]",
+      "reference": "Set up pheromone traps to monitor coffee berry borer populations."
+    },
+    {
+      "source": "Ũrĩmi wa macani nĩ ũigithia wa ihinda ĩraihu tondũ cai nĩ ũgethagũo  kahinda ka  mĩaka mĩingĩ",
+      "translation": "He is the one who gives righteousness to the world, and the one who gives righteousness to the world, and the one who gives righteousness to the world.",
+      "reference": "Tea growing can be a long-term investment, with plants yielding crops for several decades."
+    },
+    {
+      "source": "Ũrĩmi wa  macani nĩũteithagĩrĩria ũgendi  icigo inĩ iria ikũragia cai nĩ kũgucĩrĩria ageni mĩgũndainĩ ya macani",
+      "translation": "I am the one who gives righteousness to the wicked, the one who gives righteousness to the wicked, the one who gives righteousness to the wicked, the one who gives righteousness to the wicked.",
+      "reference": "The tea industry promotes tourism in regions known for tea production, attracting visitors to tea estates."
+    },
+    {
+      "source": "Thima [cs] pH [cs] ya tĩri nĩguo ũtigĩrĩre wĩna [cs] acidic [cs]  mũigana wa gatagatĩ ka inya gaturumo ithano nginya ithano gaturumo ithano ĩrĩa yagĩrĩire harĩ gũkũria gwa cai ",
+      "translation": "Thema [cs] pH [cs] of thyria thyria thyria thyria thyria thyria thyria thyria thyria thyria thyria thyria",
+      "reference": "Test the soil pH to ensure it is slightly acidic, between 4.5 and 5.5, which is ideal for tea growth."
+    },
+    {
+      "source": "Nathari cia kũmerithia mbegũ ibatiĩ gũkorwo na wariĩ wa [cs] meter [cs]    imwe na ũraihu wa [cs] centimeters [cs] ikũmi nginya ikũmi na ithano\n\n \n",
+      "translation": "The effect of the CIA is that the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat.",
+      "reference": "Nursery beds should be 1 meter wide and 10-15 centimeters high."
+    },
+    {
+      "source": "Ceha mĩtĩ ĩrĩa ĩrehaga kĩruru kaingĩ nĩgetha kahũa gakũre wega .",
+      "translation": "The U.S. is the U.S. is the U.S. is the U.S. is the U.S. is the U.S. is the U.S. is the U.S. is the U.S. is the U.S. is the U.S.",
+      "reference": "Regularly prune shade trees to allow sufficient light for coffee growth."
+    },
+    {
+      "source": "Wendia wa macani nĩ ũrehagĩra bũrũri mbeca cia kuuma na nja",
+      "translation": "Those who are in the midst of the covenant, and those who are in the midst of the covenant, and those who are in the midst of",
+      "reference": "The tea industry generates foreign exchange for countries through exports."
+    },
+    {
+      "source": "Tigĩrĩra ũgunyu wa tĩri ni mũigananu na gũitĩrĩria maĩ kaingĩ ũgĩthemaga wagi  wa mbura na maĩ kũaraha",
+      "translation": "Those who are the wicked, the wicked, the wicked, the wicked, the wicked, the wicked, and the wicked.",
+      "reference": "Maintain consistent soil moisture through regular watering, avoiding both drought and waterlogging."
+    },
+    {
+      "source": "Kũhandanĩria na mĩmera ĩngĩ ya kũhumbĩra tĩri nĩkũnyihagia gũkũra kwa ria na kũrehe  kĩruru",
+      "translation": "Those who are in the midst and in the midst and in the midst and in the midst and in the midst and in the midst and in the midst and in the midst and in the midst and in the midst.",
+      "reference": "Intercropping with cover crops can reduce weed growth by shading the soil."
+    },
+    {
+      "source": "Harĩria natharĩ nĩguo kũgirĩrĩria maĩ kũaraha na maikũrũke ",
+      "translation": "I will be able to bring them to the wicked, to the wicked, to the wicked.",
+      "reference": "Prepare raised beds in the nursery to prevent waterlogging and improve drainage."
+    },
+    {
+      "source": "Ũbataranu wa macani ma kĩmerera na ma mĩthemba ĩtiganĩte nĩũingĩhĩte na kuongerera mĩeke ya arĩmi anini.",
+      "translation": "Those who are in the midst and in the midst and in the midst and in the midst and in the midst and in the midst and in the midst and in the midst and in the midst and in the midst.",
+      "reference": "The demand for organic and specialty teas has increased, providing opportunities for small-scale farmers."
+    },
+    {
+      "source": "\nHanda  mĩmera ya kahũa  mĩtaroinĩ ya mwaramo wa [cs[meter [cs]  igĩrĩ gaturumo ithano nginya [cs[meter [cs]  ithatũ.  \n",
+      "translation": "In the midst of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains.",
+      "reference": "Transplant tea seedlings when they are 6-12 months old and about 20-30 cm tall."
+    },
+    {
+      "source": "Mbũkũ nĩ iciaranaga narua kwoguo no mũhaka ũcibangĩre nyũmba iria igaikara",
+      "translation": "They will not be able to do so, but they will not be able to do so, and they will not be able to do so, and they will not be able to do so, and they will not be able to do so.",
+      "reference": "Rabbits reproduce quickly, so plan for future housing needs."
+    },
+    {
+      "source": "Thondeka mĩtaro mũgũnda wĩna mũikũrũko nĩguo kũiga maĩ  na kũgirĩrĩria tĩri gũtwaro.  ",
+      "translation": "Thus, let them go away from the wombs of the wombs of the wombs of the wombs of the wombs of the wombs of the wombs of the wombs of the womb.",
+      "reference": "Create contour lines on sloped land to prevent soil erosion and improve water retention."
+    },
+    {
+      "source": "Handanĩrĩa kahũa na mboco  nĩguo gwĩkĩra [cs] nitrogen [cs] na kũgacĩria ũnoru wa mũgũnda",
+      "translation": "It is the wheat, and the wheat, and the wheat, and the wheat, and the wheat, and the wheat.",
+      "reference": "Intercrop coffee with legumes to fix nitrogen and improve soil fertility."
+    },
+    {
+      "source": "Itĩrĩria natharĩ maĩ wega mbere ya kũhura mbegũ nĩgetha ũtigĩrĩre ũgunyu  nĩ mũiganu ",
+      "translation": "Turkey's U.S. Air Force (U.S. Air Force, U.S. Air Force, U.S. Air Force, U.S. Air Force, U.S. Air Force, U.S.)",
+      "reference": "Water the nursery bed thoroughly before sowing the seeds to ensure adequate moisture levels."
+    },
+    {
+      "source": " Hũthĩra neti cia kĩruru kana kĩruru kĩa mĩtĩ  kũgitĩra mĩcai kuumana na riũa na ũtheri mũkĩru",
+      "translation": "He is the one who gives righteousness to the wicked, the one who gives righteousness to the wicked, the one who gives righteousness to the wicked, the one who gives righteousness to the wicked.",
+      "reference": "Use shade nets or natural shading to protect young tea seedlings from excessive sunlight."
+    },
+    {
+      "source": "Wahanda o ũguo  itĩrĩria mĩmera ĩyo maĩ nĩgetha ũgirĩrĩrie kũhoha. ",
+      "translation": "Those who are in the midst of the covenant, and those who are in the midst of the covenant, and those who are in the midst of the covenant.",
+      "reference": "Water the seedlings immediately after transplanting to reduce transplant shock."
+    },
+    {
+      "source": "Ũrimi wa macani nĩ wongagĩrĩra ũnoru wa tĩri nĩ ũndũ wa gũĩkĩrũo thumu",
+      "translation": "The worship of the worship of the worship of the worship of the righteous.",
+      "reference": "Tea cultivation can improve soil quality through organic farming practices."
+    },
+    {
+      "source": "Hura  mbegũ cia macani mĩtaroinĩ ũmĩtaganĩtie [cs] centimeter [cs] ikũmi nginya ikũmi na ithano nĩgetha ikũre wega.  ",
+      "translation": "Thus, in the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst.",
+      "reference": "Sow the tea seeds in rows, spacing them 10-15 cm apart for optimal growth."
+    },
+    {
+      "source": "\nNo ũhũthĩre mĩthemba ta [cs] coffee arabica, [cs]bourbon coffee[cs], [cs] caturra na [cs] Geisha [cs]  hamwe na mĩthemba ĩrĩa  ĩngĩ\n",
+      "translation": "The Arabic Coffee, the Arabic Coffee, the Arabic Coffee, the Arabic Coffee, the Arabic Coffee and the Arabic Coffee.",
+      "reference": "You can use varieties such as coffee arabica, bourbon coffee, caturra and Geisha among others"
+    },
+    {
+      "source": "Mbere ya kũhanda mbegũ itĩrĩria thumu kana  mahuti matukanĩire irimainĩ  nĩguo  kũgacĩria ũnoru wa tĩri ",
+      "translation": "There is a great deal of trouble, and there is a lot of trouble, and there is a lot of trouble, and there is a lot of trouble, and there is a lot of trouble, and there is a lot of trouble.",
+      "reference": "Apply organic manure or compost to enhance soil fertility before planting seeds."
+    },
+    {
+      "source": "Tigĩrĩra wĩna mĩtaro ya gũikũrũkia  maĩ   nĩgetha maĩ matikarahe mbura nyingĩ yaura ",
+      "translation": "The Great American Tiger, the Great American Tiger, the Great American Tiger, the Great American Tiger",
+      "reference": "Ensure proper drainage systems are in place to prevent waterlogging during heavy rains."
+    },
+    {
+      "source": "Humbĩra mbegũ na tĩri na mahuti  nĩgetha ũige ũgunyu wa gũteithĩrĩria mbegũ kũmera",
+      "translation": "I will go and go and go and go and go and go and go and go and go and go and go and go and go and go.",
+      "reference": "Cover the seeds lightly with soil and mulch to retain moisture and promote germination."
+    },
+    {
+      "source": "Ĩkĩra bataraitha na ikĩro nyendekithie ũtagũĩkĩra nyingi ĩrĩa ingĩthũkia mĩmera. ",
+      "translation": "Thus, there is a great deal of righteousness, and there is a great deal of righteousness, and there is a great deal of righteousness.",
+      "reference": "Apply fertilizers at the recommended rates, avoiding over-application that can harm plants."
+    },
+    {
+      "source": "Thondeka benji kũndũ gũikũrũku nĩguo ũkorwo na kũndũ kwaraganu gwa kũrima na kũnyihia kĩguũ",
+      "translation": "Through the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains,",
+      "reference": "Prepare terraces on steep slopes to create flat planting areas and reduce runoff."
+    },
+    {
+      "source": "Handa hĩndĩ ya kĩmera kĩa  mbura kana ũitĩrĩrie maĩ mbere ya kũhanda nĩgetha ũtigĩrĩre nĩ kũgunyu.",
+      "translation": "In the midst of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "Plant during the rainy season or irrigate the field before planting to ensure soil moisture."
+    },
+    {
+      "source": "Tigĩrĩra nathari nĩĩratĩrĩrio maĩ  marĩa maiganĩte nĩgetha ũgitĩre kũaraha kwa maĩ. ",
+      "translation": "Those who were in the midst of the covenant, and those who were in the midst of the covenant, and those who were in the midst of the covenant, and those who were in the midst of the covenant, and those who were in the midst of the covenant.",
+      "reference": "Ensure proper drainage in the nursery bed to prevent waterlogging."
+    },
+    {
+      "source": "Thima tĩri nĩgetha ũmenye kana wĩna hinya mwagĩrĩru na [pH] njega nĩgetha ucigananie ũrĩa kwagĩrĩire  \n\n",
+      "translation": "Thus, I will be able to make it a good thing, and I will make it a good thing, and I will make it a good thing, and I will make it a good thing, and I will make it a good thing, and I will make it a good thing.",
+      "reference": "Conduct soil tests to determine nutrient levels and pH, adjusting them as necessary."
+    },
+    {
+      "source": "Harĩria mũgũnda na kũrĩma na kũiganania mbere ya kũhanda mĩmera ya kahũa werũ",
+      "translation": "He is the one who gives righteousness, and the one who gives righteousness, the one who gives righteousness, the one who gives righteousness.",
+      "reference": "Prepare the field by plowing and leveling before transplanting coffee seedlings."
+    },
+    {
+      "source": "Ceha mĩmera nĩgetha ĩgĩe na mahuti maingĩ na kũagagĩria ũtambia wa rĩera.",
+      "translation": "And the people of the world, and the people of the world, and the people of the world, and the people of the world, and the people of the world, and the people of the world, and the people of the world, and the people of the world.",
+      "reference": "Prune the plants to encourage bushy growth and improve air circulation."
+    },
+    {
+      "source": "Cai  no uhandanĩrio na mĩthemba ĩngĩ ya irio nĩguo mũrĩmi  eongerere umithio",
+      "translation": "I am not a man and I am a man and I am a man and I am a man and I am a man and I am a man and I am a man.",
+      "reference": "Tea plants can be intercropped with other crops, providing farmers with additional income."
+    },
+    {
+      "source": "Wĩtheme kũhe mbũkũ irio ciina cukari  na wanga mũingĩ ",
+      "translation": "Sugar and Sugar Sugar Sugar and Sugar Sugar Sugar",
+      "reference": "Avoid feeding rabbits foods high in sugar or starch."
+    },
+    {
+      "source": "Thura mĩmera ĩtarĩ na mĩrimu kana itihĩtio ya kũhanda mũgũndainĩ mũharĩrie",
+      "translation": "Thou shalt say, Thou shalt say, Thou shalt say, Thou shalt say, Thou shalt say, Thou shalt say, Thou shalt say, Thou shalt say, Thou shalt say.",
+      "reference": "Choose healthy, disease-free seedlings or cuttings for planting in the prepared field."
+    },
+    {
+      "source": "Itĩrĩria mĩmera ĩyo  yahandwo maĩ o rĩo nĩgetha ĩgũate hau yahandwo",
+      "translation": "It is an Arabic, and it is an Arabic, and it is an Arabic, and it is an Arabic, and it is an Arabic.",
+      "reference": "Water the transplanted seedlings immediately to help them establish in the new environment."
+    },
+    {
+      "source": "Gitĩra mĩmera mĩeru  ĩyo yahandwo kuumana na rũhuho na riũa ikĩru na gũĩkĩra  kĩruru.  ",
+      "translation": "Thus, the people of the Americans, who are in the midst of the earth, and who are in the midst of the earth, and who are in the midst of the earth, and who are in the midst of the earth, and who are in the midst of the earth.",
+      "reference": "Protect the newly transplanted seedlings from strong winds or excessive sunlight by providing shade."
+    },
+    {
+      "source": "Gũceha kaingĩ nĩgũteithagia kũruta mathangũ merũ marĩa mateithagia kũruta  maciaro maingĩ.  ",
+      "translation": "It is a good thing for the British to be able to make a lot of trouble with the British.",
+      "reference": "Regular pruning promotes new leaf production, which is crucial for high tea yields."
+    },
+    {
+      "source": "Gũceha nĩ gũteithagia rĩera gũtamba wega igũrũ wa mĩmera na kũnyihia ũgwati wa mĩrimũ",
+      "translation": "He is the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness.",
+      "reference": "Pruning helps improve air circulation within the plant canopy, reducing the risk of disease."
+    },
+    {
+      "source": "Ruta tũtambĩ tũnene ta ĩgunyu na moko nĩgetha ũnyihie mĩrimũ.",
+      "translation": "We are going to go on the way and we are going to go on the way and we are going to go on the way and we are going to go on the way and we are going to go on the way.",
+      "reference": "Handpick larger pests like caterpillars to reduce infestation."
+    },
+    {
+      "source": "Mahũa marĩa matuĩtwo mabatiĩ kũigwo ikabu-inĩ  ikũrehe  rĩera wega nĩgetha kũnyihia kũgagata.",
+      "translation": "Through the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "Picked flowers should be put into well-ventilated baskets to reduce fermentation."
+    },
+    {
+      "source": "Humbĩra gĩtinainĩ  kĩa mũmera nĩguo ũige ũgunyu na  ũhite kũmera kwa ria.",
+      "translation": "Thus, the wicked wicked wicked wicked wicked wicked wicked wicked wicked wicked.",
+      "reference": "Mulch around the base of the plants to retain moisture and suppress weed growth."
+    },
+    {
+      "source": "Iyũria irima na tĩri na ũkindĩre kahora mĩriinĩ  nĩgetha weherie tũmĩanya twa rĩera.",
+      "translation": "Through the righteousness and the righteousness of the righteous and the righteousness of the righteous and the righteousness of the righteous and the righteousness of the righteous and the righteousness of the righteous and the righteousness of the righteous and the righteousness of the righteous.",
+      "reference": "Fill the hole with soil, gently firming it around the roots to remove air pockets."
+    },
+    {
+      "source": "Wĩcirie kũongerera [cs] mineral blocks [cs[ irio-inĩ",
+      "translation": "Mineral blocks [cs] Mineral blocks [cs]",
+      "reference": "Consider supplementing their diet with mineral blocks."
+    },
+    {
+      "source": "Thũrima mbegũ cia kahũa iria cigĩtwo thitoo   mahinda kwa mahinda nĩgetha wone kana harĩ na tũtambi kana mbaa.",
+      "translation": "Through the wrath of the wrath of the wrath of the wrath of the wrath of the wrath of the wrath of the wrath of the wrath of the wrath of the wrath of the wrath of the wrath of the wrath of the wrath of the wrath.",
+      "reference": "Inspect stored coffee beans periodically for signs of pests or mold."
+    },
+    {
+      "source": "Kũrania mĩmera  ĩrĩa mĩhohu na mĩtihie na mĩmera mĩeru nĩguo gũtigĩrĩra nĩrakũra ĩiganaine.",
+      "translation": "Through the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship.",
+      "reference": "Replace any weak or damaged plants with new seedlings to ensure uniform growth."
+    },
+    {
+      "source": "Itĩrĩria natharĩ maĩ kahinda gwa kahinda nĩgetha ũige  tĩri wĩna ũgunyu mũiganu.",
+      "translation": "Thus, the righteous worshippers of the righteous worshippers of the righteous worshippers of the righteous worshippers of the righteous worshippers of the righteous.",
+      "reference": "Water the nursery bed regularly to keep the soil moist."
+    },
+    {
+      "source": "Handa mĩmera mũgũnda-inĩ yagĩa mathangũ makĩru mana nginya matandatũ.",
+      "translation": "It is in the midst of the mountains, and it is in the midst of the mountains, and it is in the midst of the mountains.",
+      "reference": "Transplant seedlings to the field when they have 4-6 true leaves."
+    },
+    {
+      "source": "Kũra mĩmera kuuma natharĩ-inĩ na ũmenyerere ndũgathũkie mĩri.",
+      "translation": "Then he turned to him, and he turned to him, and he turned to him, and he turned to him.",
+      "reference": "Gently remove the seedlings from the nursery, taking care not to damage the roots."
+    },
+    {
+      "source": "Handa mũmera irima-inĩ na ũtigĩrĩre mĩri nĩ ihumbĩrĩtwo nĩ tĩri. ",
+      "translation": "It is in the midst and in the midst and in the midst and in the midst and in the midst and in the midst and in the midst.",
+      "reference": "Place the seedling in the hole, ensuring the root collar is level with the soil surface."
+    },
+    {
+      "source": "Thuura  mũthenya wĩna matu kana mbura wa kũhanda mĩmera  nĩguo ĩgwate wega.",
+      "translation": "Through it, the fruit is like the fruit of the cattle of the cattle of the cattle of the cattle of the cattle.",
+      "reference": "Choose a cloudy or rainy day for transplanting to minimize stress on the seedlings."
+    },
+    {
+      "source": "Ĩkĩra irima o irima thumu kana  mahuti matukanĩirio irima-inĩ ũtanahanda mĩmera. ",
+      "translation": "Thus, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous.",
+      "reference": "Apply organic manure or compost to each hole before transplanting the seedlings."
+    },
+    {
+      "source": "Ongerera  mahuti mahumbĩrĩtwo kana thumu irima-inĩ ũtanahanda mũmera.",
+      "translation": "And let them go to the ground, and let them go to the ground, and let them go to the ground, and let them go to the ground.",
+      "reference": "Add compost or organic manure to the planting hole before transplanting."
+    },
+    {
+      "source": "Hũthira bataraitha ĩna [cs] nitrogen [cs]   nĩ getha  ĩkũrie mathangũ maingĩ mĩmera-inĩ ya macani",
+      "translation": "He is the one who is the one who is the one who is the one who is the one who is the one who is the one who is the one who is the one who is the one who is the one who is the one who is the one.",
+      "reference": "Use nitrogen-based fertilizers to promote leafy growth in tea plants."
+    },
+    {
+      "source": "Harĩria mũgũnda na kũrĩma na kũiganania tĩri na kũenja mĩtaro",
+      "translation": "He is the one who gives righteousness and righteousness, the one who gives righteousness and righteousness.",
+      "reference": "Prepare the main field by tilling and leveling the soil, ensuring proper drainage."
+    },
+    {
+      "source": "Ceha macani o mwaka nĩguo maige mũhanĩre wamo na magacĩrithie kũmera mathangũ",
+      "translation": "In the year, the worship of the worship of the worship of the worship of the worship of the worship of the",
+      "reference": "Prune tea plants annually to maintain their shape and encourage bushy growth."
+    },
+    {
+      "source": "Ceha kahũa o hingo nĩguo ĩikare na mũhanĩre mwega na weherie honge nyũmũ",
+      "translation": "And the way, and the way, and the way, and the way, and the way, and the way, and the way.",
+      "reference": "Regularly prune coffee plants to maintain proper shape and remove dead branches."
+    },
+    {
+      "source": "Mũthemba wa tĩri na ũhoti wa tĩri kũnywa maĩ nĩundu ũngĩ ũroragwo ũkũriainĩ wa Mahũa ma mbeniko",
+      "translation": "Through the shadows of the shadows and the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "Soil type and drainage strongly affect a sites suitability for pyrethrum growing"
+    },
+    {
+      "source": "Ikara ũkimenyaga ũrĩa thoko ĩikarĩte nĩgetha ũcenjĩe thogora wa kũendia nyama cia mbũkũ ũria kwagĩrĩire",
+      "translation": "I will be able to give you a lot of food, and you will be able to give you a lot of food, and you will be able to give you a lot of food, and you will be able to give you a lot of food.",
+      "reference": "Keep track of market trends to adjust your rabbit meat prices accordingly."
+    },
+    {
+      "source": "Thutha wa gũceha, ĩkĩra thumu nĩguo mathangũ na honge ikũre rĩngĩ",
+      "translation": "Through the thorns, the thorns, the thorns, the thorns, the thorns, the thorns, and the thorns.",
+      "reference": "After pruning, apply fertilizers to support the regrowth of leaves and branches."
+    },
+    {
+      "source": "Gũtua macani mahinda kwa mahinda nĩ gũtigagĩrĩra nimakũra rĩngĩ na mĩmera ndĩra neneha mũno",
+      "translation": "And I will be able to bring you to the world, and I will be able to bring you to the world, and I will be able to bring you to the world, and I will be able to bring you to the world, and I will be able to bring you to the world.",
+      "reference": "Regular plucking of tea leaves encourages new growth and prevents the plants from becoming overgrown."
+    },
+    {
+      "source": "Gitagĩrĩra  mĩmera ya kahũa kuma rũhuho rũingĩ na kũhanda mĩti ya kũnyihia rũhuho gũthiũrũrũkĩria mũgũnda",
+      "translation": "He will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one.",
+      "reference": "Protect coffee plants from strong winds by planting windbreaks around the farm."
+    },
+    {
+      "source": "Taatagĩria kahũa maĩ kĩmera kĩa riũa nĩgetha ĩkũre hĩndĩ ciothe",
+      "translation": "Thus, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous.",
+      "reference": "Irrigate coffee plants during dry spells to maintain consistent growth."
+    },
+    {
+      "source": "Ĩkĩra thumu ikũrĩrio nĩguo mĩmera ĩkũre wega",
+      "translation": "And it will be hard, and it will be hard, and it will be hard.",
+      "reference": "Apply organic fertilizer in the nursery bed for healthy seedling growth."
+    },
+    {
+      "source": "Ĩkĩra thumu thutha wa gũthima tĩri nigetha kumenyeke [cs]nutrient[cs] ĩria ĩraga",
+      "translation": "And the wicked wicked wicked wicked wicked wicked wicked wicked wicked",
+      "reference": "Apply fertilizers after soil tests to address specific nutrient deficiencies."
+    },
+    {
+      "source": "Tambia ndũmĩrĩri cia  ũguni  wa kũrĩa  nyama ya mbũkũ  nĩgetha ũgucĩrĩrie agũri arĩa mamenyagĩrĩra ũgima wao wa mwĩrĩ.  ",
+      "translation": "Those who are in the midst of the covenant, and who are in the midst of the covenant, and who are in the midst of the covenant, and who are in the midst of the covenant, and who are in the midst of the covenant, and who are in the midst of the covenant.",
+      "reference": "Promote the nutritional benefits of rabbit meat to attract health-conscious consumers."
+    },
+    {
+      "source": "Ceha rĩrĩa gũtarĩ na ũrĩmi mũingĩ  nĩgetha  kũnyihia  kũhinyĩrĩrĩka kwa mĩmera.",
+      "translation": "Thro the course of the day and the day, the worship of the worship of the worship of the worship of the worship of the worship of God.",
+      "reference": "Prune during the dormant season to minimize stress on the plants."
+    },
+    {
+      "source": "Thiĩ na mbere na kũrĩmĩra  ria nĩgetha ũnyihie mũhĩtahĩtano wa  irio na maĩ harĩ  mĩmera.  ",
+      "translation": "Thus, the righteous and the righteous and the righteous and the righteous and the righteous and the righteous and the righteous and the righteous and the righteous.",
+      "reference": "Continue to weed the field regularly to reduce competition for nutrients and water."
+    },
+    {
+      "source": "Menyera kũhanda benji mĩikũrũko-inĩ nĩgetha  kũgirĩrĩa tĩri gũtuĩka mĩgũnda-inĩ ya kahũa.  ",
+      "translation": "In the midst of the mountains, the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains.",
+      "reference": "Practice contour planting on slopes to prevent soil erosion in coffee fields."
+    },
+    {
+      "source": "Enja marima marĩ na ũriku  na wariĩ wa [cs] centimeters [cs] mĩrongo ĩtandatũ harĩ o mũmera wa kahũa.",
+      "translation": "It is the sea, and it is the sea, and it is the sea, and it is the sea, and it is the sea, and it is the sea, and it is the sea.",
+      "reference": "Dig planting holes 60 centimeters deep and wide for each coffee plant."
+    },
+    {
+      "source": "Hura mbegũ cia kahũa na ũriku-inĩ  wa [cs] centimeters [cs] ĩmwe nginya igĩrĩ natharĩ-inĩ.",
+      "translation": "Thus, the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels.",
+      "reference": "Sow coffee seeds 1-2 centimeters deep in the nursery bed."
+    },
+    {
+      "source": "Tigithũkania mĩmera ya kahũa wega nĩguo kũnyihia mũtuthũko wa tũtambi",
+      "translation": "Thus, the worship of the worship of the worship of the worship of the worship of God.",
+      "reference": "Maintain proper spacing between coffee plants to reduce pest outbreaks."
+    },
+    {
+      "source": "Wĩtheme kũgetha mbũni ĩtarĩ ngũrũ kana  iria ciĩruite mũno nĩgetha ũkorwo na ũigananu wa  o igetha.",
+      "translation": "Thus, they will be able to bring the wicked to the wicked, and the wicked to the wicked, and the wicked to the wicked, and the wicked to the wicked.",
+      "reference": "Avoid harvesting immature or overripe coffee cherries to maintain uniformity."
+    },
+    {
+      "source": "Itĩrĩria maguta ma  [cs] neem [cs] nĩgetha  ũgirĩrĩe kahũa kũgũmĩrwo nĩ gathegethi  ka mbũni  ya kahũa.",
+      "translation": "And I will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one.",
+      "reference": "Apply neem oil to control coffee berry borer infestation."
+    },
+    {
+      "source": "Harĩrĩa natharĩ ya kahũa handũ harĩ na kĩruru na tĩri wĩna ũikũrũkia  mwega wa maĩ.",
+      "translation": "And I will give them the wrath, and the wrath, and the wrath, and the wrath, and the wrath, and the wrath.",
+      "reference": "Prepare the coffee nursery bed in a shaded area with well-drained soil."
+    },
+    {
+      "source": "Hĩndĩ ciothe tigĩrĩra nyama yaku ya mbũkũ  nĩkinyĩtie gĩkĩro kĩa wega wa irio kĩrĩa gĩkĩrĩtwo nĩ watho. ",
+      "translation": "Through the wheat of the wheat, the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat.",
+      "reference": "Always ensure your rabbit meat complies with local food safety regulations."
+    },
+    {
+      "source": "Thura na ũgayanie  mbuni  o warĩkia kũgetha. ",
+      "translation": "And the heavens, and the earth, and the earth,",
+      "reference": "Sort and grade coffee cherries immediately after harvesting."
+    },
+    {
+      "source": "Humbĩra itina cia kahũa na mahuti nĩgetha kũiga ũgunyu wa tĩri na kũgirĩrĩria ria.  ",
+      "translation": "It will be in the midst and in the midst, and in the midst, and in the midst, and in the midst, and in the midst.",
+      "reference": "Mulch around coffee plants to conserve soil moisture and suppress weeds."
+    },
+    {
+      "source": "Barania  mĩmera ya kahũa kaingi  ũrore  marũri ma ũthũkangia wa tũtambĩ.",
+      "translation": "There is a great deal of wrath, and there is a great deal of wrath, and a great deal of wrath.",
+      "reference": "Inspect coffee plants regularly for signs of pest damage."
+    },
+    {
+      "source": "Hũthĩra njĩra ya gũtatia maĩ nĩgetha kũnyihia ũhũthĩri mũingĩ wa maĩ na gũkinyia hinya na njĩra njega.",
+      "translation": "Those who are in the midst of the covenant, and who are in the midst of the covenant, and who are in the midst of the covenant, and who are in the midst of the covenant, and who are in the midst of the covenant.",
+      "reference": "Use drip irrigation to conserve water and deliver nutrients efficiently."
+    },
+    {
+      "source": "Harĩria handũ hatheru ha gũkoma nyũmba-inĩ ya mbũkũ  ũkĩhũthĩra  rũũa  rwa mwere , rũũa  rwa ngano kana mura.",
+      "translation": "Thus, it is unlikely that the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels.",
+      "reference": "Provide clean bedding in the rabbit house, such as straw or wood shavings."
+    },
+    {
+      "source": "Wĩtheme gũitĩrĩria maĩ maingĩ  mũno nĩgetha kũgirĩrĩria mĩmera ya kahaũa kũgũmĩrwo nĩ mĩrimũ ya [cs] fungal [cs]. ",
+      "translation": "Thus, the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers.",
+      "reference": "Avoid over-irrigation to prevent fungal infections in coffee plants."
+    },
+    {
+      "source": "Eheria tũthuna na tũthethũka nĩgetha  ngoro ya mĩtĩ ya kahũa ĩkorwo ĩrĩ o ĩmwe. ",
+      "translation": "Thus, we will be able to give us the gifts of the Holy Spirit, and we will give us the gifts of the Holy Spirit, and we will give us the gifts of the Holy Spirit.",
+      "reference": "Remove suckers and water shoots to maintain a single stem in coffee plants."
+    },
+    {
+      "source": "No ũrehe  tũtambi tũria tũriaga tũnyamũ  tũnini ta thuraku twa kũgirĩrĩria mĩrimũ [cs] biologically [cs]",
+      "translation": "There is no such thing as we do, we do, we do, we do, we do, we do, we do, we do, we do, we do.",
+      "reference": "Introduce natural predators like ants to control coffee pests biologically."
+    },
+    {
+      "source": "Itĩrĩria bataraitha cia kĩmerera na cia [cs] chemical [cs]  maita merĩ mwaka nĩguo kahũa gakũre wega.",
+      "translation": "It turns the battery of the CIA and CIA [cs] chemical [cs] meters of the CIA in the year of the year of the year of the year of the year of the year.",
+      "reference": "Apply organic or chemical fertilizers twice a year for optimal coffee growth."
+    },
+    {
+      "source": "Thuraia  mbegũ cia kahũa kumana na ũigana, ũritũ na wagĩrĩru.",
+      "translation": "Through them, they will be wrapped, and they will be wrapped, and they will be wrapped, and they will be wrapped.",
+      "reference": "Grade coffee beans based on size, weight, and quality."
+    },
+    {
+      "source": "Ũmithia mbuni cia kahũa kĩrĩrĩ-inĩ kana handũ haraganu  nĩgetha kũnyihia gĩkĩro kĩa ũgunyu",
+      "translation": "And the heavens, and the earth, and the earth, and the earth, and the earth, and the earth, and the earth, and the earth, and the earth, and the earth, and the earth, and the earth, and the earth, and the earth, and the earth, and the earth.",
+      "reference": "Dry coffee beans on raised beds or patios to reduce moisture content."
+    },
+    {
+      "source": "Humbĩra na makoni  ma kahũa nĩgetha ũcokie irio cia ũkũria tĩri-inĩ.  ",
+      "translation": "And I will be able to make it clear, and I will be able to make it clear, and I will be able to make it clear, and I will be able to make it clear.",
+      "reference": "Mulch with coffee husks to recycle nutrients back into the soil."
+    },
+    {
+      "source": "Itĩrĩria mĩmera ya kahũa maĩ hĩndĩ ya riũa  nĩgetha ĩkure wega ",
+      "translation": "Turkey: Turkey: Turkey: Turkey: Turkey: Turkey: Turkey: Turkey: Turkey: Turkey: Turkey: Turkey",
+      "reference": "Irrigate coffee plants during dry spells to maintain consistent growth."
+    },
+    {
+      "source": "Girĩgĩrĩria  tũtambĩ  na njĩra  ya  kũiga ũtheru na gũtũmĩra indo cia kĩmerera cia gũtũingata.",
+      "translation": "Thus, we will be able to bring the righteous and the righteous, and the righteous, and the righteous, and the righteous, and the righteous, and the righteous.",
+      "reference": "Control pests by maintaining cleanliness and using natural repellents."
+    },
+    {
+      "source": "Iga mbũni ĩrĩkĩtie kũniara mĩhukoinĩ ĩtangĩingĩria ũgunyu kũgirĩrĩria  ndĩgathũke",
+      "translation": "Those who are in the midst of the earth, and who are in the midst of the earth, and who are in the midst of the earth, and who are in the midst of the earth.",
+      "reference": "Store dried coffee beans in moisture-proof bags to prevent spoilage."
+    },
+    {
+      "source": "Ũrĩmi wa mbũkũ wambagĩrĩria na gũciakĩra nyũmba njega.   ",
+      "translation": "Those who are worshippers and worshippers are worshippers.",
+      "reference": "Rabbit farming starts with constructing a proper house for your rabbits."
+    },
+    {
+      "source": "Wĩtheme gwĩkĩra [cs] nitrogen [cs] makĩria tondũ noyongerere ũhũthũ wa kũgũmĩrwo nĩ tũtambi na mĩrimũ.",
+      "translation": "Thus, the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship.",
+      "reference": "Avoid excessive nitrogen application, which can increase pest and disease susceptibility."
+    },
+    {
+      "source": "He mbũkũ irio  ginyanĩrĩrũ nĩgetha ikũre wega. ",
+      "translation": "Those who are in the midst of the wrath are the wrath.",
+      "reference": "Feed rabbits a balanced diet to ensure healthy growth."
+    },
+    {
+      "source": "Tua na moko mbũni  njĩru  hĩndĩ ya kũgetha.",
+      "translation": "And the old and the old, and the old, and the old, and the old, and the old.",
+      "reference": "Handpick ripe coffee cherries during the harvest season."
+    },
+    {
+      "source": "Tũtambi tũrĩa tũgũmagĩra ũrĩmi wa mbũku nĩ hamwe na  mũthũa, thuya na ngũha.",
+      "translation": "We are the one who gives righteousness to us, the one who gives righteousness to us, the one who gives righteousness to us, the one who gives righteousness to us, and the one who gives righteousness to us.",
+      "reference": "Common pests in rabbit farming include mites, fleas, and ticks."
+    },
+    {
+      "source": "Ngano ya hĩndĩ ya heho ĩhandagwo heho yanyihanyiha  na noyage gũtorio  nĩ heho ĩna mbarafu. ",
+      "translation": "The light of the sun, the light of the sun, the light of the sun, the light of the sun, the light of the sun.",
+      "reference": "Winter wheat is planted in the fall and can survive freezing temperatures."
+    },
+    {
+      "source": "Tĩgĩrĩra nyama nĩyaigwo na ũrugarĩ ũrĩa wagĩrĩire  igĩtwarwo thoko. ",
+      "translation": "Those who eat the food, and they eat the food, and those who eat the food, and those who eat the food, and those who eat the food.",
+      "reference": "Ensure the meat remains at a safe temperature during transport."
+    },
+    {
+      "source": "Handa mĩtĩ ya  kũrehe kĩruru mũgũndainĩ wa kahũa kũgirĩrĩria riũa ihiũ.",
+      "translation": "In the U.S. there is a righteous righteous righteous righteous.",
+      "reference": "Plant shade trees in the coffee field to protect plants from direct sunlight."
+    },
+    {
+      "source": "Mahũa ma mbeniko makũraga wega tĩri-inĩ  ũikũrũkagia maĩ wega ũri na [cs] pH [cs]  ĩtagũkĩra ithano turuma ithathatũ.",
+      "translation": "Thus, the righteous are the righteous, and the righteous are the righteous, and the righteous are the righteous, and the righteous are the righteous, and the righteous are the righteous.",
+      "reference": "Pyrethrum thrives in well-drained, loamy volcanic soils with a pH of >5.6."
+    },
+    {
+      "source": "Thũgũnda mathogora nĩgetha ũmenye hĩndĩ ĩrĩa njega ya kwendia kahũa.",
+      "translation": "Thou shalt go to the heavens, and thou shalt go to the heavens.",
+      "reference": "Monitor market prices to determine the best time to sell coffee."
+    },
+    {
+      "source": "Iga  gĩthimi gĩa tĩri kĩrĩ kĩa [cs] pH [cs] gatagatĩinĩ  ka ithano na nuthu nginya ithathatũ na nuthu nĩgetha kahũa gakũre wega",
+      "translation": "Thus, it is the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship.",
+      "reference": "Maintain a soil pH between 5.5 and 6.5 for optimal coffee growth."
+    },
+    {
+      "source": "Rora ithimi  cia [cs] pH [cs] ya tĩri na ũigananie na  [sc] lime [cs] kana [cs] sulfur [cs]   ũria kũbataire.",
+      "translation": "Rora itim cia [cs] pH [cs] of the thirst and [sc] lime [cs] to [cs] sulfur [cs] ũria kũbataire.",
+      "reference": "Monitor soil pH and adjust with lime or sulfur as needed."
+    },
+    {
+      "source": "Ongerera tũirio twa mbũkũ irio-inĩ nĩguo kũongerera hinya mwĩrĩ.",
+      "translation": "And I will give you the righteous, and I will give you the righteous, and I will give you the righteous.",
+      "reference": "Include pellets in their diet for essential nutrients."
+    },
+    {
+      "source": "\n\nMahũa ma mbeniko  nĩ mũmera  wa gũtũra  ũrĩa woyaga  kahinda ka makĩria ma mĩaka ĩrĩ  ũtakubatara kũhandwo rĩngĩ   mwaka o mwaka.\n",
+      "translation": "Thus, the Americans (the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, the Americans, and the Americans.",
+      "reference": "Pyrethrum is a perennial crop -takes a period longer than two years without the need of being replanted each year"
+    },
+    {
+      "source": "Mahũa ma mbeniko mabataraga mũigana wa ũrugarĩ  ũtakĩrĩtie [cs[ centigrade [cs] ikũmi na inyanya  gwa kahinda ka ciumia ithathatũ.",
+      "translation": "Those who are in the midst of the covenant, and who are in the midst of the covenant, and who are in the midst of the covenant, and who are in the midst of the covenant, and who are in the midst of the covenant, and who are in the midst of the covenant.",
+      "reference": "Pyrethrum requires a temperature of less than 18° C for at least 6 weeks"
+    },
+    {
+      "source": "Gayania icunjĩ cia gũciarĩra  na  gũkũrĩra nyũmbainĩ ya mbũkũ.",
+      "translation": "He is the wicked, and he is the wicked, and he is the wicked, and he is the wicked.",
+      "reference": "Separate sections for breeding and growing rabbits in the house."
+    },
+    {
+      "source": "Tĩgĩrĩra nĩ wahingia mawatho na mĩtaratara  ya ũrĩmi wa kahũa na ikĩro iria  ciandĩkithĩtio. ",
+      "translation": "Those who are in the midst and in the midst and in the midst and in the midst and in the midst and in the midst and in the midst and in the midst and in the midst.",
+      "reference": "Ensure compliance with coffee farming regulations and standards for quality assurance."
+    },
+    {
+      "source": "Mboga cia mũũkano na nyeni nĩ irio njega cia kũhe mbũkũ.",
+      "translation": "Take it with the clothes, and take it with the clothes, and take it with the clothes.",
+      "reference": "Fresh vegetables and leafy greens are good for rabbits."
+    },
+    {
+      "source": "Iga mũtaratara wa gũciarana kwa mbũkũ nĩgetha ũkoragwo na mbũkũ cia kwendia hĩndĩ ciothe. ",
+      "translation": "Through the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "Keep a breeding schedule to maintain a steady supply of rabbits."
+    },
+    {
+      "source": "Hingo ciothe rora kana  nyũmba ya mbũkũ ĩna tũnyamũ tũangangi.   ",
+      "translation": "It is like the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "Always check for signs of pests in the rabbit house."
+    },
+    {
+      "source": "Mbura nyingĩ  hĩndĩ ya kũgetha  no ĩtũme ngano ĩthethũke ihinda rĩtakinyĩte. ",
+      "translation": "Those who are in the midst of the covenant are the ones who are in the midst of the covenant, and those who are in the midst of the covenant are the ones who are in the midst of the covenant.",
+      "reference": "Too much rain during harvest can cause wheat grains to sprout prematurely."
+    },
+    {
+      "source": "Hũthĩra [cs] wire mesh[cs]  na mbaũ gũaka nyũmba  ĩngitũra ya gũikarwo nĩ mbũkũ.",
+      "translation": "They are the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels.",
+      "reference": "Use wire mesh and wood to build a durable rabbit house."
+    },
+    {
+      "source": "Hehia nyama wega  warĩkia gũthĩnja  nĩguo  ũige nyama ĩyo ĩtagũthũka.",
+      "translation": "It is the food that we eat, and the food that we eat, and the food that we eat, and the food that we eat.",
+      "reference": "Properly chill the meat immediately after slaughtering to preserve freshness."
+    },
+    {
+      "source": "Thambia  mũrũndũrũndũ wa mbũkũ wega  nĩgetha ũrute gĩko gĩothe.",
+      "translation": "Tell me that I will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be the one.",
+      "reference": "Thoroughly wash the rabbit carcass to remove any contaminants."
+    },
+    {
+      "source": "Ita thakame ya mbũku wega thutha wa gũthĩnja nĩguo ĩkorwo na nyama ya gĩkĩro kĩa igũrũ.",
+      "translation": "It will be the cattle of the cattle of the cattle of the cattle of the cattle of the cattle of the cattle of the cattle of the cattle of the cattle of the cattle of the cattle.",
+      "reference": "Bleed the rabbit properly after slaughtering for better meat quality."
+    },
+    {
+      "source": "Ĩkoretwo irĩ ĩrio cia bata cia kũrĩo nĩ andũ gwa kahinda ka miaka ngiri ikũmi.",
+      "translation": "Thus, the people of Turkey, who have lived in the city of Turkey, have lived in the city of Turkey for a long time.",
+      "reference": "It has been a vital crop for human consumption for over 10,000 years."
+    },
+    {
+      "source": "ĩhũthagirwo kuruga mĩgate, [cs] pasta [cs] na irio ingĩ cia kũruga mĩgate.",
+      "translation": "They are the worshippers, they are the worshippers, they are the worshippers, they are the worshippers, they are the worshippers.",
+      "reference": "It is used to make bread, pasta, and various baked goods."
+    },
+    {
+      "source": "Etha marũa na ritheni ma gũgũitĩkĩria kwendia nyama cia mbũkũ",
+      "translation": "Eat and Eat and Eat and Eat and Eat and Eat",
+      "reference": "Obtain necessary permits and licenses for selling rabbit meat."
+    },
+    {
+      "source": "Hũthĩra mĩtego ĩtari mĩrũrũ ya kweheria tũtambi nyũmbainĩ ya mbũkũ",
+      "translation": "Those who are in the midst of the covenant, and those who are in the midst of the covenant, and those who are in the midst of the covenant.",
+      "reference": "Use humane trapping methods if you need to remove pests from the rabbit house."
+    },
+    {
+      "source": "Ambĩrĩria kũhe mbũkũ irio ngeni kahora itikarũare nda",
+      "translation": "I will be the one who will be the one who will be the one who will be the one who will be the one",
+      "reference": "Introduce new foods gradually to prevent digestive issues."
+    },
+    {
+      "source": "Hũthĩra kahiũ kogĩ gũthĩnja narua na njĩra njega",
+      "translation": "He is the one who gives righteousness, and the one who gives righteousness.",
+      "reference": "Use a sharp knife for quick and effective slaughter."
+    },
+    {
+      "source": "Ambĩrĩria kahora ũrĩmi wa mbũkũ na waramie ũrĩmi wongerera ũgĩ",
+      "translation": "He is the one who gives righteousness, and the one who gives righteousness, and the one who gives righteousness.",
+      "reference": "Start small with your rabbit farming and expand as you gain experience."
+    },
+    {
+      "source": "Ceraga thoko cia arĩmĩ nigetha wenderie agũri gũtari mĩhĩnga",
+      "translation": "Netherlands Netherlands Netherlands Netherlands Netherlands Netherlands Netherlands Netherlands",
+      "reference": "Attend farmers' markets to sell directly to consumers."
+    },
+    {
+      "source": "Thumu wa [cs] compost [cs] wĩkĩragwo ngano ĩkĩhandwo nĩgetha wongerere ũnoru wa tĩri.",
+      "translation": "Thus, the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship.",
+      "reference": "Compost is often applied before wheat planting to improve soil fertility."
+    },
+    {
+      "source": "Ngano ĩkũragio kũndũ kwĩ mbura njiganu nginya nini.",
+      "translation": "And what is it for the worshippers of the worshippers?",
+      "reference": "Wheat is often grown in regions with moderate to low rainfall."
+    },
+    {
+      "source": "Ũtheru ũrĩa wagĩrĩire  nĩũnyihagia ũgwati wa gũtuthũka kwa mĩrimũ",
+      "translation": "He is the one who gives righteousness to the wicked, the one who gives righteousness to the wicked.",
+      "reference": "Proper sanitation reduces the risk of disease outbreaks."
+    },
+    {
+      "source": "Nĩ ya bamĩrĩ ya [cs] Brassica [cs]   ta [cs] broccoli [cs] na [cs] kale [cs].  ",
+      "translation": "The brassic brassic brassic brassic brassic brassic brassic brassic brassic brassic brassic brassic",
+      "reference": "It is part of the Brassica family, like broccoli and kale."
+    },
+    {
+      "source": "Mbura njiganu mahũa  makĩruta kiro nĩ ya bata nĩgetha mbegũ ikũre wega.",
+      "translation": "And the wreck of the wreck of the wreck of the wreck of the wreck of the wreck of the wreck.",
+      "reference": "Adequate rainfall at the flowering stage is crucial for grain development."
+    },
+    {
+      "source": "Mahũa ma mbeniko nĩ mũmera wa gũikara mĩaka mĩingĩ mũgũnda na maikaraga kahinda ka mĩaka ĩna.",
+      "translation": "The Americans are the Americans and the Americans are the Americans and the Americans are the Americans and the Americans are the Americans.",
+      "reference": "Pyrethrum is a perennial crop with a lifespan of up to 4 years."
+    },
+    {
+      "source": "Roraga kaingĩ kĩonania gĩa gũthũka  kwa nyũmba ya mbũkũ. ",
+      "translation": "It is an English-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American.",
+      "reference": "Regularly check the rabbit house for signs of wear and tear."
+    },
+    {
+      "source": "Rĩma na ũhuhĩre ndawa ciumia ta  igirĩ ũtanahanda ",
+      "translation": "Righteousness and righteousness, and righteousness, and righteousness.",
+      "reference": "Plough and apply herbicides about 2 weeks before planting."
+    },
+    {
+      "source": "Ũtheru mwega nĩ wa bata mũno hĩndĩ  ya gũthĩnja.",
+      "translation": "And they are the worshippers of the worshippers.",
+      "reference": "Proper hygiene is essential during the slaughtering process."
+    },
+    {
+      "source": "Ũgunyu ũrehetwo nĩ  mbura kana uunĩthĩria wa maĩ  nĩ ũrĩ bata ũkūria-inĩ wa   kabici.",
+      "translation": "Thou shalt say that the wicked wicked wicked wicked wicked wicked wicked wicked",
+      "reference": "Consistent moisture from rainfall or irrigation is important for cabbage."
+    },
+    {
+      "source": "Gĩkĩro kĩringanu wega  kĩa bataraitha iria ĩkũhũthĩrwo  ĩbatie kuumana na maumĩrĩra na ũrĩa tĩrĩ ũthuthurĩtwo.",
+      "translation": "Thus, the righteous are the righteous, the righteous are the righteous, the righteous are the righteous, the righteous are the righteous, the righteous are the righteous.",
+      "reference": "Accurate fertilizer application rates are dependent on results from the soil analysis."
+    },
+    {
+      "source": "Kabici ĩkũragio kũndũ kũingĩ  mũno thĩ nĩũndũ wa bata mwĩrĩ-inĩ.",
+      "translation": "Through the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "Cabbage is widely grown across the world for its nutritional value."
+    },
+    {
+      "source": "Tũma ngwatanĩro na thoko cia gũkũ na mĩkawa  nĩgetha  na wendagie hĩndĩ o hĩndĩ.",
+      "translation": "Thus, let us go and go and go and go and go and go and go and go and go and go and go and go.",
+      "reference": "Build relationships with local markets and restaurants for regular sales."
+    },
+    {
+      "source": "  Heho nyĩngĩ no ĩthũkie ngano rĩrĩa ĩraruta kĩro.",
+      "translation": "He is the one who does not have the wicked wicked wicked wicked.",
+      "reference": "Frost during flowering can destroy wheat heads."
+    },
+    {
+      "source": "Ũndũ ũyũ nĩ hamwe na mabataro ma ũrugarĩ na mbura.  ",
+      "translation": "They are the worshippers and the worshippers and the worshippers and the worshippers.",
+      "reference": "This includes temperature and rainfall requirements"
+    },
+    {
+      "source": "Tĩri wa kĩhukuhuku mũnoru nĩ mwega wa kũhanda ngano. ",
+      "translation": "It is the wreck of the wreck of the wreck of the wreck.",
+      "reference": "Loamy soils rich in organic matter are ideal for wheat farming."
+    },
+    {
+      "source": "Mahũa ma mbeniko mabatie gũcehwo  rita rĩmwe o mwaka.",
+      "translation": "It will be the year of the worship, the year of the worship, the year of the worship.",
+      "reference": "Pyrethrum plants should be cut back once a year."
+    },
+    {
+      "source": "Ũraihu wa igũrũ na thĩ nĩ  ũhutagia kahinda ga kĩmera gĩa gũkũria ngano.",
+      "translation": "Those who are worshipped and worshipped are worshipped and worshipped, and worshipped are worshipped.",
+      "reference": "Altitude affects the length of the wheat growing season."
+    },
+    {
+      "source": "Heho nyĩngĩ mũno  irĩmainĩ no inyihie maciaro.",
+      "translation": "Therefore, the Arabs are not in the midst of the earth.",
+      "reference": "heavy frost, which can occur at high altitudes, causes reduction in yield"
+    },
+    {
+      "source": "nĩgetha mahote kũruta kĩro.",
+      "translation": "And all of them will be shattered.",
+      "reference": "in order to initiate flowering."
+    },
+    {
+      "source": "Nĩgeetha kũmithia wega arĩmĩ mataragwo mahũthire hinya wa thitima ya riũa.",
+      "translation": "It is the worship of the worship of the worship of the worship of the righteous.",
+      "reference": "For better drying farmers are advised to use a solar dryer."
+    },
+    {
+      "source": "Ĩkũraga ta   hakuhĩ ũraihu  wa mita ĩmwe.",
+      "translation": "He didn’t know the wrath of the wrath.",
+      "reference": "It grows to a height of approximately one meter."
+    },
+    {
+      "source": "Bataraitha kaingĩ ĩkĩragwo maita merĩ, hĩndĩ ya kũhanda na hĩndĩ ya  mĩmera ĩgĩkũra.",
+      "translation": "It is an array of the array of the array of the array of the array of the array of the array of the array of the array.",
+      "reference": "Fertilizers are usually applied in two doses: at planting and during growth."
+    },
+    {
+      "source": "Ngano ĩkũraga wega tĩri-inĩ mũnoru na  ũikũrũkagia maĩ wega. ",
+      "translation": "And they are the wicked, and they are the wicked, and they are the wicked.",
+      "reference": "Wheat grows best in well-drained, fertile soils."
+    },
+    {
+      "source": "Kũhanda tene nĩ gũteithagia mĩri ya ngano  kũambĩka  gũtanagĩa heho.  ",
+      "translation": "Three of them are the worshippers, and the worshippers are the worshippers, and the worshippers are the worshippers.",
+      "reference": "Early planting allows wheat to establish roots before cold weather"
+    },
+    {
+      "source": "Kũmithia na riũa nĩyo  njĩra ĩrĩa ĩhũthĩkaga mũno.",
+      "translation": "And it will be in the midst, and in the midst, and in the midst, and in the midst.",
+      "reference": "Sun drying is the most common method."
+    },
+    {
+      "source": "Maciaro ma ngano no manyihe kũndũ kwĩ  ũraihu wa igũrũ nĩũndũ wa heho.",
+      "translation": "Thus, the heavens of the heavens of the heavens of the heavens of the heavens of the heavens.",
+      "reference": "Wheat yields may decline at very high altitudes due to cold."
+    },
+    {
+      "source": "Nĩ kũrĩ  mĩthemba ngũrani ya ngano hamwe na ĩrĩa  nyũmū na njororo.",
+      "translation": "It is the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship.",
+      "reference": "There are different types of wheat, including hard, soft,"
+    },
+    {
+      "source": "Mahũa mabatiĩ gũtuo marĩkia gūthethuka wega.",
+      "translation": "Those who are in the midst of the earth are in the midst of the earth.",
+      "reference": "Flowers should be harvested at the correct bud stage"
+    },
+    {
+      "source": "Gitĩra ngano ndĩgathūke nĩ kugirĩrĩria tūtambĩ.",
+      "translation": "We are the one who gives righteousness to us, the one who gives righteousness to us.",
+      "reference": "Control pests to protect wheat from damage."
+    },
+    {
+      "source": "Mahũa matibatie gũtuo  mbura ĩkiura. ",
+      "translation": "He is treated with a headache.",
+      "reference": "Flowers should not be picked under rainy conditions."
+    },
+    {
+      "source": "Ngano yakūra  mūno  no  ĩhehenjeke na ĩnyihie  magetha. ",
+      "translation": "The mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains.",
+      "reference": "Overripe wheat can shatter, causing grain loss during harvest."
+    },
+    {
+      "source": "Handa mbegũ ũrikũ wa [cs] centimetre [cs]  igĩrĩ nginya ithatũ.",
+      "translation": "It is in the midst of the mountains, and it is in the midst of the mountains, and it is in the midst of the mountains.",
+      "reference": "Plant the seeds at a depth of 2 to 3 centimeters."
+    },
+    {
+      "source": "Ngano nũĩkũrio mĩgunda-inĩ  kũndũ kũrĩ ĩgũrũ kana kũrĩ  thĩ.",
+      "translation": "And I have made it to the wicked, to the wicked, to the wicked, to the wicked.",
+      "reference": "Wheat can be grown in lowland and highland regions."
+    },
+    {
+      "source": "Unithĩria wa maĩ no ũteithĩrĩrie hĩndĩ ya riũa. ",
+      "translation": "Those who are in the midst of the wrath are not in the midst of the wrath.",
+      "reference": "Irrigation can supplement rainfall during dry periods."
+    },
+    {
+      "source": "Ũrugarĩ mũingĩ hĩndĩ ya kũgetha no ũnyihie maciaro. ",
+      "translation": "Those who are in the midst of the covenant are not in the midst of the covenant.",
+      "reference": "High temperatures during grain filling can reduce wheat yields."
+    },
+    {
+      "source": "Kwamũra ihinda rĩagĩrĩru rĩa kũgetha ngano nĩ kũgiragĩrĩria hathara. ",
+      "translation": "Thus, the wicked wicked wicked wicked wicked wicked wicked wicked.",
+      "reference": "Timing is crucial to prevent losses during wheat harvest."
+    },
+    {
+      "source": "Ũgunyu ũrĩa wagĩrĩire nĩũteithagĩrĩria kũagagĩria  maciaro ma ngano.",
+      "translation": "Those who are in the midst of the covenant, are the ones who are in the midst of the covenant, the ones who are in the midst of the covenant.",
+      "reference": "Consistent moisture levels help improve wheat yields."
+    },
+    {
+      "source": "Ihinda rĩega rĩa kũhanda ngano rĩhocanagia  na rĩera rĩa kũndũ kũu",
+      "translation": "Rise of the rise of the rise of the rise of the rise of the rise of the rise of the rise",
+      "reference": "The best time to plant wheat depends on the local climate."
+    },
+    {
+      "source": "Makũmbi ma kũiga ngano mathondeketwo magirĩrĩrie ũthũkia wa ngano na gĩko.  ",
+      "translation": "Those who are the worshippers are the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers.",
+      "reference": "Wheat storage facilities are designed to prevent contamination."
+    },
+    {
+      "source": "Heho no ĩthũkie mĩmera ya ngano.",
+      "translation": "It is not the wicked wicked wicked.",
+      "reference": "Cold temperatures can damage wheat seedlings ."
+    },
+    {
+      "source": "Arĩmĩ mahũthagĩra macini ya mbegũ nĩgũo kũhanda  ngano ũrĩa  kũagĩrĩire.",
+      "translation": "And the Americans, who were in the midst of the earth, were in the midst of the earth, in the midst of the earth, in the midst of the earth.",
+      "reference": "Farmers use seed drills to plant wheat more accurately."
+    },
+    {
+      "source": "Ndawa nĩhũraguo kũgirĩrĩria ngano makũmbĩ-inĩ  gũthũkio nĩ tũnyamu tũnini. ",
+      "translation": "And I will be able to bring them to the world, and they will be able to bring them to the world, and they will be able to bring them to the world, and they will be able to bring them to the world.",
+      "reference": "Fumigation is used to protect stored wheat from insect infestations."
+    },
+    {
+      "source": "Nĩ mboga ĩtarĩ hinya mũingĩ na tũmatanda tũingĩ. ",
+      "translation": "And they are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones.",
+      "reference": "It is a low-calorie vegetable with high fiber content."
+    },
+    {
+      "source": "Nĩ kũrĩ  mĩthemba mĩingĩ ya kabici ĩrĩa nĩ hamwe na kabici ya rangi wa nyeki nduru, rangi mũtune  na kabici ya [cs] savoy [cs].",
+      "translation": "The Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans.",
+      "reference": "There are different types of cabbage, including green, red, and Savoy."
+    },
+    {
+      "source": "Ndawa ya kũhuhĩra kũgirĩrĩria ria kũhĩtahĩtanĩra irio na ngano. ",
+      "translation": "Through the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "Herbicides help control weeds that compete with wheat for nutrients."
+    },
+    {
+      "source": "Kaingĩ ngano nyingĩ  ĩigagwo nĩgetha ĩkahota kwendio thokoinĩ  mwaka wothe.",
+      "translation": "In the year of the year, the English-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American-American.",
+      "reference": "Wheat is often stored in bulk to supply markets throughout the year."
+    },
+    {
+      "source": "Ikũraga wega kũndũ kũruru kũri na ũrugarĩ wa [cs[degrees centigrade  [cs] ikũmi na ithano na [cs] degrees centigrade  [cs] mĩrongo ĩrĩ. ",
+      "translation": "It is in the midst of the mountains, and in the midst of the mountains, and in the midst of the mountains, and in the midst of the mountains.",
+      "reference": "It grows best in cool temperatures between 15°C and 20°C."
+    },
+    {
+      "source": "Mũgũnda ũroragwo nĩgetha kweheria mĩrimũ ta [cs] rust [cs] na [cs] mildew[cs].   ",
+      "translation": "I will be able to bring them to the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "fields are monitored for fungal diseases like rust and mildew."
+    },
+    {
+      "source": "ũbũthu tĩrinĩ ũteihagia gũthondeka mũmbire wa tĩri na ũhoti wa tĩri kũiga maũ.",
+      "translation": "Thus, the wicked, the wicked, the wicked, the wicked, the wicked, the wicked, the wicked, the wicked, the wicked, the wicked, and the wicked.",
+      "reference": "Organic matter improves soil structure and water retention for wheat crops."
+    },
+    {
+      "source": "Mĩkori ya ngano ya ĩrengagwo na ngano ĩgathandũrwo kũhũthĩra [cs] threshers [cs].",
+      "translation": "Through the shadows of the shadows and the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "Wheat stalks are cut, and the grain is separated using threshers."
+    },
+    {
+      "source": "Angĩkorwo nĩwe ũrĩrĩmĩra irio cia mahiũ, ũkũbatara ĩka ĩmwe o mwaka, kũrĩithia ng'ombe ĩmwe, mori na njaũ.",
+      "translation": "It is the day of the resurrection, the day of the resurrection, the day of the resurrection, the day of the resurrection, the day of the resurrection, the day of the resurrection, the day of the resurrection, the day of the resurrection, and the day of the resurrection.",
+      "reference": "If you’re growing your own fodder you’ll need about 1 acre per year to feed one cow, one heifer and a calf."
+    },
+    {
+      "source": "Njĩra ĩno ĩgũtũma ũiganie irio cia ng'ombe ciaku nginya riũa rĩara na thogora wa iria wa haica ",
+      "translation": "I am the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness.",
+      "reference": "This way, you’ll have enough good fodder for your cows even when it gets dry and milk prices go up."
+    },
+    {
+      "source": "Gĩcũa-inĩ na icigo nini cia irĩma-inĩ cia irathĩro rĩa [cs] Rift Valley [cs] nĩ ciagĩire mbura niini ĩtaiganire ",
+      "translation": "It is the most important thing that we can do in the world, and it is the most important thing that we can do in the world, and it is the most important thing that we can do in the world, and it is the most important thing that we can do in the world.",
+      "reference": "The Coast and a few parts of the Highlands East of the Rift Valley received near to below average rainfall."
+    },
+    {
+      "source": "Kũiga matumbĩ wega nĩ kũgiragĩrĩria mathuke na [cs] bacteria[cs], kwaga kũrĩo nĩ nyamũ, na gũte rĩera, na ũrugarĩ mũingĩ na gũkua.",
+      "translation": "Thus, it will be made up of the wheat, and it will be made up of the wheat, and it will be made up of the wheat, and it will be made up of the wheat, and it will be made up of the wheat, and it will be made up of the wheat.",
+      "reference": "Packaging protects the eggs from bacteria, natural predator, loss of moisture, temperatures that cause deterioration and crushing."
+    },
+    {
+      "source": "tĩri wa mwena wa naigũrũ nĩ ũgiragĩrĩria maĩ gũikũrũka mĩtũkĩ na kũrika thĩ na kũgiria tĩri gũtwarwo.",
+      "translation": "Through the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "The soil on the upper side slows the run off water and lets it sink into the soil and stops soil being washed away."
+    },
+    {
+      "source": "gĩko kĩa [cs]Bio-slurry [cs] [cs]digestate[cs] gĩatũmĩka ta thumu nĩkĩrombũiyagia ũgima mwega wa tĩri na kwongerera maciaro.",
+      "translation": "Thus, the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship.",
+      "reference": "Bio-slurry/digestate when used as a fertilizer enhances physical, chemical, and biological attributes of the soil and increases crop productivity when applied to the land"
+    },
+    {
+      "source": "Mĩtĩ mĩnini ndĩendaga gũcehwo mbere ya miaka ĩrĩ nginya ĩtatũ.",
+      "translation": "And the Americans were the Americans, and they were the Americans, and they were the Americans, and they were the Americans.",
+      "reference": "Young trees need no pruning during the first 2 - 3 years."
+    },
+    {
+      "source": "[cs] Biogas [cs] nĩ ĩteithagĩa aikari a niini a maturaĩnĩ, nĩ iteithagia kũmahe mwaki ũtarĩ ndogo wa kũruga, nĩũndũ wa kũmenyerera ũgĩma wa mwĩrĩ.",
+      "translation": "[c] Biogas [cs] is an array of the array of the array of the array of the array of the array of the array of the array of the array of the array of the array of the array of the array of the array.",
+      "reference": "Biogas improves health of rural low-income households by providing a cleaner cooking fuel and a waste handling solution thus avoiding health problems"
+    },
+    {
+      "source": "Nyũmba cia ngũkũ njega nĩ ĩbatie kũgitĩra tũcui kumana na rĩera rĩuru na nyamũ.",
+      "translation": "Thus, we will be able to make it to us, and we will be able to make it to us, and we will be able to make it to us, and we will be able to make it to us, and we will be able to do it.",
+      "reference": "Good housing should protect the birds from extreme weather and predators."
+    },
+    {
+      "source": "ũthii wa na mbere nĩũndũ wa kũnyihia wĩra mũĩngĩ wa atumia na ciana ũkuruhanĩtĩ na kuuna ngũ kana mai ma ng'ombe hamwe na mwaki ũtari ndogo.",
+      "translation": "Through the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels of the wheels.",
+      "reference": "Social development due to the reduced workload from women and children associated with collecting fuelwood or cow dung and also the availability of clean household energy."
+    },
+    {
+      "source": "Mũthemba wa njũgũ karanga wagĩritio Kenya nĩ: [cs]KEN-GNUT 1[cs], [cs] Egerton GN-1 (L) [cs], [cs]Egerton GN- 2 (R) [cs], [cs]Gathuku [cs], [cs] Lihanga [cs] na [cs] Kanga [cs].",
+      "translation": "For example, it is noted that there is a number of different types of clothing, such as clothing, clothing, clothing, clothing, clothing, clothing and clothing.",
+      "reference": "Improved groundnut varieties available in Kenya include KEN-GNUT 1, Egerton GN-1 (L), Egerton GN- 2 (R), Gathuku, Lihanga and Kanga."
+    },
+    {
+      "source": "Handa mĩmera mĩnini ya [cs] cocoa [cs] kuuma nathari yaku, kana ũgũre rũhongeinĩ rwa ũthuthuria wa mĩmera ",
+      "translation": "Thro the world, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore, therefore.",
+      "reference": "Plant young cocoa seedlings from your own nursery, or buy from a research centre."
+    },
+    {
+      "source": "mũrĩmũ wa [cs] Bole rot [cs] ũtũmaga [cs] wet rot [cs] ũtuĩkaga rangi wa ngoikoni ũtukanĩte na wa gĩtĩri na mũtuĩku, no ũtũme mũmera wage kũgwata. ",
+      "translation": "Thus, the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat of the wheat.",
+      "reference": "Bole rot causes a wet rot which becomes yellowish-brown and soft, which may lead to the plant collapsing and dying."
+    },
+    {
+      "source": "Handa mĩti ya [cs] cocoa [cs] kĩmera kĩa mbura gĩkĩambĩrĩria.",
+      "translation": "In the covenant of the covenant of the covenant of the covenant of the covenant of the covenant,",
+      "reference": "Plant cocoa trees at the start of the rainy season."
+    },
+    {
+      "source": "Mũbango wa njanjo nĩ ũbatie kũmenyithanio rĩrĩ tũcui twa ũkũrũ wa mũthenya ũmwe twagũrwo.",
+      "translation": "Thus, the gates of the gates of the gates of the gates of the gates of the gates of the gates of the gates of the gates of the gates of the gates of the gates of the gates of the gates of the gates.",
+      "reference": "A vaccination program should be shared when day old chicks are purchased."
+    },
+    {
+      "source": "Mathangũ meru nimũ mabatie gũtuo.",
+      "translation": "And I will be in the midst of the wrath.",
+      "reference": "Only ripe leaves should be harvested."
+    },
+    {
+      "source": "Handa mĩmera ya kũhumbĩra tĩri gatagatĩ ga mĩtaro ya makongo miaka itatũ ya mbere nĩgetha kweheria ria mũgũndainĩ.",
+      "translation": "Thro the past few years, there will be a great deal of time in the world, and there will be a great deal of time in the world, and there will be a great deal of time in the world.",
+      "reference": "Plant cover crops between the sisal rows during the first 3 years to keep the land weed-free."
+    },
+    {
+      "source": "Matunda magethetwo nĩmongagĩrĩrĩka o ũrĩa mũtĩ ũrathĩ mbere na gũkũra.",
+      "translation": "The fruit of the fruit is a fruit of the fruit of the fruit of the fruit of the fruit of the fruit of the fruit of the fruit.",
+      "reference": "The fruits harvested increases as the tree continues to grow."
+    },
+    {
+      "source": "Njũgũ Karanga ĩkoragũo ĩ ngũrũ hĩndĩ ĩrĩa thĩinĩ wa makoro ĩna ũirũ gĩcũnjĩ kĩa mĩrongo mũgwanja nginya mĩrongo ĩnana harĩ igana na rangi ya mũthemba ũcio.",
+      "translation": "Through the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "Groundnuts are mature when 70-80% of the inside of the pods shells have dark markings and the kernels are plump, with colour characteristic of that variety."
+    },
+    {
+      "source": "Mĩrĩmũ ĩrĩa ĩnyitaga mũcere nĩta ĩkoragwo hamwe na [cs]bacteria[/cs] [cs] leaf [/cs] [cs] blight [/cs]",
+      "translation": "It is the most famous of those in the world, and it is the most famous of those in the world, and it is the most famous of those in the world, and the most famous of those in the world.",
+      "reference": "Diseases that affect rice include Bacteria leaf blight."
+    },
+    {
+      "source": "Thamia mũkondobia ta thikũ mĩrongo ĩrĩ thutha wa mbegũ gũthethũka.",
+      "translation": "Thus, the righteous are the righteous, the righteous are the righteous, the righteous are the righteous.",
+      "reference": "Transplant avocado about 20 days after germination."
+    },
+    {
+      "source": "Makatoni mabatie kũingĩria riera wega.",
+      "translation": "I am in the middle of the covenant.",
+      "reference": "The cartons should be well ventilated."
+    },
+    {
+      "source": "Ramata mĩrimũ ya ngano ta [cs] leaf [cs][cs] rust[cs] na kũhanda mĩthemba ya ngano ĩtanyitagwo nĩ mĩrimũ ",
+      "translation": "Through the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "Control wheat diseases e.g leaf rust by planting resistant varieties, control weeds"
+    },
+    {
+      "source": "Thura mbegũ cia thoroko ĩrĩa imeraga narua, na ĩtathũkĩtio nĩ tũtambĩ kana kunekanga",
+      "translation": "Through it, the wrath of the wrath of the wrath of the wrath of the wrath of the wrath of the wrath of the wrath of the wrath of the wrath of the wrath",
+      "reference": "Choose cowpea seeds with high germination rate, not insect damaged or broken"
+    },
+    {
+      "source": "Ũtanaiga mbegũ thitoo, tũkania mbegũ na dawa cia tũtambĩ ta [cs] neem [cs], [cs] lantana [cs]",
+      "translation": "We are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones who are the ones.",
+      "reference": "Before storage, mix seed with a mixture of pesticidal plant parts (e.g.neem, lantana)."
+    },
+    {
+      "source": "Ĩkĩruta kĩro, ũrugarĩ ndũgakĩre [cs] centigrade [cs] mĩrongo ĩtatũ",
+      "translation": "He is the wicked, he is the wicked, he is the wicked, he is the wicked.",
+      "reference": "At flowering, temperatures should not exceed 30°C"
+    },
+    {
+      "source": "Mĩthemba ĩngi nĩ ta [cs]Kat-Kunde[cs], [cs]Kunde Fauu[cs], [cs]Kunde Tumaini[cs], [cs]M66[cs], [cs]KVU 27-1[cs], na [cs]K80[cs]",
+      "translation": "Thus, in the Qur’an, the Qur’an was revealed, and the Qur’an was revealed, and the Qur’an was revealed, and the Qur’an was revealed, and the Qur’an was revealed, and the Qur’an was revealed, and the Qur’an was revealed, and the Qur’an was revealed, and the Qur’an was revealed, and the Qur’an was revealed.",
+      "reference": "Other varieties include Kat-Kunde, Kunde Faulu, Kunde Tumaini, M66, KVU 27-1, and K80"
+    },
+    {
+      "source": "Mĩthemba ya thoroko ĩrĩa yonekaga kaĩngĩ Kenya nĩ [cs]Kunde Tamu[cs], [cs]Kunde Soko[cs]",
+      "translation": "Thus, the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship.",
+      "reference": "The common Cowpea varieties in Kenya are: Kunde Tamu, Kunde Soko."
+    },
+    {
+      "source": "Huha na gĩtarũrũ kũeheranĩria ngano theru na mahutii",
+      "translation": "and the righteous, and the righteous, and the righteous",
+      "reference": "Do winnowing to separate clean wheat grains from the chaff,"
+    },
+    {
+      "source": "Hiũha gũtabarĩrĩa maũndũ nigetha ũnyihie gũthũkangia ũria wendekithĩtio nĩ abithaa wa ngirigacha",
+      "translation": "I will be able to give you a little bit of a little bit of a little bit of a little bit of a little bit of a little bit of a little bit of a little bit of a little bit of a little bit of a little bit.",
+      "reference": "Take necessary action to reduce damage as recommended by agricultural experts"
+    },
+    {
+      "source": "Geria kũmerithia thoroko thikũ ikũmi mbere ya kũhanda",
+      "translation": "Righteous righteous righteous righteous",
+      "reference": "Do a germination test 10 days before planting cowpeas"
+    },
+    {
+      "source": "Ĩkĩra ngano theru makũniainĩ ma kio mĩrongo kenda",
+      "translation": "Thus, the worship of the worship of the worship of the worship of the",
+      "reference": "Put clean grain in 90 kg bags."
+    },
+    {
+      "source": "Mĩmera ya kũhumbĩra tĩri ĩthingataga ũnoru wa tĩri, maĩ, kũramata tũtambĩ na mĩrimũ",
+      "translation": "Thus, the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers.",
+      "reference": "Cover crops manage soil fertility, soil quality, water, pests, and diseases."
+    },
+    {
+      "source": "Thoroko nĩyo ya kerĩ ĩrĩ bata mũno bũrũrinĩ wa Kenya kũrũmĩrĩra mboco",
+      "translation": "Those who are in the midst of the covenant, and those who are in the midst of the covenant, and those who are in the midst of the covenant.",
+      "reference": "Cowpea is the second most important legume crop after common beans in Kenya"
+    },
+    {
+      "source": "Hura mbegũ cia matharũ na ũhumbĩre hanini na tĩri",
+      "translation": "and the wicked, and the wicked, and the wicked, and the",
+      "reference": "Sow the kale seeds and cover lightly with soil."
+    },
+    {
+      "source": "Mĩthemba ya matharũ ĩrĩa yonekaga mũno ni [cs]collards[cs], [cs]marrow stem[cs] na [cs]thousand headed[cs].",
+      "translation": "Thus, the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship.",
+      "reference": "Common kale varieties include collards, marrow stem and Thousand Headed are the most common varieties"
+    },
+    {
+      "source": "Ambĩrĩra kũmithia mbegũ kiumia kĩmwe nginya igĩrĩ ũtanahanda",
+      "translation": "And the wicked wicked wicked wicked wicked",
+      "reference": "Start hardening the seedlings 1 – 2 weeks before transplanting."
+    },
+    {
+      "source": "Warĩkia kũhanda, itĩrĩria gĩtambaya maĩ maita matatũ o mũthenya, na uthũrime mbegũ icio mũthenya wa gatatũ",
+      "translation": "Turkey, Turkey, Turkey, Turkey, Turkey, Turkey, Turkey, Turkey, Turkey, Turkey, Turkey, Turkey, Turkey",
+      "reference": "Afterwards water the cloth 3 times a day, examine the seeds on the 3rd day."
+    },
+    {
+      "source": "Hũthĩra mbegũ cia matharũ ĩhĩtũkĩtio nĩ watho",
+      "translation": "He is the one who gives righteousness to the wicked.",
+      "reference": "Use certified kale seed with special attributes"
+    },
+    {
+      "source": "Menyerera ndugaĩtĩrĩrĩe maĩ maĩngĩ tondũ nomarehe mũrimũ wa [cs]damping-off [cs]",
+      "translation": "They are the people of the world, and they are the people of the world, and they are the people of the world, and they are the people of the world.",
+      "reference": "Avoid over-watering which can lead to “Damping-off” disease."
+    },
+    {
+      "source": "Hũra harũ wiki ta igĩri kana ithatũ thutha wa kũrĩma",
+      "translation": "It is the day of the day, the day of the day, the day of the day, the day of the day.",
+      "reference": "This is followed by harrowing, 2-3 weeks after ploughing"
+    },
+    {
+      "source": "Mĩthemba ĩngĩ nĩ ta thũkũma cia [cs]Mfame F1[cs] na [cs] Moss Curled[cs]",
+      "translation": "The United States of America has a fighter cia [cs]Mfame F1[cs] and [cs] Moss Curled[cs]",
+      "reference": "Other varieties include Mfalme F1 and Moss Curled Kale."
+    },
+    {
+      "source": "\nHĩtana na mbũca, tũthegethi mbembe na [cs afatoxin [cs] na kũniaria mbembe nginya gĩcunji gĩa ikũmi na ithatũ nginya ikũmi na inya harĩ igana cia ũgunyu\n",
+      "translation": "Sweaters and Sweaters, Sweaters and Sweaters, Sweaters and Sweaters, Sweaters and Sweaters, Sweaters and Sweaters, Sweaters and Sweaters, Sweaters and Sweaters, Sweaters and Sweaters, Sweaters and Sweaters, Sweaters and Sweaters, Sweaters and Sweaters, Sweaters and Sweaters.",
+      "reference": "Control weevils, grain borers and aflatoxin by drying the maize to 13-14% moisture."
+    },
+    {
+      "source": "Makongo no magethwo rita ria mbere thutha wa mĩaka ĩtatũ kana ĩna kuuma mahandwo",
+      "translation": "It is not the way that the Americans will be able to do the same as the Americans will be able to do the same.",
+      "reference": "Sisal may be harvested for the first time 3-4 years after planting."
+    },
+    {
+      "source": "Ũbatie gwĩka  ũndũ ũyu kĩroko tene",
+      "translation": "Thou shalt say, thou shalt say.",
+      "reference": "This should be done early in the morning."
+    },
+    {
+      "source": "Thuura waru ĩrĩa igethetwo nĩgetha kweheria irĩa  ndihangie,  thũũkũ , mbuthu  kana ciĩna mĩrimũ",
+      "translation": "Thou shalt speak, thou shalt speak, thou shalt speak, thou shalt speak, thou shalt speak, thou shalt speak, thou shalt speak, thou shalt speak.",
+      "reference": "Sort the harvested potatoes to remove the bruised, damaged, rotting or diseased tubers from the good ones."
+    },
+    {
+      "source": "mbere ya kũhanda nyanya, amũra  handũ hagĩrĩru na hatakwaraha maĩ ",
+      "translation": "He is the wicked, he is the wicked, he is the wicked, he is not the wicked, he is not the wicked.",
+      "reference": "Before planting tomatoes, select a suitable and well drained ground."
+    },
+    {
+      "source": "Thima kana nĩ nyũmũ wega ũkĩrũma kana gũkunya na ndwara ciaku",
+      "translation": "Thus, it is like a shirt and a shirt, and it is like a shirt and a shirt.",
+      "reference": "Test if it's dry enough by biting or pinching with your finger nails."
+    },
+    {
+      "source": "Wĩra ũcio ũrutagwo mbere ya kĩmera kĩa mbura nĩguo kũnyihia mĩrĩmũ na mbũca.",
+      "translation": "Those who are the worshippers are the worshippers who are the worshippers who are the worshippers who are the worshippers who are the worshippers who are the worshippers.",
+      "reference": "It is usually done before the rainy season to reduce disease infection and weevils."
+    },
+    {
+      "source": "Ndũkaige waru thĩ na ndũkaige makũniainĩ ma makongo ",
+      "translation": "They will be wrapped in the shadows, and they will be wrapped in the shadows.",
+      "reference": "Do not place tubers on the ground and don't store them in sisal bags."
+    },
+    {
+      "source": "Waru yagĩrĩirwo kũgethwo mũthenya wĩ riũa na ũtarĩ mbura",
+      "translation": "Those who are the wicked, the wicked, the wicked, and the wicked.",
+      "reference": "The tubers should be dug on a dry day."
+    },
+    {
+      "source": "  Iga magetha ma [cs] soya[cs] makũniainĩ handũ itarainĩ  kana mbaoinĩ ya kwaro harainu na na rũthingo",
+      "translation": "Those who are in the midst of the covenant, and those who are in the midst of the covenant, and those who are in the midst of the covenant, and those who are in the midst of the covenant, and those who are in the midst of the covenant.",
+      "reference": "Store harvested soybean in grain bags on a raised platform or wooden pallet away from the wall."
+    },
+    {
+      "source": "Mbere ya kũhanda waru, rĩma mũgũnda hĩndĩ ya riũa kahinda ga  ciumia ithathatũ.",
+      "translation": "Through the shadows of the shadows, the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "Before planting potatoes, clear your land during the dry season at least 6 weeks before planting."
+    },
+    {
+      "source": "Gũkũria makongo gũtibataraga gũitĩrĩria maĩ tondũ makongo nĩmameraga ona gũtarĩ maĩ ",
+      "translation": "And the wicked, and the wicked, and the wicked, and the wicked, and the wicked, and the wicked, and the wicked.",
+      "reference": "Growing sisal does not need irrigation, as the sisal plant is drought resistant."
+    },
+    {
+      "source": "Iga waru handũ ha rĩera rĩega na ithandũkũ-inĩ rĩrĩa rĩngĩtũma rĩera rĩkinye.",
+      "translation": "It is not a wrath, it is a wrath, it is a wrath, it is a wrath, it is a wrath.",
+      "reference": "Store potato tubers in a well-ventilated space and wooden crates which allow air circulation."
+    },
+    {
+      "source": "Thibinachi nĩrĩ hinya wa vitameni cia A,C na K, [cs] iron [cs], [cs] folate [cs], na [cs]potassium[cs]",
+      "translation": "A, C and K, [cs] iron [cs], [cs] folate [cs], and [cs] potassium [cs]",
+      "reference": "Spinach is rich in Vitamin A, Vitamin C, Vitamin K, iron, folate, and potassium."
+    },
+    {
+      "source": "Mũmera ũmenyekaga nĩ ũrakũra wega wambĩrĩria kuumia rangi wa ngoikoni.",
+      "translation": "Those who are in the midst of the covenant, are the ones who are in the midst of the covenant, the ones who are in the midst of the covenant.",
+      "reference": "The best indicator is yellowing of vines."
+    },
+    {
+      "source": "Inĩkĩrĩria maĩ  harĩa uhurĩte mbegũ mũthenya ũmwe mbere ya kũhanda nĩguo ũigananie gĩkĩro gĩa tĩri",
+      "translation": "The Americans will be able to make a great deal of trouble, and they will be able to make a great deal of trouble, and they will be able to make a great deal of trouble, and they will make a great deal of trouble.",
+      "reference": "Drain the nursery bed the day before sowing to stabilize the soil surface of the soil."
+    },
+    {
+      "source": "Koroco njĩthĩ  nĩ ĩrĩagwo na nĩ irĩ  cukari, [cs] minerals [cs] na vitameni.",
+      "translation": "It is the most famous in the world, and the most famous in the world, and the most famous in the world, and the most famous in the world, and the most famous in the world.",
+      "reference": "Raw cashew nut is edible and is a valuable source of sugar, minerals and vitamins."
+    },
+    {
+      "source": "No mũhaka ikorwo [cs] meters[cs] ikũmi kuuma barabara-inĩ nĩgetha  ũgirĩrĩrie rũkũngũ na ndogo ya ngari.",
+      "translation": "Therefore, there is no such thing as the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "It should be at least 10 meters away from the road to prevent dust and vehicle fumes."
+    },
+    {
+      "source": "Kũrĩmĩra gwa kerĩ gwĩkagwo mbere ya gũĩkĩra mborera.",
+      "translation": "Thus, the righteous are the righteous righteous righteous righteous righteous righteous.",
+      "reference": "The 2nd weeding is done just before topdressing."
+    },
+    {
+      "source": "Ĩtĩrĩria maĩ hangĩbatarania.",
+      "translation": "by the Americans.",
+      "reference": "Irrigate if necessary."
+    },
+    {
+      "source": "Mboco nĩ ikũraga na ihenya na no ikũre thutha wa mĩeri ĩrĩ, maita maingĩ ikũraga thutha wa thikũ mĩrongo ĩna na ĩtano nginya mĩrongo mũgwanja na ĩtano",
+      "translation": "Thus, in the midst of the mountains, and in the midst of the mountains, and in the midst of the mountains, and in the midst of the mountains, and in the midst of the mountains, and in the midst of the mountains, and in the midst of the mountains, and in the midst of the mountains, and in the midst of the mountains.",
+      "reference": "Beans grow fast and can mature within two months, on average between 45 to 75 days"
+    },
+    {
+      "source": "Koroco nĩ ibatiĩ kũmithio na icoke ciigwo handũ hatarĩ na ũrugarĩ kana ũgunyu",
+      "translation": "He is the one who gives righteousness and the one who gives righteousness and the one who gives righteousness and the one who gives righteousness.",
+      "reference": "Cashew nut should be dried before storage in a cool dry place."
+    },
+    {
+      "source": "Mwanga kũgĩa marangi maingĩ",
+      "translation": "The bright bright bright bright",
+      "reference": "Muhogo mosaic."
+    },
+    {
+      "source": "Ihũa rĩa karanga",
+      "translation": "Issue of Cranberries",
+      "reference": "rosette ya karanga."
+    },
+    {
+      "source": "Ũmba gĩito gĩaku igũrũ wega nĩguo ũhote kũramata mĩmera wega",
+      "translation": "I will be able to bring you to the heavens of the heavens of the heavens of the heavens.",
+      "reference": "Raise the bed so you can manage your crop easier."
+    },
+    {
+      "source": "Thĩinĩ wa  Nyandarua kũrĩ na wĩra wa kũrĩma na kũrĩmĩra kwa mbere kwa mbembe, kũhanda na gũthikĩrĩra waru kwa mbere.   ",
+      "translation": "Through it, the wicked and the wicked and the wicked and the wicked and the wicked and the wicked and the wicked and the wicked and the wicked and the wicked and the wicked.",
+      "reference": "In Nyandarua planting and early weeding of the maize crop while for potatoes planting and 1st earthing up was being done."
+    },
+    {
+      "source": "Magetha nĩ metereirwo ota mũtugo",
+      "translation": "Magetha Metrereirwo Ota Mũtugo",
+      "reference": "Normal production expected."
+    },
+    {
+      "source": "Kauntĩ-inĩ ya Naikuru, mĩgũnda wa mbembe nĩ ũrathiĩ na mbere kũharĩrio na mĩgũnda kuongerereka. nĩ ũndũ wa ũheani wa mborera ya thogora wa thi nĩ thirikari ya Kenya. Mborera ĩno  hamwe na mbura nene ĩrĩa ĩkoretwo icigo-inĩ itiganĩte cia kaunti ĩyo na kwoguo kwĩrĩgĩrĩra atĩ ĩngĩthiĩ na mbere no ĩrehe magetha mega.",
+      "translation": "Thus, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, and the righteous.",
+      "reference": "Maize is at planning stage in Nakuru County with increased acreage due to readily availed GOK subside fertilizers and the affordable fertilizer coupled with the heavy rainfall witnessed in different parts of the county and therefore predict if it continues it is likely to result in good harvests."
+    },
+    {
+      "source": "Mũgũnda ũkoragwo na mĩmera mĩega  gũtarĩ na mĩrimũ mĩingĩ ya tũtambĩ",
+      "translation": "They are the Americans and the Americans and the Americans and the Americans.",
+      "reference": "Crop condition in the field is favourable with no major pest incidences."
+    },
+    {
+      "source": "Kaunti-inĩ ya Kwale na Kilifi mweri-inĩ wa kana nĩ gũkoretwo na mbura wega.",
+      "translation": "The truth is the truth, the truth is the truth, the truth is the truth, the truth is the truth, the truth is the truth.",
+      "reference": "In Kwale and Kilifi, the month of April has been characterized by rainfall well distributed in the County."
+    },
+    {
+      "source": "Mboco ĩkĩmera wega na  ĩkĩambĩrĩria kũruta kĩro  ",
+      "translation": "Those who are the wicked and the wicked are the wicked.",
+      "reference": "Beans are at early vegetative to flowering stages and performance is good."
+    },
+    {
+      "source": "Kaunti ya Tana River yothe nĩ ĩkoretwo na mbura nyinyi ĩtakura wega ",
+      "translation": "The town of Tana River is the northern coast of the northern coast of the northern coast of the northern coast of the north.",
+      "reference": "In Tana River, the whole County have experienced some rains though they were erratic and the distribution was generally poor."
+    },
+    {
+      "source": "  Mu͂ceere ni͂  uhanditwo icigoini͂ cia Matuga, Msambweni na Lungalunga.",
+      "translation": "It is a good thing to do, but it is a good thing to do, and it is a good thing to do, and it is a good thing to do, and it is a good thing to do.",
+      "reference": "For rice in Matuga, Msambweni and Lungalunga Sub counties, the crop has been planted."
+    },
+    {
+      "source": " Gicigo kĩa irathiro ria itherero, mĩgunda nĩ ihotekaga gũkoruo  ĩrĩ mĩnini ya kũhanda irio.  ",
+      "translation": "It is a righteous righteous righteous righteous righteous righteous righteous righteous.",
+      "reference": "The north eastern region acreages under crop usually very low and easily achieved."
+    },
+    {
+      "source": "Maũndũ macio nĩmo maronania maũndũ ma rĩera marĩa matũmaga irio igĩe na maciaro matigaine",
+      "translation": "I am in the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst of the midst.",
+      "reference": "These represent the key climatic drivers that are having an impact on crop condition status."
+    },
+    {
+      "source": "Kũhaarĩria  mũgũnda wa kũhanda ngano  nĩ kwambĩrĩirie icigo-inĩ iria ikũragia ngano naguo  mwena wa ithũĩro [cs]Rift[cs] kũbangĩtwo  kwambĩrĩria mweri-inĩ wa gatano kana wa gatandatũ.",
+      "translation": "Thus, the righteous are the righteous, the righteous are the righteous, the righteous are the righteous, the righteous are the righteous, the righteous are the righteous, the righteous are the righteous, the righteous are the righteous.",
+      "reference": "Land preparation and planting of wheat is starting in wheat growing areas while in North Rift it is expected to begin in May/ June"
+    },
+    {
+      "source": "Irio iria ihandĩtwo mĩgũnda ya Kĩambu na Mũrang’a nĩcionekaga irĩ njega kuuma kũhandwo nĩũndũ wa wagĩrĩru wa rĩera",
+      "translation": "And I will be able to give you the righteous, and the righteous will give you the righteous, and the righteous will give you the righteous.",
+      "reference": "The crops in Kiambu and Muranga were from planting to early vegetative stages with conditions being favourable."
+    },
+    {
+      "source": "Mwena wa Kitui kwarĩ riũa mũno  no   mbura nĩyaurire mwicoinĩ wa mweri.",
+      "translation": "The moon of the moon of the moon of the moon of the moon of the moon of the moon of the moon.",
+      "reference": "Kitui reported dry conditions but rains were received towards the end of the month."
+    },
+    {
+      "source": "Ũhoro-inĩ wĩgiĩ ngano kauntĩ-inĩ ĩyo,   kũhaarĩria mĩgũnda na kũhanda nĩ kũrathiĩ na mbere, na rĩera rĩega no rĩtũme kũgĩe na magetha mega.",
+      "translation": "Those who are the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers.",
+      "reference": "For wheat in the county, land preparation and planting is ongoing and the favourable weather may result in good harvest."
+    },
+    {
+      "source": "mogarũrũku ma ũtongoria, ũteithio wa arĩmi, ũteithio wa thirikari [cs] etc.[cs]    ",
+      "translation": "It is an aristocracy, an aristocracy, an aristocracy, an aristocracy, etc.",
+      "reference": "policy changes, agricultural subsidies, government intervention, etc.)"
+    },
+    {
+      "source": "Gĩcũnjĩ kĩa mĩrongo ĩtatũ harĩ igana kĩa arĩmi Trans Nzoia nĩ mahandĩte ",
+      "translation": "He is the one who gives righteousness to the wicked; he is the one who gives righteousness to the wicked.",
+      "reference": "About 30% of farmers have already planted in Trans Nzoia."
+    },
+    {
+      "source": "Mbura ĩthiraga tene gũkĩra ũrĩa ĩtanyĩtwo kĩmera-inĩ kĩu",
+      "translation": "Thou shalt say, Thou shalt say, Thou shalt say, Thou shalt say, Thou shalt say, Thou shalt say, Thou shalt say, Thou shalt say.",
+      "reference": "Rains end earlier than expected in the season"
+    },
+    {
+      "source": "Thogora mũnene wa mborera nĩ watũmire arĩmi metheme kũhanda mbembe  makihanda mithemba ya mboco ĩrĩa ĩtarabatara mborera nyingĩ",
+      "translation": "Thogora's clothes of the U.S. bear the army methems of the clothes of the U.S. bear the clothes of the U.S. bear the clothes of the U.S.",
+      "reference": "High cost of fertilizer led farmers to avoid maize and plant legumes that do not require a lot of fertilizers."
+    },
+    {
+      "source": "[cs] Central [cs], na [cs] South Rift Valley [cs] na [cs] Highlands East of the Rift Valley [cs] kũrĩa kwarĩ na thĩna no kũragethwo gĩcunjĩ kĩa rũgongo kĩa, Kakamega, Bungoma , mĩena ĩmwe  ya kaunti cia [cs] North[cs]  na [cs] central Rift [cs]",
+      "translation": "[cs] Central [cs], and [cs] South Rift Valley [cs] and [cs] Highlands East of the Rift Valley [cs] and [cs] and [cs] and [cs] and [cs] and [cs] and [cs] and [cs] and [cs] and [cs] and [cs]",
+      "reference": "Central and South Rift Valley and the Highlands East of the Rift Valley which was a challenge to harvesting that is still ongoing in Upper zones of Kakamega, Bungoma, parts of North and central Rift counties"
+    },
+    {
+      "source": "Kũhanda nĩ gwacereirwo  Baringo nĩ ũndũ wa mbura ya [cs]OND [cs]  gũcererwo.",
+      "translation": "They are the worshippers of the worshippers of the worshippers of the worshippers of the worshippers of the worshippers.",
+      "reference": "Planting was delayed in Baringo due to late onset of the OND rains."
+    },
+    {
+      "source": "\n[cs]The Highlands East of the Rift Valley [sc]  hamwe na kauntĩ ya Nairobi na [cs] South-eastern lowlands [cs]  no gũkorwo na mbura nini mweri wa gatandatũ  heho ĩkĩambĩrĩria.\n",
+      "translation": "[cs]The Highlands East of the Rift Valley [sc] is a landscape of Nairobi and [cs] South-eastern lowlands [cs] is not a landscape and a landscape of what the winds of the winds of the Americans.",
+      "reference": "The Highlands East of the Rift Valley including Nairobi County and parts of the South-eastern lowlands may experience light rainfall in June as the cold season sets in."
+    },
+    {
+      "source": "\nNĩgetha ũgirĩrĩrie mĩri ya makondobia kũbutha ũbatiĩ kũhanda tĩriinĩ  ũgũikũrũkia maĩ wega, ũhande mĩriko-inĩ kana wĩkĩre dawa ĩna  [cs] metalaxyl [cs]   \n",
+      "translation": "He is the one who gives righteousness to the wicked, the one who gives righteousness to the wicked, the one who gives righteousness to the wicked, the one who gives righteousness to the wicked, the one who gives righteousness to the wicked, the one who gives righteousness to the wicked, the one who gives righteousness to the wicked.",
+      "reference": "Control of Avocado root rot is plant in well-drained soil where drainage is not good, Plant in ridges  or Apply metalaxyl based chemical"
+    },
+    {
+      "source": "\nGĩcigo kĩa ithũiro mbembe iria ikũraga na mbura ya ihinda inini na   irĩ nguhĩ ikĩruta kimira kĩa mbembe kũria   Vihiga, Busia, na [cs] sub counties [cs] cia cĩanda wa mũhuro wa Kakamega na Bungoma   nĩkwarĩ na [cs] FAW [cs] iria cianyihanyihirio nĩ mbura nyingĩ  icigoinĩ icio. \n",
+      "translation": "Thro the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course.",
+      "reference": "In Western region maize short rains maize is at knee high to tasseling in Vihiga Busia, lower sub counties of Kakamega and Bungoma isolated cases of FAW reported has been suppressed by excessive rain in the region."
+    },
+    {
+      "source": "Ũria kũronekana nĩ atĩ kũngĩthiĩ na mbere kwara riũa inene  no kwage kũgethwo mbembe Kaunti ya Nyeri ",
+      "translation": "He is the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness.",
+      "reference": "The outlook is such that if the current hot and dry weather conditions persist, maize in Nyeri county is likely to experience a crop failure."
+    },
+    {
+      "source": "Gĩcigoinĩ kĩa Nyanza, makĩria ma gĩcunjĩ kĩa mĩrongo mũgwaja harĩ igana nĩ hĩndĩ mbembe ĩrakũra na kũruta kĩmira ",
+      "translation": "He said: “There is a righteousness, a righteousness, a righteousness, a righteousness, a righteousness, a righteousness, a righteousness.",
+      "reference": "In the Nyanza region, more than 70% of the maize is at the vegetative and tasseling stage."
+    },
+    {
+      "source": "Mũcere nĩwagagĩrĩrwo nĩ rĩera Kirinyaga.",
+      "translation": "And I will be able to bring them to the righteous, the righteous.",
+      "reference": "Rice is in favourable condition in Kirinyaga."
+    },
+    {
+      "source": "Mĩgũnda nĩ ĩraharĩrio Mũranga, Kirinyaga, na Kĩambu ",
+      "translation": "They are the worshippers, the worshippers, the worshippers and the worshippers.",
+      "reference": "In Murangâ_x0080__x0099_a, Kirinyaga and Kiambu land is under preparation."
+    },
+    {
+      "source": "Magetha ma mbembe na mboco nĩ matanyĩtwo gũkorwo marĩ  ta ũrĩa merĩgagĩrĩrwo nĩundũ wa mbura ya ihinda inini njega ĩrĩa yurĩte gĩcigo-inĩ kĩu",
+      "translation": "Through the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows of the shadows.",
+      "reference": "Maize and beans performance are expected to be normal due to the good performance of the short rains in the region."
+    },
+    {
+      "source": "Mi͂mera ya mboco ya mbura nini i͂ri͂ na u͂guni mwega thi͂ini͂ wa Uasin Gishu na West Pokot hi͂ndi͂ i͂ri͂a ku͂handa ku͂rathii͂ na mbere thi͂ini͂ wa Nandi,",
+      "translation": "As a result of this, it is important to note that, in the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course of the course.",
+      "reference": "The short rains beans crop is in favorable condition in Uasin Gishu and West Pokot while planting is ongoing in Nandi,"
+    },
+    {
+      "source": "Icigo imwe cia  gĩcigo kĩa irathĩro, gĩcua-inĩ kwarĩ riũa tondũ mbura nĩyacereirwo",
+      "translation": "Icigo imbe cia gîcigo râthrâthrâthrâthrâthrâthrâthrâthrâthrâ",
+      "reference": "Parts of Eastern, Coast remained dry as rainfall onset has been delayed."
+    },
+    {
+      "source": "Mboco ya mbura ya ihinda inini  ĩrĩ na riera rĩega  rĩagĩrĩire Uasin Gishu na West Pokot rĩrĩa irahandwo Nandi, Trans Nzoia, na Egeyo Marakwet",
+      "translation": "A little bit of victory in India Turkish and Turkish rabbit rabbit Uasin Gishu and West Pokot rabbit rabbit Nandi, Trans Nzoia, and Egeyo Marakwet",
+      "reference": "The short rains beans crop is in favorable condition in Uasin Gishu and West Pokot while planting is ongoing Nandi, Trans Nzoia and Elgeyo Marakwet."
+    },
+    {
+      "source": "  Nyoni cia quelea nĩ irarirwo na  njĩra gũcimakia na kũhũra ndawa kuuma rĩera-inĩ",
+      "translation": "It is the one who gives righteousness, and the one who gives righteousness, and the one who gives righteousness and righteousness.",
+      "reference": "Quelea quelea birds menace is being addressed through bird scaring and aerial spraying of pesticides."
+    },
+    {
+      "source": "Hakuhĩ gĩcunjĩ kĩa mĩrongo kenda  harĩ igana kĩa arĩmi nĩmahandĩte na no kũrathiĩ na mbere kũhandwo Embu",
+      "translation": "He did not believe that the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, the righteous, and the righteous.",
+      "reference": "Around 90% of farmers have planted and planting is still ongoing in Embu."
+    },
+    {
+      "source": "Wĩra ũria mũnene warutagwo   icigo-inĩ ici warĩ wa kũharĩria mĩgũnda na kũhanda mbura ĩtanaura",
+      "translation": "Thus, the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship.",
+      "reference": "Main activities in these areas was land preparation and dry planting"
+    },
+    {
+      "source": "\nIrio iria ciahandirwo mweri wa mũgwanja na wenana nĩirakũra wega ona gũtuĩka ũthimi wa maĩ niwambĩrĩirie  nĩũndũ wa wagi wa mbura ũrĩa wahota kũnyihia hanini magetha marĩa matanyĩtwo\n",
+      "translation": "I am the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness.",
+      "reference": "The main crop that was planted in July and August is doing well although rationing of water has started as a result of the dry weather which may slightly reduce the expected yields."
+    },
+    {
+      "source": "Magetha ma irio ciothe nĩmarĩkĩte no matikinyĩtie gĩkĩro kĩrĩa kĩagĩrĩire gĩcigoinĩ ",
+      "translation": "He is the one who is not the one who is the one who is the one who is the one who is the one who is the one who is the one who is the one who is the one who is the one who is the one who is the one who is the one who is the one who is the one.",
+      "reference": "Harvesting for all crops is complete with overall below average performance in the region."
+    },
+    {
+      "source": "Matanya ma maumĩrĩra ni gĩcunjĩ kĩa mĩrongo kenda na inya harĩ igana ta ũria kwagĩrĩire",
+      "translation": "He is the one who gives righteousness, and he is the one who gives righteousness, and he is the one who gives righteousness, and he is the one who gives righteousness.",
+      "reference": "Forecast production is 94% which almost normal."
+    },
+    {
+      "source": "Ũrathi ũcio wonanĩtie atĩ kauntĩ cigana ũna cia[cs] Highlands West of the Rift Valley[cs] , [cs] the Lake Victoria Basin [cs] ,  [cs]  Central Rift Valley  [cs]  na icigo ingi cia [cs] Northwest [cs] kwahota kura mbura ya mũigana wa gatagati-ini kana mbura nyĩngaingĩ ",
+      "translation": "",
+      "reference": "The forecast indicates that several counties of the Highlands West of the Rift Valley, the Lake Victoria Basin, the Southern, Central Rift Valley regions and a few areas in the Northwest are likely to experience near-average rainfall with a tendency to above-average."
+    },
+    {
+      "source": "Mahanda marĩ makinya-inĩ ngũrani gĩcigo-inĩ kĩu , Homabay mahanda marĩ gĩcunjĩ kĩa mĩrongo kenda harĩ igana na Migori marĩ gĩcunjĩ kĩa mĩrongo mũgwanja harĩ igana",
+      "translation": "He is the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness.",
+      "reference": "Planting is at various levels in the region, Homabay planting is at 90% and Migori 70%."
+    },
+    {
+      "source": "Maumĩrĩra ma mbembe mĩena ya rũgongo rwa Kisii na Nyamira marĩ ta ũrĩa magĩrĩirwo",
+      "translation": "The U.S. and the U.S. and the U.S. and the U.S. and the U.S. and the U.S. and the U.S. and the U.S.",
+      "reference": "Maize performance in the upper zones of Kisii and Nyamira were normal."
+    },
+    {
+      "source": "Rĩu gĩcigo gĩkĩ nĩ kĩraharĩria mígũnda nĩ ũndũ wa mbura ya ihinda inini rĩrĩa rĩkoragwo rĩrĩ ihinda rĩrĩa inene rĩa gũkũria irio",
+      "translation": "Thou shalt speak to the wicked, thou shalt speak to the wicked, thou shalt speak to the wicked, thou shalt speak to the wicked, thou shalt speak to the wicked, thou shalt speak to the wicked.",
+      "reference": "The region is currently preparing the land for short rains season which is the main production season."
+    },
+    {
+      "source": "Icigo cierĩ cia Taita Taveta na Tana River mĩmera ya gũkũrio na maĩ ta mũcere  nĩ irathiĩ na mbere wega",
+      "translation": "Icigo ciereri cia Taita Taveta and Tana River the Americans of the river and the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans of the Americans",
+      "reference": "In both Taita Taveta and Tana River, irrigated crops like rice are doing well."
+    },
+    {
+      "source": "Mboco  ciarĩ na magetha  mega gĩcigo-inĩ kĩu",
+      "translation": "The great and the great, and the great, and the great,",
+      "reference": "Beans performed well in the region."
+    },
+    {
+      "source": "Ũrathi wa Taita Taveta wonanĩtie gicunjĩ kĩa mĩrongo ĩtandatũ na ithano harĩ igana",
+      "translation": "Thus, the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship",
+      "reference": "The forecast for Taita Taveta is 65%."
+    },
+    {
+      "source": "Hũthĩra [cs]sodium hypochlorite [cs] kũgirĩrĩria  kũongerereka kwa mĩrimũ na ũitĩrĩrie  matunda   maĩ mahiũ marĩ [cs] 47oC[cs]  kahinda ka ndagĩka ithano",
+      "translation": "Sodium hypochlorite [cs] Sodium hypochlorite [cs] Sodium hypochlorite [cs] Sodium hypochlorite [cs] Sodium hypochlorite [cs] Sodium hypochlorite [cs] Sodium hypochlorite [cs] Sodium hypochlorite [cs] Sodium hypochlorite [cs] Sodium hypochlorite [cs] Sodium hypochlorite [cs] Sodium hypochlorite [cs] Sodium hypochlorite [cs]",
+      "reference": "Use sodium hypochlorite to prevent build-up of pathogen and treat the fruit with hot water at 47oC for 5 minutes."
+    },
+    {
+      "source": "Maciaro  marĩa matanyĩtwo o ta mutugo ni mega gũkira ma mũigana wa gatagatĩ wa ihinda iraya",
+      "translation": "Maciaro is a massive fighter and a massive fighter in Iraq.",
+      "reference": "Expected production is normal compared to the long term average."
+    },
+    {
+      "source": "Kũria Kirinyaga gĩcunjĩ kĩa mĩrongo kenda harĩ igana kĩa magetha marĩa marathĩtwo nĩmerĩgĩrĩirwo",
+      "translation": "Rise of the rise of the rise of the rise of the rise of the rise of the rise of the rise",
+      "reference": "In Kirinyaga 90% of forecast production is expected."
+    },
+    {
+      "source": "Ngano yari na magetha  mega icigo nyingĩ cia Narok  no nyoni cia [cs] Quelea[cs]  nĩciathũkangirie ngano mũno",
+      "translation": "I'm not sure I'm going to do it, I'm not sure I'm going to do it, I'm going to do it, I'm going to do it, I'm going to do it.",
+      "reference": "Wheat performed well in most parts of Narok but was heavily affected by Quelea Quelea birds."
+    },
+    {
+      "source": "Thondeka natharĩ ya wariĩ wa mita ĩmwe na uraihu ũrĩa wagĩrĩire na weherie tĩĩri ucio kũũma natharĩ-inĩ  nginya ũriku wa [cs] centimeter[cs] mĩrongo ĩtatũ na ũcoke  ũiyũrie [cs] centimeter[cs] icio mĩrongo ĩtatũ cia ũrikĩru na mũthanga",
+      "translation": "Through the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains of the mountains.",
+      "reference": "Prepare a seedbed of width 1 m and a desirable length by removing farm soil from the seedbed to a depth of 30 cm and refill the 30 cm depression with sand."
+    },
+    {
+      "source": "Kũgaacĩrithia ũhoti wa arĩa marĩ na itemi maũndũ-inĩ ma njũa   kauntĩ-inĩ ciothe mĩrongo ĩna na  mũgwanja",
+      "translation": "It is the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship of the worship.",
+      "reference": "Capacity building of stakeholders in hides and skins in all 47 Counties"
+    },
+    {
+      "source": "Gĩcunjĩ kĩa mĩrongo mũgwanja na ithathatũ  kwa igana kĩa gĩcigo kĩrĩa kĩarongoreirio kĩmera-inĩ kĩu nĩkĩo kĩahingire nĩũndũ wa mbura gũcererwo",
+      "translation": "He is the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness, the one who gives righteousness.",
+      "reference": "An estimated 76% of the target area was realized during the season due to late onset of rains"
+    },
+    {
+      "source": "Kũria Kirinyaga magetha mothe nitamarĩkĩte mĩgũnda-inĩ yothe",
+      "translation": "I will be the one who will be the one who will be the one who will be the one who will be the one who will be the one who will be",
+      "reference": "In Kirinyaga, harvesting almost finalized in all farms."
+    }
+  ]
+}

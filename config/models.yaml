@@ -1,32 +1,66 @@
 # Machine Translation Model Registry for Benchmarking
-# v1.0: Lightweight + specialized models for English ↔ Gĩkũyũ
+# Aligned with Paper Table 1: Selected Gĩkũyũ-English MT Models
 
 models:
-  # Large-Scale Multilingual Models
+  # === Category 1: Large-Scale Multilingual Encoder-Decoder ===
+
   nllb_200:
     name: "NLLB-200 (600M Distilled)"
     model_id: "facebook/nllb-200-distilled-600M"
     model_type: "transformer_mt"
-    parameters: 600000000
-    download_size_gb: 2.48
-    vram_fp32_gb: 2.4
+    category: "Large-Scale Multilingual Encoder-Decoder"
+    parameters: 600_000_000
     vram_fp16_gb: 1.2
     vram_int8_gb: 0.6
-    dtype: "torch.float16"  # default quantization
+    dtype: "torch.float16"
     is_encoder_decoder: true
     batch_size: 8
     max_new_tokens: 256
     num_beams: 5
     device_map: "auto"
-    description: "Distilled multilingual encoder-decoder (200 languages)"
+    description: "Distilled multilingual encoder-decoder (200 languages). Gĩkũyũ included via FLORES-200 coverage."
+    lang_code_format: "flores"  # uses kik_Latn / eng_Latn
+
+  nllb_200_1_3b:
+    name: "NLLB-200 (1.3B)"
+    model_id: "facebook/nllb-200-1.3B"
+    model_type: "transformer_mt"
+    category: "Large-Scale Multilingual Encoder-Decoder"
+    parameters: 1_300_000_000
+    vram_fp16_gb: 2.6
+    vram_int8_gb: 1.3
+    dtype: "torch.float16"
+    is_encoder_decoder: true
+    batch_size: 4
+    max_new_tokens: 256
+    num_beams: 5
+    device_map: "auto"
+    description: "Dense NLLB-200 1.3B variant. Same vocab/tokenizer as the distilled 600M; gives within-family scaling signal."
+    lang_code_format: "flores"
+
+  nllb_200_3_3b:
+    name: "NLLB-200 (3.3B)"
+    model_id: "facebook/nllb-200-3.3B"
+    model_type: "transformer_mt"
+    category: "Large-Scale Multilingual Encoder-Decoder"
+    parameters: 3_300_000_000
+    vram_fp16_gb: 6.6
+    vram_int8_gb: 3.3
+    dtype: "torch.float16"
+    is_encoder_decoder: true
+    batch_size: 2
+    max_new_tokens: 256
+    num_beams: 5
+    device_map: "auto"
+    description: "Dense NLLB-200 3.3B variant. Largest non-MoE NLLB checkpoint; tops the within-family scaling curve."
+    lang_code_format: "flores"
 
   m2m_100:
     name: "M2M-100 (418M)"
     model_id: "facebook/m2m100_418M"
     model_type: "transformer_mt"
-    parameters: 418000000
-    download_size_gb: 1.7
-    vram_fp32_gb: 1.6
+    category: "Large-Scale Multilingual Encoder-Decoder"
+    parameters: 418_000_000
     vram_fp16_gb: 0.8
     vram_int8_gb: 0.45
     dtype: "torch.float16"
@@ -35,92 +69,129 @@ models:
     max_new_tokens: 256
     num_beams: 5
     device_map: "auto"
-    description: "Dense multilingual encoder-decoder (100 languages)"
+    description: "Dense multilingual encoder-decoder (100 languages). No English pivot required."
+    lang_code_format: "m2m"  # uses ki / en
 
-  seamless_m4t:
-    name: "SeamlessM4T (Medium)"
-    model_id: "facebook/seamless-m4t-medium"
-    model_type: "transformer_mt"
-    parameters: 1200000000
-    download_size_gb: 4.0
-    vram_fp32_gb: 3.0
-    vram_fp16_gb: 1.5
-    vram_int8_gb: 0.8
-    dtype: "torch.float16"
-    is_encoder_decoder: true
-    batch_size: 4  # smaller batch for medium model
-    max_new_tokens: 256
-    num_beams: 5
-    device_map: "auto"
-    description: "Multimodal multilingual encoder-decoder (96 languages)"
-    lang_format: "seamless"  # special lang code format
+  # === Reference Only (NOT Evaluated) ===
+  # seamless_m4t:
+  #   name: "SeamlessM4T v2 Large"
+  #   model_id: "facebook/seamless-m4t-v2-large"
+  #   category: "Reference Only"
+  #   parameters: 2_300_000_000
+  #   description: "Gĩkũyũ falls outside documented language coverage. Listed for contextual comparison only."
+  #   evaluate: false
 
-  # Community Fine-Tuned Model
+  # === Category 2: Community Fine-Tuned Model ===
+
   kikuyu_translator:
-    name: "Kikuyu Translator (LoRA Fine-tuned Gemma-3)"
+    name: "kikuyu-translator-final"
     model_id: "InterstellarCG/kikuyu-translator-final"
     model_type: "lora_finetuned"
-    parameters: 4000000000
-    download_size_gb: 8.0
-    vram_fp32_gb: 10.0
-    vram_fp16_gb: 6.0
-    vram_int8_gb: 4.0
-    dtype: "torch.float16"
-    is_encoder_decoder: false  # Decoder-only LLM with LoRA
-    batch_size: 4
+    category: "Community Fine-Tuned Model"
+    parameters: 8_000_000_000  # Gemma-3n-E4B effective param count (multimodal base)
+    vram_fp16_gb: 16.0
+    vram_int8_gb: 12.0
+    dtype: "torch.bfloat16"
+    is_encoder_decoder: false
+    batch_size: 1
     max_new_tokens: 256
     device_map: "auto"
-    description: "LoRA fine-tuned model for bidirectional English-Kikuyu translation"
+    description: "LoRA fine-tune of unsloth/gemma-3n-e4b-it-unsloth-bnb-4bit (Gemma-3n multimodal). The bnb-4bit base + unquantized vision/audio towers + LoRA adapter exceed 12 GB VRAM on dual-11 GB GPUs; needs >=16 GB single GPU. Skip by default; the README claims a Gemma-3-4B base but adapter_config.json reveals Gemma-3n."
     bidirectional: true
-    special_handling: "lora_gemma"
+    base_model: "unsloth/gemma-3n-e4b-it-unsloth-bnb-4bit"  # corrected from earlier wrong "google/gemma-3-4b-it"
+    use_unsloth: true
+    load_in_4bit: true
+    skip_on_low_memory: true
 
-  # General-Purpose LLMs via Prompting
-  mistral_7b:
-    name: "Mistral-7B-Instruct-v0.3"
-    model_id: "mistralai/Mistral-7B-Instruct-v0.3"
+  # === Category 3: LLMs Evaluated via Prompting ===
+
+  aya_101:
+    name: "Aya-101"
+    model_id: "CohereForAI/aya-101"
     model_type: "llm_prompting"
-    parameters: 7000000000
-    download_size_gb: 14.0
-    vram_fp32_gb: 16.0
-    vram_fp16_gb: 8.0
-    vram_int8_gb: 4.0
+    category: "LLM Evaluated via Prompting"
+    parameters: 13_000_000_000
+    vram_fp16_gb: 26.0
+    vram_int8_gb: 13.0
+    dtype: "torch.float16"
+    is_encoder_decoder: true  # mT5-xxl architecture
+    architecture: "encoder_decoder"
+    batch_size: 2
+    max_new_tokens: 256
+    device_map: "auto"
+    description: "Massively multilingual instruction-tuned model (101 languages). Purpose-built for lower-resource communities. Does NOT fit on dual-11 GB GPUs even at INT8 + CPU offload (forward pass OOMs); documented as hardware-inaccessible."
+    prompting_modes:
+      - "zero_shot"
+      - "few_shot"
+    quantization: "int8"  # Required due to model size
+    skip_on_low_memory: true  # 13 GB INT8 + activations + concurrent users -> OOM on 11 GB GPUs
+
+  llama3_1_8b:
+    name: "Llama 3.1 8B Instruct"
+    model_id: "meta-llama/Llama-3.1-8B-Instruct"
+    model_type: "llm_prompting"
+    category: "LLM Evaluated via Prompting"
+    parameters: 8_000_000_000
+    vram_fp16_gb: 16.0
+    vram_int8_gb: 8.0
     dtype: "torch.float16"
     is_encoder_decoder: false
+    architecture: "decoder_only"
     batch_size: 4
     max_new_tokens: 256
     temperature: 0.3
     top_p: 0.9
     device_map: "auto"
-    description: "Instruction-tuned LLM for zero-shot MT via prompting"
-    prompting_mode: "zero_shot"
+    quantization: "int8"  # 8B at FP16 = 16 GB; INT8 (~8 GB) fits a single 11 GB GPU
+    description: "Llama 3.1 8B Instruct. Officially supports 8 langs (none Bantu); tests emergent zero/few-shot Kikuyu transfer."
+    prompting_modes:
+      - "zero_shot"
+      - "few_shot"
 
-  mistral_small:
-    name: "Mistral-Small-3.1-24B"
-    model_id: "mistralai/Mistral-Small-3.1-24B-Instruct-2411"
+  gemma3_4b_it:
+    name: "Gemma 3 4B Instruct"
+    model_id: "google/gemma-3-4b-it"
     model_type: "llm_prompting"
-    parameters: 24000000000
-    download_size_gb: 50.0
-    vram_fp32_gb: 56.0
-    vram_fp16_gb: 28.0
-    vram_int8_gb: 14.0
-    dtype: "torch.float16"
+    model_class: "gemma3"  # use Gemma3ForCausalLM (text-only head)
+    category: "LLM Evaluated via Prompting"
+    parameters: 4_000_000_000
+    vram_fp16_gb: 8.0
+    dtype: "torch.bfloat16"
     is_encoder_decoder: false
-    batch_size: 1  # Small batch due to size
+    architecture: "decoder_only"
+    batch_size: 2
     max_new_tokens: 256
-    temperature: 0.3
-    top_p: 0.9
     device_map: "auto"
-    description: "Large instruction-tuned LLM for few-shot MT via prompting"
-    prompting_mode: "few_shot"
-    skip_on_low_memory: true  # Optional: skip if insufficient VRAM
+    description: "Gemma 3 4B Instruct (BF16). Same base as kikuyu-translator-final; isolates the LoRA fine-tuning effect. INT4/INT8 are broken for Gemma-3 on Turing GPUs, so we use BF16."
+    prompting_modes:
+      - "zero_shot"
+      - "few_shot"
 
-# Language code mappings
+# Language code mappings per model type
 language_codes:
   english: "eng"
   kikuyu: "kik"
   english_flores: "eng_Latn"
   kikuyu_flores: "kik_Latn"
-  english_seamless: "eng"
-  kikuyu_seamless: "kik"
-  english_iso639_3: "eng"
-  kikuyu_iso639_3: "kik"
+  english_m2m: "en"
+  kikuyu_m2m: "ki"
+  english_name: "English"
+  kikuyu_name: "Gĩkũyũ"
+
+# Few-shot examples for LLM prompting (MUST NOT overlap with test set)
+# TODO: Have Mark/Gĩkũyũ speaker validate these before final run
+few_shot_examples:
+  eng_to_kik:
+    - source: "The government announced new policies to support farmers."
+      target: "Thirikari nĩ ĩrahũrire watho mũerũ wa gũteithia arĩmi."
+    - source: "The children went to school early in the morning."
+      target: "Ciana nĩ ciathiire thukuru rũciinĩ tene."
+    - source: "We need to plant trees to protect our environment."
+      target: "Nĩ tũhĩthagio gũhaanda mĩtĩ nĩ guo tũrĩnde mahĩndĩ maitũ."
+  kik_to_eng:
+    - source: "Thirikari nĩ ĩrahũrire watho mũerũ wa gũteithia arĩmi."
+      target: "The government announced new policies to support farmers."
+    - source: "Ciana nĩ ciathiire thukuru rũciinĩ tene."
+      target: "The children went to school early in the morning."
+    - source: "Nĩ tũhĩthagio gũhaanda mĩtĩ nĩ guo tũrĩnde mahĩndĩ maitũ."
+      target: "We need to plant trees to protect our environment."

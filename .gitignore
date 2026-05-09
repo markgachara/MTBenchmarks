@@ -47,9 +47,16 @@ huggingface_hub/
 # Torch cache
 .torch/
 
+# Unsloth compiled cache
+unsloth_compiled_cache/
+
+# Environment files
+.env
+
 # Jupyter
 .ipynb_checkpoints/
 *.ipynb
+!analysis.ipynb
 
 # OS
 .DS_Store

@@ -1,173 +1,252 @@
 """
-Results aggregation and reporting
+Results aggregation and reporting.
+Generates outputs matching paper Tables 4, 5, and 6 format.
 """
 import logging
 import json
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Optional
 from datetime import datetime
-import pandas as pd
 
-from scripts.utils import get_hardware_info
+import pandas as pd
 
 logger = logging.getLogger(__name__)
 
 
 class MTReporter:
-    """Aggregate and report benchmarking results"""
-    
+    """Aggregate and report benchmarking results."""
+
     def __init__(self, output_dir: str = "./results"):
         self.output_dir = Path(output_dir)
-        self.output_dir.mkdir(parents=True, exist_ok=True)
         self.timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    
-    def create_results_dataframe(
+        self.run_dir = self.output_dir / f"benchmark_{self.timestamp}"
+        self.run_dir.mkdir(parents=True, exist_ok=True)
+        (self.run_dir / "translations").mkdir(exist_ok=True)
+        (self.run_dir / "metrics").mkdir(exist_ok=True)
+        (self.run_dir / "qualitative").mkdir(exist_ok=True)
+
+    def create_results_table(
         self,
-        results: Dict,
-        hardware_info: Dict = None
+        all_metrics: Dict[str, Dict],
+        direction: str,
+        human_ref_metrics: Optional[Dict] = None,
     ) -> pd.DataFrame:
         """
-        Convert results dict to pandas DataFrame
-        
+        Create a results table matching paper Table 4/5 format.
+
+        Returns a *numeric* DataFrame: missing values are stored as
+        ``None`` / ``NaN`` so that downstream pandas/R analysis can
+        treat the columns as numeric. Markdown rendering applies
+        formatting at output time only (see ``save_results``).
+
         Args:
-            results: Results dict with structure:
-                {model_name: {direction: {dataset: metrics_dict}}}
-            hardware_info: Optional hardware info to include
-        
-        Returns:
-            DataFrame with one row per model+direction+dataset combination
+            all_metrics: {model_display_name: metrics_dict}
+            direction: e.g. "eng->kik" or "kik->eng"
+            human_ref_metrics: Corpus-level baseline for human references
         """
         rows = []
-        
-        for model_name, directions in results.items():
-            for direction, datasets in directions.items():
-                for dataset_name, metrics in datasets.items():
-                    row = {
-                        'timestamp': self.timestamp,
-                        'model': model_name,
-                        'direction': direction,
-                        'dataset': dataset_name,
-                        # Metrics
-                        'bleu': metrics.get('bleu', None),
-                        'chrf': metrics.get('chrf', None),
-                        'chrf_char_order': metrics.get('chrf_char_order', None),
-                        'bertscore': metrics.get('bertscore', None),
-                        # Performance
-                        'speed_tokens_per_sec': metrics.get('speed', None),
-                        'num_sentences': metrics.get('num_sentences', None),
-                        'inference_time_sec': metrics.get('inference_time', None),
-                        # Metadata
-                        'valid': metrics.get('valid', False),
-                        'notes': metrics.get('notes', '')
-                    }
-                    rows.append(row)
-        
-        df = pd.DataFrame(rows)
-        
-        # Sort by model, direction, dataset
-        df = df.sort_values(['model', 'direction', 'dataset']).reset_index(drop=True)
-        
-        return df
-    
-    def save_csv(self, df: pd.DataFrame, filename: str = None) -> Path:
-        """Save results as CSV"""
-        if filename is None:
-            filename = f"mt_benchmark_{self.timestamp}.csv"
-        
-        filepath = self.output_dir / filename
-        df.to_csv(filepath, index=False)
-        logger.info(f"Saved results to {filepath}")
-        return filepath
-    
-    def save_json(self, results: Dict, filename: str = None) -> Path:
-        """Save detailed results as JSON"""
-        if filename is None:
-            filename = f"mt_benchmark_{self.timestamp}.json"
-        
-        filepath = self.output_dir / filename
-        with open(filepath, 'w', encoding='utf-8') as f:
-            json.dump(results, f, indent=2, ensure_ascii=False)
-        logger.info(f"Saved detailed results to {filepath}")
-        return filepath
-    
-    def generate_markdown_report(
+
+        for model_name, metrics in all_metrics.items():
+            row = {
+                "Model": model_name,
+                "Direction": direction,
+                "BLEU": metrics.get("bleu"),
+                "chrF++": metrics.get("chrf_pp"),
+                "BERTScore F1": metrics.get("bertscore_f1"),
+                "AfriCOMET-MTL": metrics.get("africomet_mtl"),
+                "Perplexity": metrics.get("pred_perplexity"),
+                "TTR": metrics.get("pred_ttr"),
+                "Hapax Rate": metrics.get("pred_hapax_rate"),
+                "Avg Sent Len": metrics.get("pred_avg_sent_len"),
+                "Inference Time (s)": metrics.get("inference_time"),
+                "Speed (tok/s)": metrics.get("speed"),
+            }
+            rows.append(row)
+
+        # Human reference baseline row — None for metrics that are
+        # undefined for the human reference (BLEU/chrF++ against itself).
+        if human_ref_metrics:
+            rows.append({
+                "Model": "Human Reference",
+                "Direction": direction,
+                "BLEU": None,
+                "chrF++": None,
+                "BERTScore F1": None,
+                "AfriCOMET-MTL": None,
+                "Perplexity": human_ref_metrics.get("human_ref_perplexity"),
+                "TTR": human_ref_metrics.get("human_ref_ttr"),
+                "Hapax Rate": human_ref_metrics.get("human_ref_hapax_rate"),
+                "Avg Sent Len": human_ref_metrics.get("human_ref_avg_sent_len"),
+                "Inference Time (s)": None,
+                "Speed (tok/s)": None,
+            })
+
+        return pd.DataFrame(rows)
+
+    # Per-column formatters used only when rendering Markdown / display
+    # (CSV stays numeric so pandas/R can parse the columns correctly).
+    _MARKDOWN_FORMATTERS = {
+        "BLEU": "{:.2f}",
+        "chrF++": "{:.2f}",
+        "BERTScore F1": "{:.4f}",
+        "AfriCOMET-MTL": "{:.4f}",
+        "Perplexity": "{:.2f}",
+        "TTR": "{:.4f}",
+        "Hapax Rate": "{:.4f}",
+        "Avg Sent Len": "{:.2f}",
+        "Inference Time (s)": "{:.2f}",
+        "Speed (tok/s)": "{:.2f}",
+    }
+
+    @classmethod
+    def _format_for_markdown(cls, df: pd.DataFrame) -> pd.DataFrame:
+        """Return a copy of df with numeric columns rendered as strings,
+        with ``None`` / ``NaN`` shown as ``"—"``. Used only for
+        Markdown output; CSV consumers see the numeric DataFrame."""
+        out = df.copy()
+        for col, fmt in cls._MARKDOWN_FORMATTERS.items():
+            if col not in out.columns:
+                continue
+            out[col] = out[col].apply(
+                lambda v: "—" if v is None or (isinstance(v, float) and pd.isna(v))
+                else (fmt.format(v) if isinstance(v, (int, float)) else v)
+            )
+        return out
+
+    def save_results(
         self,
         df: pd.DataFrame,
-        hardware_info: Dict = None
-    ) -> str:
-        """Generate markdown summary report"""
-        report = []
-        report.append(f"# MT Benchmarking Report - {self.timestamp}\n")
-        
-        # Hardware info
-        if hardware_info:
-            report.append("## Hardware Configuration\n")
-            report.append(f"- OS: {hardware_info['os']}")
-            report.append(f"- CPU: {hardware_info['cpu']['model']} ({hardware_info['cpu']['cores']} cores)")
-            report.append(f"- RAM: {hardware_info['ram']['total_gb']:.1f} GB")
-            if hardware_info['gpu']['available']:
-                for gpu in hardware_info['gpu']['devices']:
-                    report.append(f"- GPU: {gpu['name']} ({gpu['memory_gb']:.1f} GB)")
-            else:
-                report.append("- GPU: Not available (CPU-only mode)")
-            report.append("")
-        
-        # Summary statistics
-        report.append("## Summary Statistics\n")
-        report.append(f"- Models evaluated: {df['model'].nunique()}")
-        report.append(f"- Directions: {df['direction'].nunique()}")
-        report.append(f"- Datasets: {df['dataset'].nunique()}")
-        report.append("")
-        
-        # Results table
-        report.append("## Results\n")
-        report.append("```")
-        report.append(df.to_string(index=False))
-        report.append("```\n")
-        
-        # Best models per metric
-        report.append("## Best Performing Models\n")
-        for metric in ['bleu', 'chrf', 'bertscore']:
-            if metric in df.columns and df[metric].notna().any():
-                best_row = df.nlargest(1, metric).iloc[0]
-                score = best_row[metric]
-                if pd.notna(score):
-                    report.append(f"- **{metric.upper()}**: {best_row['model']} ({best_row['direction']}) = {score:.2f}")
-        report.append("")
-        
-        # Speed comparison
-        report.append("## Speed Comparison (tokens/sec)\n")
-        if 'speed_tokens_per_sec' in df.columns:
-            speed_df = df[df['speed_tokens_per_sec'].notna()].sort_values(
-                'speed_tokens_per_sec', ascending=False
-            )[['model', 'direction', 'speed_tokens_per_sec']].drop_duplicates()
-            report.append(speed_df.to_markdown(index=False))
-            report.append("")
-        
-        # Notes
-        report.append("## Notes\n")
-        report.append("- BLEU and ChrF scores typically range 0-100 for MT tasks")
-        report.append("- Higher is better for all metrics")
-        report.append("- Results depend on hardware, quantization mode, and batch size")
-        report.append("- Gĩkũyũ is low-resource; expect lower absolute scores than high-resource pairs")
-        
-        return '\n'.join(report)
-    
-    def save_markdown_report(self, report: str, filename: str = None) -> Path:
-        """Save markdown report"""
-        if filename is None:
-            filename = f"mt_benchmark_{self.timestamp}.md"
-        
-        filepath = self.output_dir / filename
-        with open(filepath, 'w', encoding='utf-8') as f:
-            f.write(report)
-        logger.info(f"Saved markdown report to {filepath}")
-        return filepath
-    
-    def print_summary(self, df: pd.DataFrame):
-        """Print summary to console"""
-        print("\n" + "="*80)
-        print(f"BENCHMARKING RESULTS - {self.timestamp}")
-        print("="*80 + "\n")
-        print(df.to_string(index=False))
-        print("\n" + "="*80 + "\n")
+        direction: str,
+        fmt: str = "csv",
+    ) -> Path:
+        """Save results table.
+
+        ``fmt='csv'`` writes the *numeric* DataFrame so values are
+        machine-readable. ``fmt='markdown'`` applies display formatting
+        first so missing values render as "—" rather than "nan".
+        """
+        tag = direction.replace("->", "2")
+        if fmt == "csv":
+            path = self.run_dir / "metrics" / f"table_{tag}.csv"
+            df.to_csv(path, index=False)
+        elif fmt == "markdown":
+            path = self.run_dir / "metrics" / f"table_{tag}.md"
+            with open(path, "w") as f:
+                f.write(self._format_for_markdown(df).to_markdown(index=False))
+        else:
+            path = self.run_dir / "metrics" / f"table_{tag}.json"
+            df.to_json(path, orient="records", indent=2, force_ascii=False)
+
+        logger.info(f"Saved {direction} results to {path}")
+        return path
+
+    def save_full_metrics_json(self, all_results: Dict) -> Path:
+        """Save the complete metrics dictionary as JSON."""
+        path = self.run_dir / "metrics" / "full_metrics.json"
+        # Convert numpy values
+        clean = json.loads(json.dumps(all_results, default=_json_default))
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(clean, f, indent=2, ensure_ascii=False)
+        logger.info(f"Saved full metrics to {path}")
+        return path
+
+    def generate_qualitative_template(
+        self,
+        indices: List[int],
+        english_texts: List[str],
+        kikuyu_texts: List[str],
+        model_translations: Dict[str, Dict[str, List[str]]],
+    ) -> Path:
+        """
+        Generate Excel spreadsheet for human qualitative assessment.
+
+        Args:
+            indices: Indices of the stratified sample
+            english_texts: Full English text list
+            kikuyu_texts: Full Gĩkũyũ text list
+            model_translations: {model_name: {direction: [translations]}}
+        """
+        rows = []
+        criteria = [
+            "Diacritic Accuracy",
+            "Idiomatic Appropriateness",
+            "Biblical Register Avoidance",
+            "Cultural Concept Handling",
+            "Addition",
+            "Omission",
+            "Mistranslation",
+            "Grammar",
+            "Overall Score",
+        ]
+
+        for idx in indices:
+            for model_name, directions in model_translations.items():
+                for direction, translations in directions.items():
+                    if idx < len(translations):
+                        if "eng->kik" in direction:
+                            source = english_texts[idx]
+                            reference = kikuyu_texts[idx]
+                        else:
+                            source = kikuyu_texts[idx]
+                            reference = english_texts[idx]
+
+                        row = {
+                            "Index": idx,
+                            "Direction": direction,
+                            "Model": model_name,
+                            "Source": source,
+                            "Reference": reference,
+                            "Translation": translations[idx],
+                        }
+                        for c in criteria:
+                            row[c] = ""  # Blank for human assessor
+                        row["Notes"] = ""
+                        rows.append(row)
+
+        df = pd.DataFrame(rows)
+        path = self.run_dir / "qualitative" / "human_assessment_template.xlsx"
+        df.to_excel(path, index=False)
+        logger.info(f"Saved qualitative assessment template ({len(rows)} rows) to {path}")
+        return path
+
+    def generate_markdown_report(
+        self,
+        eng2kik_df: pd.DataFrame,
+        kik2eng_df: pd.DataFrame,
+        hardware_info: Dict,
+    ) -> Path:
+        """Generate full markdown report."""
+        lines = [
+            f"# Gĩkũyũ MT Benchmark Report — {self.timestamp}\n",
+            "## Hardware\n",
+            f"- CPU: {hardware_info['cpu']['model']} ({hardware_info['cpu']['cores']} cores)",
+            f"- RAM: {hardware_info['ram']['total_gb']:.1f} GB",
+        ]
+        if hardware_info["gpu"]["available"]:
+            for g in hardware_info["gpu"]["devices"]:
+                lines.append(f"- GPU {g['index']}: {g['name']} ({g['memory_gb']:.1f} GB)")
+        lines.append("")
+
+        lines.append("## Table 4: English → Gĩkũyũ\n")
+        lines.append(self._format_for_markdown(eng2kik_df).to_markdown(index=False))
+        lines.append("")
+
+        lines.append("## Table 5: Gĩkũyũ → English\n")
+        lines.append(self._format_for_markdown(kik2eng_df).to_markdown(index=False))
+        lines.append("")
+
+        path = self.run_dir / "report.md"
+        with open(path, "w", encoding="utf-8") as f:
+            f.write("\n".join(lines))
+        logger.info(f"Saved report to {path}")
+        return path
+
+
+def _json_default(obj):
+    """JSON serializer for non-serializable types."""
+    import numpy as np
+    if isinstance(obj, (np.floating, np.integer)):
+        return float(obj)
+    if isinstance(obj, np.ndarray):
+        return obj.tolist()
+    raise TypeError(f"Object of type {type(obj)} is not JSON serializable")

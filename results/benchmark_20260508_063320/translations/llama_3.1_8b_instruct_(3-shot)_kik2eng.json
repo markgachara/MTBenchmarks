@@ -1,0 +1,2507 @@
+{
+  "model": "Llama 3.1 8B Instruct (3-shot)",
+  "direction": "kik->eng",
+  "num_sentences": 499,
+  "metadata": {
+    "prompting_mode": "few_shot",
+    "speed": 15.169037966085272,
+    "inference_time": 477.09024238586426
+  },
+  "sentences": [
+    {
+      "source": "Hihi ũhũthĩri rĩngĩ wa mbembe ciagethetwo no ihandwo imera irũmanĩrĩire?",
+      "translation": "What is the reason for the government's decision to increase the price of maize?",
+      "reference": "Is re-use of harvested maize for planting in successive seasons a common practice?"
+    },
+    {
+      "source": "Thomithia ũrĩmi wĩgiĩ gũthuura mbegũ wega,  mũtaganĩrie mwagĩrĩru wa mbegũ, wongereri wa mborera ona kũrĩmĩra ",
+      "translation": "The government has established a committee to oversee the management of forests, the conservation of wildlife, and the protection of the environment.",
+      "reference": "Train on good agronomic practices, that is, seed selection, correct spacing, fertilizer application and weeding."
+    },
+    {
+      "source": "Kũrĩ icigo iria ikoragwo na ũgucania mũnene wa arĩmĩ arũme na arĩmĩ atumia, mĩcemanio ya mwanya ya ithomo kana mĩbango ngũrani ya gũikara ya arĩmĩ arũme na arĩmĩ atumia nĩ yagĩrĩirũo kũrũmagĩrĩrũo.",
+      "translation": "The current system is controlled by a large corporation that owns and uses it, the media of the means of production or the means of production of the corporation that owns and uses it, the means of communication of the means of production or the means of production of the corporation that owns and uses it is controlled by the owners and users.",
+      "reference": "Regions where gender dynamics is pronounced, separate training sessions or seating arrangements of male and female farmers should be adhered to."
+    },
+    {
+      "source": "na mĩtugo ya ũrĩmi ĩrĩa ĩhũthagĩrwo  matũũrainĩ mao.",
+      "translation": "We need to respect the traditional knowledge of our ancestors.",
+      "reference": "and agronomic practices used in their villages."
+    },
+    {
+      "source": "Mĩthemba mĩega ya mbegũ na ĩrĩa yagĩrĩire nĩ ĩri bata harĩ gũkũria mĩmera mĩega ĩtangĩgũmĩrwo nĩ mĩrimũ kana waagi wa mbura ",
+      "translation": "The government has established a fund to support farmers who have been affected by the drought to buy seeds and fertilizers.",
+      "reference": "Good quality and appropriate seed varieties are essential for the growth of strong and healthy crops that are resistant to diseases and even drought."
+    },
+    {
+      "source": "Ciũria cia gũtaara: Nĩkĩi harĩ bata kũhũthĩra mbegũ mĩthemba ĩrĩa yagĩrĩire?",
+      "translation": "What is the meaning of life: Is it to suffer and be oppressed as it has been?",
+      "reference": "Prompting questions: Why is it important to use appropriate seed variety?"
+    },
+    {
+      "source": "Mĩgũnda ya kũgereria nĩ ĩgũteithĩrĩria gũthuura mbegũ cia mbembe iria ĩrĩhũthagĩrwo.",
+      "translation": "The government is planning to increase the number of police officers in the country.",
+      "reference": "Demo plots will facilitate in selection of maize seed varieties to be adopted."
+    },
+    {
+      "source": "Haha mũhuro nĩ ciũria imwe iria [cs] technical adviser [cs]  angĩũria [cs]VBA [cs]  nĩguo amenye ũrĩa ũrĩmi ũratwarithio mĩgũndainĩ gicigo kĩu",
+      "translation": "The current government has appointed a new technical adviser who is not experienced enough to manage the affairs of the country effectively.",
+      "reference": "Below are a number of questions which the technical adviser can ask the VBAs in order to get an overview of contemporary agricultural practices in the area."
+    },
+    {
+      "source": "Maumĩrĩra ma gĩthomo: kũmenya bata wa kuhũthĩra mĩthemba ya mbegũ iria ciagĩrĩire\n",
+      "translation": "The leaders of the nation: they are trying to reduce the poverty that has been increasing.",
+      "reference": "Learning outcomes: Understand the importance of using the appropriate seed variety."
+    },
+    {
+      "source": "Wandĩkithia wa nyũmba  o nyũmba  wa andũ arĩa marigainie",
+      "translation": "The people of the village are in great need.",
+      "reference": "Door-to-door registration of their neighbours."
+    },
+    {
+      "source": "Maumĩrĩra ma gĩthomo: kũhanda kwĩmenyeria  mĩtugo ya ũrĩmi ĩrĩa ĩ kuo ",
+      "translation": "The leaders of the community: let us plant trees to cover the bare land.",
+      "reference": "Learning objectives: establish the existing agronomic practices."
+    },
+    {
+      "source": "  Mũtaganĩrie wa rĩu nĩ ũrĩkũ? ",
+      "translation": "What is the meaning of life?",
+      "reference": "What is the current spacing?"
+    },
+    {
+      "source": "Mbegũ ĩtarĩ cia ũndũire ĩhandagwo icigo itiganĩte ũraihu wa igũrũ na thĩ hamwe na mũigana wa mbura",
+      "translation": "The government has failed to provide adequate funding for the construction of the dam and the road.",
+      "reference": "Hybrid seeds are usually area-specific since different places have different altitude and rainfall conditions."
+    },
+    {
+      "source": "ngarama ya ũcenjia wa rĩera ũrĩmi-inĩ ũtarĩirwo gũkorwo ũrĩ   gĩcunjĩ kĩa igĩrĩ tũrũmo ithathatũ kwa igana ya ũtonga wa Kenya (GDP)",
+      "translation": "The growth rate of the economy of the country is expected to increase when the government implements the new policies in the country of Kenya (GDP).",
+      "reference": "The economic costs of climate change on agriculture are estimated at 2.6% of GDP."
+    },
+    {
+      "source": "Ũrĩmi bũrũri wa Kenya nĩ mũnene na nĩwongagĩrĩra ũkũria wa ũtonga wa bũrũri (GDP)",
+      "translation": "The Kenyan economy is large and it is the largest in East Africa (GDP).",
+      "reference": "Agriculture in Kenya dominates the economy, contributing significantly to GDP."
+    },
+    {
+      "source": "Ikundi cia ũrĩmi nĩirutaga wĩra wa bata harĩ ũkũria wa matũra bũrũriinĩ wa Kenya ",
+      "translation": "The group of young people is working hard to develop the agricultural sector in rural Kenya.",
+      "reference": "Agricultural cooperatives play a significant role in Kenya’s rural economy."
+    },
+    {
+      "source": "Ngwatanĩro cia arĩmi a kauntĩ nĩmarahũkĩte kwendia magetha hamwe.",
+      "translation": "The government has decided to reduce the number of days for holidays.",
+      "reference": "The county’s farmers are actively involved in cooperative societies to market their produce."
+    },
+    {
+      "source": "ũigi mwega  wa magetha thitooinĩ nĩũgiragĩrĩria mathũke matanendio",
+      "translation": "The teacher of the school is very strict with the students.",
+      "reference": "Proper storage methods help prevent farm produce from spoiling before reaching the market."
+    },
+    {
+      "source": "Mborera nĩnoragia tĩĩri harĩ ũkũria wa karati ",
+      "translation": "The teacher is not available to teach the students.",
+      "reference": "Organic matter improves soil structure for carrots."
+    },
+    {
+      "source": "\nMĩgũnda  ya Nyandarua kũrĩa  kũhandagwo mboga mĩthemba na mĩthemba  \n  nĩiri nyũmba nyĩngĩ  iria cigaga ũrugarĩ, heho,  maaĩ  na kũgitĩra tũtambi \n",
+      "translation": "The Nyandarua region is known for its rich and fertile soil which is suitable for growing crops such as maize, beans, potatoes, and vegetables.",
+      "reference": "Nyandarua’s agricultural landscape is dotted with greenhouses growing a variety of vegetables."
+    },
+    {
+      "source": "No mũhaka arĩmi marũmĩrĩre mawatho ma ũgitĩri wa irio kũri wendia wa karati",
+      "translation": "The new laws are making it difficult for the poor to access food.",
+      "reference": "Farmers must comply with food safety regulations for carrot sales."
+    },
+    {
+      "source": "ũrĩmi nĩũrathogwo nĩ ũcenjia wa rĩera na ũrĩmĩ wĩhocĩtie mbũra mũno",
+      "translation": "The community is being helped by the government and the church to build a new school.",
+      "reference": "Kenya’s agricultural sector faces challenges like climate change and overreliance on rain-fed farming."
+    },
+    {
+      "source": "kũhe mahiũ irio hĩndĩ ciothe na ũmenyereri mwega nĩũtũmaga mahiu magie na ũgima mwega wa mwĩrĩ na kũgia maciaro mega.",
+      "translation": "We need to take care of the land and the environment so that we can harvest good crops and have a good harvest of food and a good time for leisure and to enjoy the beauty of nature.",
+      "reference": "Regular feeding and care of livestock ensure animals remain healthy and productive."
+    },
+    {
+      "source": "Kabici yendaga ũrugarĩ  wa  centigrade ikũmi na ithano nginya mĩrongo ĩrĩ.",
+      "translation": "The temperature is expected to drop to minus ten degrees centigrade tonight.",
+      "reference": "Cabbage prefers temperatures between 15°C and 20°C."
+    },
+    {
+      "source": "Kũgitĩra mĩmera kuumana na mĩrimũ na tũtambi nĩ  ũndũ wa bata harĩ kũgaacĩra magetha.",
+      "translation": "The youth should work together with the elderly and the disabled to achieve their goals.",
+      "reference": "Protecting crops from pests and diseases is essential for a successful harvest ."
+    },
+    {
+      "source": "Arĩmi nĩ mabataraga kũingĩra thoko-inĩ cia bũrũri na cia mabũrũri ma nja nĩguo mahote kwendia magetha mao.",
+      "translation": "The government is working with local and international partners to implement the projects.",
+      "reference": "Farmers need enter to local and international markets to sell their harvested produce."
+    },
+    {
+      "source": "Mũgũnda mũtheru  nĩ ũgitagĩra mahiũ kuumana na mĩrimũ.",
+      "translation": "The community leader is working together with the elders.",
+      "reference": "A clean farm keeps livestock safe from diseases."
+    },
+    {
+      "source": "Arĩmi nĩmagitagĩra mahiũ   kuumana na mĩrimũ nĩ kũmaiga marĩa matheru.",
+      "translation": "They are working together to achieve their goals.",
+      "reference": "Farmers protect livestock from diseases by keeping them clean."
+    },
+    {
+      "source": "Tũhaandaga mbegũ hĩndĩ ya mbura nĩguo ikũre wega na tũgĩe na magetha mega.",
+      "translation": "We should take care of the environment so that it can give us food and we can live long.",
+      "reference": "We plant our seeds during the rainy season to ensure good growth and harvest."
+    },
+    {
+      "source": "Arĩmi a kaunti  nĩmararĩma  makĩhũthĩra mũno thumu wa gũtũria tĩri.",
+      "translation": "The county government is planning to build a new hospital in the rural area.",
+      "reference": "The county’s farmers are increasingly using organic fertilizers to maintain soil health."
+    },
+    {
+      "source": "Arĩmi magethaga irio hĩndĩ ya riũa rĩrĩa mĩgũnda ĩrĩ mĩũmũ.",
+      "translation": "The government has introduced a new law to protect the rights of the poor.",
+      "reference": "Farmers harvest their crops during the dry season when the fields are dry."
+    },
+    {
+      "source": "Rĩera rĩega  riũa na mbura nĩ iteithagia arĩmi kũgĩa na magetha maingĩ.",
+      "translation": "The government is working with the private sector to develop the economy and create many jobs.",
+      "reference": "Good weather conditions, including sunshine and rain, help farmers produce abundant crops."
+    },
+    {
+      "source": "Ũrĩmi Kenya  wĩ bata harĩ ũkũria wa bũrũri na ũgitĩri wa wagi wa irio.",
+      "translation": "Kenya is a country with a rich culture and a variety of traditional dishes.",
+      "reference": "Kenya’s agricultural sector is crucial for national development and food security."
+    },
+    {
+      "source": "Thũmũ ya mahiũ nĩ ũteithagia mũgũnda gũkũria magetha mega.",
+      "translation": "The government is planning to build a new hospital in the city.",
+      "reference": "Cattle manure helps the field to grow good crops."
+    },
+    {
+      "source": "Arĩmi a ngũkũ marĩithagia  ngũkũ nĩũndũ  wa matũmbi marĩa mendagia thokoinĩ.",
+      "translation": "The government is planning to build new roads in areas where people are suffering.",
+      "reference": "Farmers raise chickens for eggs, which they sell in the market."
+    },
+    {
+      "source": "Mũrĩmi nĩakamaga iria rĩingĩ rĩrĩa ng’ombe ĩhũnĩte. ",
+      "translation": "The farmer is looking for a cow that has escaped.",
+      "reference": "A well-fed cow produces more milk for the farmer."
+    },
+    {
+      "source": "Rĩera rĩega na ũteithio wa thirikari nĩũgacĩrĩirie  maciaro ũrĩminĩ  bũrũri wa Kenya. ",
+      "translation": "The opposition party and the government are working together to develop the country of Kenya.",
+      "reference": "Favorable weather and government subsidies have boosted agricultural productivity in Kenya recently."
+    },
+    {
+      "source": "Kurima makũniainĩ nĩkũhotithagia mũrĩmi gũkũria karati handũ harĩ mwaramo mũnini.",
+      "translation": "Farming in the fields is a way of making a living during the rainy season.",
+      "reference": "Container gardening allows for growing carrots in limited spaces."
+    },
+    {
+      "source": "kabici ndumanu nocigũmĩrwo nĩ mĩrimũ.",
+      "translation": "The people are suffering due to poverty.",
+      "reference": "Crowded cabbage heads are more prone to diseases."
+    },
+    {
+      "source": "Kaingĩ arĩmi nĩ mendagia magetha marĩa matigarĩte thoko-inĩ cia hakuhĩ  nĩguo magĩe mbeca nyingĩ.",
+      "translation": "The government has announced that it will provide funds to schools so that they can build more classrooms.",
+      "reference": "Farmers often sell surplus crops in local markets to earn income"
+    },
+    {
+      "source": "Ngũkũ iheanaga matumbi na nyama iria irĩ bata irio inĩ cia bamĩrĩ.",
+      "translation": "The people are harvesting crops and animals in the fields during the rainy season.",
+      "reference": "Chickens provide eggs and meat, important for family meals."
+    },
+    {
+      "source": "Ũtheri wa riũa ũheaga mĩmera hinya ũrĩa ũbataranagia nĩguo ithondeke irio na ikũre.",
+      "translation": "The teacher of the school will not allow the students to play during the time when they are supposed to eat and rest.",
+      "reference": "Sunlight provides plants with energy, which is necessary for photosynthesis and growth."
+    },
+    {
+      "source": "Arĩmi nĩmakaga ngiri nũmu  nĩ kũgitĩra mahiũ kuumana  na nyamũ cia gĩthaka.",
+      "translation": "The government has decided to reduce the price of maize to reduce the burden of the poor.",
+      "reference": "Farmers build strong fences to protect livestock from wild animals."
+    },
+    {
+      "source": "Kenya nĩtongorĩtie harĩ ũrimi wa cai na kahũa, ũrĩa ũri bata harĩ ũkũria wa bũrũri.",
+      "translation": "Kenya is a country rich in tea and coffee, which is the backbone of the country's economy.",
+      "reference": "Kenya is a leading producer of tea and coffee, vital for its economy."
+    },
+    {
+      "source": "Nyamũ irĩ ũgima mwega wa mwĩrĩ nĩ ibataraga maĩ matheru na irio cia kũigana o mũthenya.",
+      "translation": "The river is a source of water that quenches the thirst of the people and provides food for the hungry in the evening.",
+      "reference": "Healthy animals need clean water and enough food every day."
+    },
+    {
+      "source": "Ũrĩmi nĩ ũheaga andũ wĩra, na makĩria icagi-inĩ kũrĩa ũrĩmi nĩ mũingĩ.",
+      "translation": "The people are suffering, and the country is in a difficult situation.",
+      "reference": "Agriculture creates employment opportunities, especially in rural areas where farming is common."
+    },
+    {
+      "source": "Ng'ombe nĩ iheaga arĩmi iria na nyama cia kũrĩa na kwendia.",
+      "translation": "Cattle are the ones that give us milk and meat and hide.",
+      "reference": "Cows provide milk and meat for the farmers to consume and sell."
+    },
+    {
+      "source": "Rũhonge rwa ũrĩmi Kenya nĩrũrahĩmbĩria ũrĩmi na matanya ma kĩrĩu.",
+      "translation": "The Kenyan government has been criticized for its corruption.",
+      "reference": "Kenya’s agricultural sector is adapting to new challenges and opportunities."
+    },
+    {
+      "source": "ũkũria wa cai Kenya ũtigarĩtĩ ũri gĩcangĩro kĩnene hari indo iria ciendagio na nja cia ũrĩmi",
+      "translation": "The Kenyan government has taken a big step forward in addressing the issue of corruption and crime.",
+      "reference": "Kenya’s tea production remains a major contributor to its agricultural exports."
+    },
+    {
+      "source": "ũcenjia wa rĩera nĩ ũrehaga mathĩna ũrĩmi-inĩ",
+      "translation": "The teacher of the school is very good in her work.",
+      "reference": "Climate change poses significant challenges to Kenya’s agricultural sector."
+    },
+    {
+      "source": "Arĩmi mendagia mahiũ nĩguo mone mbeca cia kũgũra indo ingĩ cia ũremi.",
+      "translation": "The government is working hard to ensure that the rights of the people are respected.",
+      "reference": "Farmers sell livestock to make money for other farm needs."
+    },
+    {
+      "source": "Ruhonge rwa ũrimi  Nyandarua   nĩ  ũri   bata mũno nĩũndũ wa  gũtigĩrĩra atĩ kwĩna irio ciakũigana Kenya",
+      "translation": "The Nyandarua County is the largest producer of rice in Kenya.",
+      "reference": "Nyandarua’s agricultural sector plays a crucial role in ensuring food security in Kenya."
+    },
+    {
+      "source": "Arĩmi  maciarithanagia mahiu nigetha maagirie mahiu.",
+      "translation": "They are trying to solve the problems of the people.",
+      "reference": "Farmers breed strong animals to improve livestock quality."
+    },
+    {
+      "source": "ũkũria wa macani  Kenya wakinyire tani ngiri magana matano mwaka wa ngiri igĩrĩ na ikũmi na inyanya.",
+      "translation": "The Kenyan government has been in power for five years with no significant achievements.",
+      "reference": "Kenya’s tea production reached 500 thousand tons in 2018."
+    },
+    {
+      "source": "Rũhonge rwa ũrĩmi  Kenya  nĩ ũraiyũkia teknoronji  njerũ na ũrĩmi wa kĩrĩu ",
+      "translation": "The Kenyan government is investing in technology and innovation.",
+      "reference": "Kenya’s agricultural sector is adapting to new technologies and practices."
+    },
+    {
+      "source": "Bũrũri nĩ ũkoretwo na mathĩna ũhoro ũkoniĩ  ũrĩmi nĩũndũ wa ũnyihu wa mĩgũnda.",
+      "translation": "The country is facing a severe drought due to the lack of rain in the dry season.",
+      "reference": "The country faces challenges in agricultural productivity due to limited arable land."
+    },
+    {
+      "source": "Bũrũri niguo wa gatatũ ũtongoragia  hari wendia wa maciaro thĩ yothe ",
+      "translation": "The country is facing a severe drought that has affected many people.",
+      "reference": "The country is the third-leading exporter of fresh produce globally."
+    },
+    {
+      "source": "Arĩmi no mũhaka mamenyerere mahiũ matikanyitwo nĩ mĩrimũ.",
+      "translation": "The government has decided to reduce the prices of essential goods.",
+      "reference": "Farmers must watch animals closely to see if they are sick."
+    },
+    {
+      "source": "Mahiũ no marehe  ũtonga  rĩrĩa mendio thokoinĩ.",
+      "translation": "The people are going to the market.",
+      "reference": "Livestock can provide income when sold at the market."
+    },
+    {
+      "source": "Rũhonge rwa ũrĩmi nĩrwabata harĩ ũthii wa nambere na kũnyihia ũkĩa Kenya.",
+      "translation": "The government of the country has been accused of corruption and embezzlement in Kenya.",
+      "reference": "Kenya’s agriculture sector is crucial for rural development and poverty reduction."
+    },
+    {
+      "source": "Arĩmi nĩ mandikaga  rekondi cia mahiũ  nigetha  mamenye ũrĩa mahiu marakũra na ũgima.",
+      "translation": "The government is planning to increase the production of food crops in order to reduce hunger and poverty.",
+      "reference": "Farmers keep records of livestock to track their growth and health."
+    },
+    {
+      "source": "Kumenyerera  mahiũ wega nĩ gũteithagia arĩmi kũongerera ũtonga.   ",
+      "translation": "The government is planning to implement new laws to control inflation.",
+      "reference": "Good care of livestock helps increase farm income."
+    },
+    {
+      "source": "\nMaciaro ma mĩgunda kuuma Kenya marĩa mendagio  mũno mabũrũri ma nja nĩ macani, kahũa,  mahũa na mĩthemba ya  mboga\n",
+      "translation": "Floods in Kenya have destroyed many homes, leaving many people homeless, hungry, and without food.",
+      "reference": "Kenya’s major agricultural exports include tea, coffee, cut flowers, and vegetables."
+    },
+    {
+      "source": "Rũhonge rwa iria Kenya nĩrũmwe rwa marĩa manene (cs) Sub-Saharan Afrika",
+      "translation": "Lake Victoria is one of the largest lakes in East Africa.",
+      "reference": "Kenya’s dairy sector is one of the largest in sub-Saharan Africa."
+    },
+    {
+      "source": "Thirikari  nĩ  ĩrambatĩria ũrimi wa maĩ nĩũndũ wa kũnyihia kwĩhoka ũrĩmi wa mbura.",
+      "translation": "The government is planning to increase the number of people who have access to clean water.",
+      "reference": "The government is promoting irrigation to reduce dependence on rain-fed agriculture."
+    },
+    {
+      "source": "ũrĩmi nĩguo  wĩra ũrĩa mũnene na nĩ wandĩkĩte andũ mĩrongo mũgwanja harĩ igana Kenya.",
+      "translation": "The youth are the ones who will build a big country and unite the people of Kenya.",
+      "reference": "Agriculture is the backbone of Kenya’s economy, employing 70% of the rural population."
+    },
+    {
+      "source": "Kenya niyo ĩtongoretie harĩ ũkũria wa macani, kahũa na mboga mĩthema mĩthemba.",
+      "translation": "Kenya is the country that has the most beautiful beaches, mountains, and the most diverse flora.",
+      "reference": "Kenya is a leading producer of tea, coffee, and fresh vegetables."
+    },
+    {
+      "source": "Thirikari nĩirambatĩrĩria ũrĩmi  mwega nĩguo kũgitĩra marĩa matũrigicĩirie.",
+      "translation": "The government is planning to build a new hospital to serve the community.",
+      "reference": "The government is promoting agricultural practices to protect the environment."
+    },
+    {
+      "source": "Karati nĩ ibataraga ũtheri wa riũa mũthenya wothe nĩguo ĩgĩe na mĩri mĩega.",
+      "translation": "The teacher is a good example to follow so that we can learn a lot.",
+      "reference": "Carrots need sunlight all day to grow strong and produce good roots."
+    },
+    {
+      "source": "Thirikari nĩĩranyitĩrĩra ikundi cia ũrĩmi nĩgetha  kũongerereke  maciaro ma arĩmi",
+      "translation": "The government has established a committee to support farmers.",
+      "reference": "The government is supporting agricultural cooperatives to enhance farmer productivity."
+    },
+    {
+      "source": "Arĩmi anini Kenya makũragia mbembe, mboco, waru na marigu.",
+      "translation": "The people of Kenya are suffering from hunger, poverty, war, and diseases.",
+      "reference": "Small-scale farmers in Kenya grow maize, beans, potatoes, and bananas."
+    },
+    {
+      "source": "Rũhonge rwa iria rũcangagĩra gĩcunje kĩa inya harĩ igana ya ũtonga wa Kenya  [cs](GDP).",
+      "translation": "The region of tea production is the main source of income in the economy of Kenya [GDP].",
+      "reference": "The dairy sector contributes 4% to Kenya’s GDP."
+    },
+    {
+      "source": "Thirikari nĩraigithia ũrĩmi-inĩ wa maĩ kwambatĩria maciaro ma ũrĩmi",
+      "translation": "The government has established a fund to support the disabled.",
+      "reference": "The government is investing in irrigation to boost agricultural production."
+    },
+    {
+      "source": "kabici yendaga   riũa nĩguo  ĩkũre wega.",
+      "translation": "The teacher is teaching us well.",
+      "reference": "Cabbage needs full sunlight for proper growth."
+    },
+    {
+      "source": "mbegũ cia kabici ciamambaga kuhurwo.",
+      "translation": "The people are discussing the issue.",
+      "reference": "Cabbage seeds are sown in seedbeds first."
+    },
+    {
+      "source": "Ongerera thũmũ mũgũnda-inĩ nĩ ũndũ wa gũteithĩrĩria karati gũkũra na ũgima mwega.",
+      "translation": "The government has launched a program to teach literacy and numeracy skills to the youth.",
+      "reference": "Add compost to the soil to help carrots grow larger and healthier."
+    },
+    {
+      "source": "Ona mĩgũnda mĩnini Kenya nĩkũragia mboco, minji, na biribiri",
+      "translation": "Kenya is known for its beautiful, green, and hilly landscapes.",
+      "reference": "Small farms in Kenya also produce beans, peas, and chillies."
+    },
+    {
+      "source": "Kũhumbĩra tĩri na mahuti gũteithagia kũiga ũgunyu.",
+      "translation": "We should respect and protect our natural resources.",
+      "reference": "mulching helps to retain soil moisture."
+    },
+    {
+      "source": "Iga kabici  handũ hatarĩ  na urugari   nĩgetha ciikarange itagũthũka.",
+      "translation": "The government has been warned that it will face consequences if it does not take action.",
+      "reference": "Store cabbage in cold storage for longer freshness."
+    },
+    {
+      "source": "Thirikari nĩraendekithia ũthuthuria wa ũrĩmi kwagĩria maciaro",
+      "translation": "The government is working hard to reduce poverty.",
+      "reference": "The government is promoting agricultural research to enhance productivity."
+    },
+    {
+      "source": "Gũitĩrĩria maĩ wega gũtũmaga kabici  ĩkorwo cĩganaine.",
+      "translation": "The government is working hard to improve the economy.",
+      "reference": "Proper irrigation ensures healthy, uniform cabbage heads."
+    },
+    {
+      "source": "Mĩthemba ĩrĩa ĩkũrangaga nĩĩteithagia kũrĩra rĩera rĩũru.",
+      "translation": "The people who are suffering are those who are not helping others.",
+      "reference": "Early maturing varieties help avoid harsh weather conditions."
+    },
+    {
+      "source": "Arĩmi mongagĩrĩra thumu  nĩguo kwongerera maciaro ma kabici.",
+      "translation": "The government has decided to increase the number of schools.",
+      "reference": "Farmers add manure to boost cabbage yields."
+    },
+    {
+      "source": "Karati nĩikoragwo na bitameni nyingĩ  cia A na K.",
+      "translation": "The languages A and K are being taught in many schools.",
+      "reference": "Carrots are rich in vitamins A and K."
+    },
+    {
+      "source": "Riia rĩhĩtahĩtanaga gũtunya mĩmera [cs]nutrients[cs] na maĩ ",
+      "translation": "The soil lacks essential nutrients and minerals.",
+      "reference": "Weeds can compete with crops for nutrients and water."
+    },
+    {
+      "source": "gũitĩrĩria maĩ nĩ kũri bata hĩndĩ ĩrĩa kwarĩte.",
+      "translation": "They are trying to solve the problems that we have.",
+      "reference": "Irrigation is crucial during dry periods"
+    },
+    {
+      "source": "gũcenjania mĩmera kũnyihagia ũgwati wa mĩrimũ na tũtambi.",
+      "translation": "They are trying to destroy the forest and the animals.",
+      "reference": "Crop rotation reduces the risk of disease and pest."
+    },
+    {
+      "source": "ũrugarĩ mũingĩ no ũtũme   kabici ciatũke.",
+      "translation": "We have a lot to learn from our elders.",
+      "reference": "Too much heat can cause cabbage heads to crack."
+    },
+    {
+      "source": "Irio ithondeketwo igereirio maciniinĩ ta mai na irio cia mĩkebe",
+      "translation": "The people are working hard to achieve their goals and make a living.",
+      "reference": "Processed forms include juices and canned products."
+    },
+    {
+      "source": "no ũhũthĩre thumu wa mĩmera ũrĩminĩ wa kabici.",
+      "translation": "The government has not yet announced the election date.",
+      "reference": "Also use green manures for cabbage farming."
+    },
+    {
+      "source": "Getha kabici rũcinĩ tene.",
+      "translation": "The children are playing outside.",
+      "reference": "Harvest cabbage early in the morning."
+    },
+    {
+      "source": "No ũhande karati na njĩra ya kũhura kana kũhanda tũmĩmera twahurĩtwo.  ",
+      "translation": "We need to use the right tools and methods to cultivate the land we have inherited.",
+      "reference": "You can plant carrots either by sowing seeds straight into the soil, or transplant seedlings that were started in another location."
+    },
+    {
+      "source": "Karati igethagwo na gũcigũcia kahora kuma tĩriinĩ.",
+      "translation": "The students are being taught in a new classroom.",
+      "reference": "Carrots are harvested by gently pulling from the soil."
+    },
+    {
+      "source": "Nĩ ciendaga ũgunyu mũingĩ hĩndĩ ĩrĩa irakũra.",
+      "translation": "The people are not happy with the current situation.",
+      "reference": "They requires consistent moisture during the growing season."
+    },
+    {
+      "source": "Getha kabici yakũra wega",
+      "translation": "The time has come for change.",
+      "reference": "Harvest cabbage when heads are firm."
+    },
+    {
+      "source": "Thumu nĩ wongagĩrĩra ũnoru wa tĩri ũrĩminĩ wa kabici.",
+      "translation": "The government has established a committee to oversee the implementation of the new law.",
+      "reference": "Compost improves soil fertility for cabbage farming."
+    },
+    {
+      "source": "Arĩmi mahũthagĩra dawa kũingata tũtambi.",
+      "translation": "The government has decided to reduce the cost of living.",
+      "reference": "Farmers use organic pesticides to control pests."
+    },
+    {
+      "source": "Kũhanda ihinda rĩrĩa rĩagĩrĩire kũrehaga maciaro maingĩ.",
+      "translation": "The government has failed to provide adequate healthcare services.",
+      "reference": "Well-timed planting leads to higher yields."
+    },
+    {
+      "source": "Getha karati rĩrĩa ciakũra.",
+      "translation": "The teacher is very clever.",
+      "reference": "Harvest carrots when they reach desired size."
+    },
+    {
+      "source": "Ciendaga ũgunyu hĩndĩ ĩrĩa   irakũra.",
+      "translation": "The people are suffering due to poverty.",
+      "reference": "They require consistent moisture throughout their growth."
+    },
+    {
+      "source": "Bataraitha ĩna [cs] nitrogen [cs] nyingĩ  nĩ ĩteithagia ũgima mwega wa mahuti ma karati.",
+      "translation": "Farmers are advised to apply nitrogen fertilizers to improve the quality of the soil.",
+      "reference": "Nitrogen-rich fertilizers promote healthy carrot tops."
+    },
+    {
+      "source": "Munya mĩmera ĩmwe ya karati nĩgetha kũgie na handũ ha mĩmera ĩyo ĩngĩ gũkũra wega.",
+      "translation": "The teacher is teaching us and the students are not listening carefully.",
+      "reference": "Pull out extra carrot plants to give the others space"
+    },
+    {
+      "source": "Karati no ihandwo mbura  yambĩrĩria kana ĩkiura.",
+      "translation": "The teacher will not allow the students to play during the lesson.",
+      "reference": "Carrots can be planted in both spring and fall."
+    },
+    {
+      "source": "Thima ũrũrũ wa tĩri ũtana handa karati.",
+      "translation": "The teacher is very tired and needs a rest.",
+      "reference": "Test soil pH before planting carrots."
+    },
+    {
+      "source": "Mbegu ihandagwo o rĩmwe tĩrinĩ ",
+      "translation": "Seeds are sown in the season.",
+      "reference": "Seeds are sown directly into the garden soil."
+    },
+    {
+      "source": "Kũiga kabici wega nĩkũmenyagĩrĩra gĩkĩro thutha wa kũgethwo.",
+      "translation": "The government has been warned that the country is facing a severe drought.",
+      "reference": "Proper storage practices ensure cabbage quality is maintained after harvest."
+    },
+    {
+      "source": "Karati ikũraga wega tĩri-inĩ ũtagaga ũgunyu na riũa",
+      "translation": "The government has failed to provide adequate resources to the people.",
+      "reference": "Carrots grow best in loose, well-drained soil with plenty of sunlight."
+    },
+    {
+      "source": "Karati ĩkũraga wega  kũndũ gũtarahaga maĩ",
+      "translation": "The teacher is teaching the children in a very good manner.",
+      "reference": "Carrots grow well in well-drained, loose soil."
+    },
+    {
+      "source": "Ĩtagirĩria karati maĩ kaingĩ nĩgetha itikome",
+      "translation": "The teacher is teaching us how to read.",
+      "reference": "Water carrots regularly to prevent them from becoming woody."
+    },
+    {
+      "source": "Karati yendaga tĩri ũharĩrio wega ĩtanahandwo.",
+      "translation": "The teacher will give us a lot of homework.",
+      "reference": "Carrots require good soil preparation before planting."
+    },
+    {
+      "source": "kabici ndune na ya ngiriini nĩyo mĩthemba ĩrĩa yonekanaga kaingĩ.",
+      "translation": "The people who are in power are the ones who have the power to make decisions.",
+      "reference": "Red cabbage and green cabbage are common varieties."
+    },
+    {
+      "source": "Kũhanda kabici mbura ĩkĩambĩrĩria nĩ gũtũmaga ĩgethwo tene.",
+      "translation": "They are planting crops that will be harvested in the morning.",
+      "reference": "Spring planting gives an early cabbage harvest."
+    },
+    {
+      "source": "Karati no ikũrio kũndũ kũhehu  ",
+      "translation": "The teacher is not at home.",
+      "reference": "Carrots can be grown in cool climates."
+    },
+    {
+      "source": "Karati  ikũraga ihinda rĩa mĩeri ĩĩrĩ kana ĩtatũ.  ",
+      "translation": "The teacher is teaching the children in the school.",
+      "reference": "Carrots take about two to three months to fully mature for harvesting."
+    },
+    {
+      "source": "Arĩmi mahũthagĩra thumu nĩguo  manyihie ũthũkangu wa rĩera.",
+      "translation": "The government has decided to increase the number of police officers.",
+      "reference": "Farmers use organic methods to reduce environmental impact."
+    },
+    {
+      "source": "Karati yendaga riũa  nĩguo ikũre wega,",
+      "translation": "The teacher will come when the bell rings.",
+      "reference": "Carrots need full sunlight for optimal development."
+    },
+    {
+      "source": "Kũrora mĩgũnda ya karati kaingĩ nĩkwabata mũno.",
+      "translation": "The teacher is teaching the students carefully.",
+      "reference": "Regular monitoring of carrot fields is crucial."
+    },
+    {
+      "source": "Arĩmi maroraga mĩgũnda kũrira tũtambi ",
+      "translation": "The government has decided to reduce the cost of living.",
+      "reference": "Farmers scout fields to monitor pest activity."
+    },
+    {
+      "source": "Mĩgũndainĩ mĩnene ihũthagĩra macini kũgetha.",
+      "translation": "The youth are working hard to achieve their goals.",
+      "reference": "Large-scale farms use mechanical harvesters ."
+    },
+    {
+      "source": "kũgitĩra mĩrimũ kwina gũthiũrũrũkia mĩmera mũgũndainĩ na gũitĩrĩrĩa maĩ wega.",
+      "translation": "They are building a bridge to connect the village and the town.",
+      "reference": "Disease management includes crop rotation and proper watering."
+    },
+    {
+      "source": "Arĩmi nĩmamunyaga karati imwe nĩgwo gũteithia rĩera rithiũngũke wega.",
+      "translation": "The government has decided to increase the budget to improve the economy.",
+      "reference": "Farmers often thin carrot rows to improve air circulation."
+    },
+    {
+      "source": "Karati no  irĩo ciĩ njĩthĩ kana irugĩtwo",
+      "translation": "The teacher is not at home today.",
+      "reference": "Carrots can be eaten raw or cooked."
+    },
+    {
+      "source": "kabici noimere wega kũĩna heho nini no ti heho nyingĩ.  ",
+      "translation": "What is the reason for the delay and what is the reason for the delay again.",
+      "reference": "Cabbage can tolerate light frost but not heavy frost."
+    },
+    {
+      "source": "Arĩmi macagũraga mbegu kũringana na rĩera.",
+      "translation": "The government is working together with the community.",
+      "reference": "Farmers select seeds based on their climate."
+    },
+    {
+      "source": "Arĩmi mahũthagĩra indo cia gũthondekwo kũhanda na kũgetha karati.",
+      "translation": "The government has introduced new measures to improve and increase production.",
+      "reference": "Farmers use mechanical tools for planting and harvesting carrots."
+    },
+    {
+      "source": "ũĩigi wa karati nĩ ũcenjagia ihinda rĩrĩa cingĩigwo.",
+      "translation": "The teacher is teaching the students in the classroom.",
+      "reference": "Storage conditions affect carrot shelf life."
+    },
+    {
+      "source": "Tĩri ũharĩirio wega ũtũmaga mĩri ĩkũre wega.",
+      "translation": "The government will provide assistance to those who are in need.",
+      "reference": "Well-prepared soil ensures good root development."
+    },
+    {
+      "source": "Tĩri wĩna ũgima mwega ũtũmaga karati ĩkorwo na ũgima mwega na cama.",
+      "translation": "The teacher is teaching the students when the teacher is also a student.",
+      "reference": "Healthy soil leads to healthy, flavorful carrots."
+    },
+    {
+      "source": "Kũigĩrĩra mahuti nĩgũteithagia kũiga ũrugarĩ mwega wa tĩri.",
+      "translation": "The government is working to improve the quality of education.",
+      "reference": "Mulching helps in keeping the soil temperature stable."
+    },
+    {
+      "source": "Kũgetha karati tene no kũgũmire cama wacio.",
+      "translation": "We should wake up early to avoid the heat.",
+      "reference": "Harvesting carrots too early can affect their flavor."
+    },
+    {
+      "source": "Karati ĩkũragio na mbegũ.",
+      "translation": "Karati ĩkũragio na mbegũ.",
+      "reference": "Carrots are often grown from seed,"
+    },
+    {
+      "source": "kabici na itũngũrũ nĩ mĩmera mĩega ya kũhandanĩrio na karati,",
+      "translation": "The government and the opposition are in a fierce competition for the parliamentary seats.",
+      "reference": "Cabbage and onions are good companions for carrots."
+    },
+    {
+      "source": "Karati no ĩkũrio mĩkebeinĩ taũninĩ.",
+      "translation": "The students are studying at home tonight.",
+      "reference": "Carrots can be grown in containers for urban farming."
+    },
+    {
+      "source": "Kũhanda na kũgetha rĩrĩa kwagĩrĩire nĩkwongagĩrĩra magetha.",
+      "translation": "We should respect and protect the things that our ancestors left behind.",
+      "reference": "Proper timing of planting and harvesting improves yields."
+    },
+    {
+      "source": "ũndu ũyũ ũtũmaga karati ĩrũngare na ĩiganane.",
+      "translation": "The community is working together to improve education.",
+      "reference": "This also help in achieving straight, uniform carrots."
+    },
+    {
+      "source": "Maĩ maingĩ no matũme karati ibuthe.",
+      "translation": "The people are not listening to advice.",
+      "reference": "Too much water can cause carrots to rot."
+    },
+    {
+      "source": "Getha karati ihinda rĩrĩa rĩagĩrĩire nĩgetha cikorwo na mũcamo mwega.",
+      "translation": "The teacher is the one who has the power to make the student learn or not.",
+      "reference": "Harvesting carrots at the right time ensures good flavor."
+    },
+    {
+      "source": "Arĩmi mahũthagĩra natharĩ cioetwo igũrũ nĩgetha maĩ makanyuo wega.",
+      "translation": "The government has decided to increase the number of police officers in the country.",
+      "reference": "Farmers often use raised beds for better drainage."
+    },
+    {
+      "source": "Karati no ĩgũmĩrwo nĩ tũtambi twa karati.",
+      "translation": "The teacher is our teacher.",
+      "reference": "Carrots are susceptible to pests like carrot flies."
+    },
+    {
+      "source": "Arĩmi macenjagia mĩthemba ya kũrĩma kuumana na ũrĩa tĩrĩ ũtarie.",
+      "translation": "They are calling for peace and unity among us.",
+      "reference": "Farmers adjust cultivation practices based on soil conditions."
+    },
+    {
+      "source": "Arĩmi mahũthagĩra ũthimi wa tĩri nĩgetha kũmenya [cs] nutrients [cs] iria irendekana.",
+      "translation": "The new technology will provide essential nutrients that are lacking.",
+      "reference": "Farmers use soil tests to determine nutrient needs."
+    },
+    {
+      "source": "ũrugarĩ mũhehu nĩwongagĩrĩra cama wa karati.",
+      "translation": "The teacher is teaching the class of iron.",
+      "reference": "Cool temperatures can enhance the sweetness of carrots."
+    },
+    {
+      "source": "ũrĩmi ũtarĩ wa dawa nĩta thumu na kũingata tũtambi ũtakũhũthĩra dawa.",
+      "translation": "The medicine is very expensive and we cannot afford to buy it.",
+      "reference": "Organic farming practices include composting and non-chemical pest control."
+    },
+    {
+      "source": "ũthuthuria ũrongoragĩrĩria kwongerera maciaro, kuĩgĩtĩra mĩrimũ na cama.",
+      "translation": "The government is working hard to improve the economy, reduce poverty and hunger.",
+      "reference": "Research focuses on improving yield, disease resistance, and flavor."
+    },
+    {
+      "source": "Kũeheria riia wega nĩkwambatagĩrĩa gĩkĩro kĩa mĩmera ya karati.",
+      "translation": "The government has decided to increase the budget for education.",
+      "reference": "Proper weed management improves the quality of carrot crops."
+    },
+    {
+      "source": "Karati ĩbatie gũthambio wega ĩtanaigwo thitoo.",
+      "translation": "The teacher is teaching the students in the classroom.",
+      "reference": "Carrots should be cleaned thoroughly before storage."
+    },
+    {
+      "source": "Karati no ĩkũrio tĩri mũthemba mũthemba ĩngimenyereirwo wega.",
+      "translation": "The government has failed to provide adequate healthcare services to the people.",
+      "reference": "Carrots can be grown in various soil types with proper care."
+    },
+    {
+      "source": "Karati ihandagwo itiganĩte hanini nĩgetha kũgetha gũtikarũgame.",
+      "translation": "The government has failed to provide the necessary resources to the people.",
+      "reference": "Carrots are often grown in succession for continuous harvest."
+    },
+    {
+      "source": "Gũkũrĩria karati nyũmba cia kũiga urũgari kugitagĩra karati kuumana na rĩera rĩũru.",
+      "translation": "The government has established a house of parliament to harmonize laws with the constitution.",
+      "reference": "Greenhouse cultivation protects carrots from extreme weather conditions."
+    },
+    {
+      "source": "mĩmera ĩrĩa ĩhumbagĩra tĩri nĩ ithondekaga ũnoru wa tĩri nĩũndũ wa karati.",
+      "translation": "The teacher who teaches the children is the one who makes the future of the country bright.",
+      "reference": "Cover crops enhance soil structure and fertility for carrots."
+    },
+    {
+      "source": "ũigi mwega wa [cs] record [cs] nĩ ũteithagia ũrĩmi mwega wa karati.",
+      "translation": "The artist of the record is being celebrated as the artist of the year.",
+      "reference": "Proper record-keeping helps in managing carrot production."
+    },
+    {
+      "source": "Arĩmi ni mekaga ũthuthuria nĩgetha magagĩrie mĩthemba ya karati.",
+      "translation": "The government has decided to increase the number of scholarships for students.",
+      "reference": "Farmers often conduct research to improve carrot varieties."
+    },
+    {
+      "source": "Karati no igwo wega kũhũthĩra kugwatia heho kana gũĩkĩra mĩkebeinĩ.",
+      "translation": "The government has decided to reduce the price of goods in the market.",
+      "reference": "Carrots can be preserved through freezing or canning."
+    },
+    {
+      "source": "ũigi mwega nĩgũteithagia karati ĩikare kahinda karaihu.",
+      "translation": "The teacher is teaching the students in the classroom.",
+      "reference": "Preservation methods extend the shelf life of carrots."
+    },
+    {
+      "source": "gũitĩrĩrĩa maĩ na njira ya mataata ni kũnyihagia gũitaanga maĩ na kũgirĩrĩa mĩrimũ.",
+      "translation": "The best way to get rid of a problem is to face it and solve it, not to run away from it.",
+      "reference": "Drip irrigation helps in reducing water waste and disease."
+    },
+    {
+      "source": "Arĩmi mataatagĩria mĩgũnda maĩ nĩguo gũkorwo na maĩ kaingĩ.",
+      "translation": "They are planning to build new houses as soon as possible.",
+      "reference": "Farmers use irrigation to provide consistent water supply."
+    },
+    {
+      "source": "Kumenyerera ni kũgiragĩriria gũthũka na kũiga wega.",
+      "translation": "It is good to be patient and to be strong.",
+      "reference": "Proper handling prevents damage and maintains quality."
+    },
+    {
+      "source": "Mĩgũnda mĩnene ĩhũthagĩra [cs] advanced technology [cs] gũkũria karati.",
+      "translation": "Modern technology has greatly improved education.",
+      "reference": "Large-scale farms use advanced technology for carrot production."
+    },
+    {
+      "source": "Karati no cikũrio mĩgũndainĩ mĩnini na mĩnene.",
+      "translation": "The teacher is teaching the students in a quiet and peaceful manner.",
+      "reference": "Carrots are grown in both small and large-scale farms."
+    },
+    {
+      "source": "Arĩmi mendagia karati kũgerera thoko cia arĩmi kana nduka.",
+      "translation": "The government is planning to increase the budget for the government's projects.",
+      "reference": "Farmers market carrots through local farmers’ markets and grocery stores."
+    },
+    {
+      "source": "Ciongagĩrĩra ũruti wa wĩra wega na kũnyihia marĩhi ma aruti  a wĩra.",
+      "translation": "The artists are creating a new art piece and destroying old ones.",
+      "reference": "They increase efficiency and reduce labor costs."
+    },
+    {
+      "source": "Itũngũrũ no igethwo rĩrĩa ciagĩa  rangi wa ngoikoni na mahuti marĩkia kũũma ",
+      "translation": "The artist does not have a fixed color palette and the brushes are very expensive.",
+      "reference": "Harvest onions when their tops turn yellow and fall."
+    },
+    {
+      "source": "Arĩmi nĩ mahũthagĩra mahuti nĩgetha magitĩre  gĩtũngũrũ kuumana tũtambĩ. ",
+      "translation": "The government has established a committee to investigate the cause of the recent floods.",
+      "reference": "Farmers use row covers to protect onions from pests."
+    },
+    {
+      "source": "Karati ĩhandagwo hamwe na mĩthemba ĩngĩ ya mboga",
+      "translation": "Farming is done together with the help of the soil.",
+      "reference": "Carrots are often grown alongside other root vegetables."
+    },
+    {
+      "source": "Gũthima tĩri kaingĩ gũteithagia gũtua matua mega kũhuthĩra mborera.  ",
+      "translation": "The government has decided to increase the price of maize to reduce poverty.",
+      "reference": "Regular soil testing helps in making informed fertilization decisions."
+    },
+    {
+      "source": "Itĩrĩria itũngũrũ maĩ maita maingĩ  no maĩ  matikarahe.",
+      "translation": "The people are suffering from hunger and poverty.",
+      "reference": "Water onions regularly but avoid waterlogging."
+    },
+    {
+      "source": "Menyerera itũngũrũ ndugekire nduutu.",
+      "translation": "The people are suffering due to lack of water.",
+      "reference": "Handle onions carefully to avoid bruising."
+    },
+    {
+      "source": "Njira njega  ya gũitĩrĩria maĩ nĩ ĩteithagia ũhũthĩri wa maĩ wega na kũgacĩrĩria karati  gũkũra ",
+      "translation": "The best way to achieve success is to work hard and be determined to learn and acquire knowledge.",
+      "reference": "Efficient irrigation systems conserve water and improve carrot growth."
+    },
+    {
+      "source": "Gĩtũngũrũ gĩkũraga wega gĩkĩrĩtwo mborera ĩna [cs] phosphorus[cs] nyingĩ",
+      "translation": "The soil in the garden is lacking in phosphorus.",
+      "reference": "Onions benefit from fertilizers high in phosphorus."
+    },
+    {
+      "source": "Kũmenya mathĩna tene nĩgũteithagia kũmeheria na njĩra njega ",
+      "translation": "We are going to the market early to buy food and vegetables.",
+      "reference": "Early detection of issues helps in managing problems effectively."
+    },
+    {
+      "source": "Gitũngũrũ no gĩkũre hĩndĩ ya heho kana hĩndĩ ya mbura.",
+      "translation": "The government is not responsible for the current situation.",
+      "reference": "Onions can be grown in both spring and fall."
+    },
+    {
+      "source": "Thima [cs] pH[cs] ya  tĩri ũtanahanda gĩtũngũrũ .",
+      "translation": "The time of the harvest is approaching slowly.",
+      "reference": "Test soil pH before planting onions."
+    },
+    {
+      "source": "Ciendaga ũgunyu  mwagĩrĩru hĩndĩ ĩrĩa yothe  irakũra.",
+      "translation": "The teacher is teaching the students in the classroom.",
+      "reference": "They need consistent moisture throught their growing period."
+    },
+    {
+      "source": "Karati  nĩ ĩkũragio thĩ yothe kũringana na rĩera rĩa kũrĩa ĩrakũrio",
+      "translation": "The teacher is teaching the lesson according to the curriculum.",
+      "reference": "Carrots are grown worldwide, adapted to various climates."
+    },
+    {
+      "source": "Hura  tũtambi ũkĩhũthĩra njĩra ya  [cs] organic[cs] kana njĩra cia  [cs] chemical [cs]",
+      "translation": "The government is promoting organic farming methods rather than chemical methods.",
+      "reference": "Control pests using organic or chemical methods."
+    },
+    {
+      "source": "Kũiga karati handũ  harĩ ũhehu nĩ gũtũmaga ndĩgathũke.  ",
+      "translation": "The teacher will not be able to attend the meeting today.",
+      "reference": "Cold storage slows down the aging process of carrots."
+    },
+    {
+      "source": "Gĩtũngũrũ  nĩ kĩgũmagĩrwo nĩ tũtambi ta ngi iria itangaga  itũngũrũ.",
+      "translation": "The teacher is teaching the students who are not listening carefully.",
+      "reference": "Onions are susceptible to pests like onion flies."
+    },
+    {
+      "source": "Kũhumbĩra nĩ gũteithagia gũkũra wega",
+      "translation": "The government is planning to increase the budget.",
+      "reference": "Shading helps in maintaining optimal growth."
+    },
+    {
+      "source": "Kaingĩ arĩmi mahũthagĩra thumu kũongerera ũnoru wa tĩri.",
+      "translation": "The government has introduced a new law to control the spread of the disease.",
+      "reference": "Farmers often use compost to improve soil fertility."
+    },
+    {
+      "source": "Itemi Nĩ wĩra ũrĩkũ marutaga mĩciĩ-inĩ kana kũri mũingĩ  rĩao nĩ rĩrĩkũ mũciĩ-inĩ/mũingĩ-inĩ?",
+      "translation": "What is the meaning of life in the universe?",
+      "reference": "What are their roles in the household/society?"
+    },
+    {
+      "source": "Mũtaratara wa ũrĩa  ũhũthagĩrwo wa gũthomithia. ",
+      "translation": "The teacher who teaches mathematics.",
+      "reference": "A systematic outline of how the training is conducted."
+    },
+    {
+      "source": "Buroti cia kũgereria na tũmĩhuko tũnini tũa mbegũ cia kũgeria: matanya ma maumĩrĩra ma gũthomithia\n \n",
+      "translation": "The government has a lot of work to do to improve the quality of education.",
+      "reference": "Demo Plots and maize Small packs for demonstration: learning objectives:"
+    },
+    {
+      "source": "[cs]VBA [cs] gũkorwo makĩmenya bata wa kũhũthĩra njĩra njega cia ũrĩmi.",
+      "translation": "The government has established a program to improve the living conditions of the rural community.",
+      "reference": "VBAs understanding the benefit of adopting good agronomic practices."
+    },
+    {
+      "source": "ĩtana baratha kana mĩcemanio.",
+      "translation": "We are waiting for the rain season.",
+      "reference": "Call for barazas or meetings."
+    },
+    {
+      "source": "No mahũthĩre kanitha ta njĩra ya kũambĩrĩria.",
+      "translation": "There is no need to wait for the right moment to take action.",
+      "reference": "They can use the church as an entry point."
+    },
+    {
+      "source": "Ũhoro ũikaine wĩgiĩ gĩcigo kĩu",
+      "translation": "The rain will bring life to the dry land.",
+      "reference": "Background information of the region"
+    },
+    {
+      "source": "Thogora wa irio no ũnyihio nĩ gũĩkũrĩria irio ciaku cia mbũkũ",
+      "translation": "The recipe of my traditional dish is a secret.",
+      "reference": "Feed costs can be managed by growing your own rabbit feed."
+    },
+    {
+      "source": "Nĩguo irio ithĩĩke  wega mbũkũ ibataraga kũheo nyeki ",
+      "translation": "It is not clear what the translation of the given Gĩkũyũ sentence is.",
+      "reference": "Rabbits need unlimited access to hay for proper digestion."
+    },
+    {
+      "source": "ũrugarĩ mũingĩ no ũtũme ngano yũme naihenya.",
+      "translation": "We should not waste time in vain.",
+      "reference": "Extreme heat can cause wheat to dry out quickly."
+    },
+    {
+      "source": "Arĩmi othe arĩa marenda gũkũria mbeniko no mũhaka mathime tĩri.",
+      "translation": "The government has decided to increase the prices of goods and services.",
+      "reference": "All farmers intending to grow pyrethrum should first test their soil."
+    },
+    {
+      "source": "Ramata mĩrĩre  ya mbũkũ nĩguo ũgirĩrĩrie ũritũ mũkĩru",
+      "translation": "The government has failed to provide adequate resources to the poor.",
+      "reference": "Monitor feed intake to prevent obesity in rabbits."
+    },
+    {
+      "source": "Ũhehu mũigananu nĩ ũtũmaga kabici ĩkũre wega.",
+      "translation": "The teacher is teaching the students in the classroom.",
+      "reference": "Cool temperatures encourage the formation of compact cabbage heads."
+    },
+    {
+      "source": "Ngano no yũmĩrĩrie tĩri wĩna [cs] alkaline [cs] niini kana wĩ [cs] acidic [cs]",
+      "translation": "The soil is either alkaline or acidic.",
+      "reference": "Wheat can tolerate slightly alkaline or acidic soils."
+    },
+    {
+      "source": "ũrugarĩ mũnini nĩ ũteithagia mbegũ gũthethũka hĩndĩ ya kũmera.",
+      "translation": "How many times do you think about the beauty of nature.",
+      "reference": "Warm temperatures during germination help wheat seeds sprout."
+    },
+    {
+      "source": "kabici nĩ mboga ĩ mahuti maĩngĩ ikuragio nĩũndũ wa gũtunguha.",
+      "translation": "The government is distributing food to the people in the rural areas.",
+      "reference": "Cabbage is a leafy vegetable grown for its dense head."
+    },
+    {
+      "source": "Ngano no yũmĩrĩrie heho niini yakũra.",
+      "translation": "The people are not listening to the advice.",
+      "reference": "Wheat can tolerate mild frost once it is fully established."
+    },
+    {
+      "source": "Yendaga mbura gĩthimo kĩa gatagatĩ ga [cs] centimeter [cs] mĩrongo ĩtatũ na ĩtano nginya mĩrongo ĩtano.",
+      "translation": "The new road has a width of 3 meters and a length of 10 kilometers.",
+      "reference": "It requires about 35 to 50 cm of rainfall during its growth."
+    },
+    {
+      "source": "Njĩra njega cia gũkũria cai no gũteithie kũgitĩra ũcenjia wa rĩera na kũnyihia kũrekererio ndogo  ya  [cs] carbon [cs] ",
+      "translation": "The government has launched a program to reduce carbon emissions and promote sustainable development.",
+      "reference": "Sustainable tea farming practices can help combat climate change by reducing carbon emissions."
+    },
+    {
+      "source": "Hũra hũra tĩri  ũregere  na  ũrĩme   ũriku wa [cs] centimeter [cs]  mĩrongo ĩtatũ nĩguo tĩri ũhuthe   mĩri inyite wega",
+      "translation": "The measurements are taken every 10 centimeters and the length of the tunnel is 100 meters.",
+      "reference": "Loosen the soil by tilling to a depth of about 30 cm to improve aeration and root penetration."
+    },
+    {
+      "source": "Hũthĩra indo theru na njũgĩ gũceha kũgirĩrĩria gũthũkia na kũnyihia ũgwati wa mĩrimũHũthĩra indo theru na njũgĩ cia gũceha  nĩguo kũgirĩrĩria gũthũkia na kũnyihia ũgwati wa mĩrimũ",
+      "translation": "The government has established a committee to oversee the implementation and enforcement of the new laws.",
+      "reference": "Use clean, sharp tools for pruning to prevent damage and reduce the risk of infection."
+    },
+    {
+      "source": "\nTiga mĩanya ya nathari ũrĩa kwagĩrĩire ũtigie mĩanya ya kũigana ya  mũmera gũkũra wega na kũhota kũmenyererwo \n",
+      "translation": "The government has taken measures to reduce the rate of maternal mortality and improve maternal health care.",
+      "reference": "Space the seedbeds appropriately, leaving enough room for plant growth and management."
+    },
+    {
+      "source": "Mahinda   matiganĩte ma  kũgetha cai   mabatiĩ kũigananio gũtigĩrĩra macani nĩ ma gĩkĩro kĩa igũru na  cai wĩna mũcamo ũrĩa urendekana",
+      "translation": "The government has established a program to provide iron sheets to the poor in the rural areas and those who are in need of shelter.",
+      "reference": "Harvesting intervals should be optimized to ensure high-quality tea leaves with the desired flavor profile."
+    },
+    {
+      "source": "Macani nĩ marĩ [cs] antioxidants [cs] na [cs] compounds [cs]  iria ikoragwo na ũguni harĩ  ũgima wa mwĩrĩ igatũma macani mendekane nĩ andũ",
+      "translation": "Macani nĩ marĩ [cs] antioxidants [cs] na [cs] compounds [cs] iria ikoragwo na ũguni harĩ  ũgima wa mwĩrĩ igatũma macani mendekane nĩ andũ.",
+      "reference": "Tea contains antioxidants and other compounds that offer health benefits, boosting its popularity."
+    },
+    {
+      "source": "Thima tĩri kaingĩ nĩgetha ũmenye ũrĩa  ũrĩhũthagĩra   bataraitha",
+      "translation": "The people who are in charge are not doing anything to help the poor.",
+      "reference": "Conduct soil tests periodically to adjust fertilization practices."
+    },
+    {
+      "source": "Niĩ ndĩ obithaa wa ũrĩmi wa ndengũ",
+      "translation": "I am a student of the local language.",
+      "reference": "Mimi ni ofisa wa ukulima wa ndengu"
+    },
+    {
+      "source": "Macani nĩ mamwe ma indo iria inyuagwo mũno thĩ yothe  kũheana ũgima na kũhe arĩmi mbeca",
+      "translation": "The government has been warned that it will face consequences if it does not act now.",
+      "reference": "Tea is one of the most widely consumed beverages globally, providing both health benefits and economic value."
+    },
+    {
+      "source": "Gathĩka mĩtego ya [SC]pheromone[CS] nĩguo ũgirĩrĩrie ũingĩ wa [cs] coffee berry borer [cs]  ",
+      "translation": "The spread of the [SC]pheromone[CS] is what attracts the [cs] coffee berry borer [cs] beetle.",
+      "reference": "Set up pheromone traps to monitor coffee berry borer populations."
+    },
+    {
+      "source": "Ũrĩmi wa macani nĩ ũigithia wa ihinda ĩraihu tondũ cai nĩ ũgethagũo  kahinda ka  mĩaka mĩingĩ",
+      "translation": "The current government is not doing anything to help the people who are suffering a lot in the country.",
+      "reference": "Tea growing can be a long-term investment, with plants yielding crops for several decades."
+    },
+    {
+      "source": "Ũrĩmi wa  macani nĩũteithagĩrĩria ũgendi  icigo inĩ iria ikũragia cai nĩ kũgucĩrĩria ageni mĩgũndainĩ ya macani",
+      "translation": "The government is working hard to ensure that the country is not affected by the effects of climate change.",
+      "reference": "The tea industry promotes tourism in regions known for tea production, attracting visitors to tea estates."
+    },
+    {
+      "source": "Thima [cs] pH [cs] ya tĩri nĩguo ũtigĩrĩre wĩna [cs] acidic [cs]  mũigana wa gatagatĩ ka inya gaturumo ithano nginya ithano gaturumo ithano ĩrĩa yagĩrĩire harĩ gũkũria gwa cai ",
+      "translation": "The problem of climate change is caused by the excessive emission of acidic pollutants from industrial activities that have been going on for a long time.",
+      "reference": "Test the soil pH to ensure it is slightly acidic, between 4.5 and 5.5, which is ideal for tea growth."
+    },
+    {
+      "source": "Nathari cia kũmerithia mbegũ ibatiĩ gũkorwo na wariĩ wa [cs] meter [cs]    imwe na ũraihu wa [cs] centimeters [cs] ikũmi nginya ikũmi na ithano\n\n \n",
+      "translation": "The measurements of the room are 3 meters long and 4 meters wide and 2.5 meters high.",
+      "reference": "Nursery beds should be 1 meter wide and 10-15 centimeters high."
+    },
+    {
+      "source": "Ceha mĩtĩ ĩrĩa ĩrehaga kĩruru kaingĩ nĩgetha kahũa gakũre wega .",
+      "translation": "The people who are suffering from hunger are crying for help because of the severe drought.",
+      "reference": "Regularly prune shade trees to allow sufficient light for coffee growth."
+    },
+    {
+      "source": "Wendia wa macani nĩ ũrehagĩra bũrũri mbeca cia kuuma na nja",
+      "translation": "The government is responsible for the security of the country and its citizens.",
+      "reference": "The tea industry generates foreign exchange for countries through exports."
+    },
+    {
+      "source": "Tigĩrĩra ũgunyu wa tĩri ni mũigananu na gũitĩrĩria maĩ kaingĩ ũgĩthemaga wagi  wa mbura na maĩ kũaraha",
+      "translation": "The government has established a committee to investigate the cause of the fire and the damage it has caused.",
+      "reference": "Maintain consistent soil moisture through regular watering, avoiding both drought and waterlogging."
+    },
+    {
+      "source": "Kũhandanĩria na mĩmera ĩngĩ ya kũhumbĩra tĩri nĩkũnyihagia gũkũra kwa ria na kũrehe  kĩruru",
+      "translation": "They are trying to find a solution to the problem by using technology and innovation.",
+      "reference": "Intercropping with cover crops can reduce weed growth by shading the soil."
+    },
+    {
+      "source": "Harĩria natharĩ nĩguo kũgirĩrĩria maĩ kũaraha na maikũrũke ",
+      "translation": "They are planning to build a road and a bridge.",
+      "reference": "Prepare raised beds in the nursery to prevent waterlogging and improve drainage."
+    },
+    {
+      "source": "Ũbataranu wa macani ma kĩmerera na ma mĩthemba ĩtiganĩte nĩũingĩhĩte na kuongerera mĩeke ya arĩmi anini.",
+      "translation": "The current government is using the money from taxes and loans to finance its projects and increase the budget of the government.",
+      "reference": "The demand for organic and specialty teas has increased, providing opportunities for small-scale farmers."
+    },
+    {
+      "source": "\nHanda  mĩmera ya kahũa  mĩtaroinĩ ya mwaramo wa [cs[meter [cs]  igĩrĩ gaturumo ithano nginya [cs[meter [cs]  ithatũ.  \n",
+      "translation": "The time for the harvest of the rainy season is approaching, and the seventh month is coming.",
+      "reference": "Transplant tea seedlings when they are 6-12 months old and about 20-30 cm tall."
+    },
+    {
+      "source": "Mbũkũ nĩ iciaranaga narua kwoguo no mũhaka ũcibangĩre nyũmba iria igaikara",
+      "translation": "The government is working hard to ensure that the house where the president lives is secure.",
+      "reference": "Rabbits reproduce quickly, so plan for future housing needs."
+    },
+    {
+      "source": "Thondeka mĩtaro mũgũnda wĩna mũikũrũko nĩguo kũiga maĩ  na kũgirĩrĩria tĩri gũtwaro.  ",
+      "translation": "The farmers will harvest their crops when the time is ripe and the weather is favorable.",
+      "reference": "Create contour lines on sloped land to prevent soil erosion and improve water retention."
+    },
+    {
+      "source": "Handanĩrĩa kahũa na mboco  nĩguo gwĩkĩra [cs] nitrogen [cs] na kũgacĩria ũnoru wa mũgũnda",
+      "translation": "The government is distributing fertilizers that contain nitrogen and other nutrients to farmers.",
+      "reference": "Intercrop coffee with legumes to fix nitrogen and improve soil fertility."
+    },
+    {
+      "source": "Itĩrĩria natharĩ maĩ wega mbere ya kũhura mbegũ nĩgetha ũtigĩrĩre ũgunyu  nĩ mũiganu ",
+      "translation": "The government has announced a new law to reduce the number of people who are unemployed.",
+      "reference": "Water the nursery bed thoroughly before sowing the seeds to ensure adequate moisture levels."
+    },
+    {
+      "source": " Hũthĩra neti cia kĩruru kana kĩruru kĩa mĩtĩ  kũgitĩra mĩcai kuumana na riũa na ũtheri mũkĩru",
+      "translation": "The government has decided to increase the price of charcoal and charcoal from trees to reduce the burden on the people and the economy.",
+      "reference": "Use shade nets or natural shading to protect young tea seedlings from excessive sunlight."
+    },
+    {
+      "source": "Wahanda o ũguo  itĩrĩria mĩmera ĩyo maĩ nĩgetha ũgirĩrĩrie kũhoha. ",
+      "translation": "The government should not interfere with the private sector.",
+      "reference": "Water the seedlings immediately after transplanting to reduce transplant shock."
+    },
+    {
+      "source": "Ũrimi wa macani nĩ wongagĩrĩra ũnoru wa tĩri nĩ ũndũ wa gũĩkĩrũo thumu",
+      "translation": "The current government is being led by a person from the Gĩkũyũ tribe.",
+      "reference": "Tea cultivation can improve soil quality through organic farming practices."
+    },
+    {
+      "source": "Hura  mbegũ cia macani mĩtaroinĩ ũmĩtaganĩtie [cs] centimeter [cs] ikũmi nginya ikũmi na ithano nĩgetha ikũre wega.  ",
+      "translation": "The measurements of the well are 10 centimeters in diameter and 20 centimeters deep.",
+      "reference": "Sow the tea seeds in rows, spacing them 10-15 cm apart for optimal growth."
+    },
+    {
+      "source": "\nNo ũhũthĩre mĩthemba ta [cs] coffee arabica, [cs]bourbon coffee[cs], [cs] caturra na [cs] Geisha [cs]  hamwe na mĩthemba ĩrĩa  ĩngĩ\n",
+      "translation": "There are several varieties of coffee including Arabica, Bourbon, Caturra and Geisha as well as others.",
+      "reference": "You can use varieties such as coffee arabica, bourbon coffee, caturra and Geisha among others"
+    },
+    {
+      "source": "Mbere ya kũhanda mbegũ itĩrĩria thumu kana  mahuti matukanĩire irimainĩ  nĩguo  kũgacĩria ũnoru wa tĩri ",
+      "translation": "The time for planting is not yet ripe for the crops to grow well and the rains to fall in their season so that the harvest can be good.",
+      "reference": "Apply organic manure or compost to enhance soil fertility before planting seeds."
+    },
+    {
+      "source": "Tigĩrĩra wĩna mĩtaro ya gũikũrũkia  maĩ   nĩgetha maĩ matikarahe mbura nyingĩ yaura ",
+      "translation": "The government has allocated funds for the construction of many roads and bridges in various areas.",
+      "reference": "Ensure proper drainage systems are in place to prevent waterlogging during heavy rains."
+    },
+    {
+      "source": "Humbĩra mbegũ na tĩri na mahuti  nĩgetha ũige ũgunyu wa gũteithĩrĩria mbegũ kũmera",
+      "translation": "We should respect the environment and take care of it so that it can take care of us.",
+      "reference": "Cover the seeds lightly with soil and mulch to retain moisture and promote germination."
+    },
+    {
+      "source": "Ĩkĩra bataraitha na ikĩro nyendekithie ũtagũĩkĩra nyingi ĩrĩa ingĩthũkia mĩmera. ",
+      "translation": "The people are suffering because of the many things that are happening in the country.",
+      "reference": "Apply fertilizers at the recommended rates, avoiding over-application that can harm plants."
+    },
+    {
+      "source": "Thondeka benji kũndũ gũikũrũku nĩguo ũkorwo na kũndũ kwaraganu gwa kũrima na kũnyihia kĩguũ",
+      "translation": "The government should not be involved in the election process so that it does not interfere with the freedom of the people.",
+      "reference": "Prepare terraces on steep slopes to create flat planting areas and reduce runoff."
+    },
+    {
+      "source": "Handa hĩndĩ ya kĩmera kĩa  mbura kana ũitĩrĩrie maĩ mbere ya kũhanda nĩgetha ũtigĩrĩre nĩ kũgunyu.",
+      "translation": "The time of the harvest is near, and we must prepare the land so that it can produce well and give us a good harvest.",
+      "reference": "Plant during the rainy season or irrigate the field before planting to ensure soil moisture."
+    },
+    {
+      "source": "Tigĩrĩra nathari nĩĩratĩrĩrio maĩ  marĩa maiganĩte nĩgetha ũgitĩre kũaraha kwa maĩ. ",
+      "translation": "The government has established a program to provide aid to those who are suffering from hunger.",
+      "reference": "Ensure proper drainage in the nursery bed to prevent waterlogging."
+    },
+    {
+      "source": "Thima tĩri nĩgetha ũmenye kana wĩna hinya mwagĩrĩru na [pH] njega nĩgetha ucigananie ũrĩa kwagĩrĩire  \n\n",
+      "translation": "The government has allocated funds to the ministry of health and the budget for the next financial year has been approved.",
+      "reference": "Conduct soil tests to determine nutrient levels and pH, adjusting them as necessary."
+    },
+    {
+      "source": "Harĩria mũgũnda na kũrĩma na kũiganania mbere ya kũhanda mĩmera ya kahũa werũ",
+      "translation": "They should cultivate and harvest and preserve the seeds of the sweet potato variety.",
+      "reference": "Prepare the field by plowing and leveling before transplanting coffee seedlings."
+    },
+    {
+      "source": "Ceha mĩmera nĩgetha ĩgĩe na mahuti maingĩ na kũagagĩria ũtambia wa rĩera.",
+      "translation": "The people are suffering from hunger and poverty and are crying out for help from the government.",
+      "reference": "Prune the plants to encourage bushy growth and improve air circulation."
+    },
+    {
+      "source": "Cai  no uhandanĩrio na mĩthemba ĩngĩ ya irio nĩguo mũrĩmi  eongerere umithio",
+      "translation": "The children are not allowed to play with fire in the kitchen because the mother is cooking.",
+      "reference": "Tea plants can be intercropped with other crops, providing farmers with additional income."
+    },
+    {
+      "source": "Wĩtheme kũhe mbũkũ irio ciina cukari  na wanga mũingĩ ",
+      "translation": "They are selling cheap food and drinks at the market.",
+      "reference": "Avoid feeding rabbits foods high in sugar or starch."
+    },
+    {
+      "source": "Thura mĩmera ĩtarĩ na mĩrimu kana itihĩtio ya kũhanda mũgũndainĩ mũharĩrie",
+      "translation": "The government has not yet decided on the date of the next election.",
+      "reference": "Choose healthy, disease-free seedlings or cuttings for planting in the prepared field."
+    },
+    {
+      "source": "Itĩrĩria mĩmera ĩyo  yahandwo maĩ o rĩo nĩgetha ĩgũate hau yahandwo",
+      "translation": "The government has failed to provide the necessary resources to the people who are suffering.",
+      "reference": "Water the transplanted seedlings immediately to help them establish in the new environment."
+    },
+    {
+      "source": "Gitĩra mĩmera mĩeru  ĩyo yahandwo kuumana na rũhuho na riũa ikĩru na gũĩkĩra  kĩruru.  ",
+      "translation": "The government has established a committee to investigate the causes of the drought and famine.",
+      "reference": "Protect the newly transplanted seedlings from strong winds or excessive sunlight by providing shade."
+    },
+    {
+      "source": "Gũceha kaingĩ nĩgũteithagia kũruta mathangũ merũ marĩa mateithagia kũruta  maciaro maingĩ.  ",
+      "translation": "The government is planning to build many roads that will connect many villages.",
+      "reference": "Regular pruning promotes new leaf production, which is crucial for high tea yields."
+    },
+    {
+      "source": "Gũceha nĩ gũteithagia rĩera gũtamba wega igũrũ wa mĩmera na kũnyihia ũgwati wa mĩrimũ",
+      "translation": "The government is planning to construct a dam on the river and to open a road to the village.",
+      "reference": "Pruning helps improve air circulation within the plant canopy, reducing the risk of disease."
+    },
+    {
+      "source": "Ruta tũtambĩ tũnene ta ĩgunyu na moko nĩgetha ũnyihie mĩrimũ.",
+      "translation": "We should respect the elderly and the elderly should guide us well.",
+      "reference": "Handpick larger pests like caterpillars to reduce infestation."
+    },
+    {
+      "source": "Mahũa marĩa matuĩtwo mabatiĩ kũigwo ikabu-inĩ  ikũrehe  rĩera wega nĩgetha kũnyihia kũgagata.",
+      "translation": "The people who are in the village are not aware that the time for the harvest is near and they are not preparing for it.",
+      "reference": "Picked flowers should be put into well-ventilated baskets to reduce fermentation."
+    },
+    {
+      "source": "Humbĩra gĩtinainĩ  kĩa mũmera nĩguo ũige ũgunyu na  ũhite kũmera kwa ria.",
+      "translation": "The government should provide support to the poor so that they can live a better life.",
+      "reference": "Mulch around the base of the plants to retain moisture and suppress weed growth."
+    },
+    {
+      "source": "Iyũria irima na tĩri na ũkindĩre kahora mĩriinĩ  nĩgetha weherie tũmĩanya twa rĩera.",
+      "translation": "The youth are working hard and doing a good job in the field of education to improve our future.",
+      "reference": "Fill the hole with soil, gently firming it around the roots to remove air pockets."
+    },
+    {
+      "source": "Wĩcirie kũongerera [cs] mineral blocks [cs[ irio-inĩ",
+      "translation": "The company is producing mineral blocks in large quantities.",
+      "reference": "Consider supplementing their diet with mineral blocks."
+    },
+    {
+      "source": "Thũrima mbegũ cia kahũa iria cigĩtwo thitoo   mahinda kwa mahinda nĩgetha wone kana harĩ na tũtambi kana mbaa.",
+      "translation": "They are planting trees in the forest to protect the environment for the future generation so that they may not suffer like us in the past.",
+      "reference": "Inspect stored coffee beans periodically for signs of pests or mold."
+    },
+    {
+      "source": "Kũrania mĩmera  ĩrĩa mĩhohu na mĩtihie na mĩmera mĩeru nĩguo gũtigĩrĩra nĩrakũra ĩiganaine.",
+      "translation": "The government has been warned that the country is facing a severe drought.",
+      "reference": "Replace any weak or damaged plants with new seedlings to ensure uniform growth."
+    },
+    {
+      "source": "Itĩrĩria natharĩ maĩ kahinda gwa kahinda nĩgetha ũige  tĩri wĩna ũgunyu mũiganu.",
+      "translation": "The government has announced that the election will be held on a specific date and time, and the people are eagerly waiting.",
+      "reference": "Water the nursery bed regularly to keep the soil moist."
+    },
+    {
+      "source": "Handa mĩmera mũgũnda-inĩ yagĩa mathangũ makĩru mana nginya matandatũ.",
+      "translation": "The government has promised to increase the number of schools in the rural areas.",
+      "reference": "Transplant seedlings to the field when they have 4-6 true leaves."
+    },
+    {
+      "source": "Kũra mĩmera kuuma natharĩ-inĩ na ũmenyerere ndũgathũkie mĩri.",
+      "translation": "The people are working hard and they are making good progress.",
+      "reference": "Gently remove the seedlings from the nursery, taking care not to damage the roots."
+    },
+    {
+      "source": "Handa mũmera irima-inĩ na ũtigĩrĩre mĩri nĩ ihumbĩrĩtwo nĩ tĩri. ",
+      "translation": "Let us work together to achieve our goals and make our country proud.",
+      "reference": "Place the seedling in the hole, ensuring the root collar is level with the soil surface."
+    },
+    {
+      "source": "Thuura  mũthenya wĩna matu kana mbura wa kũhanda mĩmera  nĩguo ĩgwate wega.",
+      "translation": "The teacher will give us books and pencils to write the exam when it is time.",
+      "reference": "Choose a cloudy or rainy day for transplanting to minimize stress on the seedlings."
+    },
+    {
+      "source": "Ĩkĩra irima o irima thumu kana  mahuti matukanĩirio irima-inĩ ũtanahanda mĩmera. ",
+      "translation": "The rain falls equally on the just and the unjust alike.",
+      "reference": "Apply organic manure or compost to each hole before transplanting the seedlings."
+    },
+    {
+      "source": "Ongerera  mahuti mahumbĩrĩtwo kana thumu irima-inĩ ũtanahanda mũmera.",
+      "translation": "The government has failed to provide adequate water to the people in the rural areas.",
+      "reference": "Add compost or organic manure to the planting hole before transplanting."
+    },
+    {
+      "source": "Hũthira bataraitha ĩna [cs] nitrogen [cs]   nĩ getha  ĩkũrie mathangũ maingĩ mĩmera-inĩ ya macani",
+      "translation": "The farmers are using nitrogen fertilizers to increase crop yields in the agricultural season.",
+      "reference": "Use nitrogen-based fertilizers to promote leafy growth in tea plants."
+    },
+    {
+      "source": "Harĩria mũgũnda na kũrĩma na kũiganania tĩri na kũenja mĩtaro",
+      "translation": "We should cultivate the land, irrigate it, fertilize it, and harvest crops.",
+      "reference": "Prepare the main field by tilling and leveling the soil, ensuring proper drainage."
+    },
+    {
+      "source": "Ceha macani o mwaka nĩguo maige mũhanĩre wamo na magacĩrithie kũmera mathangũ",
+      "translation": "They have been working hard for a long time now and they are tired of the hard work.",
+      "reference": "Prune tea plants annually to maintain their shape and encourage bushy growth."
+    },
+    {
+      "source": "Ceha kahũa o hingo nĩguo ĩikare na mũhanĩre mwega na weherie honge nyũmũ",
+      "translation": "The people are suffering because of the lack of food and water and the poor roads.",
+      "reference": "Regularly prune coffee plants to maintain proper shape and remove dead branches."
+    },
+    {
+      "source": "Mũthemba wa tĩri na ũhoti wa tĩri kũnywa maĩ nĩundu ũngĩ ũroragwo ũkũriainĩ wa Mahũa ma mbeniko",
+      "translation": "The Mau Mau fighters were armed with spears and arrows to fight against the British colonial forces.",
+      "reference": "Soil type and drainage strongly affect a sites suitability for pyrethrum growing"
+    },
+    {
+      "source": "Ikara ũkimenyaga ũrĩa thoko ĩikarĩte nĩgetha ũcenjĩe thogora wa kũendia nyama cia mbũkũ ũria kwagĩrĩire",
+      "translation": "The government has failed to provide adequate funding for the livestock sector.",
+      "reference": "Keep track of market trends to adjust your rabbit meat prices accordingly."
+    },
+    {
+      "source": "Thutha wa gũceha, ĩkĩra thumu nĩguo mathangũ na honge ikũre rĩngĩ",
+      "translation": "The time of harvest, the farmer will reap what he has sown and reap more in abundance.",
+      "reference": "After pruning, apply fertilizers to support the regrowth of leaves and branches."
+    },
+    {
+      "source": "Gũtua macani mahinda kwa mahinda nĩ gũtigagĩrĩra nimakũra rĩngĩ na mĩmera ndĩra neneha mũno",
+      "translation": "The people are being oppressed by the oppressors and the oppressors are being oppressed by the people.",
+      "reference": "Regular plucking of tea leaves encourages new growth and prevents the plants from becoming overgrown."
+    },
+    {
+      "source": "Gitagĩrĩra  mĩmera ya kahũa kuma rũhuho rũingĩ na kũhanda mĩti ya kũnyihia rũhuho gũthiũrũrũkĩria mũgũnda",
+      "translation": "The government has established a special fund to support the poor and plant trees to reduce poverty.",
+      "reference": "Protect coffee plants from strong winds by planting windbreaks around the farm."
+    },
+    {
+      "source": "Taatagĩria kahũa maĩ kĩmera kĩa riũa nĩgetha ĩkũre hĩndĩ ciothe",
+      "translation": "The government has failed to provide the necessary resources to the people in need.",
+      "reference": "Irrigate coffee plants during dry spells to maintain consistent growth."
+    },
+    {
+      "source": "Ĩkĩra thumu ikũrĩrio nĩguo mĩmera ĩkũre wega",
+      "translation": "The teacher is teaching the students in the classroom.",
+      "reference": "Apply organic fertilizer in the nursery bed for healthy seedling growth."
+    },
+    {
+      "source": "Ĩkĩra thumu thutha wa gũthima tĩri nigetha kumenyeke [cs]nutrient[cs] ĩria ĩraga",
+      "translation": "The soil lacks essential nutrients due to poor farming practices.",
+      "reference": "Apply fertilizers after soil tests to address specific nutrient deficiencies."
+    },
+    {
+      "source": "Tambia ndũmĩrĩri cia  ũguni  wa kũrĩa  nyama ya mbũkũ  nĩgetha ũgucĩrĩrie agũri arĩa mamenyagĩrĩra ũgima wao wa mwĩrĩ.  ",
+      "translation": "The government has failed to protect the wildlife reserve that was being managed by the community.",
+      "reference": "Promote the nutritional benefits of rabbit meat to attract health-conscious consumers."
+    },
+    {
+      "source": "Ceha rĩrĩa gũtarĩ na ũrĩmi mũingĩ  nĩgetha  kũnyihia  kũhinyĩrĩrĩka kwa mĩmera.",
+      "translation": "The government has decided to increase the number of police officers to maintain law and order in the country.",
+      "reference": "Prune during the dormant season to minimize stress on the plants."
+    },
+    {
+      "source": "Thiĩ na mbere na kũrĩmĩra  ria nĩgetha ũnyihie mũhĩtahĩtano wa  irio na maĩ harĩ  mĩmera.  ",
+      "translation": "There is no need to rush and cook food in a hurry, but rather prepare a balanced meal.",
+      "reference": "Continue to weed the field regularly to reduce competition for nutrients and water."
+    },
+    {
+      "source": "Menyera kũhanda benji mĩikũrũko-inĩ nĩgetha  kũgirĩrĩa tĩri gũtuĩka mĩgũnda-inĩ ya kahũa.  ",
+      "translation": "The government has decided to increase the number of schools in the rural areas to improve the quality of education.",
+      "reference": "Practice contour planting on slopes to prevent soil erosion in coffee fields."
+    },
+    {
+      "source": "Enja marima marĩ na ũriku  na wariĩ wa [cs] centimeters [cs] mĩrongo ĩtandatũ harĩ o mũmera wa kahũa.",
+      "translation": "The height of the tree is about 30 centimeters in diameter at breast height.",
+      "reference": "Dig planting holes 60 centimeters deep and wide for each coffee plant."
+    },
+    {
+      "source": "Hura mbegũ cia kahũa na ũriku-inĩ  wa [cs] centimeters [cs] ĩmwe nginya igĩrĩ natharĩ-inĩ.",
+      "translation": "The height of the tree is [cs] centimeters and it is growing well in the garden.",
+      "reference": "Sow coffee seeds 1-2 centimeters deep in the nursery bed."
+    },
+    {
+      "source": "Tigithũkania mĩmera ya kahũa wega nĩguo kũnyihia mũtuthũko wa tũtambi",
+      "translation": "We should respect the traditional way of life so that we can preserve our culture.",
+      "reference": "Maintain proper spacing between coffee plants to reduce pest outbreaks."
+    },
+    {
+      "source": "Wĩtheme kũgetha mbũni ĩtarĩ ngũrũ kana  iria ciĩruite mũno nĩgetha ũkorwo na ũigananu wa  o igetha.",
+      "translation": "The government is planning to build a road that will connect the village to the city.",
+      "reference": "Avoid harvesting immature or overripe coffee cherries to maintain uniformity."
+    },
+    {
+      "source": "Itĩrĩria maguta ma  [cs] neem [cs] nĩgetha  ũgirĩrĩe kahũa kũgũmĩrwo nĩ gathegethi  ka mbũni  ya kahũa.",
+      "translation": "The government has established a committee to oversee the implementation of the new constitution.",
+      "reference": "Apply neem oil to control coffee berry borer infestation."
+    },
+    {
+      "source": "Harĩrĩa natharĩ ya kahũa handũ harĩ na kĩruru na tĩri wĩna ũikũrũkia  mwega wa maĩ.",
+      "translation": "The government has announced that the drought has caused a lot of suffering and death among the people.",
+      "reference": "Prepare the coffee nursery bed in a shaded area with well-drained soil."
+    },
+    {
+      "source": "Hĩndĩ ciothe tigĩrĩra nyama yaku ya mbũkũ  nĩkinyĩtie gĩkĩro kĩa wega wa irio kĩrĩa gĩkĩrĩtwo nĩ watho. ",
+      "translation": "The current situation is that the meat of the goat is being sold at a very high price in the market which is causing hardship to the people.",
+      "reference": "Always ensure your rabbit meat complies with local food safety regulations."
+    },
+    {
+      "source": "Thura na ũgayanie  mbuni  o warĩkia kũgetha. ",
+      "translation": "The people are not happy with the current situation.",
+      "reference": "Sort and grade coffee cherries immediately after harvesting."
+    },
+    {
+      "source": "Humbĩra itina cia kahũa na mahuti nĩgetha kũiga ũgunyu wa tĩri na kũgirĩrĩria ria.  ",
+      "translation": "The government should provide the necessary resources to support the development of the country's infrastructure and economy.",
+      "reference": "Mulch around coffee plants to conserve soil moisture and suppress weeds."
+    },
+    {
+      "source": "Barania  mĩmera ya kahũa kaingi  ũrore  marũri ma ũthũkangia wa tũtambĩ.",
+      "translation": "The government has increased the price of maize to benefit the farmers.",
+      "reference": "Inspect coffee plants regularly for signs of pest damage."
+    },
+    {
+      "source": "Hũthĩra njĩra ya gũtatia maĩ nĩgetha kũnyihia ũhũthĩri mũingĩ wa maĩ na gũkinyia hinya na njĩra njega.",
+      "translation": "The government has established a system to distribute food to the community and provide aid to the needy and the poor.",
+      "reference": "Use drip irrigation to conserve water and deliver nutrients efficiently."
+    },
+    {
+      "source": "Harĩria handũ hatheru ha gũkoma nyũmba-inĩ ya mbũkũ  ũkĩhũthĩra  rũũa  rwa mwere , rũũa  rwa ngano kana mura.",
+      "translation": "The government has decided to close the school due to the lack of funds, lack of water, or lack of food.",
+      "reference": "Provide clean bedding in the rabbit house, such as straw or wood shavings."
+    },
+    {
+      "source": "Wĩtheme gũitĩrĩria maĩ maingĩ  mũno nĩgetha kũgirĩrĩria mĩmera ya kahaũa kũgũmĩrwo nĩ mĩrimũ ya [cs] fungal [cs]. ",
+      "translation": "The theme of the research is to investigate the causes of the widespread fungal disease in the region.",
+      "reference": "Avoid over-irrigation to prevent fungal infections in coffee plants."
+    },
+    {
+      "source": "Eheria tũthuna na tũthethũka nĩgetha  ngoro ya mĩtĩ ya kahũa ĩkorwo ĩrĩ o ĩmwe. ",
+      "translation": "We are working together to protect the forest when it is not raining.",
+      "reference": "Remove suckers and water shoots to maintain a single stem in coffee plants."
+    },
+    {
+      "source": "No ũrehe  tũtambi tũria tũriaga tũnyamũ  tũnini ta thuraku twa kũgirĩrĩria mĩrimũ [cs] biologically [cs]",
+      "translation": "There is no need to translate the brackets [cs] as they are not part of the original text.",
+      "reference": "Introduce natural predators like ants to control coffee pests biologically."
+    },
+    {
+      "source": "Itĩrĩria bataraitha cia kĩmerera na cia [cs] chemical [cs]  maita merĩ mwaka nĩguo kahũa gakũre wega.",
+      "translation": "Farmers are using both traditional and chemical fertilizers throughout the year to increase agricultural production.",
+      "reference": "Apply organic or chemical fertilizers twice a year for optimal coffee growth."
+    },
+    {
+      "source": "Thuraia  mbegũ cia kahũa kumana na ũigana, ũritũ na wagĩrĩru.",
+      "translation": "The youth are fighting for their rights, freedom, and justice.",
+      "reference": "Grade coffee beans based on size, weight, and quality."
+    },
+    {
+      "source": "Ũmithia mbuni cia kahũa kĩrĩrĩ-inĩ kana handũ haraganu  nĩgetha kũnyihia gĩkĩro kĩa ũgunyu",
+      "translation": "The youth are being forced to live in poverty because of the lack of opportunities in the country.",
+      "reference": "Dry coffee beans on raised beds or patios to reduce moisture content."
+    },
+    {
+      "source": "Humbĩra na makoni  ma kahũa nĩgetha ũcokie irio cia ũkũria tĩri-inĩ.  ",
+      "translation": "Let's work together to protect the environment by planting trees.",
+      "reference": "Mulch with coffee husks to recycle nutrients back into the soil."
+    },
+    {
+      "source": "Itĩrĩria mĩmera ya kahũa maĩ hĩndĩ ya riũa  nĩgetha ĩkure wega ",
+      "translation": "The government has announced a new era of peace and stability in the country.",
+      "reference": "Irrigate coffee plants during dry spells to maintain consistent growth."
+    },
+    {
+      "source": "Girĩgĩrĩria  tũtambĩ  na njĩra  ya  kũiga ũtheru na gũtũmĩra indo cia kĩmerera cia gũtũingata.",
+      "translation": "The government is working with the private sector to develop and implement new technologies.",
+      "reference": "Control pests by maintaining cleanliness and using natural repellents."
+    },
+    {
+      "source": "Iga mbũni ĩrĩkĩtie kũniara mĩhukoinĩ ĩtangĩingĩria ũgunyu kũgirĩrĩria  ndĩgathũke",
+      "translation": "The government has failed to provide adequate resources to the people who are suffering due to the drought.",
+      "reference": "Store dried coffee beans in moisture-proof bags to prevent spoilage."
+    },
+    {
+      "source": "Ũrĩmi wa mbũkũ wambagĩrĩria na gũciakĩra nyũmba njega.   ",
+      "translation": "The teacher of the school is teaching and taking care of the students.",
+      "reference": "Rabbit farming starts with constructing a proper house for your rabbits."
+    },
+    {
+      "source": "Wĩtheme gwĩkĩra [cs] nitrogen [cs] makĩria tondũ noyongerere ũhũthũ wa kũgũmĩrwo nĩ tũtambi na mĩrimũ.",
+      "translation": "The government is promoting the use of nitrogen fertilizers to increase agricultural production in the region through irrigation and farming.",
+      "reference": "Avoid excessive nitrogen application, which can increase pest and disease susceptibility."
+    },
+    {
+      "source": "He mbũkũ irio  ginyanĩrĩrũ nĩgetha ikũre wega. ",
+      "translation": "The people are working hard to build a good future.",
+      "reference": "Feed rabbits a balanced diet to ensure healthy growth."
+    },
+    {
+      "source": "Tua na moko mbũni  njĩru  hĩndĩ ya kũgetha.",
+      "translation": "We have a lot of work to do.",
+      "reference": "Handpick ripe coffee cherries during the harvest season."
+    },
+    {
+      "source": "Tũtambi tũrĩa tũgũmagĩra ũrĩmi wa mbũku nĩ hamwe na  mũthũa, thuya na ngũha.",
+      "translation": "We are facing a great challenge of poverty, hunger, and disease.",
+      "reference": "Common pests in rabbit farming include mites, fleas, and ticks."
+    },
+    {
+      "source": "Ngano ya hĩndĩ ya heho ĩhandagwo heho yanyihanyiha  na noyage gũtorio  nĩ heho ĩna mbarafu. ",
+      "translation": "The current situation of the country is very difficult and the future is uncertain with no clear direction.",
+      "reference": "Winter wheat is planted in the fall and can survive freezing temperatures."
+    },
+    {
+      "source": "Tĩgĩrĩra nyama nĩyaigwo na ũrugarĩ ũrĩa wagĩrĩire  igĩtwarwo thoko. ",
+      "translation": "The people are suffering because of the lack of food they were given.",
+      "reference": "Ensure the meat remains at a safe temperature during transport."
+    },
+    {
+      "source": "Handa mĩtĩ ya  kũrehe kĩruru mũgũndainĩ wa kahũa kũgirĩrĩria riũa ihiũ.",
+      "translation": "The government should plant trees in the forest to prevent soil erosion.",
+      "reference": "Plant shade trees in the coffee field to protect plants from direct sunlight."
+    },
+    {
+      "source": "Mahũa ma mbeniko makũraga wega tĩri-inĩ  ũikũrũkagia maĩ wega ũri na [cs] pH [cs]  ĩtagũkĩra ithano turuma ithathatũ.",
+      "translation": "The effects of climate change are causing severe droughts and floods that destroy our crops.",
+      "reference": "Pyrethrum thrives in well-drained, loamy volcanic soils with a pH of >5.6."
+    },
+    {
+      "source": "Thũgũnda mathogora nĩgetha ũmenye hĩndĩ ĩrĩa njega ya kwendia kahũa.",
+      "translation": "The government has decided to increase the number of people going to the university.",
+      "reference": "Monitor market prices to determine the best time to sell coffee."
+    },
+    {
+      "source": "Iga  gĩthimi gĩa tĩri kĩrĩ kĩa [cs] pH [cs] gatagatĩinĩ  ka ithano na nuthu nginya ithathatũ na nuthu nĩgetha kahũa gakũre wega",
+      "translation": "The new technology of the 21st century is making it easy for us to communicate with each other and the world at large.",
+      "reference": "Maintain a soil pH between 5.5 and 6.5 for optimal coffee growth."
+    },
+    {
+      "source": "Rora ithimi  cia [cs] pH [cs] ya tĩri na ũigananie na  [sc] lime [cs] kana [cs] sulfur [cs]   ũria kũbataire.",
+      "translation": "The new constitution of the country has introduced laws and regulations regarding the use of lime and sulfur.",
+      "reference": "Monitor soil pH and adjust with lime or sulfur as needed."
+    },
+    {
+      "source": "Ongerera tũirio twa mbũkũ irio-inĩ nĩguo kũongerera hinya mwĩrĩ.",
+      "translation": "We need to take care of our children so that they can grow up well.",
+      "reference": "Include pellets in their diet for essential nutrients."
+    },
+    {
+      "source": "\n\nMahũa ma mbeniko  nĩ mũmera  wa gũtũra  ũrĩa woyaga  kahinda ka makĩria ma mĩaka ĩrĩ  ũtakubatara kũhandwo rĩngĩ   mwaka o mwaka.\n",
+      "translation": "The rainy seasons are the time of the year when the crops are harvested and the people are busy working in the fields every year.",
+      "reference": "Pyrethrum is a perennial crop -takes a period longer than two years without the need of being replanted each year"
+    },
+    {
+      "source": "Mahũa ma mbeniko mabataraga mũigana wa ũrugarĩ  ũtakĩrĩtie [cs[ centigrade [cs] ikũmi na inyanya  gwa kahinda ka ciumia ithathatũ.",
+      "translation": "The temperatures in the region are expected to rise to 40 degrees centigrade by the end of the week.",
+      "reference": "Pyrethrum requires a temperature of less than 18° C for at least 6 weeks"
+    },
+    {
+      "source": "Gayania icunjĩ cia gũciarĩra  na  gũkũrĩra nyũmbainĩ ya mbũkũ.",
+      "translation": "The youth are being trained in various skills and crafts at the vocational training center.",
+      "reference": "Separate sections for breeding and growing rabbits in the house."
+    },
+    {
+      "source": "Tĩgĩrĩra nĩ wahingia mawatho na mĩtaratara  ya ũrĩmi wa kahũa na ikĩro iria  ciandĩkithĩtio. ",
+      "translation": "The government has come up with new laws and regulations to control the spread of the disease.",
+      "reference": "Ensure compliance with coffee farming regulations and standards for quality assurance."
+    },
+    {
+      "source": "Mboga cia mũũkano na nyeni nĩ irio njega cia kũhe mbũkũ.",
+      "translation": "Vegetables of the farm and the garden are the source of our food.",
+      "reference": "Fresh vegetables and leafy greens are good for rabbits."
+    },
+    {
+      "source": "Iga mũtaratara wa gũciarana kwa mbũkũ nĩgetha ũkoragwo na mbũkũ cia kwendia hĩndĩ ciothe. ",
+      "translation": "The current state of the forest is being destroyed by the chainsaw and the axe of the loggers.",
+      "reference": "Keep a breeding schedule to maintain a steady supply of rabbits."
+    },
+    {
+      "source": "Hingo ciothe rora kana  nyũmba ya mbũkũ ĩna tũnyamũ tũangangi.   ",
+      "translation": "The house is being built with a big and beautiful roof.",
+      "reference": "Always check for signs of pests in the rabbit house."
+    },
+    {
+      "source": "Mbura nyingĩ  hĩndĩ ya kũgetha  no ĩtũme ngano ĩthethũke ihinda rĩtakinyĩte. ",
+      "translation": "Many people are still suffering from hunger due to lack of food.",
+      "reference": "Too much rain during harvest can cause wheat grains to sprout prematurely."
+    },
+    {
+      "source": "Hũthĩra [cs] wire mesh[cs]  na mbaũ gũaka nyũmba  ĩngitũra ya gũikarwo nĩ mbũkũ.",
+      "translation": "The government has installed wire mesh and barbed wire fencing around the farm to prevent theft.",
+      "reference": "Use wire mesh and wood to build a durable rabbit house."
+    },
+    {
+      "source": "Hehia nyama wega  warĩkia gũthĩnja  nĩguo  ũige nyama ĩyo ĩtagũthũka.",
+      "translation": "They are hunting wild animals in the forest so that they can sell them.",
+      "reference": "Properly chill the meat immediately after slaughtering to preserve freshness."
+    },
+    {
+      "source": "Thambia  mũrũndũrũndũ wa mbũkũ wega  nĩgetha ũrute gĩko gĩothe.",
+      "translation": "The government has failed to provide adequate resources to the poor.",
+      "reference": "Thoroughly wash the rabbit carcass to remove any contaminants."
+    },
+    {
+      "source": "Ita thakame ya mbũku wega thutha wa gũthĩnja nĩguo ĩkorwo na nyama ya gĩkĩro kĩa igũrũ.",
+      "translation": "The time of famine is coming when the crops will be destroyed because of the drought.",
+      "reference": "Bleed the rabbit properly after slaughtering for better meat quality."
+    },
+    {
+      "source": "Ĩkoretwo irĩ ĩrio cia bata cia kũrĩo nĩ andũ gwa kahinda ka miaka ngiri ikũmi.",
+      "translation": "The people who have been living in the village for many years are not used to the new way of life.",
+      "reference": "It has been a vital crop for human consumption for over 10,000 years."
+    },
+    {
+      "source": "ĩhũthagirwo kuruga mĩgate, [cs] pasta [cs] na irio ingĩ cia kũruga mĩgate.",
+      "translation": "They are selling rice, pasta, and other food items at the market.",
+      "reference": "It is used to make bread, pasta, and various baked goods."
+    },
+    {
+      "source": "Etha marũa na ritheni ma gũgũitĩkĩria kwendia nyama cia mbũkũ",
+      "translation": "They should not hunt wild animals for food.",
+      "reference": "Obtain necessary permits and licenses for selling rabbit meat."
+    },
+    {
+      "source": "Hũthĩra mĩtego ĩtari mĩrũrũ ya kweheria tũtambi nyũmbainĩ ya mbũkũ",
+      "translation": "The government has allocated funds to construct a new hospital in the rural area.",
+      "reference": "Use humane trapping methods if you need to remove pests from the rabbit house."
+    },
+    {
+      "source": "Ambĩrĩria kũhe mbũkũ irio ngeni kahora itikarũare nda",
+      "translation": "The government has failed to provide food to the people in the past.",
+      "reference": "Introduce new foods gradually to prevent digestive issues."
+    },
+    {
+      "source": "Hũthĩra kahiũ kogĩ gũthĩnja narua na njĩra njega",
+      "translation": "The people are working hard to achieve their goals.",
+      "reference": "Use a sharp knife for quick and effective slaughter."
+    },
+    {
+      "source": "Ambĩrĩria kahora ũrĩmi wa mbũkũ na waramie ũrĩmi wongerera ũgĩ",
+      "translation": "The government has decided to increase the salary of civil servants and reduce that of politicians.",
+      "reference": "Start small with your rabbit farming and expand as you gain experience."
+    },
+    {
+      "source": "Ceraga thoko cia arĩmĩ nigetha wenderie agũri gũtari mĩhĩnga",
+      "translation": "The government has failed to provide adequate resources to the people in the rural areas.",
+      "reference": "Attend farmers' markets to sell directly to consumers."
+    },
+    {
+      "source": "Thumu wa [cs] compost [cs] wĩkĩragwo ngano ĩkĩhandwo nĩgetha wongerere ũnoru wa tĩri.",
+      "translation": "The soil of the compost is rich in nutrients that promote healthy growth of crops.",
+      "reference": "Compost is often applied before wheat planting to improve soil fertility."
+    },
+    {
+      "source": "Ngano ĩkũragio kũndũ kwĩ mbura njiganu nginya nini.",
+      "translation": "What is the reason for the delay in the project.",
+      "reference": "Wheat is often grown in regions with moderate to low rainfall."
+    },
+    {
+      "source": "Ũtheru ũrĩa wagĩrĩire  nĩũnyihagia ũgwati wa gũtuthũka kwa mĩrimũ",
+      "translation": "The people who were elected are now in charge of the country's administration.",
+      "reference": "Proper sanitation reduces the risk of disease outbreaks."
+    },
+    {
+      "source": "Nĩ ya bamĩrĩ ya [cs] Brassica [cs]   ta [cs] broccoli [cs] na [cs] kale [cs].  ",
+      "translation": "It is a type of vegetable of the Brassica family, specifically broccoli and kale.",
+      "reference": "It is part of the Brassica family, like broccoli and kale."
+    },
+    {
+      "source": "Mbura njiganu mahũa  makĩruta kiro nĩ ya bata nĩgetha mbegũ ikũre wega.",
+      "translation": "The government has decided to increase the price of maize to reduce the burden of the poor.",
+      "reference": "Adequate rainfall at the flowering stage is crucial for grain development."
+    },
+    {
+      "source": "Mahũa ma mbeniko nĩ mũmera wa gũikara mĩaka mĩingĩ mũgũnda na maikaraga kahinda ka mĩaka ĩna.",
+      "translation": "The benefits of education are the key to a bright future and a better tomorrow.",
+      "reference": "Pyrethrum is a perennial crop with a lifespan of up to 4 years."
+    },
+    {
+      "source": "Roraga kaingĩ kĩonania gĩa gũthũka  kwa nyũmba ya mbũkũ. ",
+      "translation": "The government has decided to allocate funds for the construction of a new house.",
+      "reference": "Regularly check the rabbit house for signs of wear and tear."
+    },
+    {
+      "source": "Rĩma na ũhuhĩre ndawa ciumia ta  igirĩ ũtanahanda ",
+      "translation": "The people are suffering due to lack of food.",
+      "reference": "Plough and apply herbicides about 2 weeks before planting."
+    },
+    {
+      "source": "Ũtheru mwega nĩ wa bata mũno hĩndĩ  ya gũthĩnja.",
+      "translation": "The teacher is not in the classroom today.",
+      "reference": "Proper hygiene is essential during the slaughtering process."
+    },
+    {
+      "source": "Ũgunyu ũrehetwo nĩ  mbura kana uunĩthĩria wa maĩ  nĩ ũrĩ bata ũkūria-inĩ wa   kabici.",
+      "translation": "The new law is against the rights of the people who are fighting for their freedom.",
+      "reference": "Consistent moisture from rainfall or irrigation is important for cabbage."
+    },
+    {
+      "source": "Gĩkĩro kĩringanu wega  kĩa bataraitha iria ĩkũhũthĩrwo  ĩbatie kuumana na maumĩrĩra na ũrĩa tĩrĩ ũthuthurĩtwo.",
+      "translation": "The government has decided to increase the number of police officers to maintain peace and order in the country.",
+      "reference": "Accurate fertilizer application rates are dependent on results from the soil analysis."
+    },
+    {
+      "source": "Kabici ĩkũragio kũndũ kũingĩ  mũno thĩ nĩũndũ wa bata mwĩrĩ-inĩ.",
+      "translation": "The government has decided to close all schools due to the outbreak of cholera.",
+      "reference": "Cabbage is widely grown across the world for its nutritional value."
+    },
+    {
+      "source": "Tũma ngwatanĩro na thoko cia gũkũ na mĩkawa  nĩgetha  na wendagie hĩndĩ o hĩndĩ.",
+      "translation": "We should respect the traditional way of life and culture of our ancestors and the elderly.",
+      "reference": "Build relationships with local markets and restaurants for regular sales."
+    },
+    {
+      "source": "  Heho nyĩngĩ no ĩthũkie ngano rĩrĩa ĩraruta kĩro.",
+      "translation": "He is a person who has a lot of knowledge.",
+      "reference": "Frost during flowering can destroy wheat heads."
+    },
+    {
+      "source": "Ũndũ ũyũ nĩ hamwe na mabataro ma ũrugarĩ na mbura.  ",
+      "translation": "The situation is complicated by the presence of thieves and bandits.",
+      "reference": "This includes temperature and rainfall requirements"
+    },
+    {
+      "source": "Tĩri wa kĩhukuhuku mũnoru nĩ mwega wa kũhanda ngano. ",
+      "translation": "The farmer's wife is the one who takes care of the farm.",
+      "reference": "Loamy soils rich in organic matter are ideal for wheat farming."
+    },
+    {
+      "source": "Mahũa ma mbeniko mabatie gũcehwo  rita rĩmwe o mwaka.",
+      "translation": "The rains have delayed the planting of crops this season.",
+      "reference": "Pyrethrum plants should be cut back once a year."
+    },
+    {
+      "source": "Ũraihu wa igũrũ na thĩ nĩ  ũhutagia kahinda ga kĩmera gĩa gũkũria ngano.",
+      "translation": "The current government is not doing anything to improve the living standards of the people.",
+      "reference": "Altitude affects the length of the wheat growing season."
+    },
+    {
+      "source": "Heho nyĩngĩ mũno  irĩmainĩ no inyihie maciaro.",
+      "translation": "The people are suffering due to lack of food.",
+      "reference": "heavy frost, which can occur at high altitudes, causes reduction in yield"
+    },
+    {
+      "source": "nĩgetha mahote kũruta kĩro.",
+      "translation": "We are going to the market.",
+      "reference": "in order to initiate flowering."
+    },
+    {
+      "source": "Nĩgeetha kũmithia wega arĩmĩ mataragwo mahũthire hinya wa thitima ya riũa.",
+      "translation": "I am not familiar with the language Gĩkũyũ, but I will attempt to translate the sentence based on my knowledge.",
+      "reference": "For better drying farmers are advised to use a solar dryer."
+    },
+    {
+      "source": "Ĩkũraga ta   hakuhĩ ũraihu  wa mita ĩmwe.",
+      "translation": "The teacher is teaching us mathematics.",
+      "reference": "It grows to a height of approximately one meter."
+    },
+    {
+      "source": "Bataraitha kaingĩ ĩkĩragwo maita merĩ, hĩndĩ ya kũhanda na hĩndĩ ya  mĩmera ĩgĩkũra.",
+      "translation": "They are planting crops in the field, the one for harvest and the one for the next season.",
+      "reference": "Fertilizers are usually applied in two doses: at planting and during growth."
+    },
+    {
+      "source": "Ngano ĩkũraga wega tĩri-inĩ mũnoru na  ũikũrũkagia maĩ wega. ",
+      "translation": "The government is working hard to improve the economy.",
+      "reference": "Wheat grows best in well-drained, fertile soils."
+    },
+    {
+      "source": "Kũhanda tene nĩ gũteithagia mĩri ya ngano  kũambĩka  gũtanagĩa heho.  ",
+      "translation": "We should start early to harvest the crops before the rain comes.",
+      "reference": "Early planting allows wheat to establish roots before cold weather"
+    },
+    {
+      "source": "Kũmithia na riũa nĩyo  njĩra ĩrĩa ĩhũthĩkaga mũno.",
+      "translation": "We should not be lazy in the way we work.",
+      "reference": "Sun drying is the most common method."
+    },
+    {
+      "source": "Maciaro ma ngano no manyihe kũndũ kwĩ  ũraihu wa igũrũ nĩũndũ wa heho.",
+      "translation": "The rain has stopped falling in the area of the forest because of the drought.",
+      "reference": "Wheat yields may decline at very high altitudes due to cold."
+    },
+    {
+      "source": "Nĩ kũrĩ  mĩthemba ngũrani ya ngano hamwe na ĩrĩa  nyũmū na njororo.",
+      "translation": "We need to respect the traditional knowledge of our ancestors along with the wisdom of our elders.",
+      "reference": "There are different types of wheat, including hard, soft,"
+    },
+    {
+      "source": "Mahũa mabatiĩ gũtuo marĩkia gūthethuka wega.",
+      "translation": "The rains have caused a lot of damage to the crops.",
+      "reference": "Flowers should be harvested at the correct bud stage"
+    },
+    {
+      "source": "Gitĩra ngano ndĩgathūke nĩ kugirĩrĩria tūtambĩ.",
+      "translation": "The government will not allow the opposition to participate.",
+      "reference": "Control pests to protect wheat from damage."
+    },
+    {
+      "source": "Mahũa matibatie gũtuo  mbura ĩkiura. ",
+      "translation": "The government has failed to provide adequate resources.",
+      "reference": "Flowers should not be picked under rainy conditions."
+    },
+    {
+      "source": "Ngano yakūra  mūno  no  ĩhehenjeke na ĩnyihie  magetha. ",
+      "translation": "The government has not been able to provide the necessary funds.",
+      "reference": "Overripe wheat can shatter, causing grain loss during harvest."
+    },
+    {
+      "source": "Handa mbegũ ũrikũ wa [cs] centimetre [cs]  igĩrĩ nginya ithatũ.",
+      "translation": "The height of the building is about 100 centimeters.",
+      "reference": "Plant the seeds at a depth of 2 to 3 centimeters."
+    },
+    {
+      "source": "Ngano nũĩkũrio mĩgunda-inĩ  kũndũ kũrĩ ĩgũrũ kana kũrĩ  thĩ.",
+      "translation": "The future belongs to those who work hard.",
+      "reference": "Wheat can be grown in lowland and highland regions."
+    },
+    {
+      "source": "Unithĩria wa maĩ no ũteithĩrĩrie hĩndĩ ya riũa. ",
+      "translation": "The United Nations will not solve the problem of hunger.",
+      "reference": "Irrigation can supplement rainfall during dry periods."
+    },
+    {
+      "source": "Ũrugarĩ mũingĩ hĩndĩ ya kũgetha no ũnyihie maciaro. ",
+      "translation": "The government has failed to provide aid to the poor.",
+      "reference": "High temperatures during grain filling can reduce wheat yields."
+    },
+    {
+      "source": "Kwamũra ihinda rĩagĩrĩru rĩa kũgetha ngano nĩ kũgiragĩrĩria hathara. ",
+      "translation": "The government is working hard to improve the economy through development projects.",
+      "reference": "Timing is crucial to prevent losses during wheat harvest."
+    },
+    {
+      "source": "Ũgunyu ũrĩa wagĩrĩire nĩũteithagĩrĩria kũagagĩria  maciaro ma ngano.",
+      "translation": "The government has failed to provide adequate resources to the poor.",
+      "reference": "Consistent moisture levels help improve wheat yields."
+    },
+    {
+      "source": "Ihinda rĩega rĩa kũhanda ngano rĩhocanagia  na rĩera rĩa kũndũ kũu",
+      "translation": "The main road to the farm is very long and the road to the market is very far.",
+      "reference": "The best time to plant wheat depends on the local climate."
+    },
+    {
+      "source": "Makũmbi ma kũiga ngano mathondeketwo magirĩrĩrie ũthũkia wa ngano na gĩko.  ",
+      "translation": "The people who are in charge of the forest are responsible for the forest and the animals.",
+      "reference": "Wheat storage facilities are designed to prevent contamination."
+    },
+    {
+      "source": "Heho no ĩthũkie mĩmera ya ngano.",
+      "translation": "They have forgotten the past.",
+      "reference": "Cold temperatures can damage wheat seedlings ."
+    },
+    {
+      "source": "Arĩmĩ mahũthagĩra macini ya mbegũ nĩgũo kũhanda  ngano ũrĩa  kũagĩrĩire.",
+      "translation": "The government has established a program to plant trees in the area that was previously deforested.",
+      "reference": "Farmers use seed drills to plant wheat more accurately."
+    },
+    {
+      "source": "Ndawa nĩhũraguo kũgirĩrĩria ngano makũmbĩ-inĩ  gũthũkio nĩ tũnyamu tũnini. ",
+      "translation": "The government is planning to construct new roads in the rural areas to improve transportation.",
+      "reference": "Fumigation is used to protect stored wheat from insect infestations."
+    },
+    {
+      "source": "Nĩ mboga ĩtarĩ hinya mũingĩ na tũmatanda tũingĩ. ",
+      "translation": "We have a lot of work to do every day.",
+      "reference": "It is a low-calorie vegetable with high fiber content."
+    },
+    {
+      "source": "Nĩ kũrĩ  mĩthemba mĩingĩ ya kabici ĩrĩa nĩ hamwe na kabici ya rangi wa nyeki nduru, rangi mũtune  na kabici ya [cs] savoy [cs].",
+      "translation": "It is a rare and unique combination of colors, a mix of beige and brown, brown and beige.",
+      "reference": "There are different types of cabbage, including green, red, and Savoy."
+    },
+    {
+      "source": "Ndawa ya kũhuhĩra kũgirĩrĩria ria kũhĩtahĩtanĩra irio na ngano. ",
+      "translation": "The time for harvesting is the time for reaping the fruits of our labor.",
+      "reference": "Herbicides help control weeds that compete with wheat for nutrients."
+    },
+    {
+      "source": "Kaingĩ ngano nyingĩ  ĩigagwo nĩgetha ĩkahota kwendio thokoinĩ  mwaka wothe.",
+      "translation": "Many different languages are spoken in the country during the dry season.",
+      "reference": "Wheat is often stored in bulk to supply markets throughout the year."
+    },
+    {
+      "source": "Ikũraga wega kũndũ kũruru kũri na ũrugarĩ wa [cs[degrees centigrade  [cs] ikũmi na ithano na [cs] degrees centigrade  [cs] mĩrongo ĩrĩ. ",
+      "translation": "The temperature dropped to minus 10 degrees centigrade and rose to 20 degrees centigrade in the morning.",
+      "reference": "It grows best in cool temperatures between 15°C and 20°C."
+    },
+    {
+      "source": "Mũgũnda ũroragwo nĩgetha kweheria mĩrimũ ta [cs] rust [cs] na [cs] mildew[cs].   ",
+      "translation": "The crops are being destroyed by rust and mildew.",
+      "reference": "fields are monitored for fungal diseases like rust and mildew."
+    },
+    {
+      "source": "ũbũthu tĩrinĩ ũteihagia gũthondeka mũmbire wa tĩri na ũhoti wa tĩri kũiga maũ.",
+      "translation": "The community is working together to protect the forest and the river.",
+      "reference": "Organic matter improves soil structure and water retention for wheat crops."
+    },
+    {
+      "source": "Mĩkori ya ngano ya ĩrengagwo na ngano ĩgathandũrwo kũhũthĩra [cs] threshers [cs].",
+      "translation": "The agricultural tool made of iron is made with iron and is used to thresh.",
+      "reference": "Wheat stalks are cut, and the grain is separated using threshers."
+    },
+    {
+      "source": "Angĩkorwo nĩwe ũrĩrĩmĩra irio cia mahiũ, ũkũbatara ĩka ĩmwe o mwaka, kũrĩithia ng'ombe ĩmwe, mori na njaũ.",
+      "translation": "If you plant a garden with vegetables, you will harvest it once a year, raise a cow once, and reap the benefits of a goat.",
+      "reference": "If you’re growing your own fodder you’ll need about 1 acre per year to feed one cow, one heifer and a calf."
+    },
+    {
+      "source": "Njĩra ĩno ĩgũtũma ũiganie irio cia ng'ombe ciaku nginya riũa rĩara na thogora wa iria wa haica ",
+      "translation": "The woman is cooking porridge for her cow that has just given birth and is nursing its calf.",
+      "reference": "This way, you’ll have enough good fodder for your cows even when it gets dry and milk prices go up."
+    },
+    {
+      "source": "Gĩcũa-inĩ na icigo nini cia irĩma-inĩ cia irathĩro rĩa [cs] Rift Valley [cs] nĩ ciagĩire mbura niini ĩtaiganire ",
+      "translation": "The Rift Valley lakes are the source of water for the people of the region.",
+      "reference": "The Coast and a few parts of the Highlands East of the Rift Valley received near to below average rainfall."
+    },
+    {
+      "source": "Kũiga matumbĩ wega nĩ kũgiragĩrĩria mathuke na [cs] bacteria[cs], kwaga kũrĩo nĩ nyamũ, na gũte rĩera, na ũrugarĩ mũingĩ na gũkua.",
+      "translation": "The new vaccines are made from the eggs of chickens, the blood of animals, and the serum, and they are tested on many animals and humans.",
+      "reference": "Packaging protects the eggs from bacteria, natural predator, loss of moisture, temperatures that cause deterioration and crushing."
+    },
+    {
+      "source": "tĩri wa mwena wa naigũrũ nĩ ũgiragĩrĩria maĩ gũikũrũka mĩtũkĩ na kũrika thĩ na kũgiria tĩri gũtwarwo.",
+      "translation": "The current government is being criticized for not doing enough to improve the economy and reduce poverty.",
+      "reference": "The soil on the upper side slows the run off water and lets it sink into the soil and stops soil being washed away."
+    },
+    {
+      "source": "gĩko kĩa [cs]Bio-slurry [cs] [cs]digestate[cs] gĩatũmĩka ta thumu nĩkĩrombũiyagia ũgima mwega wa tĩri na kwongerera maciaro.",
+      "translation": "The use of bio-slurry digestate as fertilizer is beneficial to the soil and reduces the spread of diseases.",
+      "reference": "Bio-slurry/digestate when used as a fertilizer enhances physical, chemical, and biological attributes of the soil and increases crop productivity when applied to the land"
+    },
+    {
+      "source": "Mĩtĩ mĩnini ndĩendaga gũcehwo mbere ya miaka ĩrĩ nginya ĩtatũ.",
+      "translation": "The trees will grow well in the shade of the three-year-old trees.",
+      "reference": "Young trees need no pruning during the first 2 - 3 years."
+    },
+    {
+      "source": "[cs] Biogas [cs] nĩ ĩteithagĩa aikari a niini a maturaĩnĩ, nĩ iteithagia kũmahe mwaki ũtarĩ ndogo wa kũruga, nĩũndũ wa kũmenyerera ũgĩma wa mwĩrĩ.",
+      "translation": "The biogas is produced from organic matter, it is produced by decomposing organic matter, and it is a small source of energy, a source of fuel that is environmentally friendly.",
+      "reference": "Biogas improves health of rural low-income households by providing a cleaner cooking fuel and a waste handling solution thus avoiding health problems"
+    },
+    {
+      "source": "Nyũmba cia ngũkũ njega nĩ ĩbatie kũgitĩra tũcui kumana na rĩera rĩuru na nyamũ.",
+      "translation": "The house of the poor is where one finds a good friend and a true companion.",
+      "reference": "Good housing should protect the birds from extreme weather and predators."
+    },
+    {
+      "source": "ũthii wa na mbere nĩũndũ wa kũnyihia wĩra mũĩngĩ wa atumia na ciana ũkuruhanĩtĩ na kuuna ngũ kana mai ma ng'ombe hamwe na mwaki ũtari ndogo.",
+      "translation": "The first child is the one who will help the mother to take care of the younger children and the cattle with the help of the elder and the small child.",
+      "reference": "Social development due to the reduced workload from women and children associated with collecting fuelwood or cow dung and also the availability of clean household energy."
+    },
+    {
+      "source": "Mũthemba wa njũgũ karanga wagĩritio Kenya nĩ: [cs]KEN-GNUT 1[cs], [cs] Egerton GN-1 (L) [cs], [cs]Egerton GN- 2 (R) [cs], [cs]Gathuku [cs], [cs] Lihanga [cs] na [cs] Kanga [cs].",
+      "translation": "The University of Nairobi Vice-Chancellor announced the following universities in Kenya: KENYUT 1, Egerton University (L), Egerton University (R), Gathuku, Luhanga and Kanga.",
+      "reference": "Improved groundnut varieties available in Kenya include KEN-GNUT 1, Egerton GN-1 (L), Egerton GN- 2 (R), Gathuku, Lihanga and Kanga."
+    },
+    {
+      "source": "Handa mĩmera mĩnini ya [cs] cocoa [cs] kuuma nathari yaku, kana ũgũre rũhongeinĩ rwa ũthuthuria wa mĩmera ",
+      "translation": "The best time for planting cocoa is when the weather is cool, or in the shade of a tree.",
+      "reference": "Plant young cocoa seedlings from your own nursery, or buy from a research centre."
+    },
+    {
+      "source": "mũrĩmũ wa [cs] Bole rot [cs] ũtũmaga [cs] wet rot [cs] ũtuĩkaga rangi wa ngoikoni ũtukanĩte na wa gĩtĩri na mũtuĩku, no ũtũme mũmera wage kũgwata. ",
+      "translation": "The artist of [cs] Bole created [cs] ũtũmaga [cs] wet [cs] ũtuĩkaga painting of a woman wearing a traditional [cs] ngoikoni [cs] ũtukanĩte and a [cs] gĩtĩri [cs] na mũtuĩku, and also a [cs] mũmera [cs] wage [cs] kũgwata.",
+      "reference": "Bole rot causes a wet rot which becomes yellowish-brown and soft, which may lead to the plant collapsing and dying."
+    },
+    {
+      "source": "Handa mĩti ya [cs] cocoa [cs] kĩmera kĩa mbura gĩkĩambĩrĩria.",
+      "translation": "Plant more cocoa trees to reduce poverty.",
+      "reference": "Plant cocoa trees at the start of the rainy season."
+    },
+    {
+      "source": "Mũbango wa njanjo nĩ ũbatie kũmenyithanio rĩrĩ tũcui twa ũkũrũ wa mũthenya ũmwe twagũrwo.",
+      "translation": "The government has decided to extend the deadline for the upcoming general elections.",
+      "reference": "A vaccination program should be shared when day old chicks are purchased."
+    },
+    {
+      "source": "Mathangũ meru nimũ mabatie gũtuo.",
+      "translation": "The people are working hard to build the country.",
+      "reference": "Only ripe leaves should be harvested."
+    },
+    {
+      "source": "Handa mĩmera ya kũhumbĩra tĩri gatagatĩ ga mĩtaro ya makongo miaka itatũ ya mbere nĩgetha kweheria ria mũgũndainĩ.",
+      "translation": "The government has announced that it will increase the price of maize by 30% in the next three years to reduce the burden on the poor.",
+      "reference": "Plant cover crops between the sisal rows during the first 3 years to keep the land weed-free."
+    },
+    {
+      "source": "Matunda magethetwo nĩmongagĩrĩrĩka o ũrĩa mũtĩ ũrathĩ mbere na gũkũra.",
+      "translation": "Fruits are being harvested at the right time when the tree is ripe and ready.",
+      "reference": "The fruits harvested increases as the tree continues to grow."
+    },
+    {
+      "source": "Njũgũ Karanga ĩkoragũo ĩ ngũrũ hĩndĩ ĩrĩa thĩinĩ wa makoro ĩna ũirũ gĩcũnjĩ kĩa mĩrongo mũgwanja nginya mĩrongo ĩnana harĩ igana na rangi ya mũthemba ũcio.",
+      "translation": "The Njũgũ Karanga people are known for their unique culture in the region of Makoro where they have a strong tradition of unity and a rich cultural heritage that is characterized by their vibrant colors and beautiful designs.",
+      "reference": "Groundnuts are mature when 70-80% of the inside of the pods shells have dark markings and the kernels are plump, with colour characteristic of that variety."
+    },
+    {
+      "source": "Mĩrĩmũ ĩrĩa ĩnyitaga mũcere nĩta ĩkoragwo hamwe na [cs]bacteria[/cs] [cs] leaf [/cs] [cs] blight [/cs]",
+      "translation": "The disease that causes leaf blight is caused by bacteria.",
+      "reference": "Diseases that affect rice include Bacteria leaf blight."
+    },
+    {
+      "source": "Thamia mũkondobia ta thikũ mĩrongo ĩrĩ thutha wa mbegũ gũthethũka.",
+      "translation": "The government has decided to extend the deadline for the payment of taxes.",
+      "reference": "Transplant avocado about 20 days after germination."
+    },
+    {
+      "source": "Makatoni mabatie kũingĩria riera wega.",
+      "translation": "The people are working hard to achieve their goals.",
+      "reference": "The cartons should be well ventilated."
+    },
+    {
+      "source": "Ramata mĩrimũ ya ngano ta [cs] leaf [cs][cs] rust[cs] na kũhanda mĩthemba ya ngano ĩtanyitagwo nĩ mĩrimũ ",
+      "translation": "The main causes of leaf rust and the decline of the coffee plant are the leaf rust and the decline of the coffee plant itself.",
+      "reference": "Control wheat diseases e.g leaf rust by planting resistant varieties, control weeds"
+    },
+    {
+      "source": "Thura mbegũ cia thoroko ĩrĩa imeraga narua, na ĩtathũkĩtio nĩ tũtambĩ kana kunekanga",
+      "translation": "The government has failed to provide seeds to farmers, and we are suffering because of it.",
+      "reference": "Choose cowpea seeds with high germination rate, not insect damaged or broken"
+    },
+    {
+      "source": "Ũtanaiga mbegũ thitoo, tũkania mbegũ na dawa cia tũtambĩ ta [cs] neem [cs], [cs] lantana [cs]",
+      "translation": "We should plant trees, cultivate them and use their leaves to make medicine for our community.",
+      "reference": "Before storage, mix seed with a mixture of pesticidal plant parts (e.g.neem, lantana)."
+    },
+    {
+      "source": "Ĩkĩruta kĩro, ũrugarĩ ndũgakĩre [cs] centigrade [cs] mĩrongo ĩtatũ",
+      "translation": "When it's cold, the thermometer shows three degrees centigrade.",
+      "reference": "At flowering, temperatures should not exceed 30°C"
+    },
+    {
+      "source": "Mĩthemba ĩngi nĩ ta [cs]Kat-Kunde[cs], [cs]Kunde Fauu[cs], [cs]Kunde Tumaini[cs], [cs]M66[cs], [cs]KVU 27-1[cs], na [cs]K80[cs]",
+      "translation": "The Mĩthemba ĩngi nĩ ta Kat-Kunde, Kunde Fauu, Kunde Tumaini, M66, KVU 27-1, and K80.",
+      "reference": "Other varieties include Kat-Kunde, Kunde Faulu, Kunde Tumaini, M66, KVU 27-1, and K80"
+    },
+    {
+      "source": "Mĩthemba ya thoroko ĩrĩa yonekaga kaĩngĩ Kenya nĩ [cs]Kunde Tamu[cs], [cs]Kunde Soko[cs]",
+      "translation": "The winner of the Thoroko award is Kunde Tamu, Kunde Soko.",
+      "reference": "The common Cowpea varieties in Kenya are: Kunde Tamu, Kunde Soko."
+    },
+    {
+      "source": "Huha na gĩtarũrũ kũeheranĩria ngano theru na mahutii",
+      "translation": "We are waiting for the rain to come and bring us relief.",
+      "reference": "Do winnowing to separate clean wheat grains from the chaff,"
+    },
+    {
+      "source": "Hiũha gũtabarĩrĩa maũndũ nigetha ũnyihie gũthũkangia ũria wendekithĩtio nĩ abithaa wa ngirigacha",
+      "translation": "The government has failed to provide adequate resources to the people of the region.",
+      "reference": "Take necessary action to reduce damage as recommended by agricultural experts"
+    },
+    {
+      "source": "Geria kũmerithia thoroko thikũ ikũmi mbere ya kũhanda",
+      "translation": "It is time to prepare for the coming harvest season.",
+      "reference": "Do a germination test 10 days before planting cowpeas"
+    },
+    {
+      "source": "Ĩkĩra ngano theru makũniainĩ ma kio mĩrongo kenda",
+      "translation": "The people are suffering due to the long distance between the two countries.",
+      "reference": "Put clean grain in 90 kg bags."
+    },
+    {
+      "source": "Mĩmera ya kũhumbĩra tĩri ĩthingataga ũnoru wa tĩri, maĩ, kũramata tũtambĩ na mĩrimũ",
+      "translation": "The role of a teacher is to educate the mind, body, and soul of the student.",
+      "reference": "Cover crops manage soil fertility, soil quality, water, pests, and diseases."
+    },
+    {
+      "source": "Thoroko nĩyo ya kerĩ ĩrĩ bata mũno bũrũrinĩ wa Kenya kũrũmĩrĩra mboco",
+      "translation": "The president is coming to the village in Kenya to open the market.",
+      "reference": "Cowpea is the second most important legume crop after common beans in Kenya"
+    },
+    {
+      "source": "Hura mbegũ cia matharũ na ũhumbĩre hanini na tĩri",
+      "translation": "We should plant seeds of love and spread peace and harmony.",
+      "reference": "Sow the kale seeds and cover lightly with soil."
+    },
+    {
+      "source": "Mĩthemba ya matharũ ĩrĩa yonekaga mũno ni [cs]collards[cs], [cs]marrow stem[cs] na [cs]thousand headed[cs].",
+      "translation": "The varieties of cabbage include collards, marrow stem, and thousand headed.",
+      "reference": "Common kale varieties include collards, marrow stem and Thousand Headed are the most common varieties"
+    },
+    {
+      "source": "Ambĩrĩra kũmithia mbegũ kiumia kĩmwe nginya igĩrĩ ũtanahanda",
+      "translation": "We should not waste time on useless things that do not benefit us.",
+      "reference": "Start hardening the seedlings 1 – 2 weeks before transplanting."
+    },
+    {
+      "source": "Warĩkia kũhanda, itĩrĩria gĩtambaya maĩ maita matatũ o mũthenya, na uthũrime mbegũ icio mũthenya wa gatatũ",
+      "translation": "They are planting, but the seeds of the third season are being harvested, and the seeds of the third season are being sown.",
+      "reference": "Afterwards water the cloth 3 times a day, examine the seeds on the 3rd day."
+    },
+    {
+      "source": "Hũthĩra mbegũ cia matharũ ĩhĩtũkĩtio nĩ watho",
+      "translation": "The government has given the farmers a lot of money.",
+      "reference": "Use certified kale seed with special attributes"
+    },
+    {
+      "source": "Menyerera ndugaĩtĩrĩrĩe maĩ maĩngĩ tondũ nomarehe mũrimũ wa [cs]damping-off [cs]",
+      "translation": "The farmer should not overwater the seedlings to prevent damping-off disease.",
+      "reference": "Avoid over-watering which can lead to “Damping-off” disease."
+    },
+    {
+      "source": "Hũra harũ wiki ta igĩri kana ithatũ thutha wa kũrĩma",
+      "translation": "The government will issue a statement on the third day of the week.",
+      "reference": "This is followed by harrowing, 2-3 weeks after ploughing"
+    },
+    {
+      "source": "Mĩthemba ĩngĩ nĩ ta thũkũma cia [cs]Mfame F1[cs] na [cs] Moss Curled[cs]",
+      "translation": "The new iPhone is a product of Apple Inc. and Moss Creek.",
+      "reference": "Other varieties include Mfalme F1 and Moss Curled Kale."
+    },
+    {
+      "source": "\nHĩtana na mbũca, tũthegethi mbembe na [cs afatoxin [cs] na kũniaria mbembe nginya gĩcunji gĩa ikũmi na ithatũ nginya ikũmi na inya harĩ igana cia ũgunyu\n",
+      "translation": "We should not be afraid, we should be brave and fight against the evil and the poison that is killing our children and our future and our country is in danger.",
+      "reference": "Control weevils, grain borers and aflatoxin by drying the maize to 13-14% moisture."
+    },
+    {
+      "source": "Makongo no magethwo rita ria mbere thutha wa mĩaka ĩtatũ kana ĩna kuuma mahandwo",
+      "translation": "The elders and the youth are working together to develop the country for the benefit of all.",
+      "reference": "Sisal may be harvested for the first time 3-4 years after planting."
+    },
+    {
+      "source": "Ũbatie gwĩka  ũndũ ũyu kĩroko tene",
+      "translation": "The people are working hard in the morning.",
+      "reference": "This should be done early in the morning."
+    },
+    {
+      "source": "Thuura waru ĩrĩa igethetwo nĩgetha kweheria irĩa  ndihangie,  thũũkũ , mbuthu  kana ciĩna mĩrimũ",
+      "translation": "They should not be allowed to do whatever they want, but rather follow the rules, the law, or the constitution.",
+      "reference": "Sort the harvested potatoes to remove the bruised, damaged, rotting or diseased tubers from the good ones."
+    },
+    {
+      "source": "mbere ya kũhanda nyanya, amũra  handũ hagĩrĩru na hatakwaraha maĩ ",
+      "translation": "Before planting tomatoes, one needs to prepare the soil and choose a suitable location.",
+      "reference": "Before planting tomatoes, select a suitable and well drained ground."
+    },
+    {
+      "source": "Thima kana nĩ nyũmũ wega ũkĩrũma kana gũkunya na ndwara ciaku",
+      "translation": "The government has decided to increase the price of fuel and electricity.",
+      "reference": "Test if it's dry enough by biting or pinching with your finger nails."
+    },
+    {
+      "source": "Wĩra ũcio ũrutagwo mbere ya kĩmera kĩa mbura nĩguo kũnyihia mĩrĩmũ na mbũca.",
+      "translation": "The government is being accused of corruption in order to embezzle funds and embezzle.",
+      "reference": "It is usually done before the rainy season to reduce disease infection and weevils."
+    },
+    {
+      "source": "Ndũkaige waru thĩ na ndũkaige makũniainĩ ma makongo ",
+      "translation": "We will go to the village and we will go to the market.",
+      "reference": "Do not place tubers on the ground and don't store them in sisal bags."
+    },
+    {
+      "source": "Waru yagĩrĩirwo kũgethwo mũthenya wĩ riũa na ũtarĩ mbura",
+      "translation": "They are trying to destroy the forest with their activities.",
+      "reference": "The tubers should be dug on a dry day."
+    },
+    {
+      "source": "  Iga magetha ma [cs] soya[cs] makũniainĩ handũ itarainĩ  kana mbaoinĩ ya kwaro harainu na na rũthingo",
+      "translation": "The farmers have planted soya beans in the fields around the village and the surrounding areas.",
+      "reference": "Store harvested soybean in grain bags on a raised platform or wooden pallet away from the wall."
+    },
+    {
+      "source": "Mbere ya kũhanda waru, rĩma mũgũnda hĩndĩ ya riũa kahinda ga  ciumia ithathatũ.",
+      "translation": "The best time to plant trees is when the soil is still moist and the weather is cool enough for growth.",
+      "reference": "Before planting potatoes, clear your land during the dry season at least 6 weeks before planting."
+    },
+    {
+      "source": "Gũkũria makongo gũtibataraga gũitĩrĩria maĩ tondũ makongo nĩmameraga ona gũtarĩ maĩ ",
+      "translation": "The government is planning to increase the number of schools in the area where there are no schools.",
+      "reference": "Growing sisal does not need irrigation, as the sisal plant is drought resistant."
+    },
+    {
+      "source": "Iga waru handũ ha rĩera rĩega na ithandũkũ-inĩ rĩrĩa rĩngĩtũma rĩera rĩkinye.",
+      "translation": "The people of the village are not aware of the problems they are facing.",
+      "reference": "Store potato tubers in a well-ventilated space and wooden crates which allow air circulation."
+    },
+    {
+      "source": "Thibinachi nĩrĩ hinya wa vitameni cia A,C na K, [cs] iron [cs], [cs] folate [cs], na [cs]potassium[cs]",
+      "translation": "The recommended daily intake is vitamins A, C, and K, iron, folate, and potassium.",
+      "reference": "Spinach is rich in Vitamin A, Vitamin C, Vitamin K, iron, folate, and potassium."
+    },
+    {
+      "source": "Mũmera ũmenyekaga nĩ ũrakũra wega wambĩrĩria kuumia rangi wa ngoikoni.",
+      "translation": "The artist has painted a beautiful picture of the beautiful landscape.",
+      "reference": "The best indicator is yellowing of vines."
+    },
+    {
+      "source": "Inĩkĩrĩria maĩ  harĩa uhurĩte mbegũ mũthenya ũmwe mbere ya kũhanda nĩguo ũigananie gĩkĩro gĩa tĩri",
+      "translation": "The government has decided to reduce the price of maize before the harvest season starts.",
+      "reference": "Drain the nursery bed the day before sowing to stabilize the soil surface of the soil."
+    },
+    {
+      "source": "Koroco njĩthĩ  nĩ ĩrĩagwo na nĩ irĩ  cukari, [cs] minerals [cs] na vitameni.",
+      "translation": "The country is rich in oil, gas, minerals, and water.",
+      "reference": "Raw cashew nut is edible and is a valuable source of sugar, minerals and vitamins."
+    },
+    {
+      "source": "No mũhaka ikorwo [cs] meters[cs] ikũmi kuuma barabara-inĩ nĩgetha  ũgirĩrĩrie rũkũngũ na ndogo ya ngari.",
+      "translation": "The road will be closed when [cs] meters[cs] of the road is flooded and the car is small.",
+      "reference": "It should be at least 10 meters away from the road to prevent dust and vehicle fumes."
+    },
+    {
+      "source": "Kũrĩmĩra gwa kerĩ gwĩkagwo mbere ya gũĩkĩra mborera.",
+      "translation": "The government has taken measures to prevent corruption.",
+      "reference": "The 2nd weeding is done just before topdressing."
+    },
+    {
+      "source": "Ĩtĩrĩria maĩ hangĩbatarania.",
+      "translation": "They are not listening to advice.",
+      "reference": "Irrigate if necessary."
+    },
+    {
+      "source": "Mboco nĩ ikũraga na ihenya na no ikũre thutha wa mĩeri ĩrĩ, maita maingĩ ikũraga thutha wa thikũ mĩrongo ĩna na ĩtano nginya mĩrongo mũgwanja na ĩtano",
+      "translation": "The government is working with the private sector and the international community to implement the constitution, and it is also working with the local community to implement the constitution in the rural areas and the urban areas.",
+      "reference": "Beans grow fast and can mature within two months, on average between 45 to 75 days"
+    },
+    {
+      "source": "Koroco nĩ ibatiĩ kũmithio na icoke ciigwo handũ hatarĩ na ũrugarĩ kana ũgunyu",
+      "translation": "The government is working hard to provide food to the people and to reduce poverty and hunger.",
+      "reference": "Cashew nut should be dried before storage in a cool dry place."
+    },
+    {
+      "source": "Mwanga kũgĩa marangi maingĩ",
+      "translation": "The sun is setting slowly.",
+      "reference": "Muhogo mosaic."
+    },
+    {
+      "source": "Ihũa rĩa karanga",
+      "translation": "The time of harvest.",
+      "reference": "rosette ya karanga."
+    },
+    {
+      "source": "Ũmba gĩito gĩaku igũrũ wega nĩguo ũhote kũramata mĩmera wega",
+      "translation": "The rain that falls from the sky is the one that brings us water for our crops.",
+      "reference": "Raise the bed so you can manage your crop easier."
+    },
+    {
+      "source": "Thĩinĩ wa  Nyandarua kũrĩ na wĩra wa kũrĩma na kũrĩmĩra kwa mbere kwa mbembe, kũhanda na gũthikĩrĩra waru kwa mbere.   ",
+      "translation": "In Nyandarua district, there is a lot of farming and cultivation, planting and harvesting in season.",
+      "reference": "In Nyandarua planting and early weeding of the maize crop while for potatoes planting and 1st earthing up was being done."
+    },
+    {
+      "source": "Magetha nĩ metereirwo ota mũtugo",
+      "translation": "The people are suffering due to hunger.",
+      "reference": "Normal production expected."
+    },
+    {
+      "source": "Kauntĩ-inĩ ya Naikuru, mĩgũnda wa mbembe nĩ ũrathiĩ na mbere kũharĩrio na mĩgũnda kuongerereka. nĩ ũndũ wa ũheani wa mborera ya thogora wa thi nĩ thirikari ya Kenya. Mborera ĩno  hamwe na mbura nene ĩrĩa ĩkoretwo icigo-inĩ itiganĩte cia kaunti ĩyo na kwoguo kwĩrĩgĩrĩra atĩ ĩngĩthiĩ na mbere no ĩrehe magetha mega.",
+      "translation": "In Nairobi County, the county government is responsible for and has the power to implement and enforce the county's laws. This authority is not shared with the national government which only has the power to oversee and monitor the county's performance and ensure that it adheres to the national laws and regulations.",
+      "reference": "Maize is at planning stage in Nakuru County with increased acreage due to readily availed GOK subside fertilizers and the affordable fertilizer coupled with the heavy rainfall witnessed in different parts of the county and therefore predict if it continues it is likely to result in good harvests."
+    },
+    {
+      "source": "Mũgũnda ũkoragwo na mĩmera mĩega  gũtarĩ na mĩrimũ mĩingĩ ya tũtambĩ",
+      "translation": "The community is being helped by the government to reduce poverty and improve the living standards.",
+      "reference": "Crop condition in the field is favourable with no major pest incidences."
+    },
+    {
+      "source": "Kaunti-inĩ ya Kwale na Kilifi mweri-inĩ wa kana nĩ gũkoretwo na mbura wega.",
+      "translation": "The counties of Kwale and Kilifi have been affected by the heavy rain.",
+      "reference": "In Kwale and Kilifi, the month of April has been characterized by rainfall well distributed in the County."
+    },
+    {
+      "source": "Mboco ĩkĩmera wega na  ĩkĩambĩrĩria kũruta kĩro  ",
+      "translation": "The teacher will come and teach the children.",
+      "reference": "Beans are at early vegetative to flowering stages and performance is good."
+    },
+    {
+      "source": "Kaunti ya Tana River yothe nĩ ĩkoretwo na mbura nyinyi ĩtakura wega ",
+      "translation": "Tana River County is one of the counties that has been affected by floods.",
+      "reference": "In Tana River, the whole County have experienced some rains though they were erratic and the distribution was generally poor."
+    },
+    {
+      "source": "  Mu͂ceere ni͂  uhanditwo icigoini͂ cia Matuga, Msambweni na Lungalunga.",
+      "translation": "The Mu͂ceere is located in the areas of Matuga, Msambweni, and Lungalunga.",
+      "reference": "For rice in Matuga, Msambweni and Lungalunga Sub counties, the crop has been planted."
+    },
+    {
+      "source": " Gicigo kĩa irathiro ria itherero, mĩgunda nĩ ihotekaga gũkoruo  ĩrĩ mĩnini ya kũhanda irio.  ",
+      "translation": "The role of the teacher is to educate the students, and the school is a place where they learn to develop their skills.",
+      "reference": "The north eastern region acreages under crop usually very low and easily achieved."
+    },
+    {
+      "source": "Maũndũ macio nĩmo maronania maũndũ ma rĩera marĩa matũmaga irio igĩe na maciaro matigaine",
+      "translation": "The good things that we have been given are the things that we have been given by God and the things that we have worked for.",
+      "reference": "These represent the key climatic drivers that are having an impact on crop condition status."
+    },
+    {
+      "source": "Kũhaarĩria  mũgũnda wa kũhanda ngano  nĩ kwambĩrĩirie icigo-inĩ iria ikũragia ngano naguo  mwena wa ithũĩro [cs]Rift[cs] kũbangĩtwo  kwambĩrĩria mweri-inĩ wa gatano kana wa gatandatũ.",
+      "translation": "The government has launched a program to eradicate the tsetse fly in the Rift Valley to prevent sleeping sickness.",
+      "reference": "Land preparation and planting of wheat is starting in wheat growing areas while in North Rift it is expected to begin in May/ June"
+    },
+    {
+      "source": "Irio iria ihandĩtwo mĩgũnda ya Kĩambu na Mũrang’a nĩcionekaga irĩ njega kuuma kũhandwo nĩũndũ wa wagĩrĩru wa rĩera",
+      "translation": "The people of Kĩambu and Mũrang’a are in a hurry to go to the market before the rain starts.",
+      "reference": "The crops in Kiambu and Muranga were from planting to early vegetative stages with conditions being favourable."
+    },
+    {
+      "source": "Mwena wa Kitui kwarĩ riũa mũno  no   mbura nĩyaurire mwicoinĩ wa mweri.",
+      "translation": "The people of Kitui are suffering a lot due to the heavy rains.",
+      "reference": "Kitui reported dry conditions but rains were received towards the end of the month."
+    },
+    {
+      "source": "Ũhoro-inĩ wĩgiĩ ngano kauntĩ-inĩ ĩyo,   kũhaarĩria mĩgũnda na kũhanda nĩ kũrathiĩ na mbere, na rĩera rĩega no rĩtũme kũgĩe na magetha mega.",
+      "translation": "In the morning, the sun rises, it brings light and warmth, and it also brings rain to nourish the crops.",
+      "reference": "For wheat in the county, land preparation and planting is ongoing and the favourable weather may result in good harvest."
+    },
+    {
+      "source": "mogarũrũku ma ũtongoria, ũteithio wa arĩmi, ũteithio wa thirikari [cs] etc.[cs]    ",
+      "translation": "The government, the opposition, the civil service, etc.",
+      "reference": "policy changes, agricultural subsidies, government intervention, etc.)"
+    },
+    {
+      "source": "Gĩcũnjĩ kĩa mĩrongo ĩtatũ harĩ igana kĩa arĩmi Trans Nzoia nĩ mahandĩte ",
+      "translation": "The peace agreement of the region is being implemented by the government of Trans Nzoia County.",
+      "reference": "About 30% of farmers have already planted in Trans Nzoia."
+    },
+    {
+      "source": "Mbura ĩthiraga tene gũkĩra ũrĩa ĩtanyĩtwo kĩmera-inĩ kĩu",
+      "translation": "The teacher is teaching the children in the classroom.",
+      "reference": "Rains end earlier than expected in the season"
+    },
+    {
+      "source": "Thogora mũnene wa mborera nĩ watũmire arĩmi metheme kũhanda mbembe  makihanda mithemba ya mboco ĩrĩa ĩtarabatara mborera nyingĩ",
+      "translation": "The big tree of the forest is being cut down by the people who are in a hurry to make charcoal that will be used to cook food that will be eaten by other people.",
+      "reference": "High cost of fertilizer led farmers to avoid maize and plant legumes that do not require a lot of fertilizers."
+    },
+    {
+      "source": "[cs] Central [cs], na [cs] South Rift Valley [cs] na [cs] Highlands East of the Rift Valley [cs] kũrĩa kwarĩ na thĩna no kũragethwo gĩcunjĩ kĩa rũgongo kĩa, Kakamega, Bungoma , mĩena ĩmwe  ya kaunti cia [cs] North[cs]  na [cs] central Rift [cs]",
+      "translation": "Central, and South Rift Valley and Highlands East of the Rift Valley region, which is also known as the Western region, Kakamega, Bungoma, and other counties of the North and Central Rift.",
+      "reference": "Central and South Rift Valley and the Highlands East of the Rift Valley which was a challenge to harvesting that is still ongoing in Upper zones of Kakamega, Bungoma, parts of North and central Rift counties"
+    },
+    {
+      "source": "Kũhanda nĩ gwacereirwo  Baringo nĩ ũndũ wa mbura ya [cs]OND [cs]  gũcererwo.",
+      "translation": "The Baringo County is the worst affected by the drought.",
+      "reference": "Planting was delayed in Baringo due to late onset of the OND rains."
+    },
+    {
+      "source": "\n[cs]The Highlands East of the Rift Valley [sc]  hamwe na kauntĩ ya Nairobi na [cs] South-eastern lowlands [cs]  no gũkorwo na mbura nini mweri wa gatandatũ  heho ĩkĩambĩrĩria.\n",
+      "translation": "The Highlands East of the Rift Valley together with the county of Nairobi and the South-eastern lowlands only if there is a clear vision that will bring about development.",
+      "reference": "The Highlands East of the Rift Valley including Nairobi County and parts of the South-eastern lowlands may experience light rainfall in June as the cold season sets in."
+    },
+    {
+      "source": "\nNĩgetha ũgirĩrĩrie mĩri ya makondobia kũbutha ũbatiĩ kũhanda tĩriinĩ  ũgũikũrũkia maĩ wega, ũhande mĩriko-inĩ kana wĩkĩre dawa ĩna  [cs] metalaxyl [cs]   \n",
+      "translation": "We need to control the spread of fungal diseases that affect crops, prevent them from rotting, and reduce the use of chemicals like [cs] metalaxyl [cs].",
+      "reference": "Control of Avocado root rot is plant in well-drained soil where drainage is not good, Plant in ridges  or Apply metalaxyl based chemical"
+    },
+    {
+      "source": "\nGĩcigo kĩa ithũiro mbembe iria ikũraga na mbura ya ihinda inini na   irĩ nguhĩ ikĩruta kimira kĩa mbembe kũria   Vihiga, Busia, na [cs] sub counties [cs] cia cĩanda wa mũhuro wa Kakamega na Bungoma   nĩkwarĩ na [cs] FAW [cs] iria cianyihanyihirio nĩ mbura nyingĩ  icigoinĩ icio. \n",
+      "translation": "The Ministry of Agriculture is working with the county governments of Vihiga, Busia, and some sub-counties of Kakamega and Bungoma to combat the Fall Armyworm through various methods.",
+      "reference": "In Western region maize short rains maize is at knee high to tasseling in Vihiga Busia, lower sub counties of Kakamega and Bungoma isolated cases of FAW reported has been suppressed by excessive rain in the region."
+    },
+    {
+      "source": "Ũria kũronekana nĩ atĩ kũngĩthiĩ na mbere kwara riũa inene  no kwage kũgethwo mbembe Kaunti ya Nyeri ",
+      "translation": "The area is not easily accessible by road and it is only accessible by foot in County Nyeri.",
+      "reference": "The outlook is such that if the current hot and dry weather conditions persist, maize in Nyeri county is likely to experience a crop failure."
+    },
+    {
+      "source": "Gĩcigoinĩ kĩa Nyanza, makĩria ma gĩcunjĩ kĩa mĩrongo mũgwaja harĩ igana nĩ hĩndĩ mbembe ĩrakũra na kũruta kĩmira ",
+      "translation": "In Nyanza region, the rivers of the Nile basin are the main source of water that is used for irrigation and drinking.",
+      "reference": "In the Nyanza region, more than 70% of the maize is at the vegetative and tasseling stage."
+    },
+    {
+      "source": "Mũcere nĩwagagĩrĩrwo nĩ rĩera Kirinyaga.",
+      "translation": "The governor is visiting Kirinyaga.",
+      "reference": "Rice is in favourable condition in Kirinyaga."
+    },
+    {
+      "source": "Mĩgũnda nĩ ĩraharĩrio Mũranga, Kirinyaga, na Kĩambu ",
+      "translation": "The counties are Muranga, Kirinyaga, and Kiambu.",
+      "reference": "In Murangâ_x0080__x0099_a, Kirinyaga and Kiambu land is under preparation."
+    },
+    {
+      "source": "Magetha ma mbembe na mboco nĩ matanyĩtwo gũkorwo marĩ  ta ũrĩa merĩgagĩrĩrwo nĩundũ wa mbura ya ihinda inini njega ĩrĩa yurĩte gĩcigo-inĩ kĩu",
+      "translation": "The government has given orders to the police to arrest anyone who is found to be involved in the looting of the country's resources during the chaos.",
+      "reference": "Maize and beans performance are expected to be normal due to the good performance of the short rains in the region."
+    },
+    {
+      "source": "Mi͂mera ya mboco ya mbura nini i͂ri͂ na u͂guni mwega thi͂ini͂ wa Uasin Gishu na West Pokot hi͂ndi͂ i͂ri͂a ku͂handa ku͂rathii͂ na mbere thi͂ini͂ wa Nandi,",
+      "translation": "The region of West Pokot and Uasin Gishu is facing a severe drought and famine, and the people of Nandi are also suffering from hunger.",
+      "reference": "The short rains beans crop is in favorable condition in Uasin Gishu and West Pokot while planting is ongoing in Nandi,"
+    },
+    {
+      "source": "Icigo imwe cia  gĩcigo kĩa irathĩro, gĩcua-inĩ kwarĩ riũa tondũ mbura nĩyacereirwo",
+      "translation": "The current economic system, which is based on exploitation, will lead to the suffering of the majority.",
+      "reference": "Parts of Eastern, Coast remained dry as rainfall onset has been delayed."
+    },
+    {
+      "source": "Mboco ya mbura ya ihinda inini  ĩrĩ na riera rĩega  rĩagĩrĩire Uasin Gishu na West Pokot rĩrĩa irahandwo Nandi, Trans Nzoia, na Egeyo Marakwet",
+      "translation": "The border of the Rift Valley is long and has a boundary that separates Uasin Gishu and West Pokot from Nandi, Trans Nzoia, and Eberdeero Marakwet.",
+      "reference": "The short rains beans crop is in favorable condition in Uasin Gishu and West Pokot while planting is ongoing Nandi, Trans Nzoia and Elgeyo Marakwet."
+    },
+    {
+      "source": "  Nyoni cia quelea nĩ irarirwo na  njĩra gũcimakia na kũhũra ndawa kuuma rĩera-inĩ",
+      "translation": "The birds are crying because of the heavy rain that is causing the river to overflow.",
+      "reference": "Quelea quelea birds menace is being addressed through bird scaring and aerial spraying of pesticides."
+    },
+    {
+      "source": "Hakuhĩ gĩcunjĩ kĩa mĩrongo kenda  harĩ igana kĩa arĩmi nĩmahandĩte na no kũrathiĩ na mbere kũhandwo Embu",
+      "translation": "The road to success is not easy, but it is a journey that the government has taken and we are following it and we are moving forward in Embu.",
+      "reference": "Around 90% of farmers have planted and planting is still ongoing in Embu."
+    },
+    {
+      "source": "Wĩra ũria mũnene warutagwo   icigo-inĩ ici warĩ wa kũharĩria mĩgũnda na kũhanda mbura ĩtanaura",
+      "translation": "The people are being forced to live in a place where they are not allowed to farm and cultivate their land.",
+      "reference": "Main activities in these areas was land preparation and dry planting"
+    },
+    {
+      "source": "\nIrio iria ciahandirwo mweri wa mũgwanja na wenana nĩirakũra wega ona gũtuĩka ũthimi wa maĩ niwambĩrĩirie  nĩũndũ wa wagi wa mbura ũrĩa wahota kũnyihia hanini magetha marĩa matanyĩtwo\n",
+      "translation": "The government has given the people a chance to participate in the decision-making process and has made it possible for them to express their opinions freely without fear of being punished or arrested.",
+      "reference": "The main crop that was planted in July and August is doing well although rationing of water has started as a result of the dry weather which may slightly reduce the expected yields."
+    },
+    {
+      "source": "Magetha ma irio ciothe nĩmarĩkĩte no matikinyĩtie gĩkĩro kĩrĩa kĩagĩrĩire gĩcigoinĩ ",
+      "translation": "The people who are in charge of the country are not doing anything to help the poor who are suffering.",
+      "reference": "Harvesting for all crops is complete with overall below average performance in the region."
+    },
+    {
+      "source": "Matanya ma maumĩrĩra ni gĩcunjĩ kĩa mĩrongo kenda na inya harĩ igana ta ũria kwagĩrĩire",
+      "translation": "The people who are supposed to be in charge are not doing anything to help the country.",
+      "reference": "Forecast production is 94% which almost normal."
+    },
+    {
+      "source": "Ũrathi ũcio wonanĩtie atĩ kauntĩ cigana ũna cia[cs] Highlands West of the Rift Valley[cs] , [cs] the Lake Victoria Basin [cs] ,  [cs]  Central Rift Valley  [cs]  na icigo ingi cia [cs] Northwest [cs] kwahota kura mbura ya mũigana wa gatagati-ini kana mbura nyĩngaingĩ ",
+      "translation": "The area is located in the highlands west of the Rift Valley, the Lake Victoria Basin, the Central Rift Valley, and the Northwest, near the border of the East African Rift System and the Indian Ocean.",
+      "reference": "The forecast indicates that several counties of the Highlands West of the Rift Valley, the Lake Victoria Basin, the Southern, Central Rift Valley regions and a few areas in the Northwest are likely to experience near-average rainfall with a tendency to above-average."
+    },
+    {
+      "source": "Mahanda marĩ makinya-inĩ ngũrani gĩcigo-inĩ kĩu , Homabay mahanda marĩ gĩcunjĩ kĩa mĩrongo kenda harĩ igana na Migori marĩ gĩcunjĩ kĩa mĩrongo mũgwanja harĩ igana",
+      "translation": "The counties of Nyandarua, Kiambu, and Muranga are in the Central region, Homabay is in the Western region, Migori is in the Nyanza region.",
+      "reference": "Planting is at various levels in the region, Homabay planting is at 90% and Migori 70%."
+    },
+    {
+      "source": "Maumĩrĩra ma mbembe mĩena ya rũgongo rwa Kisii na Nyamira marĩ ta ũrĩa magĩrĩirwo",
+      "translation": "The districts of Mbembe in Kisii and Nyamira counties are still facing challenges.",
+      "reference": "Maize performance in the upper zones of Kisii and Nyamira were normal."
+    },
+    {
+      "source": "Rĩu gĩcigo gĩkĩ nĩ kĩraharĩria mígũnda nĩ ũndũ wa mbura ya ihinda inini rĩrĩa rĩkoragwo rĩrĩ ihinda rĩrĩa inene rĩa gũkũria irio",
+      "translation": "The current situation is that the food is scarce because the rains that were expected are not coming as they used to come.",
+      "reference": "The region is currently preparing the land for short rains season which is the main production season."
+    },
+    {
+      "source": "Icigo cierĩ cia Taita Taveta na Tana River mĩmera ya gũkũrio na maĩ ta mũcere  nĩ irathiĩ na mbere wega",
+      "translation": "The region of Taita Taveta and Tana River is a fertile land with plenty of water and good climate.",
+      "reference": "In both Taita Taveta and Tana River, irrigated crops like rice are doing well."
+    },
+    {
+      "source": "Mboco  ciarĩ na magetha  mega gĩcigo-inĩ kĩu",
+      "translation": "The people are suffering due to lack of food.",
+      "reference": "Beans performed well in the region."
+    },
+    {
+      "source": "Ũrathi wa Taita Taveta wonanĩtie gicunjĩ kĩa mĩrongo ĩtandatũ na ithano harĩ igana",
+      "translation": "The people of Taita Taveta region are working together with the government to achieve their goals.",
+      "reference": "The forecast for Taita Taveta is 65%."
+    },
+    {
+      "source": "Hũthĩra [cs]sodium hypochlorite [cs] kũgirĩrĩria  kũongerereka kwa mĩrimũ na ũitĩrĩrie  matunda   maĩ mahiũ marĩ [cs] 47oC[cs]  kahinda ka ndagĩka ithano",
+      "translation": "The hospital uses sodium hypochlorite to disinfect the rooms and fruits are kept at a temperature of 47°C for a period of ten days.",
+      "reference": "Use sodium hypochlorite to prevent build-up of pathogen and treat the fruit with hot water at 47oC for 5 minutes."
+    },
+    {
+      "source": "Maciaro  marĩa matanyĩtwo o ta mutugo ni mega gũkira ma mũigana wa gatagatĩ wa ihinda iraya",
+      "translation": "The problem of corruption is a major obstacle to the development of our country.",
+      "reference": "Expected production is normal compared to the long term average."
+    },
+    {
+      "source": "Kũria Kirinyaga gĩcunjĩ kĩa mĩrongo kenda harĩ igana kĩa magetha marĩa marathĩtwo nĩmerĩgĩrĩirwo",
+      "translation": "In Kirinyaga district, the number of children who are not in school is increasing.",
+      "reference": "In Kirinyaga 90% of forecast production is expected."
+    },
+    {
+      "source": "Ngano yari na magetha  mega icigo nyingĩ cia Narok  no nyoni cia [cs] Quelea[cs]  nĩciathũkangirie ngano mũno",
+      "translation": "The birds were seen with many birds of Narok and the quelea birds were seen to be eating the grain.",
+      "reference": "Wheat performed well in most parts of Narok but was heavily affected by Quelea Quelea birds."
+    },
+    {
+      "source": "Thondeka natharĩ ya wariĩ wa mita ĩmwe na uraihu ũrĩa wagĩrĩire na weherie tĩĩri ucio kũũma natharĩ-inĩ  nginya ũriku wa [cs] centimeter[cs] mĩrongo ĩtatũ na ũcoke  ũiyũrie [cs] centimeter[cs] icio mĩrongo ĩtatũ cia ũrikĩru na mũthanga",
+      "translation": "The measurements of the well are one meter deep and the diameter is 30 centimeters in the first round and 20 centimeters in the second round of the well and the depth of the well is 10 meters.",
+      "reference": "Prepare a seedbed of width 1 m and a desirable length by removing farm soil from the seedbed to a depth of 30 cm and refill the 30 cm depression with sand."
+    },
+    {
+      "source": "Kũgaacĩrithia ũhoti wa arĩa marĩ na itemi maũndũ-inĩ ma njũa   kauntĩ-inĩ ciothe mĩrongo ĩna na  mũgwanja",
+      "translation": "They are trying to sell the land to the foreigners for a very low price.",
+      "reference": "Capacity building of stakeholders in hides and skins in all 47 Counties"
+    },
+    {
+      "source": "Gĩcunjĩ kĩa mĩrongo mũgwanja na ithathatũ  kwa igana kĩa gĩcigo kĩrĩa kĩarongoreirio kĩmera-inĩ kĩu nĩkĩo kĩahingire nĩũndũ wa mbura gũcererwo",
+      "translation": "The government has established a committee to oversee the implementation of the new constitution to ensure that the rights of citizens are protected.",
+      "reference": "An estimated 76% of the target area was realized during the season due to late onset of rains"
+    },
+    {
+      "source": "Kũria Kirinyaga magetha mothe nitamarĩkĩte mĩgũnda-inĩ yothe",
+      "translation": "We will visit Kirinyaga to see the beautiful flowers.",
+      "reference": "In Kirinyaga, harvesting almost finalized in all farms."
+    }
+  ]
+}

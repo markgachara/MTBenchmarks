@@ -1,7 +1,33 @@
 [project]
 name = "mtbenchmarks"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0.0"
+description = "Benchmarking Machine Translation Models for Gĩkũyũ"
 readme = "README.md"
 requires-python = ">=3.9"
-dependencies = []
+dependencies = [
+    "torch>=2.0",
+    "transformers>=4.50",  # 4.50 introduces Gemma3ForCausalLM (text-only head); we need it
+    "accelerate>=0.27",
+    "sentencepiece",
+    "protobuf",
+    "sacrebleu>=2.0",
+    "bert-score>=0.3",
+    "unbabel-comet>=2.0",
+    "pandas>=2.0",
+    "openpyxl",
+    "pyyaml",
+    "tqdm",
+    "psutil",
+    "py-cpuinfo",
+    "tabulate",
+    "numpy",
+    "setuptools<76",
+    "bitsandbytes>=0.41",
+    "unsloth>=2026.1.2",
+]
+
+[project.optional-dependencies]
+unsloth = ["unsloth"]
+
+[tool.uv]
+constraint-dependencies = ["setuptools<76"]
