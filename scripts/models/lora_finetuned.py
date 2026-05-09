@@ -13,6 +13,12 @@ from .base import BaseModel, TranslationResult
 
 logger = logging.getLogger(__name__)
 
+# Safe dtype lookup — avoids eval() on config strings
+_DTYPE_MAP = {
+    "torch.float16": torch.float16,
+    "torch.float32": torch.float32,
+    "torch.bfloat16": torch.bfloat16,
+}
 
 class LoRAFineTuned(BaseModel):
     """
@@ -64,7 +70,7 @@ class LoRAFineTuned(BaseModel):
         """Fallback: load with standard transformers."""
         from transformers import AutoModelForCausalLM, AutoTokenizer
 
-        torch_dtype = eval(self.dtype) if isinstance(self.dtype, str) else self.dtype
+        torch_dtype = _DTYPE_MAP.get(self.dtype, torch.float16) if isinstance(self.dtype, str) else self.dtype
         self.tokenizer = AutoTokenizer.from_pretrained(
             self.model_id, trust_remote_code=True
         )

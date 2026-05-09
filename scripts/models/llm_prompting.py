@@ -15,6 +15,12 @@ from .base import BaseModel, TranslationResult
 
 logger = logging.getLogger(__name__)
 
+# Safe dtype lookup — avoids eval() on config strings
+_DTYPE_MAP = {
+    "torch.float16": torch.float16,
+    "torch.float32": torch.float32,
+    "torch.bfloat16": torch.bfloat16,
+}
 
 _PREAMBLE_RE = re.compile(
     r"^\s*(?:okay|sure|here(?:'s| is)|the translation|translation)[^\n:]*[:.]?\s*\n",
@@ -67,7 +73,7 @@ class LLMViaPrompting(BaseModel):
         start_time = time.time()
 
         try:
-            torch_dtype = eval(self.dtype) if isinstance(self.dtype, str) else self.dtype
+            torch_dtype = _DTYPE_MAP.get(self.dtype, torch.float16) if isinstance(self.dtype, str) else self.dtype
             is_enc_dec = self.config.get("is_encoder_decoder", False)
 
             # Check if quantization is needed
@@ -241,8 +247,10 @@ class LLMViaPrompting(BaseModel):
         prompt_len = enc["input_ids"].shape[1]
 
         eos_token_ids = [self.tokenizer.eos_token_id]
+        # convert_tokens_to_ids returns unk_token_id (not None) for unknown tokens;
+        # only add <|eot_id|> when it's genuinely in the vocabulary (Llama-style).
         eot_id = self.tokenizer.convert_tokens_to_ids("<|eot_id|>")
-        if eot_id is not None and eot_id != self.tokenizer.unk_token_id:
+        if eot_id != self.tokenizer.unk_token_id:
             eos_token_ids.append(eot_id)
 
         with torch.no_grad():

@@ -171,7 +171,7 @@ class MTEvaluator:
         try:
             bert_score_fn = self._get_bertscore()
             # Use the target language side for BERTScore
-            lang = "en" if "eng" in direction.split("->")[-1] else "en"
+            lang = "en" if "eng" in direction.split("->")[-1] else "ki"
             P, R, F1 = bert_score_fn(
                 predictions,
                 references,

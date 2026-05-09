@@ -13,6 +13,13 @@ from .base import BaseModel, TranslationResult
 
 logger = logging.getLogger(__name__)
 
+# Safe dtype lookup — avoids eval() on config strings
+_DTYPE_MAP = {
+    "torch.float16": torch.float16,
+    "torch.float32": torch.float32,
+    "torch.bfloat16": torch.bfloat16,
+}
+
 # Language code mappings per model family
 LANG_CODES = {
     "flores": {  # NLLB-200
@@ -39,7 +46,7 @@ class TransformerMT(BaseModel):
         start_time = time.time()
 
         try:
-            torch_dtype = eval(self.dtype) if isinstance(self.dtype, str) else self.dtype
+            torch_dtype = _DTYPE_MAP.get(self.dtype, torch.float16) if isinstance(self.dtype, str) else self.dtype
 
             self.tokenizer = AutoTokenizer.from_pretrained(self.model_id)
             self.model = AutoModelForSeq2SeqLM.from_pretrained(

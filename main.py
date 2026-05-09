@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Gĩkũyũ MT Benchmarking Pipeline
-Evaluates 5 MT models on the GAC 500-pair test set.
+Evaluates 8 model configurations on the GAC 500-pair test set.
 Produces Tables 4, 5, 6 from the paper + qualitative assessment template.
 
 Usage:
