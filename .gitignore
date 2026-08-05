@@ -57,6 +57,7 @@ unsloth_compiled_cache/
 .ipynb_checkpoints/
 *.ipynb
 !analysis.ipynb
+!analysis_finetuning.ipynb
 
 # OS
 .DS_Store

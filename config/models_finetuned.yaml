@@ -136,6 +136,8 @@ models:
     lang_code_format: "flores"
     directions: ["eng->kik"]
     description: "QLoRA fine-tune (4-bit NF4, r=16) of facebook/nllb-200-3.3B on GAC v1.1 train split."
+    merge_adapter: false   # 3.3B fp16 merge spikes to ~13 GB; run adapter directly to fit 11 GB
+    cpu_cast_load: true    # fp32 checkpoint: cast on CPU then move, else the on-GPU cast OOMs
 
   nllb_3_3b_ft_kik2eng:
     name: "NLLB-200 (3.3B) fine-tuned"
@@ -155,3 +157,5 @@ models:
     lang_code_format: "flores"
     directions: ["kik->eng"]
     description: "QLoRA fine-tune (4-bit NF4, r=16) of facebook/nllb-200-3.3B on GAC v1.1 train split."
+    merge_adapter: false   # 3.3B fp16 merge spikes to ~13 GB; run adapter directly to fit 11 GB
+    cpu_cast_load: true    # fp32 checkpoint: cast on CPU then move, else the on-GPU cast OOMs

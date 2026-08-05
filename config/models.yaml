@@ -71,6 +71,7 @@ models:
     device_map: "auto"
     description: "Dense NLLB-200 3.3B variant. Largest non-MoE NLLB checkpoint; tops the within-family scaling curve."
     lang_code_format: "flores"
+    cpu_cast_load: true   # fp32 checkpoint: cast on CPU then move, else the on-GPU cast OOMs 11 GB
 
   m2m_100:
     name: "M2M-100 (418M)"

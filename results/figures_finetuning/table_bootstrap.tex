@@ -1,0 +1,26 @@
+\begin{table}
+\caption{Paired bootstrap significance tests.}
+\label{tab:bootstrap}
+\begin{tabular}{lllrllrr}
+\toprule
+Direction & System & Metric & Δ & 95% CI & p & n & Significant (Holm) \\
+\midrule
+eng->kik & (600M Distilled) & chrF++ & 15.34 & [13.77, 16.95] & <0.0002 & 450 & True \\
+eng->kik & (600M Distilled) & BLEU & 16.04 & [13.71, 18.43] & <0.0002 & 450 & True \\
+eng->kik & (1.3B Distilled) & chrF++ & 15.89 & [14.16, 17.68] & <0.0002 & 450 & True \\
+eng->kik & (1.3B Distilled) & BLEU & 16.54 & [14.00, 19.16] & <0.0002 & 450 & True \\
+eng->kik & (1.3B) & chrF++ & 13.93 & [12.37, 15.54] & <0.0002 & 450 & True \\
+eng->kik & (1.3B) & BLEU & 15.56 & [13.06, 18.16] & <0.0002 & 450 & True \\
+eng->kik & (3.3B) & chrF++ & 13.96 & [12.17, 15.78] & <0.0002 & 450 & True \\
+eng->kik & (3.3B) & BLEU & 16.04 & [13.27, 18.89] & <0.0002 & 450 & True \\
+kik->eng & (600M Distilled) & chrF++ & 19.22 & [17.60, 20.87] & <0.0002 & 450 & True \\
+kik->eng & (600M Distilled) & BLEU & 18.18 & [16.13, 20.28] & <0.0002 & 450 & True \\
+kik->eng & (1.3B Distilled) & chrF++ & 18.35 & [16.60, 20.13] & <0.0002 & 450 & True \\
+kik->eng & (1.3B Distilled) & BLEU & 19.01 & [16.75, 21.14] & <0.0002 & 450 & True \\
+kik->eng & (1.3B) & chrF++ & 21.84 & [19.45, 24.24] & <0.0002 & 450 & True \\
+kik->eng & (1.3B) & BLEU & 23.56 & [21.10, 25.93] & <0.0002 & 450 & True \\
+kik->eng & (3.3B) & chrF++ & 13.97 & [12.39, 15.62] & <0.0002 & 450 & True \\
+kik->eng & (3.3B) & BLEU & 15.95 & [13.85, 18.01] & <0.0002 & 450 & True \\
+\bottomrule
+\end{tabular}
+\end{table}

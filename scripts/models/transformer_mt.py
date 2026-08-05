@@ -55,19 +55,39 @@ class TransformerMT(BaseModel):
 
             tokenizer_src = adapter_path or self.model_id
             self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_src)
-            self.model = AutoModelForSeq2SeqLM.from_pretrained(
-                base_id,
-                device_map=self.device_map,
-                torch_dtype=torch_dtype,
-                low_cpu_mem_usage=True,
-            )
+
+            # NLLB checkpoints ship fp32 weights. With device_map="auto" the
+            # fp32 -> fp16 cast happens on the GPU, so loading transiently needs
+            # fp32-sized memory (~13 GB for the 3.3B) even though the final
+            # model is only ~6.2 GB. Casting on CPU first and then moving the
+            # fp16 weights across avoids that spike; set cpu_cast_load: true for
+            # any model that does not fit during load but fits once resident.
+            if self.config.get("cpu_cast_load", False):
+                self.model = AutoModelForSeq2SeqLM.from_pretrained(
+                    base_id,
+                    torch_dtype=torch_dtype,
+                    low_cpu_mem_usage=True,
+                )
+                self.model = self.model.to("cuda" if torch.cuda.is_available() else "cpu")
+            else:
+                self.model = AutoModelForSeq2SeqLM.from_pretrained(
+                    base_id,
+                    device_map=self.device_map,
+                    torch_dtype=torch_dtype,
+                    low_cpu_mem_usage=True,
+                )
 
             if adapter_path:
                 from peft import PeftModel
 
                 logger.info(f"Applying LoRA adapter from {adapter_path}")
                 self.model = PeftModel.from_pretrained(self.model, adapter_path)
-                self.model = self.model.merge_and_unload()
+                # Merging bakes the adapter into the base weights (fastest
+                # inference) but transiently needs ~2x model memory. For large
+                # checkpoints on a small GPU, set merge_adapter: false to run
+                # the PeftModel directly (mathematically equivalent output).
+                if self.config.get("merge_adapter", True):
+                    self.model = self.model.merge_and_unload()
 
             self.model.eval()
             self._is_loaded = True
