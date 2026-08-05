@@ -48,14 +48,28 @@ class TransformerMT(BaseModel):
         try:
             torch_dtype = _DTYPE_MAP.get(self.dtype, torch.float16) if isinstance(self.dtype, str) else self.dtype
 
-            self.tokenizer = AutoTokenizer.from_pretrained(self.model_id)
+            # Fine-tuned LoRA checkpoints ship only adapter weights, so the base
+            # model is loaded first and the adapter merged on top.
+            adapter_path = self.config.get("adapter_path")
+            base_id = self.config.get("base_model_id", self.model_id) if adapter_path else self.model_id
+
+            tokenizer_src = adapter_path or self.model_id
+            self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_src)
             self.model = AutoModelForSeq2SeqLM.from_pretrained(
-                self.model_id,
+                base_id,
                 device_map=self.device_map,
                 torch_dtype=torch_dtype,
                 low_cpu_mem_usage=True,
             )
 
+            if adapter_path:
+                from peft import PeftModel
+
+                logger.info(f"Applying LoRA adapter from {adapter_path}")
+                self.model = PeftModel.from_pretrained(self.model, adapter_path)
+                self.model = self.model.merge_and_unload()
+
+            self.model.eval()
             self._is_loaded = True
             self._load_time = time.time() - start_time
             logger.info(f"Loaded {self.name} in {self._load_time:.2f}s")

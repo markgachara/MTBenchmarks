@@ -1,0 +1,98 @@
+# Fine-tuning configuration for NLLB-200 on the corrected GAC v1.1 corpus.
+#
+# Hardware note: training is pinned to a single GPU. The RTX 3060 (GPU 0) is
+# frequently occupied by other users' long-running jobs, and the RTX 2080 Ti
+# (GPU 1) is Turing, which has no native bf16. All runs therefore use fp16
+# AMP (fp32 master weights + loss scaling) rather than bf16.
+#
+# Usage:
+#   python -m scripts.finetune --run nllb_600m --direction eng2kik
+#   python -m scripts.finetune --all
+
+data:
+  train_file: "data/JulyDataUpdate/TRAIN_DATA.xlsx"
+  val_file: "data/JulyDataUpdate/VALIDATION_DATA.xlsx"
+  test_file: "data/JulyDataUpdate/TEST_DATA.xlsx"
+  deduplicate_train: true
+
+defaults:
+  output_root: "models/finetuned"
+  max_source_length: 192
+  max_target_length: 192
+  num_train_epochs: 10
+  learning_rate: 5.0e-5
+  warmup_ratio: 0.1
+  weight_decay: 0.001
+  label_smoothing_factor: 0.1
+  lr_scheduler_type: "linear"
+  gradient_checkpointing: true
+  optim: "adamw_bnb_8bit"      # 8-bit optimizer states to fit 11 GB
+  max_grad_norm: 1.0           # gradient clipping; NLLB fine-tuning is unstable without it
+  fp16: true
+  seed: 42
+  eval_num_beams: 4          # validation only, for checkpoint selection; final test eval uses beam 5
+  eval_accumulation_steps: 2 # move predictions to CPU incrementally
+  early_stopping_patience: 3
+  metric_for_best_model: "chrf"
+
+# LoRA targets for the M2M100/NLLB encoder-decoder blocks
+lora_target_modules: ["q_proj", "k_proj", "v_proj", "out_proj", "fc1", "fc2"]
+
+runs:
+  nllb_600m:
+    name: "NLLB-200 (600M Distilled) fine-tuned"
+    model_id: "facebook/nllb-200-distilled-600M"
+    mode: "full"
+    learning_rate: 5.0e-5   # lower than Dale's 1e-4: 1.8k pairs, not 50k
+    per_device_train_batch_size: 4
+    gradient_accumulation_steps: 4
+    per_device_eval_batch_size: 2
+
+  nllb_1_3b:
+    name: "NLLB-200 (1.3B) fine-tuned"
+    model_id: "facebook/nllb-200-1.3B"
+    mode: "lora"
+    learning_rate: 2.0e-4
+    per_device_train_batch_size: 2
+    gradient_accumulation_steps: 8
+    per_device_eval_batch_size: 1
+    lora_r: 16
+    lora_alpha: 32
+    lora_dropout: 0.05
+
+  nllb_distilled_1_3b:
+    name: "NLLB-200 (1.3B Distilled) fine-tuned"
+    model_id: "facebook/nllb-200-distilled-1.3B"
+    mode: "lora"
+    learning_rate: 2.0e-4
+    per_device_train_batch_size: 4    # 2x the base config; keeps checkpointing so the 256k-vocab loss fits
+    gradient_accumulation_steps: 4    # effective batch 16 (unchanged dynamics)
+    per_device_eval_batch_size: 2
+    lora_r: 16
+    lora_alpha: 32
+    lora_dropout: 0.05
+
+  nllb_3_3b:
+    name: "NLLB-200 (3.3B) fine-tuned"
+    model_id: "facebook/nllb-200-3.3B"
+    mode: "lora"
+    learning_rate: 2.0e-4
+    per_device_train_batch_size: 1
+    gradient_accumulation_steps: 16
+    per_device_eval_batch_size: 1
+    lora_r: 16
+    lora_alpha: 32
+    lora_dropout: 0.05
+    load_in_4bit: true          # 3.3B fp16 (6.6 GB) + activations is too tight on 11 GB
+
+directions:
+  eng2kik:
+    source_lang: "eng"
+    target_lang: "kik"
+    src_code: "eng_Latn"
+    tgt_code: "kik_Latn"
+  kik2eng:
+    source_lang: "kik"
+    target_lang: "eng"
+    src_code: "kik_Latn"
+    tgt_code: "eng_Latn"

@@ -24,7 +24,44 @@ datasets:
     domain: "agricultural"
     notes: >
       This is the FINAL 500-pair test set from Mark's email (11 Apr 2026).
-      Training (1600) and validation (230) splits are withheld for fine-tuning phase.
+      Superseded by gac_july_v1_1 (see below) for the fine-tuning phase.
+
+  # CORRECTED July 2026 release — used for fine-tuning + post-FT evaluation
+  gac_july_v1_1:
+    name: "GAC Corrected Release v1.1 (July 2026)"
+    type: "local_excel_splits"
+    base_path: "data/JulyDataUpdate"
+    columns:
+      english: "English"
+      kikuyu: "Gikuyu"
+      dialect: "dialect"
+    splits:
+      train:
+        path: "data/JulyDataUpdate/TRAIN_DATA.xlsx"
+        rows: 1847
+        usable: 1836   # after dropping 11 exact duplicate pairs
+      validation:
+        path: "data/JulyDataUpdate/VALIDATION_DATA.xlsx"
+        rows: 49
+        usable: 49
+      test:
+        path: "data/JulyDataUpdate/TEST_DATA.xlsx"
+        rows: 451
+        usable: 450    # one row has a null English side
+      full:
+        path: "data/JulyDataUpdate/FULL_GAC_scripted_v1.1.xlsx"
+        rows: 2311
+    description: >
+      Corrected GAC release with a revised column schema (English/Gikuyu).
+      Verified zero leakage across train/validation/test. The train split is
+      fully disjoint from the original selectpairs500 benchmark set, so
+      fine-tuning on it does not contaminate the baseline comparison.
+    notes: >
+      test (451) + validation (49) together reconstitute the original
+      selectpairs500 set, so validation is in-domain with test.
+      Known issues: inconsistent dialect labels
+      (GĨ-KABETE_(KIAMBU) / GĨKABETE_(KIAMBU) / GĨ-KABETE(KIAMBU));
+      FULL contains 2300 unique pairs vs 2336 in the union of the splits.
 
   # OPTIONAL validation datasets (not primary)
   flores_200:

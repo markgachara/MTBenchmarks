@@ -43,8 +43,9 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Gĩkũyũ MT Benchmarking")
     parser.add_argument(
         "--models-config",
-        default="config/models.yaml",
-        help="Path to models config",
+        nargs="+",
+        default=["config/models.yaml"],
+        help="Path(s) to model configs; multiple files are merged",
     )
     parser.add_argument(
         "--data-file",
@@ -87,7 +88,17 @@ def main():
     logger.info("=" * 60)
 
     # ── 1. Load configs ──────────────────────────────────────────
-    models_config = load_config(args.models_config)
+    models_config = {"models": {}}
+    for cfg_path in args.models_config:
+        cfg = load_config(cfg_path)
+        models_config["models"].update(cfg.get("models", {}))
+        for key, value in cfg.items():
+            if key != "models":
+                models_config.setdefault(key, value)
+    logger.info(
+        f"Loaded {len(models_config['models'])} model configs from "
+        f"{', '.join(args.models_config)}"
+    )
 
     # ── 2. Hardware detection ────────────────────────────────────
     hardware_info = get_hardware_info()
@@ -95,12 +106,15 @@ def main():
 
     # ── 3. Load GAC test set ─────────────────────────────────────
     loader = MTDataLoader()
-    english_texts, kikuyu_texts = loader.load_gac_test_set(args.data_file)
+    english_texts, kikuyu_texts, pair_ids = loader.load_parallel_excel(
+        args.data_file, return_ids=True
+    )
 
     if args.dry_run:
         logger.info("DRY RUN: using first 10 sentences only")
         english_texts = english_texts[:10]
         kikuyu_texts = kikuyu_texts[:10]
+        pair_ids = pair_ids[:10]
 
     eng2kik, kik2eng = prepare_translation_pairs(english_texts, kikuyu_texts)
 
@@ -171,8 +185,21 @@ def main():
             source_texts = pair["source"]
             target_texts = pair["target"]
             dir_results = {}
+            # Bind into all_results now (same dict object) so incremental saves
+            # below persist progress even if a later model crashes.
+            all_results[direction] = dir_results
 
             for model_id, model_cfg in selected.items():
+                # Fine-tuned checkpoints are trained per direction, so skip any
+                # model that does not declare support for the current one.
+                supported = model_cfg.get("directions")
+                if supported and direction not in supported:
+                    logger.info(
+                        f"  Skipping {model_cfg['name']} for {direction} "
+                        f"(supports {supported})"
+                    )
+                    continue
+
                 model_type = model_cfg.get("model_type")
                 prompting_modes = model_cfg.get("prompting_modes", [None])
 
@@ -222,6 +249,12 @@ def main():
 
                     dir_results[display_name] = metrics
 
+                    # Persist after every model so an overnight run survives a
+                    # late failure (e.g. an LLM OOM) with partial results intact.
+                    try:
+                        reporter.save_full_metrics_json(all_results)
+                    except Exception as exc:  # pragma: no cover - best effort
+                        logger.warning(f"Incremental metrics save failed: {exc}")
                     # Store translations
                     if display_name not in all_translations:
                         all_translations[display_name] = {}
@@ -235,14 +268,14 @@ def main():
                         model_name=display_name,
                         direction=direction,
                         output_dir=str(reporter.run_dir / "translations"),
+                        ids=pair_ids,
                         metadata={
                             "prompting_mode": pmode,
                             "speed": trans.get("speed"),
                             "inference_time": trans.get("inference_time"),
+                            "data_file": args.data_file,
                         },
                     )
-
-            all_results[direction] = dir_results
 
     # ── 9. Generate result tables ────────────────────────────────
     logger.info("\n" + "=" * 60)

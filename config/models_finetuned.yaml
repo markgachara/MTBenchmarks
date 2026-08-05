@@ -1,0 +1,157 @@
+# Fine-tuned NLLB-200 models (GAC v1.1 corpus, July 2026 corrected release).
+#
+# Each checkpoint is trained for a single direction, so `directions` restricts
+# it to that pass. Merge with config/models.yaml to benchmark fine-tuned and
+# baseline systems side by side on the same test set:
+#
+#   python main.py --models-config config/models_finetuned.yaml \
+#                  --data-file data/JulyDataUpdate/TEST_DATA.xlsx
+
+models:
+  nllb_600m_ft_eng2kik:
+    name: "NLLB-200 (600M) fine-tuned"
+    model_id: "models/finetuned/nllb_600m_eng2kik/final"
+    model_type: "transformer_mt"
+    category: "Fine-Tuned on GAC v1.1"
+    parameters: 600_000_000
+    vram_fp16_gb: 1.2
+    dtype: "torch.float16"
+    is_encoder_decoder: true
+    batch_size: 8
+    max_new_tokens: 256
+    num_beams: 5
+    device_map: "auto"
+    lang_code_format: "flores"
+    directions: ["eng->kik"]
+    description: "Full fine-tune of facebook/nllb-200-distilled-600M on GAC v1.1 train split (1835 pairs)."
+
+  nllb_600m_ft_kik2eng:
+    name: "NLLB-200 (600M) fine-tuned"
+    model_id: "models/finetuned/nllb_600m_kik2eng/final"
+    model_type: "transformer_mt"
+    category: "Fine-Tuned on GAC v1.1"
+    parameters: 600_000_000
+    vram_fp16_gb: 1.2
+    dtype: "torch.float16"
+    is_encoder_decoder: true
+    batch_size: 8
+    max_new_tokens: 256
+    num_beams: 5
+    device_map: "auto"
+    lang_code_format: "flores"
+    directions: ["kik->eng"]
+    description: "Full fine-tune of facebook/nllb-200-distilled-600M on GAC v1.1 train split (1835 pairs)."
+
+  nllb_distilled_1_3b_ft_eng2kik:
+    name: "NLLB-200 (1.3B Distilled) fine-tuned"
+    model_id: "models/finetuned/nllb_distilled_1_3b_eng2kik/final"
+    base_model_id: "facebook/nllb-200-distilled-1.3B"
+    adapter_path: "models/finetuned/nllb_distilled_1_3b_eng2kik/final"
+    model_type: "transformer_mt"
+    category: "Fine-Tuned on GAC v1.1"
+    parameters: 1_300_000_000
+    vram_fp16_gb: 2.6
+    dtype: "torch.float16"
+    is_encoder_decoder: true
+    batch_size: 4
+    max_new_tokens: 256
+    num_beams: 5
+    device_map: "auto"
+    lang_code_format: "flores"
+    directions: ["eng->kik"]
+    description: "LoRA fine-tune (r=16) of facebook/nllb-200-distilled-1.3B on GAC v1.1 train split."
+
+  nllb_distilled_1_3b_ft_kik2eng:
+    name: "NLLB-200 (1.3B Distilled) fine-tuned"
+    model_id: "models/finetuned/nllb_distilled_1_3b_kik2eng/final"
+    base_model_id: "facebook/nllb-200-distilled-1.3B"
+    adapter_path: "models/finetuned/nllb_distilled_1_3b_kik2eng/final"
+    model_type: "transformer_mt"
+    category: "Fine-Tuned on GAC v1.1"
+    parameters: 1_300_000_000
+    vram_fp16_gb: 2.6
+    dtype: "torch.float16"
+    is_encoder_decoder: true
+    batch_size: 4
+    max_new_tokens: 256
+    num_beams: 5
+    device_map: "auto"
+    lang_code_format: "flores"
+    directions: ["kik->eng"]
+    description: "LoRA fine-tune (r=16) of facebook/nllb-200-distilled-1.3B on GAC v1.1 train split."
+
+  nllb_1_3b_ft_eng2kik:
+    name: "NLLB-200 (1.3B) fine-tuned"
+    model_id: "models/finetuned/nllb_1_3b_eng2kik/final"
+    base_model_id: "facebook/nllb-200-1.3B"
+    adapter_path: "models/finetuned/nllb_1_3b_eng2kik/final"
+    model_type: "transformer_mt"
+    category: "Fine-Tuned on GAC v1.1"
+    parameters: 1_300_000_000
+    vram_fp16_gb: 2.6
+    dtype: "torch.float16"
+    is_encoder_decoder: true
+    batch_size: 4
+    max_new_tokens: 256
+    num_beams: 5
+    device_map: "auto"
+    lang_code_format: "flores"
+    directions: ["eng->kik"]
+    description: "LoRA fine-tune (r=16) of facebook/nllb-200-1.3B on GAC v1.1 train split."
+
+  nllb_1_3b_ft_kik2eng:
+    name: "NLLB-200 (1.3B) fine-tuned"
+    model_id: "models/finetuned/nllb_1_3b_kik2eng/final"
+    base_model_id: "facebook/nllb-200-1.3B"
+    adapter_path: "models/finetuned/nllb_1_3b_kik2eng/final"
+    model_type: "transformer_mt"
+    category: "Fine-Tuned on GAC v1.1"
+    parameters: 1_300_000_000
+    vram_fp16_gb: 2.6
+    dtype: "torch.float16"
+    is_encoder_decoder: true
+    batch_size: 4
+    max_new_tokens: 256
+    num_beams: 5
+    device_map: "auto"
+    lang_code_format: "flores"
+    directions: ["kik->eng"]
+    description: "LoRA fine-tune (r=16) of facebook/nllb-200-1.3B on GAC v1.1 train split."
+
+  nllb_3_3b_ft_eng2kik:
+    name: "NLLB-200 (3.3B) fine-tuned"
+    model_id: "models/finetuned/nllb_3_3b_eng2kik/final"
+    base_model_id: "facebook/nllb-200-3.3B"
+    adapter_path: "models/finetuned/nllb_3_3b_eng2kik/final"
+    model_type: "transformer_mt"
+    category: "Fine-Tuned on GAC v1.1"
+    parameters: 3_300_000_000
+    vram_fp16_gb: 6.6
+    dtype: "torch.float16"
+    is_encoder_decoder: true
+    batch_size: 2
+    max_new_tokens: 256
+    num_beams: 5
+    device_map: "auto"
+    lang_code_format: "flores"
+    directions: ["eng->kik"]
+    description: "QLoRA fine-tune (4-bit NF4, r=16) of facebook/nllb-200-3.3B on GAC v1.1 train split."
+
+  nllb_3_3b_ft_kik2eng:
+    name: "NLLB-200 (3.3B) fine-tuned"
+    model_id: "models/finetuned/nllb_3_3b_kik2eng/final"
+    base_model_id: "facebook/nllb-200-3.3B"
+    adapter_path: "models/finetuned/nllb_3_3b_kik2eng/final"
+    model_type: "transformer_mt"
+    category: "Fine-Tuned on GAC v1.1"
+    parameters: 3_300_000_000
+    vram_fp16_gb: 6.6
+    dtype: "torch.float16"
+    is_encoder_decoder: true
+    batch_size: 2
+    max_new_tokens: 256
+    num_beams: 5
+    device_map: "auto"
+    lang_code_format: "flores"
+    directions: ["kik->eng"]
+    description: "QLoRA fine-tune (4-bit NF4, r=16) of facebook/nllb-200-3.3B on GAC v1.1 train split."

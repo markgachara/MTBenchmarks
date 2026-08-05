@@ -38,6 +38,23 @@ models:
     description: "Dense NLLB-200 1.3B variant. Same vocab/tokenizer as the distilled 600M; gives within-family scaling signal."
     lang_code_format: "flores"
 
+  nllb_200_distilled_1_3b:
+    name: "NLLB-200 (1.3B Distilled)"
+    model_id: "facebook/nllb-200-distilled-1.3B"
+    model_type: "transformer_mt"
+    category: "Large-Scale Multilingual Encoder-Decoder"
+    parameters: 1_300_000_000
+    vram_fp16_gb: 2.6
+    vram_int8_gb: 1.3
+    dtype: "torch.float16"
+    is_encoder_decoder: true
+    batch_size: 4
+    max_new_tokens: 256
+    num_beams: 5
+    device_map: "auto"
+    description: "Distilled NLLB-200 1.3B (distilled from the 54B MoE, like the 600M). Distinct from the dense facebook/nllb-200-1.3B; added to cover the full NLLB family."
+    lang_code_format: "flores"
+
   nllb_200_3_3b:
     name: "NLLB-200 (3.3B)"
     model_id: "facebook/nllb-200-3.3B"
