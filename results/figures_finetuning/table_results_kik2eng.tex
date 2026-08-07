@@ -1,18 +1,19 @@
 \begin{table}
 \caption{Benchmark results, Gĩkũyũ to English.}
 \label{tab:results_kik2eng}
-\begin{tabular}{llrrrrrr}
+\begin{tabular}{llrrrrrrll}
 \toprule
-System & Type & chrF++ & BLEU & BERTScore F1 & AfriCOMET & TTR & Len \\
+System & Type & BLEU & chrF++ & BERTScore F1 & AfriCOMET & TTR & HL Rate & Avg Sent Len ± SD & PPL \\
 \midrule
-NLLB-200 (3.3B) & Baseline & 31.96 & 7.68 & 0.78 & 0.43 & 0.24 & 16.34 \\
-NLLB-200 (1.3B Distilled) & Baseline & 31.30 & 8.37 & 0.77 & 0.43 & 0.22 & 15.90 \\
-NLLB-200 (1.3B) & Baseline & 28.11 & 4.51 & 0.78 & 0.40 & 0.15 & 25.15 \\
-NLLB-200 (600M Distilled) & Baseline & 28.05 & 6.17 & 0.77 & 0.31 & 0.23 & 16.01 \\
-NLLB-200 (1.3B) fine-tuned & Fine-tuned & 49.95 & 28.07 & 0.87 & 0.58 & 0.32 & 10.96 \\
-NLLB-200 (1.3B Distilled) fine-tuned & Fine-tuned & 49.64 & 27.38 & 0.88 & 0.59 & 0.32 & 11.07 \\
-NLLB-200 (600M) fine-tuned & Fine-tuned & 47.27 & 24.35 & 0.87 & 0.55 & 0.31 & 11.14 \\
-NLLB-200 (3.3B) fine-tuned & Fine-tuned & 45.94 & 23.63 & 0.87 & 0.57 & 0.31 & 10.89 \\
+NLLB-200 (3.3B) & Baseline & 7.68 & 31.96 & 0.78 & 0.43 & 0.24 & 0.61 & 16.34 ± 17.01 & NaN \\
+NLLB-200 (1.3B Distilled) & Baseline & 8.37 & 31.30 & 0.77 & 0.43 & 0.22 & 0.62 & 15.90 ± 19.07 & NaN \\
+NLLB-200 (1.3B) & Baseline & 4.51 & 28.11 & 0.78 & 0.40 & 0.15 & 0.64 & 25.15 ± 43.45 & NaN \\
+NLLB-200 (600M Distilled) & Baseline & 6.17 & 28.05 & 0.77 & 0.31 & 0.23 & 0.64 & 16.01 ± 16.63 & NaN \\
+NLLB-200 (1.3B) fine-tuned & Fine-tuned & 28.07 & 49.95 & 0.87 & 0.58 & 0.32 & 0.61 & 10.96 ± 4.72 & NaN \\
+NLLB-200 (1.3B Distilled) fine-tuned & Fine-tuned & 27.38 & 49.64 & 0.88 & 0.59 & 0.32 & 0.61 & 11.07 ± 4.90 & NaN \\
+NLLB-200 (600M) fine-tuned & Fine-tuned & 24.35 & 47.27 & 0.87 & 0.55 & 0.31 & 0.60 & 11.14 ± 4.89 & NaN \\
+NLLB-200 (3.3B) fine-tuned & Fine-tuned & 23.63 & 45.94 & 0.87 & 0.57 & 0.31 & 0.60 & 10.89 ± 4.65 & NaN \\
+Human Reference & Reference & NaN & NaN & NaN & NaN & 0.36 & 0.63 & 11.32 ± 5.04 & NaN \\
 \bottomrule
 \end{tabular}
 \end{table}

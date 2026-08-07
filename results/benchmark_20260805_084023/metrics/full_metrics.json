@@ -5387,6 +5387,17 @@
       "pred_perplexity": 848.0347627501692,
       "speed": 1.3691522947003867,
       "inference_time": 9011.415346384048
+    },
+    "Human Reference": {
+      "valid": 1,
+      "num_sentences": 450,
+      "pred_ttr": 0.3535,
+      "pred_hapax_rate": 0.6919,
+      "pred_avg_sent_len": 12.2,
+      "pred_std_sent_len": 5.92,
+      "pred_total_tokens": 5491,
+      "pred_unique_tokens": 1941,
+      "pred_perplexity": 650.8554544937485
     }
   },
   "kik->eng": {
@@ -10281,6 +10292,16 @@
       "ref_unique_tokens": 1814,
       "speed": 0.7794307203277044,
       "inference_time": 8918.047260284424
+    },
+    "Human Reference": {
+      "valid": 1,
+      "num_sentences": 450,
+      "pred_ttr": 0.3561,
+      "pred_hapax_rate": 0.6251,
+      "pred_avg_sent_len": 11.32,
+      "pred_std_sent_len": 5.04,
+      "pred_total_tokens": 5094,
+      "pred_unique_tokens": 1814
     }
   }
 }

@@ -1,18 +1,19 @@
 \begin{table}
 \caption{Benchmark results, English to Gĩkũyũ.}
 \label{tab:results_eng2kik}
-\begin{tabular}{llrrrrrr}
+\begin{tabular}{llrrrrrrlr}
 \toprule
-System & Type & chrF++ & BLEU & BERTScore F1 & AfriCOMET & TTR & Len \\
+System & Type & BLEU & chrF++ & BERTScore F1 & AfriCOMET & TTR & HL Rate & Avg Sent Len ± SD & PPL \\
 \midrule
-NLLB-200 (3.3B) & Baseline & 35.51 & 8.58 & 0.80 & 0.36 & 0.26 & 14.19 \\
-NLLB-200 (1.3B Distilled) & Baseline & 34.22 & 7.99 & 0.80 & 0.36 & 0.24 & 14.43 \\
-NLLB-200 (1.3B) & Baseline & 34.18 & 7.24 & 0.80 & 0.35 & 0.24 & 14.23 \\
-NLLB-200 (600M Distilled) & Baseline & 31.07 & 5.43 & 0.79 & 0.33 & 0.23 & 14.91 \\
-NLLB-200 (1.3B Distilled) fine-tuned & Fine-tuned & 50.11 & 24.53 & 0.84 & 0.41 & 0.26 & 13.14 \\
-NLLB-200 (3.3B) fine-tuned & Fine-tuned & 49.47 & 24.62 & 0.84 & 0.41 & 0.26 & 12.90 \\
-NLLB-200 (1.3B) fine-tuned & Fine-tuned & 48.12 & 22.79 & 0.84 & 0.37 & 0.25 & 13.37 \\
-NLLB-200 (600M) fine-tuned & Fine-tuned & 46.41 & 21.47 & 0.83 & 0.36 & 0.24 & 13.14 \\
+NLLB-200 (3.3B) & Baseline & 8.58 & 35.51 & 0.80 & 0.36 & 0.26 & 0.61 & 14.19 ± 9.47 & 213.29 \\
+NLLB-200 (1.3B Distilled) & Baseline & 7.99 & 34.22 & 0.80 & 0.36 & 0.24 & 0.61 & 14.43 ± 10.54 & 208.17 \\
+NLLB-200 (1.3B) & Baseline & 7.24 & 34.18 & 0.80 & 0.35 & 0.24 & 0.60 & 14.23 ± 9.56 & 195.83 \\
+NLLB-200 (600M Distilled) & Baseline & 5.43 & 31.07 & 0.79 & 0.33 & 0.23 & 0.62 & 14.91 ± 11.63 & 205.22 \\
+NLLB-200 (1.3B Distilled) fine-tuned & Fine-tuned & 24.53 & 50.11 & 0.84 & 0.41 & 0.26 & 0.60 & 13.14 ± 6.34 & 428.85 \\
+NLLB-200 (3.3B) fine-tuned & Fine-tuned & 24.62 & 49.47 & 0.84 & 0.41 & 0.26 & 0.59 & 12.90 ± 6.26 & 432.41 \\
+NLLB-200 (1.3B) fine-tuned & Fine-tuned & 22.79 & 48.12 & 0.84 & 0.37 & 0.25 & 0.59 & 13.37 ± 6.55 & 378.90 \\
+NLLB-200 (600M) fine-tuned & Fine-tuned & 21.47 & 46.41 & 0.83 & 0.36 & 0.24 & 0.57 & 13.14 ± 6.39 & 378.77 \\
+Human Reference & Reference & NaN & NaN & NaN & NaN & 0.35 & 0.69 & 12.20 ± 5.92 & 650.86 \\
 \bottomrule
 \end{tabular}
 \end{table}
