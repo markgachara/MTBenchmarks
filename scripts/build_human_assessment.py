@@ -7,13 +7,17 @@ Mirrors the column layout of the previous round
 comparable and can be analysed with the same code. The four rating columns plus
 Overall Quality and Notes are left blank for the assessors.
 
+By default every test sentence is emitted, leaving the sampling decision to
+whoever runs the assessment. ``--sample-size N`` draws a length-stratified
+subset instead.
+
 The previous round's 50 sentences cannot be reused: 49 of them became the
-VALIDATION split in v1.1 and are no longer in the test set, so a fresh
-stratified sample is drawn here.
+VALIDATION split in v1.1 and are no longer in the test set.
 
 Usage:
-    python -m scripts.build_human_assessment
-    python -m scripts.build_human_assessment --include-llms --sample-size 50
+    python -m scripts.build_human_assessment                    # all 450 sentences
+    python -m scripts.build_human_assessment --sample-size 50   # stratified subset
+    python -m scripts.build_human_assessment --include-llms
 """
 import argparse
 import json
@@ -85,7 +89,8 @@ def main():
     ap.add_argument("--run-dir", default="results/benchmark_20260805_084023")
     ap.add_argument("--test-file", default="data/JulyDataUpdate/TEST_DATA.xlsx")
     ap.add_argument("--out-dir", default="data/human_assessment")
-    ap.add_argument("--sample-size", type=int, default=50)
+    ap.add_argument("--sample-size", type=int, default=0,
+                    help="0 (default) emits every test sentence; N draws a stratified subset")
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--include-llms", action="store_true",
                     help="Also rate M2M-100 and the prompted LLMs")
@@ -96,8 +101,14 @@ def main():
     trans = load_translations(run_dir)
 
     systems = NLLB_SYSTEMS + (OTHER_SYSTEMS if args.include_llms else [])
-    idx = stratified_indices(eng, args.sample_size, args.seed)
-    logger.info(f"sampled {len(idx)} of {len(eng)} test sentences (seed {args.seed})")
+    if args.sample_size and args.sample_size < len(eng):
+        idx = stratified_indices(eng, args.sample_size, args.seed)
+        logger.info(f"sampled {len(idx)} of {len(eng)} test sentences (seed {args.seed})")
+        suffix = f"sample{len(idx)}"
+    else:
+        idx = list(range(len(eng)))
+        logger.info(f"emitting all {len(idx)} test sentences")
+        suffix = "full"
 
     rows, skipped = [], set()
     for direction in ("eng->kik", "kik->eng"):
@@ -130,7 +141,7 @@ def main():
     df = pd.DataFrame(rows, columns=COLUMNS)
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
-    out = out_dir / "human_assessment_v1.1_test450_to_analyze.csv"
+    out = out_dir / f"human_assessment_v1.1_test450_{suffix}.csv"
     df.to_csv(out, index=False)
 
     logger.info(f"wrote {out}")
