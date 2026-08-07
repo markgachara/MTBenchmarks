@@ -63,3 +63,6 @@ unsloth_compiled_cache/
 .DS_Store
 Thumbs.db
 /models/
+
+# Human assessment sheets contain private GAC test sentences
+data/human_assessment/
