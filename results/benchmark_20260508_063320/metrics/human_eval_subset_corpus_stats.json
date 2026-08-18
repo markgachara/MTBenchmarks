@@ -1,0 +1,201 @@
+{
+  "subset": "50-sentence native-speaker assessment subset",
+  "source_sheet": "human_assessment_to_analyze.xlsx - Sheet1 (1).csv",
+  "run": "benchmark_20260508_063320",
+  "directions": {
+    "eng->kik": {
+      "Gemma 3 4B Instruct (3-shot)": {
+        "pred_ttr": 0.2446,
+        "pred_hapax_rate": 0.7406,
+        "pred_avg_sent_len": 23.96,
+        "pred_std_sent_len": 21.85,
+        "pred_total_tokens": 1198,
+        "pred_unique_tokens": 293,
+        "pred_perplexity": 718.5731847327252,
+        "n_sentences": 50
+      },
+      "Gemma 3 4B Instruct (zero-shot)": {
+        "pred_ttr": 0.289,
+        "pred_hapax_rate": 0.7679,
+        "pred_avg_sent_len": 19.38,
+        "pred_std_sent_len": 21.53,
+        "pred_total_tokens": 969,
+        "pred_unique_tokens": 280,
+        "pred_perplexity": 982.116620852212,
+        "n_sentences": 50
+      },
+      "Llama 3.1 8B Instruct (3-shot)": {
+        "pred_ttr": 0.2957,
+        "pred_hapax_rate": 0.7453,
+        "pred_avg_sent_len": 18.06,
+        "pred_std_sent_len": 16.37,
+        "pred_total_tokens": 903,
+        "pred_unique_tokens": 267,
+        "pred_perplexity": 507.32005593893706,
+        "n_sentences": 50
+      },
+      "Llama 3.1 8B Instruct (zero-shot)": {
+        "pred_ttr": 0.4274,
+        "pred_hapax_rate": 0.761,
+        "pred_avg_sent_len": 14.88,
+        "pred_std_sent_len": 14.08,
+        "pred_total_tokens": 744,
+        "pred_unique_tokens": 318,
+        "pred_perplexity": 1217.391755174014,
+        "n_sentences": 50
+      },
+      "M2M-100 (418M)": {
+        "pred_ttr": 0.513,
+        "pred_hapax_rate": 0.7651,
+        "pred_avg_sent_len": 12.28,
+        "pred_std_sent_len": 6.91,
+        "pred_total_tokens": 614,
+        "pred_unique_tokens": 315,
+        "pred_perplexity": 1361.277353114464,
+        "n_sentences": 50
+      },
+      "NLLB-200 (1.3B Distilled)": {
+        "pred_ttr": 0.5828,
+        "pred_hapax_rate": 0.7994,
+        "pred_avg_sent_len": 12.32,
+        "pred_std_sent_len": 4.11,
+        "pred_total_tokens": 616,
+        "pred_unique_tokens": 359,
+        "pred_perplexity": 311.04544172609246,
+        "n_sentences": 50
+      },
+      "NLLB-200 (1.3B)": {
+        "pred_ttr": 0.5758,
+        "pred_hapax_rate": 0.7871,
+        "pred_avg_sent_len": 12.4,
+        "pred_std_sent_len": 4.54,
+        "pred_total_tokens": 620,
+        "pred_unique_tokens": 357,
+        "pred_perplexity": 238.7018818077636,
+        "n_sentences": 50
+      },
+      "NLLB-200 (3.3B)": {
+        "pred_ttr": 0.6,
+        "pred_hapax_rate": 0.7769,
+        "pred_avg_sent_len": 12.1,
+        "pred_std_sent_len": 3.83,
+        "pred_total_tokens": 605,
+        "pred_unique_tokens": 363,
+        "pred_perplexity": 265.7157391570975,
+        "n_sentences": 50
+      },
+      "NLLB-200 (600M Distilled)": {
+        "pred_ttr": 0.5209,
+        "pred_hapax_rate": 0.724,
+        "pred_avg_sent_len": 12.94,
+        "pred_std_sent_len": 4.64,
+        "pred_total_tokens": 647,
+        "pred_unique_tokens": 337,
+        "pred_perplexity": 238.42656798365024,
+        "n_sentences": 50
+      },
+      "Human Reference": {
+        "pred_ttr": 0.6568,
+        "pred_hapax_rate": 0.8364,
+        "pred_avg_sent_len": 11.54,
+        "pred_std_sent_len": 5.07,
+        "pred_total_tokens": 577,
+        "pred_unique_tokens": 379,
+        "pred_perplexity": 603.0825393977175,
+        "n_sentences": 50
+      }
+    },
+    "kik->eng": {
+      "Gemma 3 4B Instruct (3-shot)": {
+        "pred_ttr": 0.4985,
+        "pred_hapax_rate": 0.7842,
+        "pred_avg_sent_len": 13.2,
+        "pred_std_sent_len": 5.3,
+        "pred_total_tokens": 660,
+        "pred_unique_tokens": 329,
+        "n_sentences": 50
+      },
+      "Gemma 3 4B Instruct (zero-shot)": {
+        "pred_ttr": 0.4469,
+        "pred_hapax_rate": 0.7389,
+        "pred_avg_sent_len": 15.08,
+        "pred_std_sent_len": 6.86,
+        "pred_total_tokens": 754,
+        "pred_unique_tokens": 337,
+        "n_sentences": 50
+      },
+      "Llama 3.1 8B Instruct (3-shot)": {
+        "pred_ttr": 0.442,
+        "pred_hapax_rate": 0.7744,
+        "pred_avg_sent_len": 13.44,
+        "pred_std_sent_len": 5.33,
+        "pred_total_tokens": 672,
+        "pred_unique_tokens": 297,
+        "n_sentences": 50
+      },
+      "Llama 3.1 8B Instruct (zero-shot)": {
+        "pred_ttr": 0.3484,
+        "pred_hapax_rate": 0.7433,
+        "pred_avg_sent_len": 17.22,
+        "pred_std_sent_len": 9.53,
+        "pred_total_tokens": 861,
+        "pred_unique_tokens": 300,
+        "n_sentences": 50
+      },
+      "M2M-100 (418M)": {
+        "pred_ttr": 0.1399,
+        "pred_hapax_rate": 0.4777,
+        "pred_avg_sent_len": 22.44,
+        "pred_std_sent_len": 13.43,
+        "pred_total_tokens": 1122,
+        "pred_unique_tokens": 157,
+        "n_sentences": 50
+      },
+      "NLLB-200 (1.3B Distilled)": {
+        "pred_ttr": 0.4031,
+        "pred_hapax_rate": 0.7463,
+        "pred_avg_sent_len": 16.62,
+        "pred_std_sent_len": 30.62,
+        "pred_total_tokens": 831,
+        "pred_unique_tokens": 335,
+        "n_sentences": 50
+      },
+      "NLLB-200 (1.3B)": {
+        "pred_ttr": 0.2253,
+        "pred_hapax_rate": 0.7545,
+        "pred_avg_sent_len": 29.3,
+        "pred_std_sent_len": 51.82,
+        "pred_total_tokens": 1465,
+        "pred_unique_tokens": 330,
+        "n_sentences": 50
+      },
+      "NLLB-200 (3.3B)": {
+        "pred_ttr": 0.5086,
+        "pred_hapax_rate": 0.7598,
+        "pred_avg_sent_len": 15.06,
+        "pred_std_sent_len": 8.39,
+        "pred_total_tokens": 753,
+        "pred_unique_tokens": 383,
+        "n_sentences": 50
+      },
+      "NLLB-200 (600M Distilled)": {
+        "pred_ttr": 0.528,
+        "pred_hapax_rate": 0.8017,
+        "pred_avg_sent_len": 13.56,
+        "pred_std_sent_len": 5.81,
+        "pred_total_tokens": 678,
+        "pred_unique_tokens": 358,
+        "n_sentences": 50
+      },
+      "Human Reference": {
+        "pred_ttr": 0.6704,
+        "pred_hapax_rate": 0.8258,
+        "pred_avg_sent_len": 10.62,
+        "pred_std_sent_len": 3.6,
+        "pred_total_tokens": 531,
+        "pred_unique_tokens": 356,
+        "n_sentences": 50
+      }
+    }
+  }
+}
